@@ -12,4 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require social_stream-base
 //= require_tree .

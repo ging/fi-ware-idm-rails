@@ -36,3 +36,13 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+social_stream_gems = lambda {
+  gem 'social_stream-base'
+}
+
+if File.exist?('../social_stream')
+  path '../social_stream', &social_stream_gems
+else
+  git 'git://github.com/ging/social_stream.git', &social_stream_gems
+end
