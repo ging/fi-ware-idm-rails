@@ -39,6 +39,7 @@ gem 'jquery-rails'
 
 social_stream_gems = lambda {
   gem 'social_stream-base'
+  gem 'social_stream-oauth2_server'
 }
 
 if File.exist?('../social_stream')
