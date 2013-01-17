@@ -1,0 +1,3 @@
+== Fi-WARE Identity Manager Generic Enabler
+
+http://www.fi-ware.eu/
