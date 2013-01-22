@@ -1,0 +1,22 @@
+// menu horizontal
+// ----------------------------------
+@mixin menuHorizontal 
+  padding: 0
+  text-align: center
+
+  ul
+    list-style-type: none
+    margin-left: 4em
+    display: inline
+    li
+      display: inline
+  
+
+@mixin makeColumnoMargin($columns:1, $offset: 0) 
+  float: left
+  margin-left: 0px
+  width: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1))
+
+@mixin centered
+  margin-left: 0px
+  margin-right: 0px

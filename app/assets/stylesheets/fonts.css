@@ -1,0 +1,15 @@
+/************* typography*******/
+
+@font-face {
+  font-family:Comfortaa;
+  src: url(assets/fonts/comfortaa_regular-webfont.eot);
+  src: url(assets/fonts/comfortaa_regular-webfont.eot?iefix) format('eot'),
+       url(assets/fonts/comfortaa_regular-webfont.woff) format('woff'),
+       url(assets/fonts/comfortaa_regular-webfont.ttf) format('truetype'),
+       url(assets/fonts/comfortaa_regular-webfont..svg#webfont3JLVF59W) format('svg');
+}
+
+@font-face {
+  font-family:DsignesRegular;
+  src: url(assets/fonts/DsignesRegular.otf);
+}

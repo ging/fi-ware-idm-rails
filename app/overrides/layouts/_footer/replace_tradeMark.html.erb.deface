@@ -1,0 +1,4 @@
+<!-- replace_contents '#trade_mark' -->
+
+      <%= link_to t('site.name'), 'http://fi-ware.idm.com/' %>
+
