@@ -8,6 +8,7 @@ PATH
       bootstrap-sass (~> 2.2.2.0)
       cancan (~> 1.6.7)
       deep_merge
+      deface (~> 0.9.1)
       devise (~> 2.1.2)
       foreigner (~> 1.1.1)
       i18n-js (~> 2.1.2)
@@ -90,6 +91,9 @@ GEM
       execjs
     coffee-script-source (1.4.0)
     deep_merge (1.0.0)
+    deface (0.9.1)
+      nokogiri (~> 1.5.0)
+      rails (~> 3.1)
     devise (2.1.2)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -136,6 +140,7 @@ GEM
     modernizr-rails (2.0.6)
     multi_json (1.5.0)
     multipart-post (1.1.5)
+    nokogiri (1.5.6)
     oauth (0.4.7)
     oauth2 (0.8.0)
       faraday (~> 0.8)
