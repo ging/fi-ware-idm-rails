@@ -1,3 +1,0 @@
-<!-- replace_contents '.brand' -->
-
-<%= link_to t('site.name') %>
