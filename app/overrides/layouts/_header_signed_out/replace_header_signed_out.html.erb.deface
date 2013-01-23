@@ -1,0 +1,14 @@
+<!-- replace_contents '.brand' -->
+
+<%= link_to t('site.name') %>
+
+<h2>
+  Accounts
+  <h5>
+    Fi-ware has more to offer when you sign in to your Fi-ware Account.<br/>
+    Sign in on the left or 
+    <a href="#">
+      create an account.
+    </a>
+  </h5>
+</h2>
