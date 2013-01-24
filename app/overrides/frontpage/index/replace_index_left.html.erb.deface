@@ -2,7 +2,7 @@
 <div class="media">
   <a class="pull-left" href="#">
 
-    <img class="media-object" data-src="holder.js/64x64" alt="identify" style="width: 64px; height: 64px;" src="/assets/images/user-front.png">
+    <img class="media-object" data-src="holder.js/64x64" alt="identify" style="width: 64px; height: 64px;" src="/assets/user-front.png">
   </a>
   <div class="media-body">
     <h3 class="media-heading">
