@@ -262,10 +262,13 @@ ActiveRecord::Schema.define(:version => 20130117160107) do
   add_index "relations", ["ancestry"], :name => "index_relations_on_ancestry"
 
   create_table "sites", :force => true do |t|
+    t.integer  "actor_id"
     t.text     "config"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "sites", ["actor_id"], :name => "index_sites_on_actor_id"
 
   create_table "taggings", :force => true do |t|
     t.integer  "tag_id"

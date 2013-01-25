@@ -37,6 +37,12 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
+group :development do
+  gem 'forgery'
+end
+
+# gem 'omniauth-social_stream', path: '../omniauth-social_stream'
+
 social_stream_gems = lambda {
   gem 'social_stream-base'
   gem 'social_stream-oauth2_server'

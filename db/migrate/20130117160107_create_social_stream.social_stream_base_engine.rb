@@ -213,10 +213,13 @@ class CreateSocialStream < ActiveRecord::Migration
     add_index "relations", ["ancestry"], :name => "index_relations_on_ancestry"
 
     create_table :sites do |t|
+      t.integer :actor_id
       t.text :config
 
       t.timestamps
     end
+
+    add_index "sites", ["actor_id"], :name => "index_sites_on_actor_id"
 
     create_table "ties", :force => true do |t|
       t.integer  "contact_id"
@@ -290,6 +293,8 @@ class CreateSocialStream < ActiveRecord::Migration
     add_foreign_key "relation_permissions", "relations", :name => "relation_permissions_on_relation_id"
 
     add_foreign_key "relations", "actors", :name => "relations_on_actor_id"
+
+    add_foreign_key "sites", "actor_id", :name => "sites_on_actor_id"
 
     add_foreign_key "ties", "contacts", :name => "ties_on_contact_id"
     add_foreign_key "ties", "relations", :name => "ties_on_relation_id"
