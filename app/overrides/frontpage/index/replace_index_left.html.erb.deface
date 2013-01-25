@@ -1,43 +1,56 @@
 <!-- replace_contents '.left' -->
-<div class="media">
-  <a class="pull-left" href="#">
+<section>
+  <article class="media">
+    <a class="pull-left" href="#">
+      <img class="media-object" data-src="holder.js/64x64" alt="identify" style="width: 64px; height: 64px;" src="/assets/images/user-front.png">
+    </a>
+    <div class="media-body">
+      <h3 class="media-heading">
+        Identity
+      </h3>
+      The platform contains lots of users and organizations working together to achieve these great infrastructure network.
+     </div>
+  </article>
 
-    <img class="media-object" data-src="holder.js/64x64" alt="identify" style="width: 64px; height: 64px;" src="/assets/images/user-front.png">
-  </a>
-  <div class="media-body">
-    <h3 class="media-heading">
-      Identity
-    </h3>
-    The platform contains lots of users and organizations working together to achieve these great infrastructure network.
-   </div>
-</div>
+  <article class="media">
+    <a class="pull-left" href="#">
+      <img class="media-object" data-src="holder.js/64x64" alt="cloud" style="width: 64px; height: 64px;" src="/assets/cloud-front.png">
+    </a>
+    <div class="media-body">
+      <h3 class="media-heading">
+        Cloud
+      </h3>
+      Cloud hosting in FI-WARE will handle the efficient and effective provision of the computation, storage and network resources, upon which services are provisioned and managed.
+     </div>
+  </article>
 
-<div class="media">
-  <a class="pull-left" href="#">
+  <article class="media">
+    <a class="pull-left" href="#">
+      <img class="media-object" data-src="holder.js/64x64" alt="market" style="width: 64px; height: 64px;" src="/assets/market-front.png">
+    </a>
+    <div class="media-body">
+      <h3 class="media-heading">
+        Market
+      </h3>
+      fi-ware Apps is a marketplace designed to provide a variety of applications specially developed for use in the Future Internet .
+     </div>
+  </article>
 
-    <img class="media-object" data-src="holder.js/64x64" alt="cloud" style="width: 64px; height: 64px;" src="/assets/cloud-front.png">
-  </a>
-  <div class="media-body">
-    <h3 class="media-heading">
-      Cloud
-    </h3>
-    Cloud hosting in FI-WARE will handle the efficient and effective provision of the computation, storage and network resources, upon which services are provisioned and managed.
-   </div>
-</div>
-<!-- replace_contents '.left' -->
+  <nav class="btn view-more pull-right">
+    view more
+  </nav>
+</section>
 
-<div class="media">
-  <a class="pull-left" href="#">
-
-    <img class="media-object" data-src="holder.js/64x64" alt="market" style="width: 64px; height: 64px;" src="/assets/market-front.png">
-  </a>
-  <div class="media-body">
-    <h3 class="media-heading">
-      Market
-    </h3>
-    fi-ware Apps is a marketplace designed to provide a variety of applications specially developed for use in the Future Internet .
-   </div>
-</div>
+<section>
+<header>
+  Nombre del generic...
+</header>
+<article>
+  Descripción de generic...
+</article>
+</section>
 
 
-<div class="view-more pull-right">view more</div>
+
+
+
