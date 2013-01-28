@@ -2,11 +2,7 @@
 
 @font-face {
   font-family: Comfortaa;
-  src: url(fonts/comfortaa_regular-webfont.eot);
-  src: url(fonts/comfortaa_regular-webfont.eot?iefix) format('eot'),
-       url(fonts/comfortaa_regular-webfont.woff) format('woff'),
-       url(fonts/comfortaa_regular-webfont.ttf) format('truetype'),
-       url(fonts/comfortaa_regular-webfont..svg#webfont3JLVF59W) format('svg');
+  src: url(fonts/comfortaa_regular-webfont.ttf) format('truetype');
 }
 
 @font-face {
