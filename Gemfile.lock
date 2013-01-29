@@ -1,5 +1,6 @@
-PATH
-  remote: ../social_stream
+GIT
+  remote: git://github.com/ging/social_stream.git
+  revision: ffdab2296198d08335c862f4110656d824bb7666
   specs:
     social_stream-base (1.0.0)
       acts-as-taggable-on (~> 2.2.2)
@@ -19,7 +20,7 @@ PATH
       modernizr-rails (~> 2.0.6)
       omniauth-facebook (~> 1.4.1)
       omniauth-linkedin (~> 0.0.6)
-      omniauth-social_stream
+      omniauth-socialstream
       rails (>= 3.1.0)
       rails_autolink (~> 1.0.4)
       rails_engine_decorators
@@ -94,7 +95,7 @@ GEM
     deface (0.9.1)
       nokogiri (~> 1.5.0)
       rails (~> 3.1)
-    devise (2.2.2)
+    devise (2.2.3)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (~> 3.1)
@@ -162,7 +163,7 @@ GEM
     omniauth-oauth2 (1.1.1)
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
-    omniauth-social_stream (0.0.2)
+    omniauth-socialstream (0.1.0)
       omniauth-oauth2 (~> 1.1.1)
     orm_adapter (0.4.0)
     paperclip (3.4.0)
@@ -227,9 +228,9 @@ GEM
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
-    sinatra (1.3.3)
-      rack (~> 1.3, >= 1.3.6)
-      rack-protection (~> 1.2)
+    sinatra (1.3.4)
+      rack (~> 1.4)
+      rack-protection (~> 1.3)
       tilt (~> 1.3, >= 1.3.3)
     social_cheesecake (0.5.0)
       railties (>= 3.1.3)
