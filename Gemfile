@@ -34,11 +34,9 @@ gem 'jquery-rails'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# To use debugger
-# gem 'debugger'
-
 group :development do
   gem 'forgery'
+  gem 'debugger'
 end
 
 # gem 'omniauth-social_stream', path: '../omniauth-social_stream'
