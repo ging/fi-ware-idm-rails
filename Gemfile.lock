@@ -1,6 +1,5 @@
-GIT
-  remote: git://github.com/ging/social_stream.git
-  revision: ffdab2296198d08335c862f4110656d824bb7666
+PATH
+  remote: ../social_stream
   specs:
     social_stream-base (1.0.0)
       acts-as-taggable-on (~> 2.2.2)
