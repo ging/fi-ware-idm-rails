@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130117160107) do
+ActiveRecord::Schema.define(:version => 20130129165508) do
 
   create_table "activities", :force => true do |t|
     t.integer  "activity_verb_id"
@@ -183,6 +183,23 @@ ActiveRecord::Schema.define(:version => 20130117160107) do
   end
 
   add_index "notifications", ["conversation_id"], :name => "index_notifications_on_conversation_id"
+
+  create_table "oauth2_tokens", :force => true do |t|
+    t.string   "type"
+    t.integer  "user_id"
+    t.integer  "site_id"
+    t.string   "token"
+    t.string   "redirect_uri"
+    t.integer  "refresh_token_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.datetime "expires_at"
+  end
+
+  add_index "oauth2_tokens", ["refresh_token_id"], :name => "index_oauth2_tokens_on_refresh_token_id"
+  add_index "oauth2_tokens", ["site_id"], :name => "index_oauth2_tokens_on_site_id"
+  add_index "oauth2_tokens", ["token"], :name => "index_oauth2_tokens_on_token"
+  add_index "oauth2_tokens", ["user_id"], :name => "index_oauth2_tokens_on_user_id"
 
   create_table "permissions", :force => true do |t|
     t.string   "action"
