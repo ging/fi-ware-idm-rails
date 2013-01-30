@@ -5,7 +5,7 @@ header
     a
       display: inline
       img
-        margin-top: 31px
+        margin-top: 18px
         vertical-align: top
     .brand
       display: inline-block
@@ -13,28 +13,52 @@ header
       margin-top: 46px
       a
         display: block
-      h3
+        color: #8C8C8C
+        &:hover
+          color: #8C8C8C
+          text-decoration: none
+
+      h2
         display: block
         font-family: $corporationFontFamily
-        color: $gray
+        color: $blue
+        margin: 12px 0px -2px 4px
       h5
+        color: #8C8C8C
+        margin: 0px 0px 0px 6px
         a
           display: inline
+          color: $blue
+          &:hover
+            color: $blue
 
 .left
+  margin-top: 60px !important
+  .media-body
+    color: #666
   .view-more
-
+    margin-top: 10px
+    a
+      color: $blue
+      text-decoration: none
+      .icon_tool16-more
+        margin-right: 6px
 .right
-  .div_login
+  .div_login,
+  .div_registration,
+  .div_password
     @include box-shadow(0px 0px 13px rgba(50, 50, 50, 0.15))
     @include border-radius(15px)
     padding: 15px
-    margin-top: 40px
+    margin-top: 50px
     h3
-      float: right
+      text-align: right
       font-size: 35px
       line-height: 24px
     .input_username
       width: 96%
-#headerFront
-  clear: both
+    .btn
+      margin-bottom: 20px !important
+      margin-right: 0px !important
+    .soften
+      clear: both

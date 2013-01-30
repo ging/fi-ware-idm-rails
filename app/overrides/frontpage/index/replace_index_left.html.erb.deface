@@ -36,8 +36,10 @@
      </div>
   </article>
 
-  <nav class="btn view-more pull-right">
-    view more
+  <nav class="view-more pull-right">
+    <a href="#">
+      <i class='icon_tool16-more'></i>view more
+    </a>
   </nav>
 </section>
 
