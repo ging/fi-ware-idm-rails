@@ -1,0 +1,5 @@
+<!-- replace '#content' -->
+
+<section id="content">
+        <%= yield %>
+      </section>
