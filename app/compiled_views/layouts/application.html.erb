@@ -17,8 +17,8 @@
       })
     </script>
 </head>
-<body><body>
-
+<body>
+  <body>
     <div id="wrapper" class="container">
       <%= render :partial => "layouts/header" %>
       
@@ -30,12 +30,13 @@
         <%= render :partial => "layouts/flash", :locals => {:flash => flash} %>
       </div>
 
-      <section id="content" class="<%= content_section_class %>"><%= yield %>
+      <section id="content" class="<%= content_section_class %>">
+        <%= yield %>
       </section>
-</div>
+    </div>
     
-
-    <footer class="footer"><%= render :partial => "layouts/footer" %>
+    <footer class="footer">
+      <%= render :partial => "layouts/footer" %>
     </footer>
-</body></body>
+  </body>
 </html>

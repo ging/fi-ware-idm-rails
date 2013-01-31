@@ -1,0 +1,27 @@
+<!-- replace_contents 'footer' -->
+
+<div class"footer">
+  <div class="container">
+    <div class="f1">
+      <ul>
+        <li>
+          <%= Date.today.year %> © 
+        </li>
+        <li id="trade_mark">
+          <%= link_to t('site.name'), 'http://fi-ware.idm.com/' %>
+        </li>
+      </ul>
+    </div>
+    <div class="f2">
+      • 
+      <a href="#">
+        Terms of service 
+      </a>  
+      • 
+      <a href="#">
+        help 
+      </a>
+      • languaje 
+    </div>
+  </div>
+</div>

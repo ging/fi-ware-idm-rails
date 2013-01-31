@@ -1,32 +1,49 @@
-<section id="frontpage"><article class="left">
-<section><article class="media"><a class="pull-left" href="#">
-      <img class="media-object" data-src="holder.js/64x64" alt="identify" style="width: 64px; height: 64px;" src="/assets/user-front.png"></a>
-    <div class="media-body">
-      <h3 class="media-heading">
-        Identity
-      </h3>
-      The platform contains lots of users and organizations working together to achieve these great infrastructure network.
-     </div>
-  </article><article class="media"><a class="pull-left" href="#">
-      <img class="media-object" data-src="holder.js/64x64" alt="cloud" style="width: 64px; height: 64px;" src="/assets/cloud-front.png"></a>
-    <div class="media-body">
-      <h3 class="media-heading">
-        Cloud
-      </h3>
-      Cloud hosting in FI-WARE will handle the efficient and effective provision of the computation, storage and network resources, upon which services are provisioned and managed.
-     </div>
-  </article><article class="media"><a class="pull-left" href="#">
-      <img class="media-object" data-src="holder.js/64x64" alt="market" style="width: 64px; height: 64px;" src="/assets/market-front.png"></a>
-    <div class="media-body">
-      <h3 class="media-heading">
-        Market
-      </h3>
-      fi-ware Apps is a marketplace designed to provide a variety of applications specially developed for use in the Future Internet .
-     </div>
-  </article><nav class="view-more pull-right"><a href="#">
-      <i class="icon_tool16-more"></i>view more
-    </a>
-  </nav></section></article><article class="right"><div class="div_login">
+<section id="frontpage">
+  <article class="left">
+    <section>
+      <article class="media">
+        <a class="pull-left" href="#">
+          <img class="media-object" data-src="holder.js/64x64" alt="identify" style="width: 64px; height: 64px;" src="/assets/user-front.png">
+        </a>
+        <div class="media-body">
+          <h3 class="media-heading">
+            Identity
+          </h3>
+          The platform contains lots of users and organizations working together to achieve these great infrastructure network.
+        </div>
+      </article>
+      <article class="media">
+        <a class="pull-left" href="#">
+          <img class="media-object" data-src="holder.js/64x64" alt="cloud" style="width: 64px; height: 64px;" src="/assets/cloud-front.png">
+        </a>
+        <div class="media-body">
+          <h3 class="media-heading">
+            Cloud
+          </h3>
+          Cloud hosting in FI-WARE will handle the efficient and effective provision of the computation, storage and network resources, upon which services are provisioned and managed.
+        </div>
+      </article>
+      <article class="media">
+        <a class="pull-left" href="#">
+          <img class="media-object" data-src="holder.js/64x64" alt="market" style="width: 64px; height: 64px;" src="/assets/market-front.png">
+        </a>
+        <div class="media-body">
+          <h3 class="media-heading">
+            Market
+          </h3>
+          fi-ware Apps is a marketplace designed to provide a variety of applications specially developed for use in the Future Internet .
+        </div>
+      </article>
+      <nav class="view-more pull-right">
+        <a href="#">
+          <i class="icon_tool16-more"></i>
+          view more
+        </a>
+      </nav>
+    </section>
+  </article>
+  <article class="right">
+    <div class="div_login">
       <h3 data-i18n="Log In">
         Log In
       </h3>
@@ -42,8 +59,9 @@
         <%= f.password_field :password, :class => "input_username" %>
             
         <%= f.submit t(:sign_in), :class => 'btn pull-right'%>
+        
         <hr class="soften">
-<div class="options">
+        <div class="options">
           <%= link_to t('sign_up'), new_user_registration_path, :class => "register_link" %>
           |
           <%= link_to t('forgot_password'), new_user_password_path, :class => "register_link" %>
@@ -53,5 +71,6 @@
       </div>
       <% end %>
       <br class="clearfloat">
-</div>
-  </article></section>
+    </div>
+  </article>
+</section>
