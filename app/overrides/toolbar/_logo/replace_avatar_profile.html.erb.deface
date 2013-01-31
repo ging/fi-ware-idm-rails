@@ -1,0 +1,38 @@
+<!-- replace_contents '#avatar_profile' -->
+<nav class="nav menu-toolbar">
+  <ul class="main_nav">
+    <li>
+      <i class='icon_tool16-more'></i>
+      <a href="#">
+        Acounts
+    </li>
+    <li>
+      <i class='icon_tool16-more'></i>
+      <a href="#">
+        Organizations
+      </a>
+      </li>
+    <li>
+      <i class='icon_tool16-more'></i>
+      <a href="#">
+        Resources
+      </a>
+    </li>
+    <li>
+      <i class='icon_tool16-more'></i>
+      <a href="#">
+        Clients
+      </a>
+    </li>
+    <li>
+      <i class='icon_tool16-more'></i>
+      <a href="#">
+        Settings
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+
+
