@@ -1,0 +1,23 @@
+<!-- replace_contents 'body' -->
+<body>
+    <div class="wrapper container">
+      <header id="header">
+        <%= render :partial => "layouts/header" %>
+      </header>
+      <section>
+        <div id="wrapper_body">
+          <div id="flash">
+            <%= render :partial => "layouts/flash", :locals => {:flash => flash} %>
+          </div>
+          <%= yield %>
+        </div>
+      </section>
+      <br class="clearfloat" />
+      
+      <div class="push">
+      </div>
+    </div>
+    <footer class="footerFront">
+        <%= render :partial => "layouts/footer" %>
+      </footer>
+  </body>
