@@ -34,34 +34,36 @@ header
 
 #frontpage
   clear: both
-  .left
-    margin-top: 60px !important
-    .media-body
-      color: #666
-    .view-more
-      margin-top: 10px
-      a
-        color: $blue
-        text-decoration: none
-        .icon_tool16-more
-          margin-right: 6px
-  .right
-    .div_login,
-    .div_registration,
-    .div_password
-      @include makeColumn(4, 0)
-      @include box-shadow(0px 0px 13px rgba(50, 50, 50, 0.15))
-      @include border-radius(15px)
-      padding: 15px
-      margin-top: 50px
-      h3
-        text-align: right
-        font-size: 35px
-        line-height: 24px
-      .input_username
-        width: 96%
-      .btn
-        margin-bottom: 20px !important
-        margin-right: 0px !important
-      .soften
-        clear: both
+.left
+  margin-top: 60px !important
+  .media-body
+    color: #666
+  .view-more
+    margin-top: 10px
+    a
+      color: $blue
+      text-decoration: none
+      .icon_tool16-more
+        margin-right: 6px
+.right
+  .div_login,
+  .div_registration,
+  .div_password
+    @include makeColumn(4, 0)
+    @include box-shadow(0px 0px 13px rgba(50, 50, 50, 0.15))
+    @include border-radius(15px)
+    padding: 15px
+    margin-top: 50px
+    h3
+      text-align: right
+      font-size: 35px
+      line-height: 24px
+    .input_username
+      width: 96%
+    .btn
+      margin-bottom: 20px !important
+      margin-right: 0px !important
+    .soften
+      clear: both
+  .div_registration
+    margin-top: 30px

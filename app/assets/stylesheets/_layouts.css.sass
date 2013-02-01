@@ -2,13 +2,14 @@
   @include makeColumn(3, 0)
 
 #content
-  @include makeColumn (8, 0)
   h1
     @include clearfix
     font-family: $corporationFontFamily
     color: $blue
     margin-right: 13px
     text-align: right
+.content-large
+  width: 680px !important
 .dropdown
   .dropdown-menu
     .dropdown-submenu
@@ -35,8 +36,3 @@
 #flash
   @include makeColumn (5, 0)
   margin: 20px 0 0 0
-#content
-  @include box-shadow(0px 0px 13px rgba(50, 50, 50, 0.15))
-  @include border-radius(15px)
-  padding: 15px
-  margin-top: 50px
