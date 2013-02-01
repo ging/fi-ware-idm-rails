@@ -8,7 +8,5 @@
 <h5>
   Fi-ware has more to offer when you sign in to your Fi-ware Account.<br/>
   Sign in on the left or 
-  <a href="#">
-    create an account.
-  </a>
+  <%= link_to t(' create an account'), new_user_registration_path, :class => "register_link" %>
 </h5>
