@@ -2,10 +2,41 @@
   @include makeColumn(3, 0)
 
 #content
-  @include makeColumn (7, 0)
+  @include makeColumn (8, 0)
   h1
     @include clearfix
     font-family: $corporationFontFamily
     color: $blue
-    float: right
     margin-right: 13px
+    text-align: right
+.dropdown
+  .dropdown-menu
+    .dropdown-submenu
+      a 
+        &:hover,
+        &:focus,
+        &:active
+          color: $white
+          background-color: $blue
+          background-image: none
+      .active
+        a,
+        &:focus
+          background-color: $blue
+      li
+        a 
+          &:hover,
+          &:focus,
+          &:active
+            color: white
+            background-color: $blue
+            background-image: none
+
+#flash
+  @include makeColumn (5, 0)
+  margin: 20px 0 0 0
+#content
+  @include box-shadow(0px 0px 13px rgba(50, 50, 50, 0.15))
+  @include border-radius(15px)
+  padding: 15px
+  margin-top: 50px

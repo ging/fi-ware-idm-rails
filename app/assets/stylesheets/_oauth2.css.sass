@@ -2,13 +2,20 @@
   h1
     float: none !important
     text-align: right
-  .url,
-  .callback,
-  .id-client,
-  .client-secret
-    margin-bottom: 8px
-    .result
-      @include border-radius(3px)
-      color: $grayLighter
-      background-color: $white
-      padding: 8px 5px 5px 8px
+  .media-object
+    margin: 12px 10px 10px 10px
+    @include size (100px, 100px)
+  .media
+    padding-left: 20px
+    .media-body
+      .url,
+      .callback,
+      .id-client,
+      .client-secret
+        margin-bottom: 8px
+        width: 300px
+        .result
+          @include border-radius(3px)
+          color: $grayLighter
+          background-color: $white
+          padding: 8px 5px 5px 8px
