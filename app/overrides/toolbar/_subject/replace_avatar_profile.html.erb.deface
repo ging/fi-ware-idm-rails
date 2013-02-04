@@ -1,0 +1,48 @@
+<!-- replace_contents '.logo_home' -->
+<nav class="nav menu-toolbar">
+  <ul class="main_nav">
+    <li>
+      <i class='icon_tool16-more'></i>
+      <a href="#">
+       <h2>
+        Acounts
+       </h2>
+    </li>
+    <li>
+      <i class='icon_tool16-more'></i>
+      <a href="#">
+        <h2>
+          Organizations
+        </h2>
+      </a>
+      </li>
+    <li>
+      <i class='icon_tool16-more'></i>
+      <a href="#">
+        <h2>
+          Resources
+        </h2>
+      </a>
+    </li>
+    <li>
+      <i class='icon_tool16-more'></i>
+      <a href="#">
+        <h2>
+          Clients
+        </h2>
+      </a>
+    </li>
+    <li>
+      <i class='icon_tool16-more'></i>
+      <a href="#">
+        <h2>
+          Settings
+        </h2>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+
+

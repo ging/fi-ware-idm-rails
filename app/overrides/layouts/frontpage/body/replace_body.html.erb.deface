@@ -9,9 +9,6 @@
           <div id="flash">
             <%= render :partial => "layouts/flash", :locals => {:flash => flash} %>
           </div>
-          <div class="description">
-            <%= render :partial => "layouts/definition" %>
-          </div>
           <%= yield %>
         </div>
       </section>
