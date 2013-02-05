@@ -19,7 +19,7 @@ PATH
       modernizr-rails (~> 2.0.6)
       omniauth-facebook (~> 1.4.1)
       omniauth-linkedin (~> 0.0.6)
-      omniauth-socialstream
+      omniauth-socialstream (~> 0.1.2)
       rails (>= 3.1.0)
       rails_autolink (~> 1.0.4)
       rails_engine_decorators
@@ -170,7 +170,7 @@ GEM
     omniauth-oauth2 (1.1.1)
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
-    omniauth-socialstream (0.1.0)
+    omniauth-socialstream (0.1.2)
       omniauth-oauth2 (~> 1.1.1)
     orm_adapter (0.4.0)
     paperclip (3.4.0)
