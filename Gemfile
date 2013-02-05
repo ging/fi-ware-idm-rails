@@ -41,13 +41,8 @@ end
 
 # gem 'omniauth-social_stream', path: '../omniauth-social_stream'
 
-social_stream_gems = lambda {
+git 'git://github.com/ging/social_stream.git', branch: 'master' do
   gem 'social_stream-base'
   gem 'social_stream-oauth2_server'
-}
-
-if File.exist?('../social_stream')
-  path '../social_stream', &social_stream_gems
-else
-  git 'git://github.com/ging/social_stream.git', &social_stream_gems
 end
+
