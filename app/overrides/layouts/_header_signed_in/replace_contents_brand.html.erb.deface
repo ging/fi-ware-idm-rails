@@ -1,7 +1,7 @@
 <!-- replace_contents '.brand' -->
-
+<div class="home">
   <%= link_to t('site.name') %>
-
+</div>
 <h2>
-  Accounts
+  Dashboard
 </h2>

@@ -2,14 +2,14 @@
 <nav class="nav menu-toolbar">
   <ul class="main_nav">
     <li>
-      <i class='icon_tool16-more'></i>
+      <i class='icon_menu-20-home'></i>
       <a href="#">
        <h2>
         Acounts
        </h2>
     </li>
     <li>
-      <i class='icon_tool16-more'></i>
+      <%= link_to(raw"<i class='icon_menu-20-organizations'></i> " ) %>
       <a href="#">
         <h2>
           Organizations
@@ -17,7 +17,7 @@
       </a>
       </li>
     <li>
-      <i class='icon_tool16-more'></i>
+      <i class='icon_menu-20-resources'></i>
       <a href="#">
         <h2>
           Resources
@@ -25,7 +25,7 @@
       </a>
     </li>
     <li>
-      <i class='icon_tool16-more'></i>
+      <i class='icon_menu-20-clients'></i>
       <a href="#">
         <h2>
           Clients
@@ -33,7 +33,7 @@
       </a>
     </li>
     <li>
-      <i class='icon_tool16-more'></i>
+      <i class='icon_menu-20-settings'></i>
       <a href="#">
         <h2>
           Settings

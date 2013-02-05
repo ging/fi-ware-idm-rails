@@ -11,13 +11,11 @@
   .media
     padding-left: 20px
     .media-body
-      .url,
-      .callback,
-      .id-client,
-      .client-secret
+      label
         margin-bottom: 8px
         width: 300px
-        .result
+      input
+        &[type="text"]
           @include border-radius(3px)
           color: $grayLighter
           background-color: $white
@@ -26,9 +24,51 @@
 
 #new_site_client
   padding-right: 75px
+  h1
+    float: none !important
+    text-align: right
+  .media-object
+    margin: 12px 10px 10px 10px
+    @include size (100px, 100px)
+  .media
+    padding-left: 20px
+    .media-body
+      label
+        margin-bottom: 8px
+        width: 300px
+      input
+        &[type="text"]
+          @include border-radius(3px)
+          color: $grayLighter
+          background-color: $white
+          padding: 8px 5px 5px 8px
   .pull-left
     margin-right: 48px
     margin-left: 30px
-  input
-    &[type="submit"]
-      @extend .btn-blue
+  
+
+input
+  &[type="submit"]
+    @extend .btn-blue
+
+
+#new_site_client
+  h1
+    float: none !important
+    text-align: right
+  .media-object
+    margin: 12px 10px 10px 10px
+    @include size (100px, 100px)
+  .media
+    padding-left: 20px
+    .media-body
+      label
+        margin-bottom: 8px
+        width: 300px
+      input
+        &[type="text"]
+          @include border-radius(3px)
+          color: $grayLighter
+          background-color: $white
+          padding: 8px 5px 5px 8px
+
