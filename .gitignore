@@ -16,3 +16,7 @@
 
 /public/system/tmp
 /app/compiled_views
+
+**/*swp
+
+config/deploy.rb
