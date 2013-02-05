@@ -60,6 +60,9 @@ ActiveRecord::Schema.define(:version => 20130129165508) do
     t.datetime "updated_at",         :null => false
   end
 
+  add_index "activity_object_audiences", ["activity_object_id"], :name => "activity_object_audiences_on_activity_object_id"
+  add_index "activity_object_audiences", ["relation_id"], :name => "activity_object_audiences_on_relation_id"
+
   create_table "activity_object_properties", :force => true do |t|
     t.integer "activity_object_id"
     t.integer "property_id"
@@ -334,5 +337,61 @@ ActiveRecord::Schema.define(:version => 20130129165508) do
 
   add_index "users", ["actor_id"], :name => "index_users_on_actor_id"
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+
+  add_foreign_key "activities", "activity_verbs", :name => "index_activities_on_activity_verb_id"
+  add_foreign_key "activities", "actors", :name => "index_activities_on_author_id", :column => "author_id"
+  add_foreign_key "activities", "actors", :name => "index_activities_on_owner_id", :column => "owner_id"
+  add_foreign_key "activities", "actors", :name => "index_activities_on_user_author_id", :column => "user_author_id"
+
+  add_foreign_key "activity_actions", "activity_objects", :name => "index_activity_actions_on_activity_object_id"
+  add_foreign_key "activity_actions", "actors", :name => "index_activity_actions_on_actor_id"
+
+  add_foreign_key "activity_object_activities", "activities", :name => "index_activity_object_activities_on_activity_id"
+  add_foreign_key "activity_object_activities", "activity_objects", :name => "activity_object_activities_on_activity_object_id"
+
+  add_foreign_key "activity_object_audiences", "activity_objects", :name => "activity_object_audiences_on_activity_object_id"
+  add_foreign_key "activity_object_audiences", "relations", :name => "activity_object_audiences_on_relation_id"
+
+  add_foreign_key "activity_object_properties", "activity_objects", :name => "index_activity_object_properties_on_activity_object_id"
+  add_foreign_key "activity_object_properties", "activity_objects", :name => "index_activity_object_properties_on_property_id", :column => "property_id"
+
+  add_foreign_key "actors", "activity_objects", :name => "actors_on_activity_object_id"
+
+  add_foreign_key "audiences", "activities", :name => "audiences_on_activity_id"
+  add_foreign_key "audiences", "relations", :name => "audiences_on_relation_id"
+
+  add_foreign_key "authentications", "users", :name => "authentications_on_user_id"
+
+  add_foreign_key "avatars", "actors", :name => "avatars_on_actor_id"
+
+  add_foreign_key "comments", "activity_objects", :name => "comments_on_activity_object_id"
+
+  add_foreign_key "contacts", "actors", :name => "contacts_on_receiver_id", :column => "receiver_id"
+  add_foreign_key "contacts", "actors", :name => "contacts_on_sender_id", :column => "sender_id"
+
+  add_foreign_key "groups", "actors", :name => "groups_on_actor_id"
+
+  add_foreign_key "notifications", "conversations", :name => "notifications_on_conversation_id"
+
+  add_foreign_key "oauth2_tokens", "sites", :name => "index_oauth2_tokens_on_site_id"
+  add_foreign_key "oauth2_tokens", "users", :name => "index_oauth2_tokens_on_user_id"
+
+  add_foreign_key "posts", "activity_objects", :name => "posts_on_activity_object_id"
+
+  add_foreign_key "profiles", "actors", :name => "profiles_on_actor_id"
+
+  add_foreign_key "receipts", "notifications", :name => "receipts_on_notification_id"
+
+  add_foreign_key "relation_permissions", "permissions", :name => "relation_permissions_on_permission_id"
+  add_foreign_key "relation_permissions", "relations", :name => "relation_permissions_on_relation_id"
+
+  add_foreign_key "relations", "actors", :name => "relations_on_actor_id"
+
+  add_foreign_key "sites", "actors", :name => "sites_on_actor_id"
+
+  add_foreign_key "ties", "contacts", :name => "ties_on_contact_id"
+  add_foreign_key "ties", "relations", :name => "ties_on_relation_id"
+
+  add_foreign_key "users", "actors", :name => "users_on_actor_id"
 
 end

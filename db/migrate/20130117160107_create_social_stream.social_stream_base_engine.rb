@@ -294,7 +294,7 @@ class CreateSocialStream < ActiveRecord::Migration
 
     add_foreign_key "relations", "actors", :name => "relations_on_actor_id"
 
-    add_foreign_key "sites", "actor_id", :name => "sites_on_actor_id"
+    add_foreign_key "sites", "actors", :name => "sites_on_actor_id"
 
     add_foreign_key "ties", "contacts", :name => "ties_on_contact_id"
     add_foreign_key "ties", "relations", :name => "ties_on_relation_id"
