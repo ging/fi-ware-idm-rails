@@ -1,5 +1,5 @@
 #new_site_client
-  width: 500px
+  width: 570px
   margin-left: auto
   margin-right: auto
   h1
@@ -20,8 +20,40 @@
           color: $grayLighter
           background-color: $white
           padding: 8px 5px 5px 8px
-
-
+.first-img
+  h1
+    text-align: right
+    @include clearfix
+  header
+    font-size: 21px
+    color: $gray
+    a
+      font-size: 14px
+      float: right
+    .soften
+      margin: 9px 0 10px 0
+      @include opacity (100)
+  img
+    display: inline
+    background: $blue
+    @include size (40px, 40px)
+  .name,
+  .url,
+  .users
+    display: inline-block
+    color: $gray
+  .name,
+  .url
+    margin-left: 20px
+  .users
+    float: right
+    margin-top: 7px
+    span
+      color: $blue
+  .soften
+    margin: 10px 0
+    @include opacity (70)
+      
 #oauth2_server
   padding-right: 75px
   h1
