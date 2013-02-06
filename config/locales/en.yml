@@ -2,5 +2,11 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  toolbar:
+    accounts: "Accounts"
+    applications: "Applications"
+    organizations: "Organizations"
+    resources: "Resources"
+    settings: "Settings"
   site:
     name: "FI-WARE Identity Manager"
