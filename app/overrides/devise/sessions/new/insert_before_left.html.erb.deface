@@ -2,10 +2,13 @@
 
 
 <article class="left">
-  <h1>
-    Application name
-  </h1>
+<div class="pull-left">
+  <img data-src="holder.js/50x50" alt="identify" style="width: 60px; height: 60px;" src="/assets/vish.png">
+</div>
+  <h2>
+    Vish Hub
+  </h2>
   <div class="description">
-    Social Stream is a core to build websites with social networking features
+    It contains a selection of e Infrastructures, a collaborative content repository where scientists and teachers will be able to exchange and establish collaborations,
   </div>
 </article>

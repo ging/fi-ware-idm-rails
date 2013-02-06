@@ -28,7 +28,7 @@
       <i class='icon_menu-20-clients'></i>
       <a href="#">
         <h2>
-          Clients
+          <%= link_to t('Applications'), 'clients' %>
         </h2>
       </a>
     </li>
