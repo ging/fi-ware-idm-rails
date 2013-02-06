@@ -1,0 +1,11 @@
+<!-- insert_before '.right' -->
+
+
+<article class="left">
+  <h1>
+    Application name
+  </h1>
+  <div class="description">
+    Social Stream is a core to build websites with social networking features
+  </div>
+</article>
