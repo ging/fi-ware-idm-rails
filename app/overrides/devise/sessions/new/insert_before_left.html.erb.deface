@@ -1,14 +1,13 @@
 <!-- insert_before '.right' -->
 
-
-<article class="left">
-<div class="pull-left">
-  <img data-src="holder.js/50x50" alt="identify" style="width: 60px; height: 60px;" src="/assets/vish.png">
-</div>
-  <h2>
-    Vish Hub
-  </h2>
-  <div class="description">
-    It contains a selection of e Infrastructures, a collaborative content repository where scientists and teachers will be able to exchange and establish collaborations,
+<article class="media">
+  <a class="pull-left" href="#">
+    <img alt="application-logo" style="width: 60px; height: 60px;" src="/assets/vish.png">
+  </a>
+  <div class="media-body">
+    <h2 class="media-heading">
+      Vish Hub
+    </h2>
+    It contains a selection of e Infrastructures, a collaborative content repository where scientists and teachers will be able to exchange and establish collaborations
   </div>
 </article>

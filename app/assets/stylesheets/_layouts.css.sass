@@ -7,20 +7,21 @@
     text-align: right
 
 #welcome
-  .left
+  .media
     @include makeColumn(6, 1)
     margin-top: 57px !important
     margin-left: 60px
+    font-size: 16px
     .pull-left
       height: 120px
-      margin: 16px 8px 0 0
+      margin: 7px 8px 0 0
+      img
+        @include size (70px, 70px)
     h2
       text-align: left
       color: $blue
-      font-family: $corporationFontFamily
-    .description
-      font-size: 16px
-
+      font-size: 23px
+      margin-bottom: 0
 
 .content-large,
 .content-short,
