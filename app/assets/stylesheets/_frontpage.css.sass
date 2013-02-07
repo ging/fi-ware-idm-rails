@@ -34,8 +34,12 @@ header
 
 #frontpage
   clear: both
+
+
 #presentation
   margin-top: 57px !important
+  @include makeColumn(6, 0)
+
   .media-body
     color: #666
     h3
@@ -47,12 +51,32 @@ header
       text-decoration: none
       .icon_tool16-more
         margin-right: 6px
-#sig-in,
+#sign_in
+  @include makeColumn(4, 1)
+  @include box-shadow(0px 0px 13px rgba(50, 50, 50, 0.15))
+  @include border-radius(15px)
+  padding: 15px
+  margin-top: 50px
+  color: #8c8c8c
+  h3
+    text-align: right
+    font-size: 35px
+    line-height: 24px
+    margin-bottom: 20px
+    margin-top: 5px
+  .btn
+    margin-bottom: 20px !important
+    margin-right: 0px !important
+    float: right
+  .soften
+    clear: both
+
+#sign_in,
 .right
   .div_login,
   .div_registration,
   .div_password,
-  .div_sig-in
+  .div_sign_in
     @include makeColumn(4, 0)
     @include box-shadow(0px 0px 13px rgba(50, 50, 50, 0.15))
     @include border-radius(15px)
@@ -63,6 +87,8 @@ header
       text-align: right
       font-size: 35px
       line-height: 24px
+      margin-bottom: 20px
+      margin-top: 5px
     .input_username
       width: 96%
     .btn
