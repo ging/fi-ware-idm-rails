@@ -13,4 +13,6 @@ en:
     resources: "Resources"
     settings: "Settings"
   site:
+    client:
+      add: "Add new application"
     name: "FI-WARE Identity Manager"

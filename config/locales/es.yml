@@ -13,6 +13,8 @@ es:
     resources: "Recursos"
     settings: "Ajustes"
   site:
+    client:
+      add: "Añadir nueva aplicación"
     name: "Fi-ware"
 
 
