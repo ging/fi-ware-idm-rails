@@ -2,6 +2,12 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 es:
+  toolbar:
+    accounts: "Cuentas"
+    applications: "Aplicaciones"
+    organizations: "Organizaciones"
+    resources: "Recursos"
+    settings: "Ajustes"
   site:
     name: "Fi-ware"
 

@@ -2,43 +2,34 @@
 <nav class="nav menu-toolbar">
   <ul class="main_nav">
     <li>
-      <i class='icon_menu-20-home'></i>
-      <a href="#">
-       <h2>
-        Acounts
-       </h2>
+      <%= link_to '#' do %>
+        <i class='icon_menu-20-home'></i>
+        <h2><%= t('toolbar.accounts') %></h2>
+      <% end %>
     </li>
     <li>
-      <%= link_to(raw"<i class='icon_menu-20-organizations'></i> " ) %>
-      <a href="#">
-        <h2>
-          Organizations
-        </h2>
-      </a>
-      </li>
-    <li>
-      <i class='icon_menu-20-resources'></i>
-      <a href="#">
-        <h2>
-          Resources
-        </h2>
-      </a>
+      <%= link_to '#' do %>
+        <i class='icon_menu-20-organizations'></i>
+        <h2><%= t('toolbar.organizations') %></h2>
+      <% end %>
     </li>
     <li>
-      <i class='icon_menu-20-clients'></i>
-      <a href="#">
-        <h2>
-          <%= link_to t('Applications'), 'clients' %>
-        </h2>
-      </a>
+      <%= link_to '#' do %>
+        <i class='icon_menu-20-resources'></i>
+        <h2><%= t('toolbar.resources') %></h2>
+      <% end %>
     </li>
     <li>
-      <i class='icon_menu-20-settings'></i>
-      <a href="#">
-        <h2>
-          Settings
-        </h2>
-      </a>
+      <%= link_to site_clients_path do %>
+        <i class='icon_menu-20-clients'></i>
+        <h2><%= t('toolbar.applications') %></h2>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to '#' do %>
+        <i class='icon_menu-20-settings'></i>
+        <h2><%= t('toolbar.settings') %></h2>
+      <% end %>
     </li>
   </ul>
 </nav>
