@@ -8,6 +8,7 @@
   .media-object
     margin: 12px 10px 10px 10px
     @include size (100px, 100px)
+    background: $blue
   .media
     padding-left: 20px
     .media-body
@@ -17,9 +18,13 @@
       input
         &[type="text"]
           @include border-radius(3px)
-          color: $grayLighter
+          color: #999
           background-color: $white
           padding: 8px 5px 5px 8px
+      textarea
+        height: 100px
+        color: #999
+
 .first-img
   h1
     text-align: right
@@ -78,7 +83,7 @@
         width: 300px
       .result
         @include border-radius(3px)
-        color: $grayLighter
+        color: #999
         background-color: $white
         padding: 8px 5px 5px 8px
   .pull-left
