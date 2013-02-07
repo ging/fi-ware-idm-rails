@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/ging/social_stream.git
-  revision: 326d88870640e30ff83b24a02054827d84441b21
+  revision: 03dd70b9180f75fd0551d6632ac14b3d909e737e
   branch: master
   specs:
     social_stream-base (1.0.0)
@@ -109,6 +109,7 @@ GEM
       orm_adapter (~> 0.1)
       railties (~> 3.1)
       warden (~> 1.2.1)
+    diffy (2.1.3)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -278,6 +279,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   debugger
+  diffy
   forgery
   jquery-rails
   mysql2

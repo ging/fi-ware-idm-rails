@@ -42,6 +42,7 @@ gem 'jquery-rails'
 group :development do
   gem 'forgery'
   gem 'debugger'
+  gem 'diffy'
 end
 
 # gem 'omniauth-social_stream', path: '../omniauth-social_stream'
