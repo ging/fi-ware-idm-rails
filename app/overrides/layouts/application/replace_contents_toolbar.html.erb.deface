@@ -4,7 +4,7 @@
     <li>
       <%= link_to '#' do %>
         <i class='icon_menu-20-home'></i>
-        <h2><%= t('toolbar.accounts') %></h2>
+        <h2><%= t('toolbar.account') %></h2>
       <% end %>
     </li>
     <li>
