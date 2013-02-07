@@ -2,8 +2,12 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  authorization:
+    new:
+      permission:
+        title: "The application %{client} will be able to:"
   toolbar:
-    accounts: "Accounts"
+    account: "Account"
     applications: "Applications"
     organizations: "Organizations"
     resources: "Resources"
