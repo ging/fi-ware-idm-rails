@@ -15,6 +15,11 @@ es:
   site:
     client:
       add: "Añadir nueva aplicación"
+      added: "Aplicaciones desarrolladas"
+      index:
+        title: "Aplicaciones"
+      new:
+        title: "Registrar aplicación"
     name: "Fi-ware"
 
 

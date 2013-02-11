@@ -15,4 +15,9 @@ en:
   site:
     client:
       add: "Add new application"
+      added: "Developer applications"
+      index:
+        title: "Applications"
+      new:
+        title: "Register new application"
     name: "FI-WARE Identity Manager"
