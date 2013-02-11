@@ -17,7 +17,7 @@
 /public/system/tmp
 /app/compiled_views
 
-**/*swp
+**.*swp
 
 config/deploy.rb
 config/database.yml
