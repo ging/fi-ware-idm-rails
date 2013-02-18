@@ -4,11 +4,11 @@
       <header id="header">
         <%= render :partial => "layouts/header" %>
       </header>
-      <section>
-        <div id="wrapper_body">
-          <div id="flash">
+      <div id="flash">
             <%= render :partial => "layouts/flash", :locals => {:flash => flash} %>
           </div>
+      <section>
+        <div id="wrapper_body">
           <%= yield %>
         </div>
       </section>
