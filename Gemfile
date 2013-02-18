@@ -12,7 +12,6 @@ gem 'rails', '3.2.12'
 
 gem 'mysql2'
 
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -43,6 +42,10 @@ group :development do
   gem 'forgery'
   gem 'debugger'
   gem 'diffy'
+end
+
+group :development, :test do
+  gem 'rspec-rails'
 end
 
 # gem 'omniauth-social_stream', path: '../omniauth-social_stream'
