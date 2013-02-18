@@ -3,3 +3,4 @@ rvm:
   - 1.9.3
 before_script:
   - "mysql -e 'create database `fi-ware-idm_test`;'"
+  - "cp config/database.yml.example config/database.yml"
