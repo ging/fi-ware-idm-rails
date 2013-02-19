@@ -1,5 +1,5 @@
 <!-- replace_contents '#toolbar' -->
-<nav class="nav menu-toolbar">
+<div class="nav menu-toolbar">
   <ul class="main_nav">
     <li>
       <%= link_to '#' do %>
@@ -32,5 +32,5 @@
       <% end %>
     </li>
   </ul>
-</nav>
+</div>
 
