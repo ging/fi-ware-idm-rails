@@ -1,6 +1,6 @@
 <!-- replace_contents '.brand' -->
 <div class="home">
-  <%= link_to t('site.name') %>
+  <%= link_to t('site.name'), root_path %>
 </div>
 <h2>
   Dashboard
