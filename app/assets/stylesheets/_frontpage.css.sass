@@ -1,43 +1,47 @@
 header
   @include clearfix
-  .headerFront
-    margin-top: -4px
-    a
-      display: inline
-      img
-        margin-top: 18px
-        vertical-align: top
-    .brand
-      display: inline-block
-      font-size: 50px
-      margin-top: 46px
-      a
-        display: block
-        color: #8C8C8C
-        &:hover
-          color: #8C8C8C
-          text-decoration: none
 
-      h2
-        display: block
-        font-family: $corporationFontFamily
-        color: $blue
-        margin: 12px 0px -2px 4px
-      h5
+.headerFront
+  margin-top: -4px
+  a
+    display: inline
+    img
+      margin-top: 18px
+      vertical-align: top
+      width: 120px !important
+
+  .brand
+    display: inline-block
+    font-size: 50px
+    margin-top: 46px
+    a
+      display: block
+      color: #8C8C8C
+      &:hover
         color: #8C8C8C
-        margin: 0px 0px 8px 6px
-        a
-          display: inline
+        text-decoration: none
+    h2
+      display: block
+      font-family: $corporationFontFamily
+      color: $blue
+      margin: 9px 0px -2px 4px
+    h5
+      color: #8C8C8C
+      margin: 0px 0px 8px 6px
+      a
+        display: inline
+        color: $blue
+        &:hover
           color: $blue
-          &:hover
-            color: $blue
+
+
 
 #frontpage
   clear: both
 
 
 #presentation
-  margin-top: 57px !important
+  margin-top: 0px !important
   @include makeColumn(6, 0)
 
   .media-body
@@ -56,7 +60,7 @@ header
   @include box-shadow(0px 0px 13px rgba(50, 50, 50, 0.15))
   @include border-radius(15px)
   padding: 15px
-  margin-top: 50px
+  margin-top: 0px
   color: #8c8c8c
   h3
     text-align: right
