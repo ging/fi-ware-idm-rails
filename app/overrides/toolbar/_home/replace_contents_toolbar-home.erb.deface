@@ -1,0 +1,2 @@
+<!-- replace_contents '.toolbar-home' -->
+  <%= render partial: 'views/toolbar' %>

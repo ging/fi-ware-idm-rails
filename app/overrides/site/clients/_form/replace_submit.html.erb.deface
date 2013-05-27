@@ -1,3 +1,3 @@
 <!-- replace "code[erb-loud]:contains('submit')" -->
 
-  <%= f.submit :class => "btn-blue pull-right" %>
+  <%= f.submit :class => "btn-primary pull-right" %>
