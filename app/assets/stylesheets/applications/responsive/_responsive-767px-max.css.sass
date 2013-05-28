@@ -1,0 +1,39 @@
+//
+// Responsive: Landscape phone to desktop/tablet
+// --------------------------------------------------
+
+
+@media (max-width: 767px)
+
+  .menu-toolbar
+    width: 60%
+    margin-left: -160px
+    float: left
+    position: absolute
+    z-index: 10
+    padding-right: 20px
+    background: #f9f9f9
+    @include transition (margin-left 1s ease-in-out)
+    &:hover
+      margin-left: 0px
+
+  #site_client,
+  #new_site_client,
+  #oauth2_server
+    margin-left: 11% !important
+  
+  .site_clients
+    width: 98% !important
+
+  #new_site_clients
+    width: 104% !important
+
+  #oauth2_server
+    width: 86.97872% !important
+
+// UP TO LANDSCAPE PHONE
+// ---------------------
+
+@media (max-width: 480px)
+
+

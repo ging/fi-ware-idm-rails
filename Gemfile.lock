@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/ging/social_stream.git
-  revision: 41427ce35946f81140584b5e5214b205303d8f96
+  revision: bbe9b59e72509ca90e0586723015c3fb1b9c51df
   branch: master
   specs:
-    social_stream-base (2.0.0)
+    social_stream-base (2.0.1)
       acts-as-taggable-on (~> 2.2.2)
       ancestry (~> 1.2.3)
       avatars_for_rails (~> 1.0.7)

@@ -6,4 +6,17 @@
 @media (min-width: 768px) and (max-width: 979px)
 
   
-  
+  .menu-toolbar
+    margin-left: -160px
+    float: left
+    position: absolute
+    z-index: 10
+    padding-right: 20px
+    background: #f9f9f9
+    @include transition (margin-left 1s ease-in-out)
+    &:hover
+      margin-left: 0px
+
+  #oauth2_server
+    width: 86.97872% !important
+    margin-left: 11% !important
