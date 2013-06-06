@@ -1,0 +1,65 @@
+.home
+  @include grid-core-span(9, $fluidGridColumnWidth, $fluidGridGutterWidth)
+  float: left
+  .menu-toolbar
+    margin-left: 0
+  .applications
+    @include grid-core-span(6, $fluidGridColumnWidth, $fluidGridGutterWidth)
+    margin-left: 9%
+    float: left
+
+  .organizations
+    @include grid-core-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
+    float: left
+    margin: 0 0 20px 2.5%
+
+    .name
+      width: 60% !important
+    
+
+
+.applications,
+.organizations
+  padding: 12px
+  min-height: 200px
+  .first-time-message
+    h3
+      font-size: 22px
+      margin-bottom: 0px
+
+  .site_clients
+    width: 100% !important
+  img
+    @include size(40px, 40px)
+    float: left
+    background: black
+    margin-bottom: 6px
+  .name,
+  .url
+    float: left
+    width: 82%
+    margin-left: 10px
+  .soften
+    clear: both
+    margin-bottom: 7px
+
+  .url
+    margin-bottom: 6px
+  .users
+    padding-top: 2px
+
+.stats
+  clear: both
+  min-height: 300px
+  margin-top: 20px
+  #chart_div
+    width: 100%
+    height: auto
+    background: black
+.applications,
+.organizations,
+.stats
+  header
+    margin-top: -35px
+    a
+      float: right

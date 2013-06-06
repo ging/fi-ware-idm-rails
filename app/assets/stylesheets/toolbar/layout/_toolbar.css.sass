@@ -1,92 +1,25 @@
-#toolbar 
-  .contact-button
-    .btn-group
-      width: 100%
-      margin-top: 6px
-      margin-left: 0px
-      .btn
-        width: 100% !important
-        .caret 
-          margin-left: 14px
+.menu-toolbar
+  @include grid-core-span(3, $fluidGridColumnWidth, $fluidGridGutterWidth)
+  float: left
 
-
-  .icon_navbar-message-blue,
-  .icon_tool16-info
-    margin-right: 4px
-  
-  .contacts-toolbar,
-  section.groups
-    @extend .hidden-phone
-    margin-top: 20px
-    clear: both
-    h4
-      margin-bottom: 0px
-      border-bottom: 1px solid #ddd
-    ul
-      border-right: 1px solid #ddd
-      min-height: 191px
-      margin: 0
-      padding-top: 6px
-      li
-        @include grid-core-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
-        @include grid-core-offset(1, $fluidGridColumnWidth, $fluidGridGutterWidth)
+  ul
+    margin-left: -14px
+    li
+      &[class^="icon_menu-20-"]
         float: left
-        img
-          margin: 8px 0
-    .contacts-more,
-    .groups-more
-      margin-top: -10px
-      padding-right: 7px
-      clear: both
-
-  .contacts-toolbar
-    ul
-      min-height: 191px
-
-  section.groups
-    ul
-      min-height: 137px
-
-
-  .toolbar-messages
-    .toolbar_menu
-      ul
-        margin-top: 20px
-        li
-          padding: 5px
-          margin-bottom: 10px
-
-
-  #avatar_profile,
-  .logo_home
-
-    .subject-name
-      @include ellipsis
-      @extend .hidden-phone
-    .subject-name-phone
-      @include ellipsis
-      display: none
-      @extend .visible-phone
-
-   
-    .logo_caption
-      @extend .hidden-phone
-      @extend .hidden-tablet
-
-    input, select
-      @include makeColumnoMargin(2, 0)
-
-    .contact
-      width: 140px
-      padding-top: 0px
-      margin-top: -10p 0 0 16px
-      img
-        margin: 14px 10px 0 0
-
-
-  input
-    &[type="submit"]
-    img,
-    .icon_navbar-message-blue,
-    .icon_tool16-info
-      margin-right: 4px
+      a
+        color: #8c8c8c
+        &:hover
+          color: $principalColor
+        .active
+          color: $principalColor
+      h2
+        display: inline
+        font-size: 24px
+        margin-left: 14px
+        line-height: 50px
+        vertical-align: top
+        a
+          text-decoration: none
+          &:hover
+            text-decoration: none

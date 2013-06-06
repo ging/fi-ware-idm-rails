@@ -1,29 +1,11 @@
-<%= render partial: 'toolbar/toolbar' %>
+<div id="home">
+  <%= render partial: 'toolbar/toolbar' %>
 
-<div class="content-welcome">
-  <h2>Welcome!!</h2>
+  <div class="home">
+    <%= render partial: 'home/applications' %>
 
-    <p>
-      The platform contains lots of users and organizations working together to achieve these great infrastructure network.
-    </p>
+    <%= render partial: 'home/organizations' %>
 
-  <div class="power-box">
-    <a href="#">
-      <img class="featurette-image" alt="cloud" style="width: 64px; height: 64px;" src="/assets/cloud-front.png">
-    </a>
-    <p>
-      Cloud hosting in FI-WARE will handle the efficient and effective provision of the computation, storage and network resources, upon which services are provisioned and managed.
-      <a href="#"> go to this site </a>
-    </p>
-  </div>
-
-  <div class="power-box">
-    <a href="#">
-      <img class="featurette-image" alt="market" style="width: 64px; height: 64px;" src="/assets/market-front.png">
-    </a>
-    <p>
-      Fi-ware Apps is a marketplace designed to provide a variety of applications specially developed for use in the Future Internet.
-      <a href="#"> go to this site </a>
-    </p>
+    <%= render partial: 'home/stats' %>
   </div>
 </div>
