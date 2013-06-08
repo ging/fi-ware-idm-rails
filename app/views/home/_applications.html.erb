@@ -3,63 +3,17 @@
     Applications
     <a href="#">add</a>
   </header>
-  <div class="first-time-message">
-    <h3>  
-      You dont have any application.
-    </h3>
-      Wana like create your first application?
-  </div>
-  <section class="site_clients">
 
-
-    <div class="name">
-    	<a href="·">
-      name
-    </a>
+  <% if current_subject.applications.blank? %>
+    <div class="first-time-message">
+      <h3>  
+        You dont have any application.
+      </h3>
+        Wana like create your first application?
     </div>
-    <div class="url">
-      www.fsgvsrgfdv.com
-    </div>
-    <div class="users">
-      <span>
-        5
-      </span>
-      users
-    </div>
-    <hr class="soften">
-
-
-    <div class="name">
-    	<a href="·">
-      name
-    </a>
-    </div>
-    <div class="url">
-      www.fsgvsrgfdv.com
-    </div>
-    <div class="users">
-      <span>
-        5
-      </span>
-      users
-    </div>
-  <hr class="soften">
-
-    <div class="name">
-    	<a href="·">
-      name
-    </a>
-    </div>
-    <div class="url">
-      www.fsgvsrgfdv.com
-    </div>
-    <div class="users">
-      <span>
-        5
-      </span>
-      users
-    </div>
-
- </section>
+  <% else %>
+    <%= render partial: 'site/clients/list',
+               object: current_subject.applications %>
+  <% end %>
 
 </div>

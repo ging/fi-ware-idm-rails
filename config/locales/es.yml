@@ -20,6 +20,10 @@ es:
         title: "Aplicaciones"
       new:
         title: "Registrar aplicación"
-    name: "Fi-ware"
+    current:
+      description: Create and manage your FI-WARE account
+      keywords: fi-ware,idm,GE,oauth2
+      title: FI-WARE Identity Manager
+    name: FI-WARE
 
 
