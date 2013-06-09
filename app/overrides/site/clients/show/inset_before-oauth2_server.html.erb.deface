@@ -1,3 +1,0 @@
-<!-- insert_before "#oauth2_server" -->
- 
-   <%= render partial: 'toolbar/toolbar' %>

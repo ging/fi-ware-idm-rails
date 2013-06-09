@@ -1,2 +1,6 @@
-<!-- remove "a.pull-right" -->
+<!-- replace "a.go-more" -->
+
+	<button class="edit-phanton" href="#">
+	  edit
+	</button>
  

@@ -1,3 +1,0 @@
-<!-- insert_before ".new_app" -->
- 
-   <%= render partial: 'toolbar/toolbar' %>

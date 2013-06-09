@@ -1,0 +1,3 @@
+<!-- replace 'section#settings' -->
+
+  <%= render :partial => 'index' %>

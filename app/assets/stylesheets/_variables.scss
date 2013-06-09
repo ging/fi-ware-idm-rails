@@ -6,6 +6,7 @@
 // Global values
 // --------------------------------------------------
 
+
 // Grays
 // -------------------------
 $black:                 #000 !default;
@@ -13,15 +14,16 @@ $grayDarker:            #222 !default;
 $grayDark:              #333 !default;
 $gray:                  #555 !default;
 $grayLight:             #888 !default;
-$grayLighter:           #ccc !default;
+$grayLighter:           #e2e2e2 !default;
+$whiteSmoke:            #f9f9f9 !default;
 $white:                 #fff !default;
 
 
 // Accent colors
 // -------------------------
-$blue:                  #0093C6 !default;
-$blue-ligth:            #009FD6 !default;
-$blueDark:              #3E80AD !default;
+$blue:                  #049cdb !default;
+$blueDark:              #0380b4 !default;
+$blueLight:             #90ddfc !default;
 $green:                 #46a546 !default;
 $red:                   #9d261d !default;
 $yellow:                #ffc40d !default;
@@ -29,6 +31,10 @@ $orange:                #f89406 !default;
 $pink:                  #c3325f !default;
 $purple:                #7a43b6 !default;
 
+// -----------
+$principalColor:        $blue !default;
+$secundaryColor:        $blueLight !default;
+$auxiliarColor:         $white !default;
 
 // Scaffolding
 // -------------------------
@@ -38,16 +44,16 @@ $textColor:             $grayDark !default;
 
 // Links
 // -------------------------
-$linkColor:             $blue;
+$linkColor:             #049cdb !default;
 $linkColorHover:        darken($linkColor, 15%) !default;
 
 
 // Typography
 // -------------------------
 $sansFontFamily:        "OpenSans", Arial, sans-serif;
-$serifFontFamily:       "Times New Roman", Times, serif !default;
-$monoFontFamily:        "Courier New", monospace !default;
-$corporationFontFamily: "Comfortaa";
+$sansFontFamilyLight:   "OpenSansLight", Arial, sans-serif;
+$serifFontFamily:       "Comfortaa", Times New Roman, Times, serif !default;
+$handwriteFontFamily:   "Giveyouglory", Courier New, monospace !default;
 
 $baseFontSize:          14px !default;
 $baseFontFamily:        $sansFontFamily;
@@ -58,6 +64,13 @@ $headingsFontFamily:    inherit !default; // empty to use BS default, $baseFontF
 $headingsFontWeight:    normal !default;    // instead of browser default, bold
 $headingsColor:         inherit !default; // empty to use BS default, $textColor
 
+
+// buttons
+// -------------------------
+$principal-btnColorbackground: $auxiliarColor;
+$principal-btnColorborder: $principalColor;
+$secundary-btnColorbackground: $principalColor;
+$secundary-btnColorborder: $auxiliarColor;
 
 // Component sizing
 // -------------------------
@@ -274,7 +287,7 @@ $popoverArrowOuterColor:  rgba(0,0,0,.25) !default;
 // -------------------------
 $gridColumns:             12 !default;
 $gridColumnWidth:         60px !default;
-$gridGutterWidth:         20px !default;
+$gridGutterWidth:         30px !default;
 $gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1)) !default;
 
 // 1200px min

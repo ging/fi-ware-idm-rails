@@ -1,3 +1,0 @@
-<!-- insert_before ".site_clients" -->
- 
-   <%= render partial: 'toolbar/toolbar' %>

@@ -1,0 +1,9 @@
+<!-- replace '.wrapper' -->
+
+  <%= render :partial => "layouts/header" %>
+
+  <%= render :partial => "toolbar/toolbar" %>
+
+  <%= flashy %>
+
+  <%= yield %>
