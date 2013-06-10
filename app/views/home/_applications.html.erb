@@ -4,16 +4,15 @@
     <a href="#">add</a>
   </header>
 
- <!-- <% if current_subject.applications.blank? %> -->
+ <% if current_subject.applications.blank? %>
     <div class="first-time-message">
       <h3>  
         You dont have any application.
       </h3>
         Wana like create your first application?
     </div>
- <!--  <% else %>
+ <% else %>
     <%= render partial: 'site/clients/list',
                object: current_subject.applications %>
-  <% end %>-->
-
+ <% end %>
 </div>
