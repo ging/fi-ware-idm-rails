@@ -12,6 +12,8 @@ es:
     organizations: "Organizaciones"
     resources: "Recursos"
     settings: "Ajustes"
+  relation_name:
+    "Administrador de aplicación"
   site:
     client:
       add: "Añadir nueva aplicación"

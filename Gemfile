@@ -55,3 +55,4 @@ git 'git://github.com/ging/social_stream.git', branch: 'master' do
   gem 'social_stream-oauth2_server'
 end
 
+gem 'pry-rails'
