@@ -16,7 +16,7 @@
                object: current_subject.applications %>
 
     <%= link_to site_clients_path do %>
-        <%= t('view all') %>
+        <%=link_to t('view all'), site_clients_path, :class => "view-all" %>
       <% end %>
 
  <% end %>
