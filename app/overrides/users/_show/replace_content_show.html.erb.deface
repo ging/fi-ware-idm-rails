@@ -1,2 +1,61 @@
 <!-- replace '#user' -->
 
+  <section class="user">
+    <header>
+      <h1>
+        Dummy
+      </h1>
+    
+      <button class="edit-phanton" href="#">
+        edit
+      </button>
+    </header>
+
+    <img alt="App-default" class="logo-app pull-right" src="/assets/logos/app-default.png">
+
+    <div class="content">
+      <div class="gereral-info">      
+        <div class="result">
+          <a href="Social Stream's spec/dummy application"></a>
+        </div>
+
+        <h4>
+          URL
+        </h4>
+        <div class="result">
+          <a href="http://localhost:3000">http://localhost:3000</a>
+        </div>
+
+        <h4>
+          Callback URL
+        </h4>
+        <div class="result">
+          http://localhost:3000/users/auth/socialstream/callback
+        </div>
+      </div>
+        
+      <div class="btn-group">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          Credentials
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+<li>
+            <h6>
+            Client ID
+            <a href="#" class="pull-right">refresh</a>
+            </h6>
+            1
+          </li>
+
+          <li>
+            <h6>
+              Client Secret
+              <a href="#" class="pull-right">refresh</a>
+            </h6>
+            f9974ce87c455544f61cc960b58cf833eb039875ef27029449408857879a1e87283c86558e46fa431d37a3c5590ba92612c51dfd0872ccff35cbecf3910eaa02
+          </li>
+        </ul>
+</div>   
+    </div>
+  </section></section>
