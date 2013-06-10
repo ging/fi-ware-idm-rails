@@ -12,6 +12,8 @@ en:
     organizations: "Organizations"
     resources: "Resources"
     settings: "Settings"
+  relation_admin:
+    name: "Application Admin"
   site:
     client:
       add: "Add new application"
