@@ -2,7 +2,9 @@
 
   <%= render :partial => "layouts/header" %>
 
-  <%= render :partial => "toolbar/toolbar" %>
+  <% if user_signed_in? %>
+    <%= render :partial => "toolbar/toolbar" %>
+  <% end %>
 
   <%= flashy %>
 
