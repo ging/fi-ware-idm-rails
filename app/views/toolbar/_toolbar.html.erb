@@ -1,7 +1,7 @@
 <div class="nav menu-toolbar">
   <ul class="main_nav">
     <li>
-      <%= link_to '#' do %>
+      <%= link_to home_path do %>
         <i class='icon_menu-20-home'></i>
         <h2><%= t('toolbar.home') %></h2>
       <% end %>
@@ -15,7 +15,7 @@
     <li>
       <%= link_to site_clients_path do %>
         <i class='icon_menu-20-clients'></i>
-        <h2><%= link_to t('toolbar.applications'), site_clients_path %></h2>
+        <h2><%= t('toolbar.applications') %></h2>
       <% end %>
     </li>
   </ul>

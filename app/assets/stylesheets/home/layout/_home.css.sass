@@ -7,6 +7,8 @@
     @include grid-core-span(6, $fluidGridColumnWidth, $fluidGridGutterWidth)
     margin-left: 9%
     float: left
+    .view-all
+      float: right
 
   .organizations
     @include grid-core-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
@@ -32,21 +34,25 @@
   img
     @include size(40px, 40px)
     float: left
-    background: black
     margin-bottom: 6px
   .name,
   .url
     float: left
-    width: 82%
+    width: 70%
     margin-left: 10px
   .soften
     clear: both
     margin-bottom: 7px
-
+  .name
+    a
+      color: $gray
   .url
     margin-bottom: 6px
   .users
     padding-top: 2px
+    text-align: right
+    span
+      color: $principalColor
 
 .stats
   clear: both
@@ -55,7 +61,7 @@
   #chart_div
     width: 100%
     height: auto
-    background: white !important
+    background: white
 .applications,
 .organizations,
 .stats
