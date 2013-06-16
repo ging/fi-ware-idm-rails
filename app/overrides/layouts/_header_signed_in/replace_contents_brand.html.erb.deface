@@ -1,6 +1,6 @@
 <!-- replace_contents '.brand' -->
 <div class="home">
-  <%= link_to t('site.name'), root_path %>
+  <a href="#">Fi-ware <span>Identity Manager</span></a>
 </div>
 <h2>
   Dashboard

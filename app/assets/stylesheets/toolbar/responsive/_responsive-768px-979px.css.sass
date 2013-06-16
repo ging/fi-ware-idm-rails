@@ -5,17 +5,12 @@
 
 @media (min-width: 768px) and (max-width: 979px)
   
-  
+
   .menu-toolbar
-    margin-left: -160px
+    width: 35px !important
     float: left
-    position: absolute
-    z-index: 10
-    padding-right: 20px
-    @include transition (margin-left 1s ease-in-out)
-    &:hover
-      margin-left: 0px
-      background: #f9f9f9
+    h2
+      @extend .hidden-tablet
 
   #oauth2_server
     width: 86.97872% !important

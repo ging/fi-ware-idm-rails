@@ -1,4 +1,4 @@
-<!-- replace '.wrapper' -->
+<!-- replace_contents '.wrapper' -->
 
   <%= render :partial => "layouts/header" %>
 

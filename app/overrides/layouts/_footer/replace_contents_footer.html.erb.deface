@@ -2,10 +2,14 @@
 
 <div class="container">
 
-  <%= Date.today.year %> © 
+  <div class="copy">
+    <%= Date.today.year %> © <%= link_to t('site.name'), 'http://fi-ware.idm.com/' %>
+  </div>
+ 
+  <%= link_to t('Terms of service') %>
 
-  <%= link_to t('site.name'), 'http://fi-ware.idm.com/' %>
-   
-  ~ Terms of service ~ help ~ languaje 
+  <%= link_to t('Help') %>
   
+  <%= link_to t('Languaje') %>
+
 </div>

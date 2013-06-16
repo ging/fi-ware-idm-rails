@@ -1,33 +1,35 @@
 .home
   @include grid-core-span(9, $fluidGridColumnWidth, $fluidGridGutterWidth)
   float: left
+  margin-top: 35px
   .menu-toolbar
     margin-left: 0
   .applications
     @include grid-core-span(6, $fluidGridColumnWidth, $fluidGridGutterWidth)
     margin-left: 9%
     float: left
+    ul
+      margin-left: 0
     .view-all
       float: right
 
   .organizations
     @include grid-core-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
     float: left
-    margin: 0 0 20px 2.5%
+    margin: 0 0 43px 2.5%
 
     .name
       width: 60% !important
     
-
-
 .applications,
 .organizations
   padding: 12px
-  min-height: 200px
+  min-height: 300px
   .first-time-message
     h3
       font-size: 22px
-      margin-bottom: 0px
+      margin-bottom: 15px
+      line-height: 26px
 
   .site_clients
     width: 100% !important
@@ -38,7 +40,7 @@
   .name,
   .url
     float: left
-    width: 70%
+    width: 60%
     margin-left: 10px
   .soften
     clear: both
@@ -72,3 +74,7 @@
     a
       float: right
       font-size: 16px
+.stats
+  header     
+    margin-bottom: 8px
+    margin-left: 0px
