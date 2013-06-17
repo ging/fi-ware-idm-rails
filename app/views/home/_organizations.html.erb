@@ -5,40 +5,12 @@
   <form class="form-inline">
 	  <input type="text" class="input-small" placeholder="search..">
 	</form>
-  <div class="first-time-message">
-    <h3>  
-      Not are a member of any organization?
-    </h3> 
-  </div>
-  <section class="organizations-list">
-    <img>
 
-    <div class="name">
-    	<a href="·">
-      name
-    </a>
-    </div>
-   
-    <hr class="soften">
-        <img>
-
-    <div class="name">
-    	<a href="·">
-      name
-    </a>
-    </div>
-   
-  <hr class="soften">
-      <img>
-
-    <div class="name">
-    	<a href="·">
-      name
-    </a>
-    </div>
-   
-    
-
- </section> 
-
+<div class="first-time-message">
+<h3>  
+Not are a member of any organization?
+</h3> 
+</div>
+  
+  <%= render partial: 'organizations/list' %>
 </div>

@@ -4,20 +4,14 @@
     <a href="#">add</a>
   </header>
 
- <% if current_subject.applications.blank? %>
-    <div class="first-time-message">
-      <h3>  
-        You dont have any application.
-      </h3>
-        Wana like create your first application?
-    </div>
- <% else %>
+  <% if current_subject.applications.blank? %>
+    <%= render partial: 'site/clients/first'%>
+  <% else %>
     <%= render partial: 'site/clients/list',
                object: current_subject.applications.first(5) %>
 
     <%= link_to site_clients_path do %>
-        <%=link_to t('view all'), site_clients_path, :class => "view-all" %>
-      <% end %>
-
- <% end %>
+      <%=link_to t('view all'), site_clients_path, :class => "view-all" %>
+    <% end %>
+  <% end %>
 </div>

@@ -1,0 +1,17 @@
+footer
+  @include grid-core-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+  .copy,
+  a
+    @include grid-core-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+    float: left
+    a
+      color: $grayLight
+      width: auto
+      &:hover
+        color: $principalColor
+  a
+    color: $grayLight
+    &:hover
+      color: $principalColor
+    &:last-child
+      float: right
