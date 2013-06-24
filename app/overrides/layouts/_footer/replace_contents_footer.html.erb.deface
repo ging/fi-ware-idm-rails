@@ -9,19 +9,3 @@
   <%= link_to t('Terms of service') %>
 
   <%= link_to t('Help') %>
-  
-  <div class="btn-group dropup ">
-          <button data-toggle="dropdown" class="btn dropdown-toggle">
-            <span class="idioma"><%=t('lang.title')%></span>
-            <span class="caret"></span>
-          </button>     
-          <ul class="dropdown-menu">
-              <li>
-                languaje
-              </li>
-              <li>
-                languaje
-              </li>
-          </ul>
-        </div>
-</div>

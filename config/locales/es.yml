@@ -2,6 +2,9 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 es:
+  application:
+    button:
+      edit: editar
   authorization:
     new:
       permission:
@@ -26,6 +29,6 @@ es:
       description: Create and manage your FI-WARE account
       keywords: fi-ware,idm,GE,oauth2
       title: FI-WARE Identity Manager
-    name: FI-WARE
+    name: FI-WARE IdM
 
 
