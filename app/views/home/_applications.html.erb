@@ -1,7 +1,7 @@
 <div class="applications">
   <header>
     Applications
-    <a href="#">add</a>
+    <%= link_to "add", new_site_client_path %>
   </header>
 
   <% if current_subject.applications.blank? %>
