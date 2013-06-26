@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130619140007) do
+ActiveRecord::Schema.define(:version => 20130624143908) do
 
   create_table "activities", :force => true do |t|
     t.integer  "activity_verb_id"
@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(:version => 20130619140007) do
     t.integer "activity_object_id"
     t.integer "property_id"
     t.string  "type"
+    t.boolean "main"
   end
 
   add_index "activity_object_properties", ["activity_object_id"], :name => "index_activity_object_properties_on_activity_object_id"
@@ -99,6 +100,10 @@ ActiveRecord::Schema.define(:version => 20130619140007) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "activity_object_id"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
   end
 
   add_index "actors", ["activity_object_id"], :name => "index_actors_on_activity_object_id"
@@ -122,17 +127,6 @@ ActiveRecord::Schema.define(:version => 20130619140007) do
   end
 
   add_index "authentications", ["user_id"], :name => "index_authentications_on_user_id"
-
-  create_table "avatars", :force => true do |t|
-    t.integer  "actor_id"
-    t.string   "logo_file_name"
-    t.string   "logo_content_type"
-    t.integer  "logo_file_size"
-    t.datetime "logo_updated_at"
-    t.boolean  "active",            :default => true
-  end
-
-  add_index "avatars", ["actor_id"], :name => "index_avatars_on_actor_id"
 
   create_table "comments", :force => true do |t|
     t.integer  "activity_object_id"
@@ -286,6 +280,7 @@ ActiveRecord::Schema.define(:version => 20130619140007) do
     t.text     "config"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "type"
   end
 
   add_index "sites", ["actor_id"], :name => "index_sites_on_actor_id"
@@ -365,8 +360,6 @@ ActiveRecord::Schema.define(:version => 20130619140007) do
   add_foreign_key "audiences", "relations", :name => "audiences_on_relation_id"
 
   add_foreign_key "authentications", "users", :name => "authentications_on_user_id"
-
-  add_foreign_key "avatars", "actors", :name => "avatars_on_actor_id"
 
   add_foreign_key "comments", "activity_objects", :name => "comments_on_activity_object_id"
 
