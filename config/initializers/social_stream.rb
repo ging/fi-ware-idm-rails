@@ -16,12 +16,12 @@ SocialStream.setup do |config|
   # Remember you must add an "activity_object_id" foreign key column to your migration!
   # Be sure to add the other modules of Social Stream you might be using (e.g. :document, :event, :link ).
   #
-  # config.objects = [ :post, :comment ]
+  config.objects = []
 
   # Form for activity objects to be loaded
   # You can write your own activity objects
   #
-  # config.activity_forms = [ :post, :document, :foo, :bar ]
+  config.activity_forms = []
 
   # Config the relation model of your network
   #
@@ -30,15 +30,17 @@ SocialStream.setup do |config|
   #
   # config.relation_model = :custom
 
+  config.subjects = [ :user, :organization, :site ]
+
   # Expose resque interface to manage background tasks at /resque
   #
-  # config.resque_access = true
+  config.resque_access = false
 
   # Quick search (header) and Extended search models and its order. Remember to create
   # the indexes with thinking-sphinx if you are using customized models.
   #
-  # config.quick_search_models = [:user, :group]
-  # config.extended_search_models = [:user, :group]
+  config.quick_search_models = []
+  config.extended_search_models = []
 
   # Cleditor controls. It is used in new message editor, for example
   # config.cleditor_controls = "bold italic underline strikethrough subscript superscript | size style | bullets | image link unlink"
