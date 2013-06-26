@@ -56,3 +56,5 @@ git 'git://github.com/ging/social_stream.git', branch: 'master' do
 end
 
 gem 'pry-rails'
+
+gem 'exception_notification'

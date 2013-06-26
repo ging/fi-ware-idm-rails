@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/ging/social_stream.git
-  revision: 3b83b1e428e72870e019a57b768918cfb92c4228
+  revision: 33bcb0e1dabe79c409a58273d3c1da50ef62334b
   branch: master
   specs:
     social_stream-base (2.0.4)
@@ -118,6 +118,8 @@ GEM
     diff-lcs (1.2.4)
     diffy (2.1.4)
     erubis (2.7.0)
+    exception_notification (3.0.1)
+      actionmailer (>= 3.0.4)
     execjs (1.4.0)
       multi_json (~> 1.0)
     faraday (0.8.7)
@@ -310,6 +312,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   debugger
   diffy
+  exception_notification
   forgery
   jquery-rails
   mysql2
