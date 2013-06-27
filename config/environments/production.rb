@@ -65,7 +65,7 @@ FiWareIdm::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  config.middleware.use ExceptionNotification::Rack,
+  config.middleware.use ExceptionNotifier,
     email: {
       email_prefix: "[IdM Error] ",
       sender_address: %{"FI-WARE IdM" <no-reply@idm.lab.fi-ware.eu>},
