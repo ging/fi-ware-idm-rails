@@ -1,0 +1,2 @@
+class Organization < Group
+end
