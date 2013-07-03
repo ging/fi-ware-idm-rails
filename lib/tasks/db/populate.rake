@@ -1,5 +1,9 @@
 namespace :db do
   namespace :populate do
+    %w( create:groups create:posts ).each do |t|
+      task(:create).prerequisites.delete(t)
+    end
+
     desc 'Confirm users after populate'
     task create: 'create:confirm_users'
 
