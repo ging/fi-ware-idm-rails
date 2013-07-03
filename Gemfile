@@ -40,7 +40,6 @@ gem 'jquery-rails'
 
 group :development do
   gem 'forgery'
-  gem 'debugger'
   gem 'diffy'
 end
 

@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/ging/social_stream.git
-  revision: e98f7b3ccab52bb1d74b7aa98445253b018b3c0c
+  revision: 02dd6a536d9b8beaacc1e230483b48622e9df414
   branch: master
   specs:
     social_stream-base (2.0.4)
@@ -99,13 +99,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.2)
-    columnize (0.3.6)
-    debugger (1.6.0)
-      columnize (>= 0.3.1)
-      debugger-linecache (~> 1.2.0)
-      debugger-ruby_core_source (~> 1.2.1)
-    debugger-linecache (1.2.0)
-    debugger-ruby_core_source (1.2.2)
     deep_merge (1.0.0)
     deface (0.9.1)
       nokogiri (~> 1.5.0)
@@ -310,7 +303,6 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
-  debugger
   diffy
   exception_notification
   forgery
