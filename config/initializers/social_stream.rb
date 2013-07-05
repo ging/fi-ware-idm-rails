@@ -2,7 +2,7 @@ SocialStream.setup do |config|
   # List the models that are social entities. These will have ties between them.
   # Remember you must add an "actor_id" foreign key column to your migration!
   #
-  # config.subjects = [:user, :group ]
+  # config.subjects = [:user, :group, :site ]
 
   # Include devise modules in User. See devise documentation for details.
   # Others available are:
@@ -29,8 +29,6 @@ SocialStream.setup do |config|
   # :follow - user just follow other users, like Twitter
   #
   # config.relation_model = :custom
-
-  config.subjects = [ :user, :organization, :site ]
 
   # Expose resque interface to manage background tasks at /resque
   #

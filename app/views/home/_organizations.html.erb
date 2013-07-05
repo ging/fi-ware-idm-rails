@@ -2,15 +2,20 @@
   <header>
     Organizations
   </header>
-  <form class="form-inline">
-	  <input type="text" class="input-small" placeholder="search..">
-	</form>
 
-<div class="first-time-message">
-<h3>  
-Not are a member of any organization?
-</h3> 
-</div>
+  <form class="form-inline">
+    <input type="text" class="input-small" placeholder="search..">
+  </form>
+
+  <% if current_user.organizations.blank? %>
+    <div class="first-time-message">
+      <h3>  
+        You are not member of any organization
+      </h3> 
+      <%= link_to "Explore them", organizations_path %>
+    </div>
   
-  <%= render partial: 'organizations/list' %>
+  <% else %>
+    <%= render partial: 'organizations/list' %>
+  <% end %>
 </div>

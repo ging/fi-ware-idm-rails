@@ -2,6 +2,10 @@
   <div class="home">
     <%= render partial: 'home/applications' %>
 
-    <%= render partial: 'home/organizations' %>
+    <% if current_subject.is_a? User %>
+      <%= render partial: 'home/organizations' %>
+    <% else %>
+      <%= render partial: 'home/members' %>
+    <% end %>
   </div>
 </div>

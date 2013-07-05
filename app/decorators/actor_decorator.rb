@@ -1,5 +1,5 @@
+require_dependency 'fi_ware_idm/models/actor'
+
 Actor.class_eval do
-  def applications
-    managed_site_clients
-  end
+  include FiWareIdm::Models::Actor
 end
