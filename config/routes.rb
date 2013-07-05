@@ -1,4 +1,8 @@
 FiWareIdm::Application.routes.draw do
+  # FI-WARE compatible routes
+  match '/authorize', to: 'authorizations#new'
+  post  '/token', to: proc { |env| SocialStream::Oauth2Server::TokenEndpoint.new.call(env) }
+
   devise_for :users, :controllers => {:omniauth_callbacks => 'omniauth_callbacks'}
 
   # The priority is based upon order of creation:
