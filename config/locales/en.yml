@@ -9,6 +9,10 @@ en:
     new:
       permission:
         title: "The application %{client} will be able to:"
+  organization:
+    new:
+      action: "Register an organization"
+      title: "Register an organization"
   toolbar:
     account: "Account"
     applications: "Applications"
