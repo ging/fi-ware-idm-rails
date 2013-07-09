@@ -1,0 +1,11 @@
+<section id="new_organization">
+  <% content_for :title do%>
+    <%= t('organization.new.action')%>
+  <%end%>
+
+  <h2><%= t('organization.new.title') %></h2>
+
+  <%= render partial: 'form',
+             object: @organization,
+             as: :group %>
+</section>
