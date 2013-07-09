@@ -32,6 +32,8 @@ SocialStream.setup do |config|
 
   config.custom_relations[:organization] = {}
 
+  config.list_relations[:organization] = [ :owner ]
+
   # Expose resque interface to manage background tasks at /resque
   #
   config.resque_access = false
