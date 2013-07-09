@@ -7,9 +7,16 @@
       <% end %>
     </li>
     <li>
-      <%= link_to organizations_path do %>
-        <i class='icon_menu-20-organizations'></i>
-        <h2><%= t('toolbar.organizations')%></h2>
+      <% if current_subject.is_a? User %>
+        <%= link_to organizations_path do %>
+          <i class='icon_menu-20-organizations'></i>
+          <h2><%= t('toolbar.organizations')%></h2>
+        <% end %>
+      <% else %>
+        <%= link_to contacts_path do %>
+          <i class='icon_menu-20-members'></i>
+          <h2><%= t('toolbar.members')%></h2>
+        <% end %>
       <% end %>
     </li>
     <li>
