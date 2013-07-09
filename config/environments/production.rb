@@ -66,9 +66,7 @@ FiWareIdm::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   config.middleware.use ExceptionNotifier,
-    email: {
-      email_prefix: "[IdM Error] ",
-      sender_address: %{"FI-WARE IdM" <no-reply@idm.lab.fi-ware.eu>},
-      exception_recipients: %w{atapiador@dit.upm.es}
-  }
+    email_prefix: "[IdM Error] ",
+    sender_address: %{"FI-WARE IdM" <no-reply@idm.lab.fi-ware.eu>},
+    exception_recipients: %w{atapiador@dit.upm.es}
 end
