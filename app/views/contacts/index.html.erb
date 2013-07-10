@@ -1,6 +1,10 @@
 <h1>Members</h1>
 
-<%= link_to "Add", "javascript:void(0);", id: "add-contact-link" %>
+<% if can? :create, current_subject.sent_contacts.build %>
+  <%= link_to "Add", "#add-contact-modal", id: "add-contact-link", 'data-toggle' => "modal" %>
+
+  <%= render partial: 'new-modal' %>
+<% end %>
 
 <section class="members">
   <%= render partial: 'layouts/loading' %>
