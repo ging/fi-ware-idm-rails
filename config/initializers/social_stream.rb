@@ -27,6 +27,10 @@ SocialStream.setup do |config|
 
   config.system_relations[:organization] = [ :owner ]
 
+  config.available_permissions['group'] = [
+    [ 'represent', nil ]
+  ]
+
   # Expose resque interface to manage background tasks at /resque
   #
   config.resque_access = false
