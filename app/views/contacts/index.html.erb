@@ -3,11 +3,18 @@
 <%= link_to "Add", "javascript:void(0);", id: "add-contact-link" %>
 
 <section class="members">
-<%= render partial: 'layouts/loading' %>
+  <%= render partial: 'layouts/loading' %>
 
-<%= text_field_tag "contact-filter", "", placeholder: "filter", autocomplete: "off" %>
+  <%= text_field_tag "contact-filter", "", placeholder: "filter", autocomplete: "off" %>
 
-<%= render current_subject_contacts_to(@contacts) %>
+  <section class="member-list">
+    <%= render current_subject_contacts_to(@contacts) %>
+  </section>
+
+  <%= javascript_tag do %>
+    $(function() {
+      Member.index();
+    });
+  <% end %>
 
 </section>
-
