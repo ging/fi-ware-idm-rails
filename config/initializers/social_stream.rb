@@ -23,16 +23,13 @@ SocialStream.setup do |config|
   #
   config.activity_forms = []
 
-  # Config the relation model of your network
-  #
-  # :custom - users define their own relation types, and post with privacy, like Google+
-  # :follow - user just follow other users, like Twitter
-  #
-  # config.relation_model = :custom
-
   config.custom_relations[:organization] = {}
 
-  config.list_relations[:organization] = [ :owner ]
+  config.system_relations[:organization] = [ :owner ]
+
+  config.available_permissions['group'] = [
+    [ 'represent', nil ]
+  ]
 
   # Expose resque interface to manage background tasks at /resque
   #

@@ -1,0 +1,22 @@
+<div id="add-contact-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <%= form_tag contacts_path do %>
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3>Add members</h3>
+    </div>
+    <div class="modal-body">
+      <%= label_tag 'actors', 'Users' %>
+      <%= text_field_tag 'actors', '', 'data-path' => actors_path(stranger: true), 'data-type' => 'user' %>
+
+      <%= label_tag 'relations', 'Roles' %>
+      <%= select_tag 'relations', options_from_collection_for_select(current_subject.relations_for_button, :id, :name), multiple: true %>
+    </div>
+    <div class="modal-footer">
+      <%= submit_tag "Add members" %>
+    </div>
+  <% end %>
+
+  <%= javascript_tag do %>
+    Member.new_();
+  <% end %>
+</div>
