@@ -8,7 +8,11 @@ module FiWareIdm
       end
 
       def organizations
-        []
+        Organization.
+          select("DISTINCT groups.*").
+          joins(actor: { sent_contacts: :relations }).
+          merge(::Contact.received_by(self)).
+          merge(::Relation.positive)
       end
     end
   end
