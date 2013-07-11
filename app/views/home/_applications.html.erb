@@ -1,7 +1,7 @@
 <div class="applications">
   <header>
     Applications
-    <%= link_to "add", new_site_client_path %>
+    <%= link_to "add", new_application_path %>
   </header>
 
   <% if current_subject.applications.blank? %>
@@ -10,8 +10,6 @@
     <%= render partial: 'site/clients/list',
                object: current_subject.applications.first(5) %>
 
-    <%= link_to site_clients_path do %>
-      <%=link_to t('view all'), site_clients_path, :class => "view-all" %>
-    <% end %>
+    <%= link_to t('view all'), applications_path, :class => "view-all" %>
   <% end %>
 </div>
