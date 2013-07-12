@@ -7,5 +7,7 @@
     <input type="text" class="input-small" placeholder="search..">
   </form>
 
-  Members list
+  <%= render Contact.index(subject: current_subject).first(5) %>
+
+  <%= link_to 'View more', contacts_path %>
 </div>
