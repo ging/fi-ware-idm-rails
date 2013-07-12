@@ -1,0 +1,12 @@
+<section class="applications">
+  <% if subject.applications.present? %>
+    <section class="applications-list">
+      <%= render subject.applications %>
+    </section>
+  <% else %>
+    Haven't you any application?
+
+    <%= link_to 'Create application', new_application_path %>
+  <% end %>
+</section>
+

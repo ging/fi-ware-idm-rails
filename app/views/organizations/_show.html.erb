@@ -1,0 +1,15 @@
+<%= @organization.name %>
+
+<% if can? :edit, @organization.profile %>
+  <%= link_to 'Edit', polymorphic_path([ @organization, :profile ]) %>
+<% end %>
+
+Profile info
+
+<%= render partial: 'subjects/organizations',
+           object: @organization,
+           as: :subject %>
+
+<%= render partial: 'subjects/applications',
+           object: @organization,
+           as: :subject %>

@@ -1,0 +1,15 @@
+<%= div_for application do %>
+  <%= link_to application do %>
+    <%= image_tag application.logo.url(:small) %>
+  <% end %>
+
+  <div class="name">
+    <%= link_to application.name, application %>
+  </div>
+
+  <div class="description">
+    <%= application.description%>
+  </div>
+
+  <hr class="soften">
+<% end %>
