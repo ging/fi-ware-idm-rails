@@ -8,6 +8,8 @@ FiWareIdm::Application.routes.draw do
   resources :organizations
   resources :applications
 
+  match '/terms-of-service' => 'frontpage#terms_of_service', as: :terms_of_service
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
