@@ -9,6 +9,11 @@ en:
     new:
       permission:
         title: "The application %{client} will be able to:"
+  helpers:
+    submit:
+      application:
+        create: Next
+        update: Save
   organization:
     new:
       action: "Register an organization"

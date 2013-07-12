@@ -24,11 +24,18 @@ SocialStream.setup do |config|
   config.activity_forms = []
 
   config.custom_relations[:organization] = {}
+  config.custom_relations[:application]  = {}
 
   config.system_relations[:organization] = [ :owner ]
+  config.system_relations[:application]  = [ :manager ]
 
   config.available_permissions['group'] = [
     [ 'represent', nil ]
+  ]
+  config.available_permissions['application'] = [
+    [ 'manage', nil ],
+    [ 'manage', 'relation/custom' ],
+    [ 'manage', 'contact' ]
   ]
 
   # Expose resque interface to manage background tasks at /resque
