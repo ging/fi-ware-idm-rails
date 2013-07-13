@@ -1,100 +1,129 @@
-@import "variables"
+/*BOOTSTRAP-REWRITE*/
 
-@import "social_stream-base"
-
-@import "fonts"
-
-@import "mixin"
-
-@import "frontpage/frontpage"
-
-@import "frontpage/layout/frontpage"
-
-@import "frontpage/responsive/responsive-768px-979px"
-@import "frontpage/responsive/responsive-1200px-min"
-@import "frontpage/responsive/responsive-767px-max"
-
-
-@import "settings/settings"
-
-@import "settings/layout/settings"
-
-@import "terms_of_service/terms_of_service"
-
-@import "terms_of_service/layout/terms_of_service"
-
-@import "terms_of_service/responsive/responsive-768px-979px"
-@import "terms_of_service/responsive/responsive-1200px-min"
-@import "terms_of_service/responsive/responsive-767px-max"
-
-
-@import "header/header"
-
-@import "header/layout/header"
-
-@import "header/responsive/responsive-768px-979px"
-@import "header/responsive/responsive-1200px-min"
-@import "header/responsive/responsive-767px-max"
-
-
-
-@import "toolbar/toolbar"
-
-@import "toolbar/layout/toolbar"
-
-@import "toolbar/responsive/responsive-768px-979px"
-@import "toolbar/responsive/responsive-1200px-min"
-@import "toolbar/responsive/responsive-767px-max"
-
-
-
-@import "home/home"
-
-@import "home/layout/home"
-
-@import "home/responsive/responsive-768px-979px"
-@import "home/responsive/responsive-1200px-min"
-@import "home/responsive/responsive-767px-max"
-
-
-@import "applications/applications"
-
-@import "applications/layout/applications"
-
-@import "applications/responsive/responsive-768px-979px"
-@import "applications/responsive/responsive-1200px-min"
-@import "applications/responsive/responsive-767px-max"
-
-
-
-@import "social_stream-oauth2_server"
-
-@import "registration"
-
-@import "general_adjust"
-
-@import "layouts/layouts"
-
-@import "layouts/responsive/responsive-768px-979px"
-@import "layouts/responsive/responsive-1200px-min"
-@import "layouts/responsive/responsive-767px-max"
-
-
-@import "scaffolding"
-
-@import "buttons"
-
-@import "mixin"
-
-@import "footer/layout/footer"
-
-
-@import "oauth2_server"
-
-@import "icons/icon"
+@import "bootstrap-rewrite/variables"
 
 @import "bootstrap-rewrite/accordion"
-
 @import "bootstrap-rewrite/reset"
-
 @import "bootstrap-rewrite/nav"
+
+
+/*SOCIAL-STREAM*/
+
+@import "social_stream-base"
+@import "social_stream-oauth2_server"
+
+
+
+/*GENERAL*/
+
+@import "fi-ware_idm/general_adjust"
+
+/*++++++++++ICONS & FONTS*/
+
+@import "fi-ware_idm/icons&fonts/fonts/fonts"
+
+@import "fi-ware_idm/icons&fonts/icons/icons"
+
+
+/*++++++++++MIXINS*/
+
+@import "fi-ware_idm/mixins/layout"
+
+@import "fi-ware_idm/mixins/box"
+
+@import "fi-ware_idm/mixins/buttons"
+
+
+
+/*++++++++++LAYOUTS--HEADER*/
+
+@import "fi-ware_idm/layouts/header/header"
+
+@import "fi-ware_idm/layouts/header/layout/header"
+
+@import "fi-ware_idm/layouts/header/responsive/responsive-768px-979px"
+@import "fi-ware_idm/layouts/header/responsive/responsive-1200px-min"
+@import "fi-ware_idm/layouts/header/responsive/responsive-767px-max"
+
+
+/*++++++++++LAYOUTS--PAGES*/
+
+@import "fi-ware_idm/layouts/pages/pages"
+
+
+/*++++++++++LAYOUTS--FOOTER*/
+
+@import "fi-ware_idm/layouts/footer/layout/footer"
+
+
+/*++++++++++TOOLBAR*/
+
+@import "fi-ware_idm/toolbar/toolbar"
+
+@import "fi-ware_idm/toolbar/layout/toolbar"
+
+@import "fi-ware_idm/toolbar/responsive/responsive-768px-979px"
+@import "fi-ware_idm/toolbar/responsive/responsive-1200px-min"
+@import "fi-ware_idm/toolbar/responsive/responsive-767px-max"
+
+
+/*++++++++++SETTINGS*/
+
+@import "fi-ware_idm/settings/settings"
+
+@import "fi-ware_idm/settings/layout/settings"
+
+
+
+/*FRONTPAGE*/
+
+@import "fi-ware_idm/frontpage&device/frontpage&device"
+
+@import "fi-ware_idm/frontpage&device/layout/frontpage&device"
+
+@import "fi-ware_idm/frontpage&device/responsive/responsive-768px-979px"
+@import "fi-ware_idm/frontpage&device/responsive/responsive-1200px-min"
+@import "fi-ware_idm/frontpage&device/responsive/responsive-767px-max"
+
+
+
+/*TERMS OF SERVICE*/
+
+@import "fi-ware_idm/terms_of_service/terms_of_service"
+
+@import "fi-ware_idm/terms_of_service/layout/terms_of_service"
+
+@import "fi-ware_idm/terms_of_service/responsive/responsive-768px-979px"
+@import "fi-ware_idm/terms_of_service/responsive/responsive-1200px-min"
+@import "fi-ware_idm/terms_of_service/responsive/responsive-767px-max"
+
+
+
+/*HOME*/
+
+@import "fi-ware_idm/home/home"
+
+@import "fi-ware_idm/home/layout/home"
+
+@import "fi-ware_idm/home/responsive/responsive-768px-979px"
+@import "fi-ware_idm/home/responsive/responsive-1200px-min"
+@import "fi-ware_idm/home/responsive/responsive-767px-max"
+
+
+
+/*MY APPLICATIONS*/
+
+@import "fi-ware_idm/my_applications/my_applications"
+
+@import "fi-ware_idm/my_applications/layout/my_applications"
+
+@import "fi-ware_idm/my_applications/responsive/responsive-768px-979px"
+@import "fi-ware_idm/my_applications/responsive/responsive-1200px-min"
+@import "fi-ware_idm/my_applications/responsive/responsive-767px-max"
+
+
+
+@import "fi-ware_idm/oauth2_server"
+
+
+
