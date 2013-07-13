@@ -1,0 +1,12 @@
+<section class="organizations">
+  <% if subject.organizations.present? %>
+    <section class="organizations-list">
+      <%= render subject.organizations %>
+    </section>
+  <% else %>
+    Aren't you member of any organization?
+
+    <%= link_to 'Explore them', organizations_path %>
+  <% end %>
+</section>
+

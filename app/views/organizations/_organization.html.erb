@@ -1,0 +1,18 @@
+<%= div_for organization do %>
+  <%= link_to organization do %>
+    <%= image_tag organization.logo.url(:small) %>
+  <% end %>
+
+  <div class="name">
+    <%= link_to organization.name, organization %>
+  </div>
+
+  <div class="description">
+    <%= organization.description%>
+  </div>
+
+  <% if can? :represent, organization %>
+    <%= link_to "switch", s: organization.slug %>
+  <% end %>
+  <hr class="soften">
+<% end %>

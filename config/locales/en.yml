@@ -9,16 +9,22 @@ en:
     new:
       permission:
         title: "The application %{client} will be able to:"
+  helpers:
+    submit:
+      application:
+        create: Next
+        update: Save
   organization:
     new:
       action: "Register an organization"
       title: "Register an organization"
   toolbar:
-    account: "Account"
-    applications: "Applications"
-    organizations: "Organizations"
-    resources: "Resources"
-    settings: "Settings"
+    applications: My Applications
+    home: Home
+    members: Members
+    organizations: Organizations
+    resources: Resources
+    settings: Settings
   relation_admin:
     name: "Application Admin"
   site:
@@ -28,6 +34,7 @@ en:
       index:
         title: "Applications"
       new:
+        link: "Add application"
         title: "Register new application"
     current:
       description: Create and manage your FI-WARE account

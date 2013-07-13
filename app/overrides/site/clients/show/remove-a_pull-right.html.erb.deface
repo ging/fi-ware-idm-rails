@@ -1,6 +1,0 @@
-<!-- replace "a.go-more" -->
-
-<% if can?(:update, @client) %>
-	<%= link_to t('application.button.edit'), edit_site_client_path(@client), class: "edit-phanton" %>
-<% end %>
- 

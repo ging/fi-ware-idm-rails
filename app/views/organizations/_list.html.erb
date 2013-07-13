@@ -1,30 +1,17 @@
 <section class="organizations-list">
-    <img>
+  <% current_user.organizations.first(5).each do |org| %>
+    <%= link_to org do %>
+      <%= image_tag org.logo.url(:small) %>
+    <% end %>
 
     <div class="name">
-    	<a href="·">
-      name
-    </a>
+      <%= link_to org.name, org %>
     </div>
+
+    <% if can? :represent, org %>
+      <%= link_to "switch", s: org.slug %>
+    <% end %>
    
     <hr class="soften">
-        <img>
-
-    <div class="name">
-    	<a href="·">
-      name
-    </a>
-    </div>
-   
-  <hr class="soften">
-      <img>
-
-    <div class="name">
-    	<a href="·">
-      name
-    </a>
-    </div>
-   
-    
-
- </section> 
+  <% end %>
+</section> 

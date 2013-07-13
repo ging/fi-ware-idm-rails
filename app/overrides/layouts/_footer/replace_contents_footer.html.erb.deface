@@ -6,6 +6,6 @@
     <%= Date.today.year %> © <%= link_to t('site.name'), 'http://fi-ware.idm.com/' %>
   </div>
  
-  <%= link_to t('Terms of service') %>
+  <%= link_to 'Terms of service', terms_of_service_path %>
 
   <%= link_to t('Help') %>
