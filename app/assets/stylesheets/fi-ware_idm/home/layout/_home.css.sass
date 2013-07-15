@@ -18,45 +18,6 @@ div.home
     
 div.applications,
 div.organizations
-  padding: 12px
-  min-height: 300px
-  .first-time-message
-    h3
-      font-size: 22px
-      margin-bottom: 15px
-      line-height: 26px
-
-  .site_clients
-    width: 100% !important
-  img
-    @include size(40px, 40px)
-    float: left
-    margin-bottom: 6px
-  .name,
-  .url
-    float: left
-    width: 60%
-    margin-left: 10px
-  .soften
-    clear: both
-    margin-bottom: 7px
-  .name
-    a
-      color: $gray
-  .url
-    margin-bottom: 6px
-  .users
-    padding-top: 2px
-    text-align: right
-    span
-      color: $principalColor
-
-div.applications,
-div.organizations,
+  @include inside-box
   header
-    margin-top: -38px
-    font-size: 22px
-    margin-left: -12px
-    a
-      float: right
-      font-size: 16px
+    font-size: 20px

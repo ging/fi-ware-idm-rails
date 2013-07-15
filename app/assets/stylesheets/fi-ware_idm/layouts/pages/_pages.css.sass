@@ -6,58 +6,25 @@ body
 
 #home,
 #organizations,
-#new_organizations,
+#new_organization,
 .members,
 #site_clients,
 #site_client,
 #new_site_client,
-#edit_site_clients
+#edit_site_clients,
+#relation_customs,
+.settings
+
   width: 73%
   float: left
   margin-left: 10%
 
-#content
-  h1
-    @include clearfix
-    font-family: $serifFontFamily
-    color: $blue
-    margin: 1px 0 13px 0
-    text-align: right
 
-
-
-.dropdown
-  .dropdown-menu
-    .dropdown-submenu
-      a 
-        &:hover,
-        &:focus,
-        &:active
-          color: $white
-          background-color: $blue
-          background-image: none
-      .active
-        a,
-        &:focus
-          background-color: $blue
-      li
-        a 
-          &:hover,
-          &:focus,
-          &:active
-            color: white
-            background-color: $blue
-            background-image: none
 
 #flash
   float: right
-  width: 639px
-  margin-top: -86px
-    
+  width: 67%
+  position: absolute
+  margin-left: 25%
+  z-index: 1000
 
-
-.settings
-  @include grid-core-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
-  float: left
-  header
-    margin-bottom: 0px

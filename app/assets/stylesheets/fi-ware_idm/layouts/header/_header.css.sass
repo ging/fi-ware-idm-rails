@@ -19,3 +19,26 @@ header.navbar
       line-height: 30px
       font-family: $serifFontFamily
       color: $principalColor
+
+.dropdown
+  .dropdown-menu
+    .dropdown-submenu
+      a 
+        &:hover,
+        &:focus,
+        &:active
+          color: $white
+          background-color: $blue
+          background-image: none
+      .active
+        a,
+        &:focus
+          background-color: $blue
+      li
+        a 
+          &:hover,
+          &:focus,
+          &:active
+            color: white
+            background-color: $blue
+            background-image: none
