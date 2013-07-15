@@ -1,0 +1,19 @@
+<!-- replace_contents'.explore-nav' -->
+
+<ul class="oil-portal">
+<li class="cloud">
+  <a href="#">
+    cloud   
+  </a>
+</li>
+<li class="market">
+  <a href="#">
+    market
+  </a>
+</li>
+<li class="active">
+  <a href="#">
+    Idm
+  </a>
+</li>
+</ul>

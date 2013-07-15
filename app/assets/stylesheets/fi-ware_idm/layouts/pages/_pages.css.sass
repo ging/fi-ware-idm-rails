@@ -1,5 +1,8 @@
 body
   color: #8c8c8c
+  background-color: $auxiliarColor
+.wrapper
+  padding-top: 100px
 #content
   h1
     @include clearfix
@@ -38,40 +41,7 @@ body
   width: 639px
   margin-top: -86px
     
-.headerFront
-  .logo-header-out
-    width: 94px
-    float: left
-    a
-      font-size: 45px
-      display: inline
-      img
-        float: left
-        width: 94px !important
-        padding-top: 10px
-        vertical-align: top
-        max-width: 95%
-  .brand
-    display: inline-block
-    font-size: 27px
-    margin-top: 29px !important
-    margin-left: 4px
-    a
-      display: block
-      font-size: 35px
-      color: #8C8C8C
-      margin-bottom: 2px
-      &:hover
-        color: #8C8C8C
-        text-decoration: none
-    h2
-      display: block
-      font-family: $serifFontFamily
-      font-size: 27px
-      color: $blue
-      margin: 3px 0px -2px 4px
-  .register_link
-    font-size: 15px !important
+
 
 .settings
   @include grid-core-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)

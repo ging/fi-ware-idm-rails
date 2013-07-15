@@ -1,20 +1,49 @@
-header
+header.navbar
+  position: fixed
+  width: 96%
+  height: 35px
+  padding: 1px 2% 1px
   nav.navbar-inner
-    .brand
-      margin: 31px 0 0 2px !important
     .logo
-      padding-top: 10px
-      width: 94px
-    .home
-      width: auto
-      float: none
-      margin-top: 0
-      a
-        span
-          margin-left: -4px
-    h2
-      margin-top: 0
-      padding-left: 6px
+      width: 60px
+      padding-top: 0
+    .brand
+      padding: 0
+      .home
+        width: auto
+        float: none
+        margin: 12px 0 0 24px 
+        a
+          font-size: 23px
+          span
+            margin-left: -4px
+      h2
+        margin-top: 0
+        padding-left: 6px
 
   .search-mobile
     display: none !important
+  .explore-nav
+    margin-top: 0
+    width: auto !important
+    ul.oil-portal
+      width: 300px
+      height: 36px
+      padding: 0px 14px
+      margin-bottom: 0px
+      li
+        display: inline-block
+        padding: 14px 18px 9px
+        &:hover
+          background-color: $auxiliarColor
+          height: 18px
+        a
+          color: $gray
+          &:hover
+            color: $blue
+      li.active
+        background-color: $auxiliarColor
+        height: 18px
+        a
+          color: $blue
+

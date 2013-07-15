@@ -1,12 +1,3 @@
 <!-- replace_contents '.brand' -->
 
 <%= link_to t('site.name') %>
-
-<h2>
-  Identity Manager
-</h2>
-<h5>
-  Fi-ware has more to offer when you sign in to your Fi-ware Account.<br/>
-  Sign in or 
-  <%= link_to t(' create an account'), new_user_registration_path, :class => "register_link" %>
-</h5>

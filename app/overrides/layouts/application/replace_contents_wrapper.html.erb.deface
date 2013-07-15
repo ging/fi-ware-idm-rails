@@ -1,7 +1,5 @@
 <!-- replace_contents '.wrapper' -->
 
-  <%= render :partial => "layouts/header" %>
-
   <% if user_signed_in? %>
     <%= render :partial => "toolbar/toolbar" %>
   <% end %>

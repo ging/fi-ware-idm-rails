@@ -1,9 +1,7 @@
 <!-- replace_contents '.brand' -->
 <div class="home">
   <%= link_to home_path do %>
-    FI-Ware <span>Identity Manager</span>
+    Fi-Ware
   <% end %>
 </div>
-<h2>
-  Dashboard
-</h2>
+
