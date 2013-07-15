@@ -1,28 +1,23 @@
-.home
-  @include grid-core-span(9, $fluidGridColumnWidth, $fluidGridGutterWidth)
-  float: left
-  margin-top: 35px
-  .menu-toolbar
-    margin-left: 0
-  .applications
+div.home
+  margin: 59px 0 0 0
+  div.applications
     @include grid-core-span(6, $fluidGridColumnWidth, $fluidGridGutterWidth)
-    margin-left: 9%
     float: left
     ul
       margin-left: 0
     .view-all
       float: right
 
-  .organizations
+  div.organizations
     @include grid-core-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
-    float: left
+    float: right
     margin: 0 0 43px 2.5%
 
     .name
       width: 60% !important
     
-.applications,
-.organizations
+div.applications,
+div.organizations
   padding: 12px
   min-height: 300px
   .first-time-message
@@ -56,18 +51,8 @@
     span
       color: $principalColor
 
-.stats
-  clear: both
-  min-height: 300px
-  margin-top: 20px
-  #chart_div
-    width: 100%
-    height: auto
-    background: white
-
-.applications,
-.organizations,
-.stats
+div.applications,
+div.organizations,
   header
     margin-top: -38px
     font-size: 22px
@@ -75,7 +60,3 @@
     a
       float: right
       font-size: 16px
-.stats
-  header     
-    margin-bottom: 8px
-    margin-left: 0px

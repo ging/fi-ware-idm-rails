@@ -1,13 +1,13 @@
 <div class="nav menu-toolbar">
   <h5>Identity Manager</h5>
   <ul class="main_nav">
-    <li>
+    <li class="home">
       <%= link_to home_path do %>
         <i class='icon_menu-20-home'></i>
         <h2><%= t('toolbar.home') %></h2>
       <% end %>
     </li>
-    <li>
+    <li class="organizations">
       <% if current_subject.is_a? User %>
         <%= link_to organizations_path do %>
           <i class='icon_menu-20-organizations'></i>
@@ -20,9 +20,9 @@
         <% end %>
       <% end %>
     </li>
-    <li>
+    <li class="my-applications">
       <%= link_to applications_path do %>
-        <i class='icon_menu-20-clients'></i>
+        <i class='icon_menu-20-my-applications'></i>
         <h2><%= t('toolbar.applications') %></h2>
       <% end %>
     </li>

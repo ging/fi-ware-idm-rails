@@ -1,24 +1,43 @@
 .menu-toolbar
-  @include grid-core-span(3, $fluidGridColumnWidth, $fluidGridGutterWidth)
+  width: 17%
   float: left
+  margin-left: 0
   ul
-    margin-left: -14px
+    margin-left: -3px
     li
-      &[class^="icon_menu-20-"]
-        float: left
       a
         color: #8c8c8c
-        &:hover
+      &:hover
+        a
           color: $principalColor
-        .active
-          color: $principalColor
+
       h2
         display: inline
-        font-size: 24px
-        margin-left: 14px
-        line-height: 50px
-        vertical-align: top
+        font-size: 15px
+        margin-left: 12px
+        line-height: 42px
+        vertical-align: text-top
         a
           text-decoration: none
           &:hover
             text-decoration: none
+
+    li.home
+      &:hover
+        .icon_menu-20-home
+          background-position: -49px -10px
+
+    li.organizations
+      &:hover
+        .icon_menu-20-organizations
+          background-position: -49px -45px
+
+    li.my-applications
+      &:hover
+        .icon_menu-20-my-applications
+          background-position: -49.5px -114px
+
+
+    li.active
+      a
+        color: $principalColor
