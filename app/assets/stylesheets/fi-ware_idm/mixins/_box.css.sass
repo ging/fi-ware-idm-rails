@@ -8,8 +8,38 @@
   border-color: rgba(0,0,0, 0.1)
   background-color: $auxiliarColor
   border-color: rgba(0,0,0, 0.1)
-  header
-    font-size: 20px
+
+@mixin contact
+  .avatar
+    @include size(40px, 40px)
+    float: left
+    margin-bottom: 6px
+  .data
+    float: left
+    margin-left: 10px
+    .name
+      a
+        color: $gray
+
+
+@mixin application
+  img
+    @include size(40px, 40px)
+    float: left
+    margin-bottom: 6px
+
+  .name,
+  .url
+    float: left
+    margin-left: 10px
+  
+  .name
+    a
+      color: $gray
+  .url
+    margin-bottom: 6px
+
+
 
 @mixin inside-box
   padding: 12px
@@ -25,26 +55,16 @@
       font-size: 22px
       margin-bottom: 15px
       line-height: 26px
+  .contact
+    @include contact
 
   .site_clients
     width: 100% !important
-  img
-    @include size(40px, 40px)
-    float: left
-    margin-bottom: 6px
-  .name,
-  .url
-    float: left
-    width: 60%
-    margin-left: 10px
+  
   .soften
     clear: both
     margin-bottom: 7px
-  .name
-    a
-      color: $gray
-  .url
-    margin-bottom: 6px
+  
   .users
     padding-top: 2px
     text-align: right

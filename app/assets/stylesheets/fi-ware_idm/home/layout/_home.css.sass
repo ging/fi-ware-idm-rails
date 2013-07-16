@@ -5,10 +5,13 @@ div.home
     float: left
     ul
       margin-left: 0
+      li
+        @include application
     .view-all
       float: right
 
-  div.organizations
+  div.organizations,
+  div.members
     @include grid-core-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
     float: right
     margin: 0 0 43px 2.5%
@@ -17,7 +20,8 @@ div.home
       width: 60% !important
     
 div.applications,
-div.organizations
+div.organizations,
+div.members
   @include inside-box
   header
     font-size: 20px

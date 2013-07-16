@@ -1,0 +1,3 @@
+<!-- replace ".postit" -->
+
+  <h5><%= t 'permission.postit' %></h5>
