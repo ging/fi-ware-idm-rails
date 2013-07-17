@@ -7,6 +7,21 @@
   li
     display: inline
 
+
 @mixin centered
   margin-left: 0px
   margin-right: 0px
+
+
+@mixin header-tab
+  header
+    margin-top: 27px
+    a
+      float: left
+      @include btn-secundary
+      @include border-radius(5px)
+    h3
+      font-size: 21px
+      color: $gray
+      float: none !important
+      text-align: right

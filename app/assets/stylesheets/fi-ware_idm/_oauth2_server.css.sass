@@ -24,49 +24,10 @@
         height: 100px
         color: #999
 
-.first-img
-  h1
-    text-align: left
-    @include clearfix
-  header
-    font-size: 21px
-    color: $gray
-    a
-      font-size: 14px
-      float: right
-    .button_to
-      float: right
-    .soften
-      margin: 9px 0 10px 0
-      @include opacity (100)
-      clear: both
-  img
-    display: inline
-    @include size (40px, 40px)
-  .name,
-  .url,
-  .users
-    display: inline-block
-    color: $gray
-  .name,
-  .url
-    margin-left: 20px
-  .name
-    font-size: 16px
-  .url
-    a
-      color: $gray
-      &:hover
-        color: $blue
-  .users
-    font-size: 16px
-    float: right
-    margin-top: 7px
-    span
-      color: $blue
-  .soften
-    margin: 10px 0
-    @include opacity (70)
+#site_clients,
+#organizations
+  @include header-tab
+
       
 #oauth2_server
   h1
@@ -86,6 +47,8 @@
         color: #999
         background-color: $white
         padding: 8px 5px 5px 8px
+
+        
   
 .authorization
   width: 322px !important
