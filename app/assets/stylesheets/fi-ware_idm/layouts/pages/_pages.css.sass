@@ -1,13 +1,15 @@
 #home,
 #organizations,
 #new_organization,
-.members,
+#members,
 #site_clients,
 #site_client,
 #new_site_client,
 #edit_site_client,
 #relation_customs,
-#settings
+#settings,
+#user,
+#organization
   width: 73%
   float: left
   margin-left: 10%
@@ -17,10 +19,49 @@
 #organizations
   @include header-tab
 
+#user,
+#organization
+  section.applications
+    width: 100%
+    @include principal-box
+    ul
+      margin-left: 0
+      li
+        @include application
+    .view-all
+      float: right
+
+  section.organizations,
+  section.members
+    @include principal-box
+
+    margin: 0 0 43px 2.5%
+
+
+      
+  section.applications,
+  section.organizations,
+  section.members
+    @include inside-box
+    header
+      font-size: 20px
+
+  .applications,
+  .organizations
+    &:hover
+      header
+        .edit-phanton
+          @include opacity(100)
+    header
+      .edit-phanton
+        @include btn-secundary
+        @include border-radius(5px)
+        @include opacity(0)
 
 
 div.organization,
-div.member
+div.member,
+section.organizations
   @include contact
 
 div.aplication

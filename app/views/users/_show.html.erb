@@ -1,15 +1,17 @@
-<%= @user.name %>
+<div id="user">
+  <%= @user.name %>
 
-<% if can? :edit, @user.profile %>
-  <%= link_to 'Edit', polymorphic_path([ @user, :profile ]) %>
-<% end %>
+  <% if can? :edit, @user.profile %>
+    <%= link_to 'Edit', polymorphic_path([ @user, :profile ]) %>
+  <% end %>
 
-Profile info
+  Profile info
 
-<%= render partial: 'subjects/organizations',
-           object: @user,
-           as: :subject %>
+  <%= render partial: 'subjects/organizations',
+             object: @user,
+             as: :subject %>
 
-<%= render partial: 'subjects/applications',
-           object: @user,
-           as: :subject %>
+  <%= render partial: 'subjects/applications',
+             object: @user,
+             as: :subject %>
+</div>

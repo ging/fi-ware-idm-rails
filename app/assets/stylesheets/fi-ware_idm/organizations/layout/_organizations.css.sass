@@ -1,8 +1,42 @@
 .organizations-list
-
   .organization
     @minclude contact
 
-.member-list
+.members
+  .add
+    @include btn-add
+    margin: 0 0 0 60px
+    padding-top: 27px
+
+
+
+.tab-pane,
+.organizations-list
+  .organization
+    min-height: 50px
+
+#authorized
+  #contact-filter
+    width: 30% !important
+    float: right
+    margin-top: -48px
   .contact
     @include contact
+    width: 170px
+    float: left
+  .soften
+    display: none
+
+#members
+  header
+    @include header-tab
+  #contact-filter
+    width: 30% !important
+    float: right
+    margin-top: -48px
+  .contact
+    @include contact
+    width: 170px
+    float: left
+  .soften
+    display: none

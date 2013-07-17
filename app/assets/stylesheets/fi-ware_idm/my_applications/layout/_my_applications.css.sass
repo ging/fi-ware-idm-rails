@@ -10,3 +10,176 @@
     li
       @include application
       margin-top: 10px
+
+
+.authorization
+  width: 322px !important
+  margin-left: auto
+  margin-right: auto
+  h2
+    margin-top: -3px
+    border-bottom: 1px solid #ccc
+    color: $blue
+    font-family: $sansFontFamily
+  form
+    text-align: right
+    margin-bottom: -5px
+    margin-top: 14px
+    border-top: 1px solid #f1f1f1
+    padding-top: 10px
+
+  ul
+    margin-top: 5px
+    margin-left: 10px
+    li
+      padding-bottom: 5px
+      padding-top: 5px
+
+
+/*show screen*/
+#site_client
+  margin-top: 32px
+  .site_client
+    width: 95% 
+    padding: 0 2.5%
+    margin-bottom: 30px
+    display: inline-block
+    header
+      margin-top: -37px
+      h4
+        @include clearfix
+        margin-bottom: 4px
+        margin-left: -2.5%
+        a
+          font-size: 13px
+      img
+        margin-top: -52px
+    .soften
+      margin-bottom: 0px
+    .content
+      padding: 14px
+      img
+        display: inline
+        @include size (40px, 40px)
+      .gereral-info
+        @include grid-core-span(10, $fluidGridColumnWidth, $fluidGridGutterWidth)
+        float: left
+        margin-top: -50px
+        h4
+          margin-bottom: 0px
+          font-size: 18px
+          color: $principalColor
+          font-family: $serifFontFamily 
+        .name,
+        .url,
+        .users
+          display: inline-block
+        .name,
+        .url
+          margin-left: 20px
+
+        .result
+          margin-bottom: 18px
+          margin-left: 20px
+          padding-top: 5px
+          border-top: 1px solid #C1C1C1
+          color: #929292
+          font-size: 17px
+      .btn-group
+        @include btn-primary
+        @include border-radius(5px)
+        @include btn-add
+        float: right
+        .dropdown-menu
+          width: 300px
+          margin-left: -196px
+          padding: 10px 14px
+          color: $gray
+          li
+            h6
+              border-bottom: 1px solid #CCC
+              a
+                color: $principalColor !important
+          li.client-secret
+            form
+              margin-top: -20px
+              input
+                &[type="submit"]
+                  border: none
+                  box-shadow: none
+                  &:hover
+                    background-color: $white !important
+                    color: $principalColor
+
+            p
+              word-break: break-all
+              overflow-x: scroll
+  .tabbable
+    .tab-content
+      overflow: visible
+      .contact
+        @include contact
+        .add
+          @include btn-add
+          margin: 0 0 0 60px
+          padding-top: 27px
+
+/*edit screen*/
+
+#edit_site_client
+  padding-top: 56px
+  form.edit_site_client
+    padding: 10px 0 60px 10px
+    @include principal-box
+    section
+      label
+        font-family: $serifFontFamily
+        color: $principalColor
+        font-size: 15px
+    textarea
+      min-height: 40px
+      max-height: 55px
+      background-image: none !important
+      background-color: transparent
+      border-left: none
+      border-right: none
+      border-bottom: none
+      box-shadow: none
+      @include border-radius(0px)
+      float: right
+    input
+      &[type="text"]
+        background-image: none !important
+        background-color: transparent
+        border-left: none
+        border-right: none
+        border-bottom: none
+        box-shadow: none
+        @include border-radius(0px)
+        float: right
+    section.url,
+    section.callback_url
+      textarea
+        min-height: 27px
+        max-height: 28px
+
+  .site_client_roles
+    width: 100%
+    margin: 0 0 20px 0
+
+  #cancel_account
+    clear: both
+    @include principal-box
+    &:hover
+      border-color: $red !important
+      a
+        color: $red !important
+    header
+      margin-bottom: 0
+    #cancel_account_content
+      a
+        color: $red !important
+    
+
+
+
