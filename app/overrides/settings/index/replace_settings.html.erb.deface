@@ -1,3 +1,17 @@
-<!-- replace 'section#settings' -->
+<!-- replace_contents 'section#settings' -->
 
-  <%= render :partial => 'index' %>
+   <div class="accordion" id="settings-accordion">
+    <% if current_subject == current_user %>
+      <%= render partial: "devise/registrations/edit_user",
+                 locals: { resource: current_user,
+                           resource_name: :user } %>
+    <% end %>
+
+    <% if current_subject == current_user %>
+      <%= render partial: "devise/registrations/delete_account",
+                 locals: { resource: current_user,
+                           resource_name: :user } %>
+    <% else %>
+      <%= render partial: 'destroy' %>
+    <% end %>
+</div>
