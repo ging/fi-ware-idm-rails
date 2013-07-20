@@ -1,6 +1,6 @@
 #home,
 #organizations,
-#new_organization,
+section#new_organization,
 #members,
 #site_clients,
 #site_client,
@@ -34,18 +34,18 @@
   section.organizations,
   section.members
     @include principal-box
-
     margin: 0 0 43px 2.5%
-
 
       
   section.applications,
   section.organizations,
-  section.members
+  section#members
     @include inside-box
     header
       font-size: 20px
-
+      #add-contact-link
+        @include btn-secundary
+        @include border-radius(5px)
   .applications,
   .organizations
     &:hover
@@ -63,6 +63,7 @@ div.organization,
 div.member,
 section.organizations
   @include contact
+  
 
 div.aplication
   @include application

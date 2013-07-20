@@ -1,3 +1,12 @@
+#organizations
+  .data
+    width: 90%
+    .name
+      display: inline
+    a
+      &:last-child
+        display: inline-block
+    
 .organizations-list
   .organization
     @minclude contact
@@ -14,6 +23,7 @@
 .organizations-list
   .organization
     min-height: 50px
+    padding-top: 10px
 
 #authorized
   #contact-filter
@@ -28,8 +38,7 @@
     display: none
 
 #members
-  header
-    @include header-tab
+  @include header-tab
   #contact-filter
     width: 30% !important
     float: right
@@ -38,5 +47,30 @@
     @include contact
     width: 170px
     float: left
+    margin-left: 12px
   .soften
     display: none
+  .members
+    margin-top: 50px
+
+
+/*create screen*/
+
+#new_organization
+  h3
+    text-align: right
+  form#new_organization
+    padding: 0 2.5%
+    section
+      @include forms
+      
+  #new_organization
+    textarea
+      max-height: 50px 
+
+.modal-body
+  form
+    box-shadow: none !important
+    border: none !important
+  section
+    border: none !important

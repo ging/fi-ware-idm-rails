@@ -11,10 +11,12 @@
         <div class="name">
           <%= link_to org.name, org %>
         </div>
-
         <% if can? :represent, org %>
           <%= link_to "switch", s: org.slug %>
         <% end %>
+        <div class="definition">
+          definition definition definition definition definition definition definition definition definition definition definition definition
+        </div>
       </div>
     </div>
     <hr class="soften">
