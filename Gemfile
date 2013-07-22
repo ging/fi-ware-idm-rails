@@ -56,4 +56,4 @@ end
 
 gem 'pry-rails'
 
-gem 'exception_notification'
+gem 'exception_notification', '~> 3.0'
