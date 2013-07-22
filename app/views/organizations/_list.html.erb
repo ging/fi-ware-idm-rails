@@ -12,7 +12,7 @@
           <%= link_to org.name, org %>
         </div>
         <% if can? :represent, org %>
-          <%= link_to "switch", s: org.slug %>
+          <%= link_to "switch", { s: org.slug }, { class: 'session-switch' } %>
         <% end %>
         <div class="description">
           description description description description description description description description description
