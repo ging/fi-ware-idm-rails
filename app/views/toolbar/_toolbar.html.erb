@@ -1,26 +1,28 @@
 <div class="nav menu-toolbar">
   <h5>Identity Manager</h5>
   <ul class="main_nav">
-    <li class="home">
+    <li class="home<%= ' active' if current_page?(controller: 'home') %>">
       <%= link_to home_path do %>
         <i class='icon_menu-20-home'></i>
         <h2><%= t('toolbar.home') %></h2>
       <% end %>
     </li>
-    <li class="organizations">
-      <% if current_subject.is_a? User %>
+    <% if current_subject.is_a? User %>
+      <li class="organizations<%= ' active' if current_page?(controller: 'organizations') %>">
         <%= link_to organizations_path do %>
           <i class='icon_menu-20-organizations'></i>
           <h2><%= t('toolbar.organizations')%></h2>
         <% end %>
-      <% else %>
+      </li>
+    <% else %>
+      <li class="members<%= ' active' if current_page?(controller: 'contacts') %>">
         <%= link_to contacts_path do %>
           <i class='icon_menu-20-members'></i>
           <h2><%= t('toolbar.members')%></h2>
         <% end %>
-      <% end %>
-    </li>
-    <li class="my-applications">
+      </li>
+    <% end %>
+    <li class="my-applications<%= ' active' if current_page?(controller: 'applications') %>">
       <%= link_to applications_path do %>
         <i class='icon_menu-20-my-applications'></i>
         <h2><%= t('toolbar.applications') %></h2>
