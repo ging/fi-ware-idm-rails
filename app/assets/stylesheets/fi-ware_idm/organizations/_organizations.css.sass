@@ -1,3 +1,10 @@
 .organizations-list
   header
     color: $grayLight
+  .organization
+    &:hover
+      .session-switch
+        @include opacity(100)
+
+    .session-switch
+      @include opacity(0)
