@@ -19,7 +19,14 @@ section#new_organization,
 #organizations
   @include header-tab
 
-#user,
+section.applications,
+section.organizations,
+section.members,
+section.personal_info
+  @include principal-box
+  margin: 0 0 43px 2.5%
+  padding: 12px
+
 #organization
   section.applications
     width: 100%
@@ -31,10 +38,7 @@ section#new_organization,
     .view-all
       float: right
 
-  section.organizations,
-  section.members
-    @include principal-box
-    margin: 0 0 43px 2.5%
+  
 
       
   section.applications,

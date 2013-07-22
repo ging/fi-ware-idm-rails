@@ -84,7 +84,6 @@
           padding-top: 5px
           border-top: 1px solid #C1C1C1
           color: #929292
-          font-size: 17px
       .btn-group
         @include btn-primary
         @include border-radius(5px)
@@ -130,18 +129,21 @@ form#new_application,
 form#new_organization
   @include principal-box
 #site_client_form
-  padding: 0 2.5%
-  .name
+  padding: 20px 2.5% 35px
+  min-height: 280px
+  section
+    clear: both
   .description
     textarea
       max-height: 50px
+  .name,
   .url,
   .callback_url
     textarea
-      max-height: 30px
-
-#new_site_client-modal
-  
+      min-height: 20px
+      max-height: 20px
+  .btn-secundary
+    margin-top: 50px
 
 
 /*edit screen*/
