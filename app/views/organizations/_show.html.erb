@@ -2,7 +2,7 @@
   <%= @organization.name %>
 
   <% if can? :edit, @organization.profile %>
-    <%= link_to 'Edit', polymorphic_path([ @organization, :profile ]) %>
+    <%= link_to 'Edit', polymorphic_path([ @organization, :profile ]), class:"edit" %>
   <% end %>
 
   Profile info

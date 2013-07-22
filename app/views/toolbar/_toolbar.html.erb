@@ -22,7 +22,7 @@
         <% end %>
       </li>
     <% end %>
-    <li class="my-applications<%= ' active' if current_page?(controller: 'applications') %>">
+    <li class="my-applications<%= ' active' if current_page?(controller: 'applications, application') %>">
       <%= link_to applications_path do %>
         <i class='icon_menu-20-my-applications'></i>
         <h2><%= t('toolbar.applications') %></h2>
