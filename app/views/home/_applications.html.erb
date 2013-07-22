@@ -5,7 +5,7 @@
   </header>
 
   <% if current_subject.applications.blank? %>
-    <%= render partial: 'site/clients/first'%>
+    <%= render partial: 'applications/first'%>
   <% else %>
     <%= render partial: 'site/clients/list',
                object: current_subject.applications.first(5) %>
