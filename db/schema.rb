@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130711155040) do
+ActiveRecord::Schema.define(:version => 20130723133743) do
 
   create_table "activities", :force => true do |t|
     t.integer  "activity_verb_id"
@@ -93,10 +93,10 @@ ActiveRecord::Schema.define(:version => 20130711155040) do
 
   create_table "actors", :force => true do |t|
     t.string   "name"
-    t.string   "email",              :default => "",   :null => false
+    t.string   "email",                 :default => "",   :null => false
     t.string   "slug"
     t.string   "subject_type"
-    t.boolean  "notify_by_email",    :default => true
+    t.boolean  "notify_by_email",       :default => true
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "activity_object_id"
@@ -104,6 +104,7 @@ ActiveRecord::Schema.define(:version => 20130711155040) do
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
+    t.string   "notification_settings"
   end
 
   add_index "actors", ["activity_object_id"], :name => "index_actors_on_activity_object_id"
