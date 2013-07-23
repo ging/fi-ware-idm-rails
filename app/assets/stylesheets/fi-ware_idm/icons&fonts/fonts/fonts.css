@@ -3,9 +3,9 @@
 @font-face {
   font-family: Comfortaa;
   src: url(icons&fonts/comfortaa_regular-webfont.ttf) format('truetype');
-  src: url(fonts/comfortaa_regular-webfont.svg);
-  src: url(fonts/comfortaa_regular-webfont.eot);
-  src: url(fonts/comfortaa_regular-webfont.woff);
+  src: url(icons&fonts/comfortaa_regular-webfont.svg);
+  src: url(icons&fonts/comfortaa_regular-webfont.eot);
+  src: url(icons&fonts/comfortaa_regular-webfont.woff);
 }
 
 @font-face {

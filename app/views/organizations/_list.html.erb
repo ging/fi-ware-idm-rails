@@ -1,28 +1,31 @@
 <section class="organizations-list">
-
-  <% current_user.organizations.first(5).each do |org| %>
-    <div class="organization">
-      <div class="avatar">  
-        <%= link_to org do %>
-          <%= image_tag org.logo.url(:small) %>
-        <% end %>
-      </div>
-      <div class="data">
-        <div class="name">
-          <%= link_to org.name, org %>
+  <ul>
+    <% current_user.organizations.first(5).each do |org| %>
+    <li>
+      <div class="organization">
+        <div class="avatar">  
+          <%= link_to org do %>
+            <%= image_tag org.logo.url(:small) %>
+          <% end %>
         </div>
-        <% if can? :represent, org %>
-          <%= link_to "switch", { s: org.slug }, { class: 'session-switch' } %>
-        <% end %>
-
-        <% unless current_page?(controller: 'home') %>
-          <div class="description">
-            description description description description description description description description description
+        <div class="data">
+          <div class="name">
+            <%= link_to org.name, org %>
           </div>
-        <% end %>
+          <% if can? :represent, org %>
+            <%= link_to "switch", { s: org.slug }, { class: 'session-switch' } %>
+          <% end %>
+
+          <% unless current_page?(controller: 'home') %>
+            <div class="description">
+              <%= organization.description %>
+            </div>
+          <% end %>
+        </div>
       </div>
-    </div>
-    <hr class="soften">
-  <% end %>
+      <hr class="soften">
+    <% end %>
+    </li>
+  </ul>
 
 </section> 
