@@ -25,6 +25,9 @@
           &:last-child
             display: inline-block
             width: auto
+  .applications-list
+    ul
+      @include application
   .personal_info
     div
       header
@@ -47,4 +50,17 @@
           padding: 0px
           .content
             padding: 0px
-    
+
+.content
+  .accordion
+    clear: both
+    .accordion-group
+      border: none
+      .accordion-heading
+        text-align: right
+      .accordion-inner
+        border: none
+        padding: 0px
+        .content
+          padding: 0px
+      

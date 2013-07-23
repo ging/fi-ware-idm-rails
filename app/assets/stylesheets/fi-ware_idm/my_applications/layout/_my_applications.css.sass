@@ -82,35 +82,25 @@
           padding-top: 5px
           border-top: 1px solid #C1C1C1
           color: #929292
-      .btn-group
-        @include btn-primary
-        @include border-radius(5px)
-        @include btn-add
-        float: right
-        .dropdown-menu
-          width: 300px
-          margin-left: -196px
-          padding: 10px 14px
-          color: $gray
-          li
-            h6
-              border-bottom: 1px solid #CCC
-              a
-                color: $principalColor !important
-          li.client-secret
-            form
-              margin-top: -20px
-              input
-                &[type="submit"]
-                  border: none
-                  box-shadow: none
-                  &:hover
-                    background-color: $white !important
-                    color: $principalColor
+      .accordion
+        h6
+          border-bottom: 1px solid #CCC
+          a
+            color: $principalColor !important
+        div.client-secret,
+        div.client-id
+          form
+            margin-top: -20px
+            input
+              &[type="submit"]
+                border: none
+                box-shadow: none
+                &:hover
+                  background-color: $white !important
+                  color: $principalColor
 
             p
-              word-break: break-all
-              overflow-x: scroll
+              padding-left: 10px
   .tabbable
     .tab-content
       overflow: visible
