@@ -29,34 +29,36 @@
 
 
 @mixin application
-  img
-    @include size(40px, 40px)
-    float: left
-    margin-bottom: 6px
-  .data
-    float: left
-    .name,
-    .url
-      margin-left: 10px
-    
-    .name
-      a
-        color: $gray
-    .url
+  margin-left: 0
+  li
+    img
+      @include size(40px, 40px)
+      float: left
       margin-bottom: 6px
+    .data
+      float: left
+      .name,
+      .url
+        margin-left: 10px
+      
+      .name
+        a
+          color: $gray
+      .url
+        margin-bottom: 6px
+        font-size: 14px
 
-  .users
-    float: right
-    
-  .team
-    @include grid-core-span(3, $fluidGridColumnWidth, $fluidGridGutterWidth)
-    float: right
-    margin-top: -8px
-    text-align: right
-    .auth
-      display: inline-block
-
-
+    .users
+      float: right
+      
+    .team
+      @include grid-core-span(3, $fluidGridColumnWidth, $fluidGridGutterWidth)
+      float: right
+      margin-top: -8px
+      text-align: right
+      font-size: 12px
+      .auth
+        display: inline-block
 
 
 
@@ -85,7 +87,8 @@
     clear: both
     margin-bottom: 7px
   
-  .users
+  .users,
+  .auth
     padding-top: 2px
     text-align: right
     span
