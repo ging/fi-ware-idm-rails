@@ -31,6 +31,9 @@ en:
     client:
       add: "Add new application"
       added: "Developer applications"
+      destroy:
+        link: Remove the application and all its data
+        title: Destroy application
       index:
         title: "Applications"
       new:
