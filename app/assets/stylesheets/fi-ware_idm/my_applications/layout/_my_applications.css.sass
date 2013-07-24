@@ -3,10 +3,19 @@
 #site_client
   #toolbar
     display: none
+  .tabbable
+    margin-top: 30px
+
+
+.site_clients
+  .team
+    width: 13% !important
 
 .site_clients_list
   ul
     @include application
+    li
+      margin-top: 5px
  
 
 
@@ -131,35 +140,25 @@ form#new_organization
       min-height: 20px
       max-height: 20px
   .btn-secundary
-    margin-top: 50px
+    margin-top: 9px
 
 
 /*edit screen*/
 
 #edit_site_client
   padding-top: 56px
-  form.edit_site_client
-    padding: 10px 0 60px 10px
-    @include principal-box
-    section
-      label
-        font-family: $serifFontFamily
-        color: $principalColor
-        font-size: 15px
-    textarea
-      min-height: 40px
-      max-height: 55px
-      background-image: none !important
-      background-color: transparent
-      border-left: none
-      border-right: none
-      border-bottom: none
-      box-shadow: none
-      @include border-radius(0px)
-      float: right
-    input
-      &[type="text"]
-        background-image: none !important
+  .edit_site_client
+    form
+      padding: 10px 0 60px 10px
+      @include principal-box
+      section
+        label
+          font-family: $serifFontFamily
+          color: $principalColor
+          font-size: 15px
+      textarea
+        min-height: 40px
+        max-height: 55px
         background-color: transparent
         border-left: none
         border-right: none
@@ -167,11 +166,20 @@ form#new_organization
         box-shadow: none
         @include border-radius(0px)
         float: right
-    section.url,
-    section.callback_url
-      textarea
-        min-height: 27px
-        max-height: 28px
+      input
+        &[type="text"]
+          background-color: transparent
+          border-left: none
+          border-right: none
+          border-bottom: none
+          box-shadow: none
+          @include border-radius(0px)
+          float: right
+      section.url,
+      section.callback_url
+        textarea
+          min-height: 27px
+          max-height: 28px
 
   .site_client_roles
     width: 100%

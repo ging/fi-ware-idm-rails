@@ -10,24 +10,52 @@
     img
       float: right
       margin: -21px 30px -88px 0
+
+  .organizations-list,
+  .applications-list
+    .application,
+    .organization
+      padding-top: 6px
+      &:first-child
+        padding-top: 0px
+      img
+        width: 40px
+        height: 40px
+        float: left
+        margin-bottom: 6px
+      .data
+        width: 73% !important
+        max-height: 52px
+        min-height: 50px
+        display: inline-block
+        margin-left: 6px
+        .name
+          display: inline
+          a
+            color: $gray
+            width: auto !important
+      .team
+        width: 16%
+        text-align: right
+        display: inline-block
+        float: right
+        span
+          color: $principalColor
+  
+  .applications
+    width: auto !important
+  .applications-list
+    ul
+      @include application
+
   .organizations-list
     .organization
       @include contact
       min-height: 50px
       padding-top: 10px
       .data
-        width: 80%
-        max-height: 60px
-        min-height: 59px
-        .name
-          display: inline
-        a
-          &:last-child
-            display: inline-block
-            width: auto
-  .applications-list
-    ul
-      @include application
+        margin-left: 56px
+
   .personal_info
     div
       header

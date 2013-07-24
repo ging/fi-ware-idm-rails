@@ -17,7 +17,7 @@
     position: absolute
   .data
     float: left
-    margin: 2px 0 0 60px
+    margin: 6px 0 0 60px
     width: 115px
     a
       display: inline-block
@@ -54,9 +54,15 @@
     .team
       @include grid-core-span(3, $fluidGridColumnWidth, $fluidGridGutterWidth)
       float: right
-      margin-top: -8px
+      margin-top: -2px
       text-align: right
       font-size: 12px
+      .users,
+      .auth
+        padding-top: 2px
+        text-align: right
+        span
+          color: $principalColor
       .auth
         display: inline-block
 
@@ -67,8 +73,8 @@
   padding: 12px
   min-height: 300px
   header
-    margin-top: -38px
-    margin-left: -12px
+    margin: -38px 0 15px -12px
+    font-size: 20px
     a
       float: right
       font-size: 16px
@@ -87,9 +93,3 @@
     clear: both
     margin-bottom: 7px
   
-  .users,
-  .auth
-    padding-top: 2px
-    text-align: right
-    span
-      color: $principalColor

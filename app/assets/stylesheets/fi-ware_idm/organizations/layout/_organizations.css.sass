@@ -17,13 +17,17 @@
     margin: 0 0 0 60px
     padding-top: 27px
 
-
+.organizations-list
+  ul
+    margin-left: 0px
 
 .tab-pane,
 .organizations-list
   .organization
     min-height: 50px
-    @minclude contact
+    @include contact
+    &:first-child
+      margin-top: 3px
 
 #authorized
   #contact-filter
@@ -60,9 +64,12 @@
   h3
     text-align: right
   form#new_organization
-    padding: 0 2.5%
+    padding: 0 2.5% 145px
     section
       @include forms
+    input
+      &[type="submit"]
+        float: right
       
   #new_organization
     textarea

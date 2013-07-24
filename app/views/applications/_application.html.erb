@@ -3,13 +3,27 @@
     <%= image_tag application.logo.url(:small) %>
   <% end %>
 
-  <div class="name">
-    <%= link_to application.name, application %>
+  <div class="data">
+    <div class="name">
+      <%= link_to application.name, application %>
+    </div>
+    <div class="url">
+      <%= link_to application.url, application.url, target: '_blank' %>
+    </div>
   </div>
-
-  <div class="description">
-    <%= application.description%>
+  <div class="team">
+    <div class="users">
+      <span>
+        5
+      </span>
+      users
+    </div>  
+    <div class="auth">
+      <span>
+        15
+      </span>
+      authorized
+    </div>   
   </div>
-
   <hr class="soften">
 <% end %>
