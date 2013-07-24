@@ -5,48 +5,40 @@ header.navbar
   padding: 1px 2% 1px
   z-index: 2000000
   nav.navbar-inner
-    .logo
-      width: 60px
-      padding-top: 0
-    .brand
-      padding: 0
-      .home
+    .logo-header
+      display: inline
+      img
+        width: 60px
+        padding-top: 0
+      .brand
+        padding: 0
         width: auto
         float: none
-        margin: 12px 0 0 24px 
+        margin: 12px 0 0 3px 
         a
           font-size: 23px
-          span
-            margin-left: -4px
-      h2
-        margin-top: 0
-        padding-left: 6px
 
-  .search-mobile
-    display: none !important
-  .explore-nav
-    margin-top: 0
-    width: auto !important
-    ul.oil-portal
-      width: 300px
-      height: 36px
-      padding: 0px 14px
-      margin-bottom: 0px
-      li
-        display: inline-block
-        padding: 14px 18px 9px
-        &:hover
-          background-color: rgba(152, 152, 152, 0.1)
-          height: 18px
-
-        a
-          color: $gray
-          &:hover
-            color: $blue
-      li.active
-        background-color: #fcfcfc
+  ul.oil-portal
+    width: 300px
+    height: 36px
+    padding: 0px 14px
+    margin-bottom: 0px
+    display: inline-block
+    li
+      display: inline-block
+      padding: 14px 18px 9px
+      &:hover
+        background-color: rgba(152, 152, 152, 0.1)
         height: 18px
-        @include box-shadow (0px 9px 0px -1px #FCFCFC)
-        a
+
+      a
+        color: $gray
+        &:hover
           color: $blue
+    li.active
+      background-color: #fcfcfc
+      height: 18px
+      @include box-shadow (0px 9px 0px -1px #FCFCFC)
+      a
+        color: $blue
 
