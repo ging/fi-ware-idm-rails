@@ -45,3 +45,23 @@
 ul.nav li a img{
   width: 24px;
 }
+
+ul.nav li a span{
+  box-shadow: none
+}
+
+ul.nav li.dropdown.open>.dropdown-toggle, .navbar .nav li.dropdown.active>.dropdown-toggle, .navbar .nav li.dropdown.open.active>.dropdown-toggle {
+background-color: transparent !important;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-submenu:hover>a, .dropdown-submenu:focus>a {
+color: rgb(255, 255, 255);
+text-decoration: none;
+background-color: #049cdb;
+background-image: none !important;
+}
+
+li.dropdown a{
+  padding: 10px 6px !important;
+}
+

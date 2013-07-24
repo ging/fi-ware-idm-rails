@@ -3,13 +3,28 @@
 // --------------------------------------------------
 
 
-@media (max-width: 767px)
-
-  header .navbar ul.nav{
-    margin-top: 0px  
+@media (max-width: 767px){
+  
+  body {
+    padding-right: 0px;
+    padding-left: 0px;
+    text-rendering: optimizeSpeed;
   }
 
+  header .navbar ul.nav{
+    margin-top: 0px;
+  }
 
+  .logo-header{
+    float: left;
+  }
+
+  .mobile{
+    float: left;
+    margin-top: 8px;
+    display: inline-block;
+  }
+}
 
 // UP TO LANDSCAPE PHONE
 // ---------------------

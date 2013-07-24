@@ -1,5 +1,6 @@
 body{
   background-color: #fcfcfc;
+  font-family: "OpensansRegular";
 }
 a:hover{
   color: #049cdb;
@@ -84,7 +85,7 @@ ul.oil-portal li:hover{
 
 ul.oil-portal li a{
   color: #555;
-  font-family: "";
+  font-family: "OpensansRegular";
 }
 
 ul.oil-portal li a:hover{
@@ -101,4 +102,8 @@ ul.oil-portal li.active{
 
 ul.oil-portal li.active a{
   color: #049cdb;
+}
+
+.mobile{
+  display: none;
 }
