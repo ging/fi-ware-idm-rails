@@ -1,6 +1,10 @@
 body{
   background-color: #fcfcfc;
 }
+a:hover{
+  color: #049cdb;
+  text-decoration: none;
+}
 header{
   display: block;
   background-color: #f4f4f4;
