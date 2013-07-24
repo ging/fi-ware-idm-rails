@@ -41,7 +41,7 @@ nav.navbar-inner .logo-header{
 .logo-header .brand{
   padding: 0;
   width: auto;
-  float: none;
+  float: left;
   margin: 12px 0 0 3px;
   font-size: 23px;
   color: #555;
@@ -73,6 +73,7 @@ ul.oil-portal{
   padding: 0px 14px;
   margin-bottom: 0px;
   display: inline-block;
+  float: left;
 }
 
 ul.oil-portal li{
@@ -83,6 +84,7 @@ ul.oil-portal li{
 ul.oil-portal li:hover{
   background-color: rgba(152, 152, 152, 0.1);
   height: 18px;
+  color: #049cdb;
 }
 
 ul.oil-portal li a{
@@ -111,13 +113,37 @@ ul.oil-portal li.active a{
 }
 .mobile ul.dropdown-menu{
   margin-left: -67px;
-  min-width: 110px;
+  min-width: 90px;
   background-color: rgb(244, 244, 244);
   border: none;
-  border-radius: none;
-  -webkit-box-shadow: 1px 5px 8px rgba(0,0,0,0.2);
-  -moz-box-shadow: 1px 5px 8px rgba(0,0,0,0.2);
-  box-shadow: 1px 5px 8px rgba(0,0,0,0.2);
+  -webkit-border-top-left-radius: 0px;
+  -moz-border-top-left-radius: 0px;
+  border-top-left-radius: 0px;
+  -webkit-border-top-right-radius: 0px;
+  -moz-border-top-right-radius: 0px;
+  border-top-right-radius: 0px;
+  -webkit-box-shadow: 2px 3px 6px rgba(0,0,0,0.1);
+  -moz-box-shadow: 2px 3px 6px rgba(0,0,0,0.1);
+  box-shadow: 2px 3px 6px rgba(0,0,0,0.1);
+  margin-top: 0px;
+}
+.mobile ul li a:hover{
+  background-color: rgb(65, 173, 218);
+}
+
+.mobile ul li.active a{
+  background-color: #049cdb;
+  background-image: none;
+}
+
+.mobile ul li.active a:hover{
+  background-color: rgb(65, 173, 218);
+  background-image: none;
+}
+
+.mobile ul li.active a:focus{
+  background-color: #049cdb;
+  background-image: none;
 }
 
 

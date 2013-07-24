@@ -51,17 +51,43 @@ ul.nav li a span{
 }
 
 ul.nav li.dropdown.open>.dropdown-toggle, .navbar .nav li.dropdown.active>.dropdown-toggle, .navbar .nav li.dropdown.open.active>.dropdown-toggle {
-background-color: transparent !important;
+  background-color: transparent !important;
 }
 
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-submenu:hover>a, .dropdown-submenu:focus>a {
-color: rgb(255, 255, 255);
-text-decoration: none;
-background-color: #049cdb;
-background-image: none !important;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  background-color: #049cdb;
+  background-image: none !important;
 }
 
 li.dropdown a{
   padding: 10px 6px !important;
 }
+.dropdown-menu .divider {
+  height: 1px;
+  margin: 4px;
+}
+.dropdown-menu{
+  margin-top: -7px;
+  -webkit-border: 1px solid rgba(0,0,0,0.1);
+  -moz-border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.1);
+  -webkit-box-shadow: 2px 3px 6px rgba(0,0,0,0.1);
+  -moz-box-shadow: 2px 3px 6px rgba(0,0,0,0.1);
+  box-shadow: 2px 3px 6px rgba(0,0,0,0.1);
+}
+
+ul.nav span.name{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  width: 70px;
+}
+ul.nav li a{
+  padding: 10px 0 10px 1px !important;
+}
+
+
 
