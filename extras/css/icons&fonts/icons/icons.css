@@ -1,6 +1,6 @@
 /**************MENU TOOLBAR 20PX*************/
 
-[class^="icon_menu-20-"],   [class*="arrow-down-"] {
+[class^="arrow-down-"],   [class*="arrow-down-"] {
   width: 25px;
   height: 25px;
   margin-top: 7px;

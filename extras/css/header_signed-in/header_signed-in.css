@@ -41,3 +41,7 @@
   background-color: #049cdb;
   background-image: none;
 }
+
+ul.nav li a img{
+  width: 24px;
+}
