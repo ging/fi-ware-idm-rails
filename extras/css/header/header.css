@@ -63,7 +63,9 @@ nav.navbar-inner .logo-header{
   color: #888;
 }
 
-
+.mobile .dropdown-menu{
+  margin-left: -67px;
+}
 
 ul.oil-portal{
   width: 300px;
@@ -106,4 +108,45 @@ ul.oil-portal li.active a{
 
 .mobile{
   display: none;
+}
+.mobile ul.dropdown-menu{
+  margin-left: -67px;
+  min-width: 110px;
+  background-color: rgb(244, 244, 244);
+  border: none;
+  border-radius: none;
+  -webkit-box-shadow: 1px 5px 8px rgba(0,0,0,0.2);
+  -moz-box-shadow: 1px 5px 8px rgba(0,0,0,0.2);
+  box-shadow: 1px 5px 8px rgba(0,0,0,0.2);
+}
+
+
+@media (max-width: 767px){
+  
+  body {
+    padding-right: 0px;
+    padding-left: 0px;
+    text-rendering: optimizeSpeed;
+  }
+
+  header .navbar ul.nav{
+    margin-top: 0px;
+  }
+
+  .logo-header{
+    float: left;
+  }
+
+  .mobile{
+    float: left;
+    margin-top: 8px;
+    display: inline-block;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px){
+
+  header.navbar ul{
+    margin-top: 0px    
+  }
 }
