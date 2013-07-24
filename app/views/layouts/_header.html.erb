@@ -1,42 +1,44 @@
 <header class="navbar">
   <nav class="navbar-inner">
     <div class="logo-header">
-      <a href="/" class="logo-header">
+      <a href="http://lab.fi-ware.eu/" class="logo-header">
         <img alt="FI-WARE IdM" class="logo" src="/assets/header-logo.png">
       </a>
-      <a href="/home" class="brand">
-        Fi-Ware
+      <a href="http://lab.fi-ware.eu/" class="brand">
+        FI-WARE
       </a>
     </div>
   
     <ul class="oil-portal">
       <li class="cloud">
-        <a href="#">
-          cloud   
+        <a href="http://cloud.lab.fi-ware.eu/">
+          Cloud   
         </a>
       </li>
-      <li class="market">
-        <a href="#">
-          market
+      <li class="store">
+        <a href="http://store.lab.fi-ware.eu/">
+          Store
         </a>
       </li>
       <li class="active">
-        <a href="#">
-          Idm
+        <a href="/">
+          IdM
         </a>
       </li>
     </ul>
-  <ul class="nav pull-right">
-  <li>
-    <%= link_to current_subject do %>
-      <%= image_tag current_subject.logo.url(:small) %>
-      <span class="name"><%= truncate_name(current_subject.name, length: 15) %></span>
-    <% end %>
-  </li>
-        
-  <li> 
-    <%= render partial: 'layouts/header_dropdown_menu' %>
-  </li>
-</ul>
+    <ul class="nav pull-right">
+      <li>
+        <%= link_to current_subject do %>
+          <%= image_tag current_subject.logo.url(:small) %>
+          <span class="name">
+            <%= truncate_name(current_subject.name, length: 15) %>
+          </span>
+        <% end %>
+      </li>
+            
+      <li> 
+        <%= render partial: 'layouts/header_dropdown_menu' %>
+      </li>
+    </ul>
   </nav>
 </header>
