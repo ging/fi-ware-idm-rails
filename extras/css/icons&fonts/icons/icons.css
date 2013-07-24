@@ -1,0 +1,12 @@
+/**************MENU TOOLBAR 20PX*************/
+
+[class^="icon_menu-20-"],   [class*="arrow-down-"] {
+  width: 25px;
+  height: 25px;
+  margin-top: 7px;
+  background-image: url("img/arrow-down.png");
+}
+
+.arrow-down-settings { background-position: -10px -10px; }
+
+.arrow-down-settings-hover { background-position: -10px -30px; }

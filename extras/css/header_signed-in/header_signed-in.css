@@ -1,0 +1,43 @@
+.dropdown-submenu a:hover{
+  color: #fff;
+  background-color: #049cdb;
+  background-image: none;
+}
+
+.dropdown-submenu a:focus{
+  color: #fff;
+  background-color: #049cdb;
+  background-image: none;
+}
+
+.dropdown-submenu a:active{
+  color: #fff;
+  background-color: #049cdb;
+  background-image: none;
+}
+
+.dropdown-submenu .active a{
+  background-color: #049cdb;
+}
+
+.dropdown-submenu .active a:focus{
+  background-color: #049cdb;
+}
+
+.dropdown-submenu li a:hover{
+  color: #fff;
+  background-color: #049cdb;
+  background-image: none;
+}
+
+.dropdown-submenu li a:focus{
+  color: #fff;
+  background-color: #049cdb;
+  background-image: none;
+}
+
+.dropdown-submenu li a:active{
+  color: #fff;
+  background-color: #049cdb;
+  background-image: none;
+}
