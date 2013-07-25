@@ -87,11 +87,14 @@
 
         .result
           margin-bottom: 18px
-          margin-left: 20px
-          padding-top: 5px
+          margin-left: 14px
+          padding-top: 10px
           border-top: 1px solid #C1C1C1
           color: #929292
       .accordion
+        .settings_content
+          padding-top: 0
+          margin-top: -2px
         h6
           border-bottom: 1px solid #CCC
           a
@@ -110,6 +113,9 @@
 
             p
               padding-left: 10px
+        div.client-id
+          h6
+            margin-top: 0px
         div.client-secret 
           word-wrap: break-word
           min-height: 22px
@@ -192,7 +198,7 @@ form#new_organization
     width: 100%
     margin: 0 0 20px 0
 
-  #cancel_account
+  section.delete
     clear: both
     @include principal-box
     &:hover
@@ -201,6 +207,7 @@ form#new_organization
         color: $red !important
     header
       margin-bottom: 0
-    #cancel_account_content
+    #destroy_site_client-content
+      padding-left: 15px
       a
         color: $red !important
