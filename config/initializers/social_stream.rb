@@ -35,6 +35,7 @@ SocialStream.setup do |config|
   config.available_permissions['application'] = [
     [ 'manage', nil ],
     [ 'manage', 'relation/custom' ],
+    [ 'get', 'relation/custom' ],
     [ 'manage', 'contact' ]
   ]
 
