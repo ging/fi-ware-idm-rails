@@ -18,15 +18,21 @@ en:
     new:
       action: "Register an organization"
       title: "Register an organization"
-  toolbar:
-    applications: My Applications
-    home: Home
-    members: Members
-    organizations: Organizations
-    resources: Resources
-    settings: Settings
+  permission:
+    description:
+      default:
+        brief:
+          get:
+            relation/custom: Get roles
+        detailed:
+          get:
+            relation/custom: 
+              negative: They WILL NOT BE ABLE to obtain and use the roles defined in the application
+              positive: They WILL BE ABLE to obtain and use the roles defined in the application
   relation_admin:
     name: "Application Admin"
+  relation_purchaser:
+    name: "Purchaser"
   site:
     client:
       add: "Add new application"
@@ -44,3 +50,11 @@ en:
       keywords: fi-ware,idm,GE,oauth2
       title: FI-WARE Identity Manager
     name: FI-WARE IdM
+  toolbar:
+    applications: My Applications
+    home: Home
+    members: Members
+    organizations: Organizations
+    resources: Resources
+    settings: Settings
+

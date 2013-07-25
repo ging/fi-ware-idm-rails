@@ -27,7 +27,7 @@ SocialStream.setup do |config|
   config.custom_relations[:application]  = {}
 
   config.system_relations[:organization] = [ :owner ]
-  config.system_relations[:application]  = [ :manager ]
+  config.system_relations[:application]  = [ :manager, :purchaser ]
 
   config.available_permissions['group'] = [
     [ 'represent', nil ]
