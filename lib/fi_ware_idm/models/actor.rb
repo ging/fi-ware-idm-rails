@@ -3,6 +3,20 @@ module FiWareIdm
     module Actor
       extend ActiveSupport::Concern
 
+      included do
+        # This must overwrite a class method in Actor
+        def options_for_contact_select
+          @options_for_contact_select ||=
+            {
+              name => relations_for_select.map{ |r| [ r.name, r.id ] }
+          }.merge(obtained_options_for_contact_select)
+        end
+
+        def options_for_contact_select_simple?
+          (relations_list + obtained_roles).count == 1
+        end
+      end
+
       def applications
         managed_site_clients
       end
@@ -13,6 +27,24 @@ module FiWareIdm
           joins(actor: { sent_contacts: :relations }).
           merge(::Contact.received_by(self)).
           merge(::Relation.positive)
+      end
+
+      # All the applications that grant this actor the ability to
+      # obtain roles
+      def obtained_applications
+        ::Application.granting_roles(self)
+      end
+
+      def obtained_roles
+        @obtained_roles ||=
+          obtained_applications.map{ |a| a.relation_customs }
+      end
+
+      def obtained_options_for_contact_select
+        obtained_applications.inject({}){ |h, a|
+          h[a.name] = a.relation_customs.map{ |r| [ r.name, r.id ] }
+          h
+        }
       end
     end
   end
