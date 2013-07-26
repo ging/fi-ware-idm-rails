@@ -7,9 +7,7 @@ module FiWareIdm
         # This must overwrite a class method in Actor
         def options_for_contact_select
           @options_for_contact_select ||=
-            {
-              name => relations_for_select.map{ |r| [ r.name, r.id ] }
-          }.merge(obtained_options_for_contact_select)
+            build_options_for_contact_select
         end
 
         def options_for_contact_select_simple?
@@ -45,6 +43,18 @@ module FiWareIdm
           h[a.name] = a.relation_customs.map{ |r| [ r.name, r.id ] }
           h
         }
+      end
+
+      protected
+
+      def build_options_for_contact_select
+        if subject.is_a? ::Application
+          relations_for_select.map{ |r| [ r.name, r.id ] }
+        else
+          {
+            name => relations_for_select.map{ |r| [ r.name, r.id ] }
+          }.merge(obtained_options_for_contact_select)
+        end
       end
     end
   end
