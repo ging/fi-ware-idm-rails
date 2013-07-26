@@ -2,6 +2,9 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  actor:
+    title:
+      other: "Users or Organizations"
   application:
     button:
       edit: edit
@@ -9,6 +12,11 @@ en:
     new:
       permission:
         title: "The application %{client} will be able to:"
+  contact:
+    new:
+      modal:
+        button: Add
+        title: Add members
   helpers:
     submit:
       application:

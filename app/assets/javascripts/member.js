@@ -26,21 +26,9 @@ var Member = (function(SS, $, undefined) {
     });
   };
 
-  var initUserSelect2 = function() {
-    SS.Actor.select2('input[name="actors"]');
-  };
-
-  var initRoleSelect2 = function() {
-    $('select[name="relations[]"]').select2();
-  };
-
   callback.register('index',
                     SS.Contact.index,
                     initFilter);
-
-  callback.register('new_',
-                    initUserSelect2,
-                    initRoleSelect2);
 
   return callback.extend({
   });
