@@ -35,7 +35,7 @@ module FiWareIdm
 
       def obtained_roles
         @obtained_roles ||=
-          obtained_applications.map{ |a| a.relation_customs }
+          obtained_applications.map{ |a| a.relation_customs }.flatten
       end
 
       def obtained_options_for_contact_select
