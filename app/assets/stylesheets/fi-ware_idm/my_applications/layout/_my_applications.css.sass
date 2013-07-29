@@ -128,6 +128,17 @@
       @include filter
     #add-contact-link
       @include btn-primary
+      margin-right: 8px
+      margin-left: 8px
+    .btn-group
+      button
+        @include btn-primary
+        &:first-child
+          @include border-right-radius(0px)
+          @include border-right-radius(0px)
+        &:last-child
+          @include border-left-radius(0px)
+          @include border-left-radius(0px)
     .tab-content
       overflow: visible
       padding-top: 20px
@@ -151,7 +162,7 @@ form#new_application,
 form#new_organization
   @include principal-box
 
-#site_client_form
+#site_client_form,
   min-height: 315px
   padding: 0px !important
   @include forms
@@ -160,6 +171,35 @@ form#new_organization
 .edit_application
   .next-step
     @include btn-primary
+
+form#new_application
+  padding-bottom: 50px
+  section
+    @include forms
+  .name
+    max-height: 50px
+    min-height: 65px
+    padding: 20px 2.5% 0px
+
+  .url,
+  .callback_url
+    max-height: 50px
+    min-height: 65px
+    padding: 0px 2.5% 0px
+  .callback_url
+    textarea
+      max-height: 20px
+      min-height: 20px
+
+  .description
+    max-height: 50px
+    min-height: 96px
+    padding: 0px 2.5% 0px
+  input
+    &[type="submit"]
+      @include btn-primary
+      float: right
+      margin: 0 15px 18px 0
 
 /*edit screen*/
 
@@ -188,6 +228,10 @@ form#new_organization
       padding-left: 15px
       a
         color: $red !important
+
+#edit_site_client
+  form.edit_application
+    min-height: 373px
 
 .edit_form,
 .create_logo_app
