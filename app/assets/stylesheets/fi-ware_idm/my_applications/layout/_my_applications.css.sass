@@ -45,7 +45,7 @@
 
 /*show screen*/
 #site_client
-  margin-top: 32px
+  margin-top: 74px
   .site_client
     width: 95% 
     padding: 0 2.5%
@@ -138,23 +138,16 @@
 form#new_application,
 form#new_organization
   @include principal-box
-#site_client_form
-  padding: 20px 2.5% 35px
-  min-height: 280px
-  section
-    clear: both
-  .description
-    textarea
-      max-height: 50px
-  .name,
-  .url,
-  .callback_url
-    textarea
-      min-height: 20px
-      max-height: 20px
-  .btn-secundary
-    margin-top: 9px
 
+#site_client_form
+  min-height: 315px
+  padding: 0px !important
+  @include forms
+  div
+    clear: both
+.edit_application
+  .next-step
+    @include btn-primary
 
 /*edit screen*/
 
@@ -164,37 +157,7 @@ form#new_organization
   .edit_site_client,
   .modal-body
     form
-      padding: 10px 0 60px 10px
-      @include principal-box
-      section
-        label
-          font-family: $serifFontFamily
-          color: $principalColor
-          font-size: 15px
-      textarea
-        min-height: 40px
-        max-height: 55px
-        background-color: transparent
-        border-left: none
-        border-right: none
-        border-bottom: none
-        box-shadow: none
-        @include border-radius(0px)
-        float: right
-      input
-        &[type="text"]
-          background-color: transparent
-          border-left: none
-          border-right: none
-          border-bottom: none
-          box-shadow: none
-          @include border-radius(0px)
-          float: right
-      section.url,
-      section.callback_url
-        textarea
-          min-height: 27px
-          max-height: 28px
+      @include forms
 
   .site_client_roles
     width: 100%
@@ -213,3 +176,10 @@ form#new_organization
       padding-left: 15px
       a
         color: $red !important
+
+.edit_form,
+.create_logo_app
+  @include principal-box
+.edit_form
+  margin-bottom: 20px
+

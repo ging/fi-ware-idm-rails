@@ -1,18 +1,13 @@
 // menu horizontal
 // ----------------------------------
 @mixin forms
+  padding: 20px 2.5% 20px
   label
     margin-bottom: 0px
     font-size: 18px !important
     color: #049CDB  !important
     font-family: "Comfortaa"
-  input
-    margin-bottom: 18px
-    margin-left: 20px
-    padding-top: 5px
-    border-top: 1px solid #C1C1C1
-    color: #929292
-    font-size: 17px
+
   textarea
     min-height: 40px
     max-height: 55px
@@ -38,9 +33,16 @@
     textarea
       max-height: 50px
   .url,
-  .email
+  .email,
+  .city,
+  .phone,
+  .website
+    min-height: 20px
     textarea
+      min-height: 20px
       max-height: 20px
+
   input
     &[type="submit"]
       float: right
+      margin-right: 20px

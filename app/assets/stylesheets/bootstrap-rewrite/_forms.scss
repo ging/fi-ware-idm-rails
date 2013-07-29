@@ -9,3 +9,5 @@ textarea, input[type="text"], input[type="password"], input[type="email"], input
 textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus {   
   background-color: transparent;
 }
+
+form.alert{margin-bottom: 0px;}
