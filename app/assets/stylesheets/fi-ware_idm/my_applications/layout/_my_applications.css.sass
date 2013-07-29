@@ -124,14 +124,26 @@
             &[type="submit"]
               padding-right: 0px
   .tabbable
+    #contact-filter
+      @include filter
+    #add-contact-link
+      @include btn-primary
     .tab-content
       overflow: visible
+      padding-top: 20px
       .contact
         @include contact
+        width: 170px
+        float: left
+        margin-left: 12px
         .add
           @include btn-add
           margin: 0 0 0 60px
           padding-top: 27px
+      .soften
+        display: none
+
+
 
 /*create screen*/
 
