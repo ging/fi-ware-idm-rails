@@ -1,2 +1,2 @@
 <!-- insert_bottom 'section.permissions' -->
-<%= render partial: 'permissions/new' %>
+<%= render partial: 'permission/customs/new' %>

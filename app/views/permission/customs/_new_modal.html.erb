@@ -3,7 +3,9 @@
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     <h3 id="new_permission_modal_header">New permission</h3>
   </div>
-  <%= form_for Permission.new do |f| %>
+  <%= form_for custom, remote: true do |f| %>
+    <%= f.hidden_field :actor_id %>
+
     <div class="modal-body">
       <%= f.label :name %>
       <%= f.text_field :name %>

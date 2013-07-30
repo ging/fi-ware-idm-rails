@@ -1,0 +1,9 @@
+<% if can? :update, @relation %>
+  <section id="new_permission">
+    <%= link_to '+ New permission', '#new_permission_modal', class: 'new', "data-toggle" => "modal" %>
+
+    <%= render partial: 'permission/customs/new_modal',
+               object: Permission::Custom.new(actor: @relation.actor),
+               as: :custom %>
+  </section>
+<% end %>

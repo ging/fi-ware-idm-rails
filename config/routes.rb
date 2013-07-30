@@ -5,7 +5,12 @@ FiWareIdm::Application.routes.draw do
 
   devise_for :users, :controllers => {:omniauth_callbacks => 'omniauth_callbacks'}
 
+  namespace :permission do
+    resources :customs
+  end
+
   match '/terms-of-service' => 'frontpage#terms_of_service', as: :terms_of_service
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
