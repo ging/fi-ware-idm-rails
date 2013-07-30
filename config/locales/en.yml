@@ -31,7 +31,9 @@ en:
       default:
         brief:
           get:
-            relation/custom: Get roles
+            relation/custom: Get and assign roles
+          manage:
+            nil: Manage the application
         detailed:
           get:
             relation/custom: 

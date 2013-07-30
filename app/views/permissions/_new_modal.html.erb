@@ -1,0 +1,24 @@
+<div id="new_permission_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="new_permission_modal_header" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="new_permission_modal_header">New permission</h3>
+  </div>
+  <%= form_for Permission.new do |f| %>
+    <div class="modal-body">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+
+      <%= f.label :action, 'HTTP verb' %>
+      <%= f.text_field :action %>
+
+      <%= f.label :object, 'Path' %>
+      <%= f.text_field :object %>
+    </div>
+    <div class="modal-footer">
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>
