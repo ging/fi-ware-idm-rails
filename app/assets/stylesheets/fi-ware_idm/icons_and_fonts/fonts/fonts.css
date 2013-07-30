@@ -2,14 +2,14 @@
 
 @font-face {
   font-family: Comfortaa;
-  src: url(icons_and_fonts/fonts/comfortaa_regular-webfont.ttf) format('truetype');
-  src: url(icons_and_fonts/fonts/comfortaa_regular-webfont.svg);
-  src: url(icons_and_fonts/fonts/comfortaa_regular-webfont.eot);
-  src: url(icons_and_fonts/fonts/comfortaa_regular-webfont.woff);
+  src: url(fi-ware_idm/icons_and_fonts/fonts/comfortaa_regular-webfont.ttf) format('truetype');
+  src: url(fi-ware_idm/icons_and_fonts/fonts/comfortaa_regular-webfont.svg);
+  src: url(fi-ware_idm/icons_and_fonts/fonts/comfortaa_regular-webfont.eot);
+  src: url(fi-ware_idm/icons_and_fonts/fonts/comfortaa_regular-webfont.woff);
 }
 
 @font-face {
   font-family: DsignesRegular;
-  src: url(fonts/DsignesRegular.ttf);
-  src: url(fonts/DsignesRegular.otf);
+  src: url(fi-ware_idm/icons_and_fonts/fonts/DsignesRegular.ttf);
+  src: url(fi-ware_idm/icons_and_fonts/fonts/DsignesRegular.otf);
 }
