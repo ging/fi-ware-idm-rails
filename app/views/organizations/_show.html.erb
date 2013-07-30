@@ -5,7 +5,7 @@
     </h3>
 
     <% if can? :edit, @organization.profile %>
-      <%= link_to 'Edit', polymorphic_path([ @organization, :profile ]), class: 'edit' %>
+      <%= link_to 'Edit', polymorphic_path([ @organization, :profile ], action: :edit), class: 'edit' %>
     <% end %>
 
     <%= link_to (image_tag(current_subject.logo.url(:medium) , :size => "small", :alt => current_subject.name )), current_subject  %>

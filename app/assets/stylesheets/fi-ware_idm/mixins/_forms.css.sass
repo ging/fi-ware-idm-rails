@@ -20,7 +20,9 @@
     @include border-radius(0px)
     float: right
   input
-    &[type="text"]
+    &[type="text"],
+    &[type="tel"],
+    &[type="email"]
       background-image: none !important
       background-color: #f4f4f4
       border-left: none
@@ -36,6 +38,7 @@
   .email,
   .city,
   .phone,
+  .profile_phone,
   .website
     min-height: 20px
     textarea
