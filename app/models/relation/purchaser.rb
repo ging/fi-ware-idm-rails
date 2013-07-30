@@ -9,4 +9,8 @@ class Relation::Purchaser < Relation::Single
       false
     end
   end
+  
+  def available_permissions
+    ::Relation::Manager.instance.permissions
+  end
 end
