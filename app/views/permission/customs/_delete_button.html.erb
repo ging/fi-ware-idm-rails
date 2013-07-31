@@ -1,0 +1,5 @@
+<% if can? :delete, permission %>
+  <%= link_to permission, method: :delete, confirm: "Delete permission?", remote: true do %>
+    <i class="icon_tool16-trash"></i>
+  <% end %>
+<% end %>

@@ -1,0 +1,4 @@
+<!-- insert_bottom 'li' -->
+<%= render partial: 'permission/customs/delete_button',
+           object: p,
+           as: :permission %>
