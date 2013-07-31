@@ -1,0 +1,11 @@
+<% if resource.errors.present? %>
+  $('.error_explanation').html('<%= resource.errors.full_messages.to_sentence %>');
+<% else %>
+  PermissionCustom.create({
+    custom: {
+      id: '<%= resource.id %>',
+      title: '<%= resource.title %>',
+      description: '<%= resource.description %>'
+    }
+  });
+<% end %>

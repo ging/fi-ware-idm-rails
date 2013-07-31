@@ -13,6 +13,10 @@ module FiWareIdm
         def options_for_contact_select_simple?
           (relations_list + obtained_roles).count == 1
         end
+
+        has_many :permission_customs,
+                 class_name: "Permission::Custom",
+                 dependent: :destroy
       end
 
       def applications

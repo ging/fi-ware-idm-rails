@@ -22,6 +22,9 @@ en:
       application:
         create: Next
         update: Save
+      permission_custom:
+        create: Create permission
+        update: Update permission
   organization:
     new:
       action: "Register an organization"

@@ -4,11 +4,11 @@ class Permission
 
     validates :name, :action, :object, presence: true
 
-    def name
-      read_attribute(:name)
+    def title(options = {})
+      name
     end
 
-    def description
+    def description(options = {})
       read_attribute(:description)
     end
   end
