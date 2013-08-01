@@ -16,7 +16,7 @@
       <header>
       </header>
       <div class="result">
-      Ruby Developer
+        <%= @user.description %>
       </div>
     </div>
     <div class="actual_city">
@@ -24,7 +24,7 @@
         Actual city
       </header>
       <div class="result">
-        Madrid
+        <%= @user.profile.city %>
       </div>
     </div>
     <div class="accordion" id="accordion2">
@@ -41,16 +41,15 @@
                 Phone
               </header>
               <div class="result">
-                111222333
+                <%= @user.profile.phone %>
               </div>
     
               <header>
                 E-mail
               </header>
               <div class="result">
-                email@email.com
+                <%= @user.email %>
               </div>
-            
             </div>
           </div>
         </div>

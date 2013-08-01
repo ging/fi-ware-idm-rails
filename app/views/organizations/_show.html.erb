@@ -17,9 +17,14 @@
         Contact us
       </header>
       <div class="result">
-        <a href="#">wwww.oranization-site.com</a>
+        <% if @organization.profile.website.present? %>
+          <%= link_to @organization.profile.website, @organization.profile.website %>
+        <% end %>
         </br></br>
-        email@email.com
+
+        <% if @organization.email.present? %>
+          <%= link_to "mailto:#{ @organization.email }", @organization.email %>
+        <% end %>
       </div>
     </div>
     <div class="accordion" id="accordion2">
@@ -33,7 +38,7 @@
           <div class="accordion-inner">
             <div class="content settings_content collapse in">
               <div class="result">
-                organization.description organization.description organization.description
+                <%= @organization.profile.description %>
               </div>
             </div>
           </div>
