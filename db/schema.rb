@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130729143906) do
+ActiveRecord::Schema.define(:version => 20130801104534) do
 
   create_table "activities", :force => true do |t|
     t.integer  "activity_verb_id"
@@ -213,6 +213,8 @@ ActiveRecord::Schema.define(:version => 20130729143906) do
     t.integer  "actor_id"
   end
 
+  add_index "permissions", ["actor_id"], :name => "index_permissions_on_actor_id"
+
   create_table "posts", :force => true do |t|
     t.integer  "activity_object_id"
     t.datetime "created_at"
@@ -380,6 +382,8 @@ ActiveRecord::Schema.define(:version => 20130729143906) do
 
   add_foreign_key "oauth2_tokens", "sites", :name => "index_oauth2_tokens_on_site_id"
   add_foreign_key "oauth2_tokens", "users", :name => "index_oauth2_tokens_on_user_id"
+
+  add_foreign_key "permissions", "actors", :name => "permissions_actor_id_fk"
 
   add_foreign_key "posts", "activity_objects", :name => "posts_on_activity_object_id"
 
