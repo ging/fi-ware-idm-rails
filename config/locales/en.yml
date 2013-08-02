@@ -44,6 +44,8 @@ en:
               positive: They WILL BE ABLE to obtain and use the roles defined in the application
   relation_admin:
     name: "Application Admin"
+  relation_manager:
+    name: "Provider"
   relation_purchaser:
     name: "Purchaser"
   site:
