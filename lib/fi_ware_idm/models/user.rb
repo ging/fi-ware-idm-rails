@@ -48,7 +48,7 @@ module FiWareIdm
       def ties_from_organizations
         ::Tie.
           joins(sender: :group).
-          includes(:sender, :relation).
+          includes({ sender: :group }, :relation).
           merge(Group.where(type: 'Organization')).
           received_by(self)
       end
