@@ -29,8 +29,8 @@ module FiWareIdm
 
         ties_from_organizations_hash.each_pair do |org, roles|
           hash['organizations'] << {
-            id: org.id,
-            actorId: org.actor_id,
+            id: org.subject.id,
+            actorId: org.id,
             displayName: org.name,
             roles: roles.map{ |r|
               {
