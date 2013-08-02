@@ -54,7 +54,8 @@ en:
         link: Remove the application and all its data
         title: Destroy application
       index:
-        title: "Applications"
+        title: Applications
+      managing: Providing
       new:
         link: "Add application"
         title: "Register new application"
