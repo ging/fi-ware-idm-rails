@@ -10,6 +10,10 @@ class Application < Site::Client
     relations_list
   end
 
+  def custom_roles
+    relation_customs
+  end
+
   def trigger_policy_save
     XacmlPolicy.new self
   end
