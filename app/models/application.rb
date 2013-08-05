@@ -21,4 +21,13 @@ class Application < Site::Client
   def trigger_policy_save
     XacmlPolicy.new self
   end
+
+  def as_json(options = {})
+    {
+      id: id,
+      name: name,
+      description: description,
+      url: url
+    }
+  end
 end
