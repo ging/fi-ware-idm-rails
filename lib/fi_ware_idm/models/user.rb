@@ -17,6 +17,11 @@ module FiWareIdm
         alias_method_chain :as_json, :organizations
       end
 
+      # Authorize FiWARE apps by default
+      def client_authorized?(app)
+        app.official? || super
+      end
+
       # Overwrite application role information in JSON
       def as_json_with_organizations options = {}
         hash = as_json_without_organizations options
