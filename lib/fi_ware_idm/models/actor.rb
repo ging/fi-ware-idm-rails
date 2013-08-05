@@ -34,7 +34,8 @@ module FiWareIdm
       # All the applications that grant this actor the ability to
       # obtain roles
       def obtained_applications
-        ::Application.granting_roles(self)
+        ::Application.official |
+          ::Application.granting_roles(self)
       end
 
       def obtained_roles

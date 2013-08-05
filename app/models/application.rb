@@ -6,6 +6,10 @@ class Application < Site::Client
       merge(Permission.where(action: 'get', object: 'relation/custom'))
   }
 
+  scope :official, -> {
+    where(official: true)
+  }
+
   def roles
     relations_list
   end
