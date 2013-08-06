@@ -21,5 +21,7 @@
 
 config/deploy.rb
 config/database.yml
+config/thales/*
+config/initializers/thales.rb
 .DS_Store
 

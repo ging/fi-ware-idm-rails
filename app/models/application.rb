@@ -19,6 +19,8 @@ class Application < Site::Client
   end
 
   def trigger_policy_save
+    return unless FiWareIdm::Thales.enable
+
     XacmlPolicy.new self
   end
 
