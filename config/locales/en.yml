@@ -26,6 +26,11 @@ en:
         create: Create permission
         update: Update permission
   organization:
+    destroy:
+      explanation: All the information, members and applications of this organization will be destroyed!
+      last_confirm: This is your last chance. Are you really sure?
+      go_ahead: Yes, I am sure. Destroy'em all!
+      one: Destroy organization
     new:
       action: "Register an organization"
       title: "Register an organization"
