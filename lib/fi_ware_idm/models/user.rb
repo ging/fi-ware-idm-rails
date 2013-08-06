@@ -32,7 +32,18 @@ module FiWareIdm
 
         hash['organizations'] = []
 
-        ties_from_organizations_hash.each_pair do |org, roles|
+        # Maps ties_from_organizations into a hash of organization and roles
+        #   {
+        #     organization1: [ role1, role2 ],
+        #     organization2: [ role3 ]
+        #   }
+        ties_hash = ties.inject({}) do |hash, tie|
+          hash[tie.sender] ||= []
+          hash[tie.sender] << tie.relation
+          hash
+        end
+
+        ties_hash.each_pair do |org, roles|
           hash['organizations'] << {
             id: org.subject.id,
             actorId: org.id,
@@ -60,19 +71,6 @@ module FiWareIdm
           merge(Group.where(type: 'Organization')).
           merge(::Relation.where(id: role_ids)).
           received_by(self)
-      end
-
-      # Maps ties_from_organizations into a hash of organization and roles
-      #   {
-      #     organization1: [ role1, role2 ],
-      #     organization2: [ role3 ]
-      #   }
-      def ties_from_organizations_hash
-        ties_from_organizations.inject({}) do |hash, tie|
-          hash[tie.sender] ||= []
-          hash[tie.sender] << tie.relation
-          hash
-        end
       end
     end
   end
