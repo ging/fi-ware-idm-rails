@@ -35,4 +35,13 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+
+  # Add authentication helpers
+  config.include Devise::TestHelpers, :type => :controller
 end
+
+# Load Factories
+require 'factory_girl'
+base_spec_path = File.join(Gem::Specification.find_by_name('social_stream-base').full_gem_path, 'spec/')
+Dir["#{base_spec_path}/factories/*.rb"].each {|f| require f}
+
