@@ -9,6 +9,8 @@ FiWareIdm::Application.routes.draw do
     resources :customs
   end
 
+  resources :purchases
+
   match '/terms-of-service' => 'frontpage#terms_of_service', as: :terms_of_service
 
 

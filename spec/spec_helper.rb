@@ -42,6 +42,8 @@ end
 
 # Load Factories
 require 'factory_girl'
+
 base_spec_path = File.join(Gem::Specification.find_by_name('social_stream-base').full_gem_path, 'spec/')
 Dir["#{base_spec_path}/factories/*.rb"].each {|f| require f}
 
+Dir["#{ File.dirname(__FILE__) }/factories/*.rb"].each {|f| require f}

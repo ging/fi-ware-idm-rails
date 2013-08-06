@@ -4,6 +4,10 @@ class Ability
   def initialize(subject)
     super
 
+    if subject.is_a?(Application) && subject.store?
+      can :create, Purchase
+    end
+
     can :read, Relation::Purchaser
 
     can :manage, ::Permission::Custom do |p|
