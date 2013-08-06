@@ -14,7 +14,6 @@ describe UsersController do
     it "should get user info" do
       get :current, format: :json
 
-      binding.pry
       response.should be_success
     end
   end
