@@ -19,5 +19,7 @@
   
   <% else %>
     <%= render partial: 'organizations/list' %>
+
+    <%= link_to "View all", organizations_path, :class => "view-all" %>
   <% end %>
 </div>
