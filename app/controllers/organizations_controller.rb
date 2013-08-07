@@ -5,6 +5,10 @@ class OrganizationsController < GroupsController
   before_filter :redirect_to_members, only: [ :index ]
 
   def index
+    if request.xhr?
+      render partial: 'list',
+             object: collection
+    end
   end
 
   protected
