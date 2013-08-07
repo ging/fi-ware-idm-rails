@@ -7,6 +7,20 @@ class OrganizationsController < GroupsController
   def index
   end
 
+  protected
+
+  def end_of_association_chain
+    chain =
+      case params[:section]
+      when 'others'
+        current_user.other_organizations
+      else
+        current_user.organizations
+      end
+
+    chain.page(params[:page])
+  end
+
   private
 
   def redirect_to_members

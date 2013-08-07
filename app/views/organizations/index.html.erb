@@ -34,21 +34,27 @@
       </div>
     </div>
     <ul class="nav nav-tabs">
-      <li class="active">
-        <a href="#tab1" data-toggle="tab">Owned</a>
+      <li class="<%= 'active' if params[:section].blank? %>">
+        <a href="#owned" data-toggle="tab">Owned</a>
       </li>
-      <li>
-        <a href="#tab2" data-toggle="tab">Others</a>
+      <li class="<%= 'active' if params[:section] == 'others' %>">
+        <a href="#other" data-toggle="tab">Others</a>
       </li>
     </ul>
   </div>
   <div class="tab-content">
-    <div class="tab-pane active" id="tab1">
-      <%= render partial: 'organizations/list' %>
+    <div class="tab-pane<%= ' active' if params[:section].blank? %>" id="owned">
+      <% if params[:section].blank? %>
+        <%= render partial: 'organizations/list',
+                   object: collection %>
+      <% end %>
     </div>
 
-    <div class="tab-pane" id="tab2">
-      <%= render partial: 'organizations/list' %>
+    <div class="tab-pane<%= 'active' if params[:section] == 'others' %>" id="other">
+      <% if params[:section] == 'others' %>
+        <%= render partial: 'organizations/list',
+                   object: collection %>
+      <% end %>
     </div>
   </div>
 </div>
