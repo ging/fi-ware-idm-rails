@@ -23,6 +23,10 @@ module FiWareIdm
         managed_site_clients
       end
 
+      def purchased_applications
+        ::Application.purchased_by(self)
+      end
+
       def organizations
         Organization.
           select("DISTINCT groups.*").
