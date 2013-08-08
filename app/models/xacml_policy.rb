@@ -1,5 +1,7 @@
 class XacmlPolicy
   require 'rest_client'
+
+  ErrorMessage = "Put XACML policy file to Access Control GE failed!"
   #require 'xacml_file'
   # Create a new XACML Policy
   # The application has available the following methods
@@ -13,7 +15,7 @@ class XacmlPolicy
   
   class << self
     def save(application)
-         new(application)
+      new(application)
     end
   end
 
@@ -47,11 +49,12 @@ class XacmlPolicy
       :verify_ssl => OpenSSL::SSL::VERIFY_PEER,
       :ssl_ca_file => FiWareIdm::Thales.ca_certificate)
 
-    response = client.put(xml.to_xml, :content_type =>"application/xml")
+    begin
+      response = client.put(xml.to_xml, :content_type =>"application/xml")
+    rescue RestClient::BadRequest => e
+      raise "#{ ErrorMessage } #{ e.response }"
+    end
 
-    puts "the response code is: "+response.code.to_s 
-    raise IOError, "Put XACML policy file to Access Control DB failed!" if response.code !=200
+    raise "#{ ErrorMessage } #{ response.body }" if response.code !=200
   end
-
-
 end

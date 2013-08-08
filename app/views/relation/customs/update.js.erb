@@ -1,0 +1,13 @@
+<% if @custom.valid? %>
+  SocialStream.RelationCustom.update({
+    relation: {
+      id: <%= @custom.id %>,
+      name: "<%= @custom.name %>"
+    },
+    section: '<%= params[:section] %>'
+  });
+<% else %>
+
+<% end %>
+
+<%= render partial: 'acge_error' %>
