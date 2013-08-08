@@ -21,7 +21,7 @@ class Application < Site::Client
   def trigger_policy_save
     return unless FiWareIdm::Thales.enable
 
-    XacmlPolicy.new self
+    XacmlPolicy.save self
   end
 
   def as_json(options = {})
