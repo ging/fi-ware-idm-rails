@@ -16,7 +16,7 @@ class ApplicationsController < Site::ClientsController
 
   protected
 
-  def end_of_association_chain
+  def build_collection
     case params[:section]
     when "purchased"
       current_subject.purchased_applications
