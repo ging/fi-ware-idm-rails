@@ -42,7 +42,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'factory_girl'
+  gem 'factory_girl', '1.3.3'
 end
 
 # gem 'omniauth-social_stream', path: '../omniauth-social_stream'
