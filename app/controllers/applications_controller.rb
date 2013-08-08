@@ -4,8 +4,22 @@ class ApplicationsController < Site::ClientsController
 
   def index
     respond_to do |format|
-      format.html
+      format.html {
+        if request.xhr?
+        end
+      }
       format.json { render json: Actor.find(params[:actor_id]).applications }
+    end
+  end
+
+  protected
+
+  def end_of_association_chain
+    case params[:section]
+    when "purchased"
+      current_subject.purchased_applications
+    else
+      current_subject.applications
     end
   end
 end

@@ -23,12 +23,21 @@ module FiWareIdm
         managed_site_clients
       end
 
+      def purchased_applications
+        ::Application.purchased_by(self)
+      end
+
       def organizations
         Organization.
           select("DISTINCT groups.*").
           joins(actor: { sent_contacts: :relations }).
           merge(::Contact.received_by(self)).
           merge(::Relation.positive)
+      end
+
+      def other_organizations
+        Organization.
+          where(Organization.arel_table[:id].not_in(organizations.pluck(:id)))
       end
 
       # All the applications that grant this actor the ability to

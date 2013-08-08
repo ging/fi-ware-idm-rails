@@ -10,6 +10,6 @@
     <%= render partial: 'site/clients/list',
                object: current_subject.applications.first(5) %>
 
-    <%= link_to t('view all'), applications_path, :class => "view-all" %>
+    <%= link_to 'View all', applications_path, :class => "view-all" %>
   <% end %>
 </div>

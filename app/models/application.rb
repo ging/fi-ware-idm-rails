@@ -10,12 +10,26 @@ class Application < Site::Client
     where(official: true)
   }
 
+  scope :purchased_by, ->(actor) {
+    select("DISTINCT sites.*").
+      joins(actor: :sent_relations).
+      merge(Contact.received_by(actor)).
+      merge(::Relation.where(id: ::Relation::Purchaser.instance.id))
+  }
+
   def roles
     relations_list
   end
 
   def custom_roles
     relation_customs
+  end
+
+  # Adds a new purchaser of this application, which consists on
+  # creating a new tie with Relation::Purchaser
+  def add_purchaser!(actor)
+    c = contact_to!(actor)
+    c.relation_ids |= [ Relation::Purchaser.instance.id ]
   end
 
   def trigger_policy_save

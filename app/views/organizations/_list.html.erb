@@ -1,6 +1,6 @@
 <section class="organizations-list">
   <ul>
-    <% current_user.organizations.first(5).each do |org| %>
+    <% list.each do |org| %>
     <li>
       <div class="organization">
         <div class="avatar">  
@@ -27,5 +27,4 @@
     <% end %>
     </li>
   </ul>
-
 </section> 

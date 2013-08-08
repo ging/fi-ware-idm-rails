@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130805131704) do
+ActiveRecord::Schema.define(:version => 20130806104042) do
 
   create_table "activities", :force => true do |t|
     t.integer  "activity_verb_id"
@@ -292,6 +292,7 @@ ActiveRecord::Schema.define(:version => 20130805131704) do
     t.datetime "updated_at",                    :null => false
     t.string   "type"
     t.boolean  "official",   :default => false
+    t.boolean  "store",      :default => false
   end
 
   add_index "sites", ["actor_id"], :name => "index_sites_on_actor_id"

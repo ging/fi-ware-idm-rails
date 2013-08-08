@@ -1,12 +1,8 @@
-body{
-  background-color: #fcfcfc;
-  font-family: "OpensansRegular";
-}
 a:hover{
   color: #049cdb;
   text-decoration: none;
 }
-header{
+header#oil-nav{
   display: block;
   background-color: #f4f4f4;
   padding: 1px 10px 1px;
