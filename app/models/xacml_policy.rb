@@ -57,6 +57,6 @@ class XacmlPolicy
 
     raise "#{ ErrorMessage } #{ response.body }" if response.code !=200
 
-    logger.info "XACML Policy successfully saved!"
+    Rails.logger.info "XACML Policy successfully saved!"
   end
 end
