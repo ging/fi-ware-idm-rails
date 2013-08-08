@@ -6,6 +6,6 @@
   <h3><%= t('organization.new.title') %></h3>
 
   <%= render partial: 'form',
-             object: @organization,
+             object: Organization.new(owners: current_subject.actor_id),
              as: :group %>
 </section>

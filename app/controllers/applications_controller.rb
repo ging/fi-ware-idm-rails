@@ -1,4 +1,25 @@
 class ApplicationsController < Site::ClientsController
   # Change the settings of inherited_resources for applications
   defaults resource_class: Application
+
+  def index
+    respond_to do |format|
+      format.html {
+        if request.xhr?
+        end
+      }
+      format.json { render json: Actor.find(params[:actor_id]).applications }
+    end
+  end
+
+  protected
+
+  def end_of_association_chain
+    case params[:section]
+    when "purchased"
+      current_subject.purchased_applications
+    else
+      current_subject.applications
+    end
+  end
 end

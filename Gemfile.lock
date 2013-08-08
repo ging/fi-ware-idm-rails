@@ -1,9 +1,13 @@
 GIT
   remote: git://github.com/ging/social_stream.git
+<<<<<<< HEAD
   revision: 7092a8b7aa8ad5411b0efa08393966f38e4ac579
+=======
+  revision: 3d4f6d1159729010a5c0882a1481a13731a191cc
+>>>>>>> a168cde23e3f27930fdeb1ed4c19f53c0d5f23bc
   branch: master
   specs:
-    social_stream-base (2.1.0)
+    social_stream-base (2.2.0)
       acts-as-taggable-on (~> 2.2.2)
       ancestry (~> 1.2.3)
       avatars_for_rails (~> 1.1.1)
@@ -33,9 +37,13 @@ GIT
       stringex (~> 1.5.1)
       strong_parameters (~> 0.2.1)
       thinking-sphinx (~> 2.0.8)
+<<<<<<< HEAD
     social_stream-oauth2_server (2.1.1)
+=======
+    social_stream-oauth2_server (2.2.0)
+>>>>>>> a168cde23e3f27930fdeb1ed4c19f53c0d5f23bc
       rack-oauth2 (~> 1.0.0)
-      social_stream-base (~> 2.1.0)
+      social_stream-base (~> 2.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -116,6 +124,7 @@ GEM
       actionmailer (>= 3.0.4)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    factory_girl (1.3.3)
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
     flashy (0.0.1)
@@ -123,7 +132,9 @@ GEM
     foreigner (1.1.6)
       activerecord (>= 3.0.0)
     forgery (0.5.0)
-    has_scope (0.5.1)
+    has_scope (0.6.0.rc)
+      actionpack (>= 3.2, < 5)
+      activesupport (>= 3.2, < 5)
     hashie (2.0.5)
     hike (1.2.3)
     httpauth (0.2.0)
@@ -131,9 +142,9 @@ GEM
     i18n (0.6.4)
     i18n-js (2.1.2)
       i18n
-    inherited_resources (1.4.0)
-      has_scope (~> 0.5.0)
-      responders (~> 0.9)
+    inherited_resources (1.4.1)
+      has_scope (~> 0.6.0.rc)
+      responders (~> 1.0.0.rc)
     journey (1.0.4)
     jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
@@ -185,7 +196,7 @@ GEM
     omniauth-socialstream (0.1.3)
       omniauth-oauth2 (~> 1.1.1)
     orm_adapter (0.4.0)
-    paperclip (3.5.0)
+    paperclip (3.5.1)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.0)
@@ -237,8 +248,8 @@ GEM
     redis (3.0.4)
     redis-namespace (1.3.0)
       redis (~> 3.0.0)
-    responders (0.9.3)
-      railties (~> 3.1)
+    responders (1.0.0.rc)
+      railties (>= 3.2, < 5)
     resque (1.23.1)
       multi_json (~> 1.0)
       redis-namespace (~> 1.0)
@@ -305,6 +316,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   diffy
   exception_notification (~> 3.0)
+  factory_girl
   forgery
   jquery-rails
   mysql2

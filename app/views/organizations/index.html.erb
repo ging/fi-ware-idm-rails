@@ -7,7 +7,6 @@
     </h3>
   </header>
 
- 
   <div class="tabbable"> 
     <div class="search-nav hidden-phone">
       <%= form_tag search_path, method: 'get', class: "navbar-search pull-left" do %>
@@ -34,21 +33,27 @@
       </div>
     </div>
     <ul class="nav nav-tabs">
-      <li class="active">
-        <a href="#tab1" data-toggle="tab">Mine</a>
+      <li>
+        <a href="#owned" data-toggle="tab" data-path="<%= organizations_path %>">Owned</a>
       </li>
       <li>
-        <a href="#tab2" data-toggle="tab">Others</a>
+        <a href="#others" data-toggle="tab" data-path="<%= organizations_path %>">Others</a>
       </li>
     </ul>
   </div>
   <div class="tab-content">
-    <div class="tab-pane active" id="tab1">
-      <%= render partial: 'organizations/list' %>
+    <div class="tab-pane" id="owned">
+      <%= render partial: 'layouts/loading' %>
     </div>
 
-    <div class="tab-pane" id="tab2">
-      <%= render partial: 'organizations/list' %>
+    <div class="tab-pane" id="others">
+      <%= render partial: 'layouts/loading' %>
     </div>
   </div>
+
+  <%= javascript_tag do %>
+    $(function() {
+      Organization.index();
+    });
+  <% end %>
 </div>

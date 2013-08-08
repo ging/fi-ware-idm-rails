@@ -23,6 +23,10 @@ module FiWareIdm
         managed_site_clients
       end
 
+      def purchased_applications
+        ::Application.purchased_by(self)
+      end
+
       def organizations
         Organization.
           select("DISTINCT groups.*").
@@ -31,10 +35,16 @@ module FiWareIdm
           merge(::Relation.positive)
       end
 
+      def other_organizations
+        Organization.
+          where(Organization.arel_table[:id].not_in(organizations.pluck(:id)))
+      end
+
       # All the applications that grant this actor the ability to
       # obtain roles
       def obtained_applications
-        ::Application.granting_roles(self)
+        ::Application.official |
+          ::Application.granting_roles(self)
       end
 
       def obtained_roles

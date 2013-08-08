@@ -26,6 +26,11 @@ en:
         create: Create permission
         update: Update permission
   organization:
+    destroy:
+      explanation: All the information, members and applications of this organization will be destroyed!
+      last_confirm: This is your last chance. Are you really sure?
+      go_ahead: Yes, I am sure. Destroy'em all!
+      one: Destroy organization
     new:
       action: "Register an organization"
       title: "Register an organization"
@@ -44,6 +49,8 @@ en:
               positive: They WILL BE ABLE to obtain and use the roles defined in the application
   relation_admin:
     name: "Application Admin"
+  relation_manager:
+    name: "Provider"
   relation_purchaser:
     name: "Purchaser"
   site:
@@ -54,7 +61,8 @@ en:
         link: Remove the application and all its data
         title: Destroy application
       index:
-        title: "Applications"
+        title: Applications
+      managing: Providing
       new:
         link: "Add application"
         title: "Register new application"

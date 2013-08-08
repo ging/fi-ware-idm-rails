@@ -1,0 +1,3 @@
+<!-- replace "code[erb-loud]:contains('f.hidden_field :owners')" -->
+
+<%= f.hidden_field :owners, 'data-path' => actors_path(format: :json), "data-actor_name" => current_subject.name, "data-type" => 'user' %>

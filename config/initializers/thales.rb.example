@@ -1,0 +1,18 @@
+require_dependency 'fi_ware_idm/thales'
+
+FiWareIdm::Thales.setup do |config|
+  # Enable Access Control GE integration
+  config.enable = true
+
+  # Url of the Thales Access Control GE endpoint
+  config.url = ""
+
+  # Client certificate direction
+  config.client_certificate = "#{ Rails.root }/config/thales/client-cert.pem"
+
+  # Private key
+  config.key = "#{ Rails.root }/config/thales/private.key"
+
+  # CA Server certificate
+  config.ca_certificate = "#{ Rails.root }/config/thales/tar-ca-cert.pem"
+end

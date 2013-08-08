@@ -4,9 +4,13 @@
       <%= render subject.organizations %>
     </section>
   <% else %>
-    Aren't you member of any organization?
+    <% if profile_subject_is_current? %>
+      Aren't you member of any organization?
 
-    <%= link_to 'Explore them', organizations_path %>
+      <%= link_to 'Explore them', organizations_path %>
+    <% else %>
+      <%= subject.name %> is not a member of any organization.
+    <% end %>
   <% end %>
 </section>
 

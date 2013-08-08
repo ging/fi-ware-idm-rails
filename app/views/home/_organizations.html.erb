@@ -3,19 +3,24 @@
     Organizations
   </header>
 
+  <!--
   <form class="form-inline">
     <input type="text" class="input-small" placeholder="search..">
   </form>
+  -->
 
   <% if current_user.organizations.blank? %>
     <div class="first-time-message">
       <h3>  
         You are not member of any organization
       </h3> 
-      <%= link_to "Explore them", organizations_path(anchor: 'other') %>
+      <%= link_to "Explore them", organizations_path(section: 'others') %>
     </div>
   
   <% else %>
-    <%= render partial: 'organizations/list' %>
+    <%= render partial: 'organizations/list',
+               object: current_user.organizations.first(5) %>
+
+    <%= link_to "View all", organizations_path, :class => "view-all" %>
   <% end %>
 </div>

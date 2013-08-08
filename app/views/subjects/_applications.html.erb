@@ -4,9 +4,13 @@
       <%= render subject.applications %>
     </section>
   <% else %>
-    Haven't you any application?
+    <% if profile_subject_is_current? %>
+      Haven't you any application?
 
-    <%= link_to 'Create application', new_application_path %>
+      <%= link_to 'Create application', new_application_path %>
+    <% else %>
+      <%= subject.name %> has not any application.
+    <% end %>
   <% end %>
 </section>
 
