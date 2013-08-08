@@ -56,5 +56,7 @@ class XacmlPolicy
     end
 
     raise "#{ ErrorMessage } #{ response.body }" if response.code !=200
+
+    logger.info "XACML Policy successfully saved!"
   end
 end
