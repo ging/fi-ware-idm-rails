@@ -6,6 +6,8 @@ class ApplicationsController < Site::ClientsController
     respond_to do |format|
       format.html {
         if request.xhr?
+          render partial: 'list',
+                 object: collection
         end
       }
       format.json { render json: Actor.find(params[:actor_id]).applications }
