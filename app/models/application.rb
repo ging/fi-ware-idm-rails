@@ -10,6 +10,13 @@ class Application < Site::Client
     where(official: true)
   }
 
+  scope :purchased_by, ->(actor) {
+    select("DISTINCT sites.*").
+      joins(actor: :sent_relations).
+      merge(Contact.received_by(actor)).
+      merge(::Relation.where(id: ::Relation::Purchaser.instance.id))
+  }
+
   def roles
     relations_list
   end
