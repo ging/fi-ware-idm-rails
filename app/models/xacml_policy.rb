@@ -47,10 +47,7 @@ class XacmlPolicy
       :verify_ssl => OpenSSL::SSL::VERIFY_PEER,
       :ssl_ca_file => FiWareIdm::Thales.ca_certificate)
 
-    begin
     response = client.put(xml.to_xml, :content_type =>"application/xml")
-    rescue RestClient::BadRequest => e
-    end
 
     puts "the response code is: "+response.code.to_s 
     raise IOError, "Put XACML policy file to Access Control DB failed!" if response.code !=200
