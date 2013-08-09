@@ -12,7 +12,7 @@
       margin: -21px 30px -88px 0
 
   .organizations-list,
-  .applications-list
+  .applications-list,
     .application,
     .organization
       padding-top: 6px
@@ -48,7 +48,7 @@
     ul
       @include application
 
-  .organizations-list
+  .organizations-list,
     .organization
       @include contact
       min-height: 50px
@@ -79,6 +79,18 @@
           .content
             padding: 0px
 
+  .members
+    .member-list
+      @include principal-box
+      @include contact
+      padding-top: 10px
+      .contact
+        min-height: 50px
+      .data
+        margin-left: 56px
+
+
+
 .content
   .accordion
     clear: both
@@ -91,4 +103,6 @@
         padding: 0px
         .content
           padding: 0px
+
+
       
