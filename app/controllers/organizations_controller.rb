@@ -13,8 +13,13 @@ class OrganizationsController < GroupsController
 
   protected
 
-  def end_of_association_chain
-    chain =
+  def collection
+    get_collection_ivar ||
+      set_collection_ivar(build_collection)
+  end
+
+  def build_collection
+    col =
       case params[:section]
       when 'others'
         current_user.other_organizations
@@ -22,7 +27,7 @@ class OrganizationsController < GroupsController
         current_user.organizations
       end
 
-    chain.page(params[:page])
+    col.page(params[:page])
   end
 
   private

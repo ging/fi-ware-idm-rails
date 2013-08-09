@@ -7,8 +7,10 @@ module FiWareIdm
         extend ActiveSupport::Concern
 
         included do
-          after_save :trigger_policy_save
-          after_destroy :trigger_policy_save
+          attr_accessor :acge_error
+
+          before_save :trigger_policy_save
+          before_destroy :trigger_policy_save
 
           alias_method_chain :available_permissions, :custom
         end
@@ -17,6 +19,8 @@ module FiWareIdm
           if subject.is_a? Site::Client
             subject.trigger_policy_save
           end
+        rescue StandardError => e
+          self.acge_error = e.to_s
         end
 
         def available_permissions_with_custom

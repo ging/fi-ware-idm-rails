@@ -6,6 +6,8 @@ class ApplicationsController < Site::ClientsController
     respond_to do |format|
       format.html {
         if request.xhr?
+          render partial: 'list',
+                 object: collection
         end
       }
       format.json { render json: Actor.find(params[:actor_id]).applications }
@@ -14,7 +16,7 @@ class ApplicationsController < Site::ClientsController
 
   protected
 
-  def end_of_association_chain
+  def build_collection
     case params[:section]
     when "purchased"
       current_subject.purchased_applications

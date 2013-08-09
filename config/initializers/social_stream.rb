@@ -42,6 +42,12 @@ SocialStream.setup do |config|
       [ 'manage', 'contact' ]
     ]
 
+  config.available_permissions['application'] = [
+    [ 'manage', nil ],
+    [ 'manage', 'relation/custom' ],
+    [ 'manage', 'contact']
+  ]
+
   # Expose resque interface to manage background tasks at /resque
   #
   config.resque_access = false

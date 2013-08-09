@@ -3,7 +3,7 @@ module FiWareIdm
     mattr_accessor :enable
     @@enable = false
 
-    mattr_accessor :url, :client_certificate, :key, :ca_certificate
+    mattr_accessor :url, :client_certificate, :key, :ca_certificate, :passphrase
 
     class << self
       def setup

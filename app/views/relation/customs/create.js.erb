@@ -1,0 +1,12 @@
+<% if @custom.valid? %>
+  SocialStream.RelationCustom.create({
+    relation: {
+      id:   <%= @custom.id %>,
+      html: "<%= j render(@custom) %>"
+    }
+  });
+<% else %>
+  SocialStream.Flash.error('<%= @custom.errors.full_messages.to_sentence %>');
+<% end %>
+
+<%= render partial: 'acge_error' %>
