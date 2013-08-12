@@ -25,6 +25,10 @@ class Application < Site::Client
     relation_customs
   end
 
+  def grants_roles?(subject)
+    allow? subject, 'get', 'relation/custom'
+  end
+
   # Adds a new purchaser of this application, which consists on
   # creating a new tie with Relation::Purchaser
   def add_purchaser!(actor)
