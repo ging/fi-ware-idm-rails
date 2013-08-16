@@ -11,12 +11,13 @@ class XacmlFile
   StrFuncAnd = "urn:oasis:names:tc:xacml:1.0:function:and"
   StrFuncStrEqual ='urn:oasis:names:tc:xacml:1.0:function:string-equal'
 
-  def create_policyset(appName, roles)
-    #puts "xacml_file.createPolicySet method now. appName is: "+appName
+  def create_XACMLpolicy(application)
+    roles = application.roles
+    appName = application.name
 
     xmltitle = Nokogiri::XML('<?xml version = "1.0" encoding = "UTF-8" standalone ="yes"?>')
     builder = Nokogiri::XML::Builder.with(xmltitle) do |xml|
-      xml.PolicySet(:xmlns => Strxmlns, :PolicySetId => appName+'_policyset', :Version => '1.0', :PolicyCombiningAlgId => StrPolicyCombiningAlgIdPermitOverrides) {
+      xml.PolicySet(:xmlns => Strxmlns, :PolicySetId => application.id, :Version => '1.0', :PolicyCombiningAlgId => StrPolicyCombiningAlgIdPermitOverrides) {
         xml.Description(appName+' policyset')
         xml.Target
         roles.each do |role|
@@ -28,7 +29,7 @@ class XacmlFile
 
   def create_policy(xml, role)
     #create policy node
-    xml.Policy(:PolicyId => role.name, :Version => "1.0", :RuleCombiningAlgId => StrRuleCombiningAlgIdPermitOverrides){
+    xml.Policy(:PolicyId => role.id, :Version => "1.0", :RuleCombiningAlgId => StrRuleCombiningAlgIdPermitOverrides){
       xml.Description 'Role permissions policy file for '+role.name 
       xml.Target{
         xml.Resources{
@@ -57,7 +58,7 @@ class XacmlFile
 
   def create_rule(xml, role, action, object )
     #create all the rules 
-    xml.Rule(:RuleId =>role.name+'_can_'+ action.to_s+'_'+object.to_s, :Effect =>'Permit'){
+    xml.Rule(:RuleId => "role_#{ role.id }_can_#{ action.to_s.gsub(/\s/, '') }_#{ object.to_s.gsub(/\s/, '') }", :Effect =>'Permit'){
       xml.Description(role.name+' can '+ action.to_s+' '+object.to_s)
       xml.Condition{
         xml.Apply(:FunctionId =>StrFuncAnd){
@@ -71,13 +72,6 @@ class XacmlFile
           }
         }
       }
-
     }
-  end
-
-  def create_XACMLpolicy(application)
-    roles = application.roles
-    appName = application.name
-    create_policyset(appName, roles)
   end
 end
