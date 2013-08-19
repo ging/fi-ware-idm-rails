@@ -32,7 +32,12 @@ var Application = (function(SS, $, undefined) {
       dataType: 'html',
       type: 'GET',
       success: function(data) {
-        $(tab.attr('href')).html(data);
+        var id = $(tab).attr('href');
+        //XXX changed by KIKE and ALDO. Not the best fix but works
+        //we did not know how to add a modal. so we redirect to the original page
+        var old_href = $('.new_site_client-modal-link').attr('href');
+        $(""+id).html(data);
+        $('.new_site_client-modal-link').attr('href', old_href);
         tab.attr('data-loaded', 'true');
       },
       error: function(jqXHR, status, error) {
