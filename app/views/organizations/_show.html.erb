@@ -1,7 +1,7 @@
 <div id="organization">
   <header>
     <h3>
-      <%= @organization.name %>
+      <%= @organization.name %> (organization id: <%=@organization.id%>)
     </h3>
 
     <% if can? :edit, @organization.profile %>
