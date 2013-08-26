@@ -47,12 +47,14 @@
     </div>
   </section>
   <h4>
-    Profile info
+    Members
   </h4>
   <%= render partial: 'subjects/members',
              object: @organization,
              as: :subject %>
-
+  <h4>
+    Applications
+  </h4>
   <%= render partial: 'subjects/applications',
              object: @organization,
              as: :subject %>
