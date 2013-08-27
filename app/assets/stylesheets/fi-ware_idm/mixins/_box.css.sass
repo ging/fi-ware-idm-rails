@@ -10,6 +10,7 @@
   border-color: rgba(0,0,0, 0.1)
 
 @mixin contact
+  margin-bottom: 9px !important
   .avatar
     @include size(40px, 40px)
     float: left
@@ -31,6 +32,9 @@
     @include btn-add
     margin: 0 0 0 60px
     padding-top: 27px
+    .btn-group
+      button
+        padding: 0px 12px !important
 
 @mixin follow
   position: relative

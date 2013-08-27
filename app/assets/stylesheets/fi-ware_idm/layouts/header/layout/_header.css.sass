@@ -17,12 +17,51 @@ header.navbar
         margin: 12px 0 0 3px 
         a
           font-size: 23px
+    .mobile
+      display: none
+      .dropdown-menu  
+        margin-left: -67px
+        min-width: 90px
+        background-color: rgb(244, 244, 244)
+        border: none
+        -webkit-border-top-left-radius: 0px
+        -moz-border-top-left-radius: 0px
+        border-top-left-radius: 0px
+        -webkit-border-top-right-radius: 0px
+        -moz-border-top-right-radius: 0px
+        border-top-right-radius: 0px
+        -webkit-box-shadow: 2px 3px 6px rgba(0,0,0,0.1)
+        -moz-box-shadow: 2px 3px 6px rgba(0,0,0,0.1)
+        box-shadow: 2px 3px 6px rgba(0,0,0,0.1)
+        margin-top: 0px
+        .active
+          a 
+            background-color: #049cdb
+            background-image: none
+            color: #fff
+            &:hover
+              background-color: rgb(65, 173, 218)
+              background-image: none
+            &:focus
+              background-color: #049cdb
+              background-image: none
+
+        li 
+          a
+            &:hover
+              background-color: rgb(65, 173, 218)
+
+
+
+
+
 
   ul.oil-portal
-    width: 330px
+    width: 350px
     height: 36px
-    padding: 0px 14px
+    padding: 0px
     margin-bottom: 0px
+    margin-left: 2px
     display: inline-block
     li
       display: inline-block
