@@ -36,7 +36,9 @@ header
   .register_link
     font-size: 15px !important
 
-    
+#forgot-pass,
+#confirmation
+  width: 76%
 
 .headerFront
   a
@@ -89,23 +91,16 @@ header
       margin: -11px 26% 0 14px
 
 #confirmation
-  h2
-    margin-left: 40%
   .confirmation
-    @include principal-box
-    width: 27%
-    float: right
-    display: inline-block
-    padding: 5px 15px
-    margin: -11px 26% 0 14px
-    input
-      &[type="text"]
-    .soften
-      clear: both
-      margin: 39px 0 10px
-    .options
-      font-size: 12px
-      a
-        border-right: 1px solid #CCC
-        padding-right: 6px
-    
+    margin: -11px 26% 0 14px !important
+
+
+
+#forgot-pass,
+#confirmation,
+#frontpage,
+#registration,
+#new_session
+  input
+    &[type="submit"]
+      @include btn-primary
