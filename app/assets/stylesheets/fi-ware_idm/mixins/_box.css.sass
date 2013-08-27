@@ -35,6 +35,17 @@
     .btn-group
       button
         padding: 0px 12px !important
+    ul.multiselect-container
+      li
+        .multiselect-group
+          color: #888
+          margin-left: 9px
+          border-bottom: 1px solid $blue
+        a
+      li.active
+        label
+          color: $white
+    @include dropdown
 
 @mixin follow
   position: relative
@@ -64,16 +75,12 @@
   form
     margin: 0
     input
-      height: 20px
-      border: 0px none 
-      width: 100px
       display: block
       background-color: $secundaryColor
       @include border-radius($baseBorderRadius)
       color: $white
       text-align: center
       float: left
-      margin-top: -4px
       font-size: 12px
   .following-button
     display: block

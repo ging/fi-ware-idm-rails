@@ -35,4 +35,26 @@
     width: 100%
     float: left
 
+@mixin dropdown
+  .dropdown-menu,
+  .dropdown-submenu
+    li 
+      a
+        &:hover 
+          background-color: #83CBE9
+          background-image: none
+          color: $gray
 
+  .dropdown-menu
+    li 
+      a
+        &:focus
+          background-color: #049CDB
+    li.active
+      a
+        &:hover
+          background-color: #049CDB
+  .dropdown-submenu
+    &:focus 
+      a 
+        background-color: #049CDB
