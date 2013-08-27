@@ -33,13 +33,16 @@ nav.navbar-inner .logo-header{
   float: left;
 
 }
+header .navbar{
+  margin-bottom: 12px !important;
+}
 
 .logo-header .brand{
   padding: 0;
   width: auto;
-  float: left;
+  float: none;
   margin: 12px 0 0 3px;
-  font-size: 23px;
+  font-size: 20px;
   color: #555;
   font-family: "DsignesRegular";
   display: inline-block;
@@ -64,12 +67,12 @@ nav.navbar-inner .logo-header{
 }
 
 ul.oil-portal{
-  width: 300px;
+  width: 350px;
   height: 36px;
-  padding: 0px 14px;
+  padding: 0px;
+  margin-left: 2px;
   margin-bottom: 0px;
   display: inline-block;
-  float: left;
 }
 
 ul.oil-portal li{
@@ -141,7 +144,12 @@ ul.oil-portal li.active a{
   background-color: #049cdb;
   background-image: none;
 }
-
+header .navbar-inner .dropdown {
+  margin-top: 7px;
+}
+.dropdown .caret {
+margin-top: -8px;
+}
 
 @media (max-width: 767px){
   
@@ -155,14 +163,11 @@ ul.oil-portal li.active a{
     margin-top: 0px;
   }
 
-  .logo-header{
-    float: left;
-  }
-
   .mobile{
-    float: left;
-    margin-top: 8px;
     display: inline-block;
+  }
+  .logo{
+    display: none;   
   }
 }
 
@@ -170,5 +175,14 @@ ul.oil-portal li.active a{
 
   header.navbar ul{
     margin-top: 0px    
+  }
+  .mobile {
+    display: inline-block !important;
+  }
+  .logo{
+    display: none;   
+  }
+  header.navbar .oil-portal{
+    display: none
   }
 }
