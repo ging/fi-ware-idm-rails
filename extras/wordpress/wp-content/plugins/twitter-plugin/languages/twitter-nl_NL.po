@@ -1,0 +1,397 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: twitter\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-18 15:58+0300\n"
+"PO-Revision-Date: 2013-07-18 15:58+0300\n"
+"Last-Translator: \n"
+"Language-Team: Jan Willem <jw@ikinternet.nl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl_NL\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: twitter.php:109
+msgid "Not set"
+msgstr ""
+
+#: twitter.php:111
+#: twitter.php:115
+msgid "On"
+msgstr ""
+
+#: twitter.php:113
+#: twitter.php:117
+msgid "Off"
+msgstr ""
+
+#: twitter.php:121
+#: twitter.php:125
+#: twitter.php:129
+#: twitter.php:133
+#: twitter.php:137
+#: twitter.php:163
+msgid "N/A"
+msgstr ""
+
+#: twitter.php:135
+msgid " Mb"
+msgstr ""
+
+#: twitter.php:139
+#: twitter.php:143
+#: twitter.php:147
+#: twitter.php:158
+msgid "Yes"
+msgstr ""
+
+#: twitter.php:141
+#: twitter.php:145
+#: twitter.php:149
+#: twitter.php:160
+msgid "No"
+msgstr ""
+
+#: twitter.php:174
+msgid "Operating System"
+msgstr ""
+
+#: twitter.php:175
+msgid "Server"
+msgstr ""
+
+#: twitter.php:176
+msgid "Memory usage"
+msgstr ""
+
+#: twitter.php:177
+msgid "MYSQL Version"
+msgstr ""
+
+#: twitter.php:178
+msgid "SQL Mode"
+msgstr ""
+
+#: twitter.php:179
+msgid "PHP Version"
+msgstr ""
+
+#: twitter.php:180
+msgid "PHP Safe Mode"
+msgstr ""
+
+#: twitter.php:181
+msgid "PHP Allow URL fopen"
+msgstr ""
+
+#: twitter.php:182
+msgid "PHP Memory Limit"
+msgstr ""
+
+#: twitter.php:183
+msgid "PHP Max Upload Size"
+msgstr ""
+
+#: twitter.php:184
+msgid "PHP Max Post Size"
+msgstr ""
+
+#: twitter.php:185
+msgid "PHP Max Script Execute Time"
+msgstr ""
+
+#: twitter.php:186
+msgid "PHP Exif support"
+msgstr ""
+
+#: twitter.php:187
+msgid "PHP IPTC support"
+msgstr ""
+
+#: twitter.php:188
+msgid "PHP XML support"
+msgstr ""
+
+#: twitter.php:189
+msgid "Site URL"
+msgstr ""
+
+#: twitter.php:190
+msgid "Home URL"
+msgstr ""
+
+#: twitter.php:191
+msgid "WordPress Version"
+msgstr ""
+
+#: twitter.php:192
+msgid "WordPress DB Version"
+msgstr ""
+
+#: twitter.php:193
+msgid "Multisite"
+msgstr ""
+
+#: twitter.php:194
+msgid "Active Theme"
+msgstr ""
+
+#: twitter.php:209
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: twitter.php:213
+msgid "Email with system info is sent to "
+msgstr ""
+
+#: twitter.php:217
+msgid "Thank you for contacting us."
+msgstr ""
+
+#: twitter.php:245
+msgid "Sorry, email message could not be delivered."
+msgstr ""
+
+#: twitter.php:253
+#, fuzzy
+msgid "Pro plugins"
+msgstr "Плагины BWS"
+
+#: twitter.php:256
+#: twitter.php:282
+msgid "Activated plugins"
+msgstr "Geactveerde plugins"
+
+#: twitter.php:258
+#: twitter.php:266
+#: twitter.php:274
+#: twitter.php:284
+#: twitter.php:292
+#: twitter.php:300
+msgid "Read more"
+msgstr "Lees meer"
+
+#: twitter.php:258
+#: twitter.php:284
+#: twitter.php:636
+#: twitter.php:645
+msgid "Settings"
+msgstr "Instellingen"
+
+#: twitter.php:264
+#: twitter.php:290
+msgid "Installed plugins"
+msgstr "Geinstaleerde plugins"
+
+#: twitter.php:272
+#: twitter.php:298
+msgid "Recommended plugins"
+msgstr "Aanbevolen plugins"
+
+#: twitter.php:274
+msgid "Purchase"
+msgstr ""
+
+#: twitter.php:279
+#, fuzzy
+msgid "Free plugins"
+msgstr "Aanbevolen plugins"
+
+#: twitter.php:300
+msgid "Download"
+msgstr "Download"
+
+#: twitter.php:300
+#, php-format
+msgid "Install %s"
+msgstr "Installeer %s"
+
+#: twitter.php:300
+msgid "Install now from wordpress.org"
+msgstr "Installeer van wordpress.org"
+
+#: twitter.php:305
+msgid "If you have any questions, please contact us via"
+msgstr ""
+
+#: twitter.php:312
+msgid "System status"
+msgstr ""
+
+#: twitter.php:316
+msgid "Environment"
+msgstr ""
+
+#: twitter.php:327
+#, fuzzy
+msgid "Active Plugins"
+msgstr "Geactveerde plugins"
+
+#: twitter.php:338
+#, fuzzy
+msgid "Inactive Plugins"
+msgstr "Geactveerde plugins"
+
+#: twitter.php:352
+#, fuzzy
+msgid "Send to support"
+msgstr "Ondersteuning"
+
+#: twitter.php:359
+msgid "Send to custom email &#187;"
+msgstr ""
+
+#: twitter.php:397
+#: twitter.php:475
+#, fuzzy
+msgid "Twitter Settings"
+msgstr "Twitter opties"
+
+#: twitter.php:397
+msgid "Twitter"
+msgstr "Twitter"
+
+#: twitter.php:428
+#, fuzzy
+msgid "Settings saved"
+msgstr "Instellingen"
+
+#: twitter.php:450
+msgid "Error: File size > 32K"
+msgstr ""
+
+#: twitter.php:452
+msgid "Error: Invalid file type"
+msgstr ""
+
+#: twitter.php:460
+msgid "Error: moving file failed"
+msgstr ""
+
+#: twitter.php:463
+msgid "Error: check image width or height"
+msgstr ""
+
+#: twitter.php:467
+msgid "Uploading Error: check image properties"
+msgstr ""
+
+#: twitter.php:482
+msgid "Settings for the button \"Follow Me\":"
+msgstr "Instellingen voor de knop \"Follow Me\":"
+
+#: twitter.php:486
+msgid "Enter your username:"
+msgstr "Vul uw gebruikersnaam in :"
+
+#: twitter.php:490
+#, fuzzy
+msgid "If you do not have Twitter account yet, you should create it using this link"
+msgstr "Als je nog geen Twitter account hebt dan kan je er een aanmaken via de deze link"
+
+#: twitter.php:491
+#, fuzzy
+msgid "Paste the shortcode [follow_me] into the necessary page or post to use the \"Follow Me\" button."
+msgstr "Gebruik de shortcode [follow_me]  op de pagina of post om de \"Follow Me\" te tonen."
+
+#: twitter.php:492
+#, fuzzy
+msgid "If you would like to use this button in some other place, please paste this line into the template source code"
+msgstr "Als je deze button ergens anders wil gebruiken, plak de onderstaande code ergens in de template broncode"
+
+#: twitter.php:497
+msgid "Choose display settings:"
+msgstr ""
+
+#: twitter.php:501
+msgid "Standard button"
+msgstr ""
+
+#: twitter.php:503
+msgid "Custom button"
+msgstr ""
+
+#: twitter.php:513
+msgid "Current image:"
+msgstr ""
+
+#: twitter.php:521
+msgid "\"Follow Me\" image:"
+msgstr ""
+
+#: twitter.php:527
+msgid "Image properties: max image width:100px; max image height:100px; max image size:32Kb; image types:\"jpg\", \"jpeg\"."
+msgstr ""
+
+#: twitter.php:534
+#, fuzzy
+msgid "\"Twitter\" button settings:"
+msgstr "Опции Twitter"
+
+#: twitter.php:537
+msgid "Disable the \"Twitter\" button:"
+msgstr ""
+
+#: twitter.php:540
+msgid "The button \"T\" will not be displayed. Just the shortcode [follow_me] will work."
+msgstr ""
+
+#: twitter.php:545
+msgid "Choose the \"Twitter\" icon position:"
+msgstr ""
+
+#: twitter.php:548
+msgid "Top position"
+msgstr "Bovenaan gepositioneerd"
+
+#: twitter.php:549
+msgid "Bottom position"
+msgstr "Onderaan gepositioneerd"
+
+#: twitter.php:550
+#, fuzzy
+msgid "By clicking this icon a user can add the article he/she likes to his/her Twitter page."
+msgstr "Als een bezoeker hierop klikt dan wordt Twitter geopend en kan men het artikel en link delen."
+
+#: twitter.php:556
+msgid "Save Changes"
+msgstr "Instellingen opslaan"
+
+#: twitter.php:614
+#, fuzzy
+msgid "Click here if you like this article."
+msgstr "Klik hier als je dit artikel leuk vindt"
+
+#: twitter.php:646
+msgid "FAQ"
+msgstr "FAQ"
+
+#: twitter.php:647
+msgid "Support"
+msgstr "Ondersteuning"
+
+#, fuzzy
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill out the contact form on our website"
+#~ msgstr ""
+#~ "Als je vragen hebt, stuur ons een e-mail via plugin@bestwebsoft.com of "
+#~ "gebruik het contactformulier op onze website"
+#~ msgid "Options saved."
+#~ msgstr "Opties opgeslagen"
+#~ msgid "Settings for the button \"Twitter\":"
+#~ msgstr "Instellingen voor de knop  \"Twitter\":"
+
+#, fuzzy
+#~ msgid "Turn off the button \"Twitter\":"
+#~ msgstr "Instellingen voor de knop  \"Twitter\":"
+#~ msgid "Choose a position for an icon \"Twitter\":"
+#~ msgstr "Kies een positie voor het  \"Twitter\" logo:"
+#~ msgid "Install Now"
+#~ msgstr "Установить сейчас"
+

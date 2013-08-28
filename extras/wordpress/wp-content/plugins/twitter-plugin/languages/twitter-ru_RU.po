@@ -1,0 +1,377 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: twitter\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-18 15:58+0300\n"
+"PO-Revision-Date: 2013-07-18 16:01+0300\n"
+"Last-Translator: \n"
+"Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru_RU\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: twitter.php:109
+msgid "Not set"
+msgstr "Не задан"
+
+#: twitter.php:111
+#: twitter.php:115
+msgid "On"
+msgstr "Вкл"
+
+#: twitter.php:113
+#: twitter.php:117
+msgid "Off"
+msgstr "Выкл"
+
+#: twitter.php:121
+#: twitter.php:125
+#: twitter.php:129
+#: twitter.php:133
+#: twitter.php:137
+#: twitter.php:163
+msgid "N/A"
+msgstr "Неизвестно"
+
+#: twitter.php:135
+msgid " Mb"
+msgstr " Mb"
+
+#: twitter.php:139
+#: twitter.php:143
+#: twitter.php:147
+#: twitter.php:158
+msgid "Yes"
+msgstr "Да"
+
+#: twitter.php:141
+#: twitter.php:145
+#: twitter.php:149
+#: twitter.php:160
+msgid "No"
+msgstr "Нет"
+
+#: twitter.php:174
+msgid "Operating System"
+msgstr "Операционная система"
+
+#: twitter.php:175
+msgid "Server"
+msgstr "Тип сервера"
+
+#: twitter.php:176
+msgid "Memory usage"
+msgstr "Памяти использовано"
+
+#: twitter.php:177
+msgid "MYSQL Version"
+msgstr "Версия MYSQL"
+
+#: twitter.php:178
+msgid "SQL Mode"
+msgstr "Режим SQL"
+
+#: twitter.php:179
+msgid "PHP Version"
+msgstr "Версия PHP"
+
+#: twitter.php:180
+msgid "PHP Safe Mode"
+msgstr "PHP Safe Mode"
+
+#: twitter.php:181
+msgid "PHP Allow URL fopen"
+msgstr "PHP Allow URL fopen"
+
+#: twitter.php:182
+msgid "PHP Memory Limit"
+msgstr "Лимит памяти"
+
+#: twitter.php:183
+msgid "PHP Max Upload Size"
+msgstr "Макс. размер загружаемого файла"
+
+#: twitter.php:184
+msgid "PHP Max Post Size"
+msgstr "Макс. размер записи"
+
+#: twitter.php:185
+msgid "PHP Max Script Execute Time"
+msgstr "Макс. время выполнения сценария"
+
+#: twitter.php:186
+msgid "PHP Exif support"
+msgstr "Поддержка PHP Exif"
+
+#: twitter.php:187
+msgid "PHP IPTC support"
+msgstr "Поддержка PHP IPTC"
+
+#: twitter.php:188
+msgid "PHP XML support"
+msgstr "Поддержка PHP XML"
+
+#: twitter.php:189
+msgid "Site URL"
+msgstr "Адрес сайта"
+
+#: twitter.php:190
+msgid "Home URL"
+msgstr "Основной адрес сайта"
+
+#: twitter.php:191
+msgid "WordPress Version"
+msgstr "Версия WordPress"
+
+#: twitter.php:192
+msgid "WordPress DB Version"
+msgstr "Версия базы данных WordPress"
+
+#: twitter.php:193
+msgid "Multisite"
+msgstr "Мультиблог"
+
+#: twitter.php:194
+msgid "Active Theme"
+msgstr "Текущая тема"
+
+#: twitter.php:209
+msgid "Please enter a valid email address."
+msgstr "Пожалуйста, введите валидный email."
+
+#: twitter.php:213
+msgid "Email with system info is sent to "
+msgstr "E-mail с системной информацией отправлен на"
+
+#: twitter.php:217
+msgid "Thank you for contacting us."
+msgstr "Спасибо, что связались с нами."
+
+#: twitter.php:245
+msgid "Sorry, email message could not be delivered."
+msgstr "Извините, ваш email не может быть отправлен."
+
+#: twitter.php:253
+msgid "Pro plugins"
+msgstr "Pro плагины"
+
+#: twitter.php:256
+#: twitter.php:282
+msgid "Activated plugins"
+msgstr "Активированные плагины"
+
+#: twitter.php:258
+#: twitter.php:266
+#: twitter.php:274
+#: twitter.php:284
+#: twitter.php:292
+#: twitter.php:300
+msgid "Read more"
+msgstr "Читать далее"
+
+#: twitter.php:258
+#: twitter.php:284
+#: twitter.php:636
+#: twitter.php:645
+msgid "Settings"
+msgstr "Настройки"
+
+#: twitter.php:264
+#: twitter.php:290
+msgid "Installed plugins"
+msgstr "Установленные плагины"
+
+#: twitter.php:272
+#: twitter.php:298
+msgid "Recommended plugins"
+msgstr "Рекомендованные к установке плагины"
+
+#: twitter.php:274
+msgid "Purchase"
+msgstr "Купить"
+
+#: twitter.php:279
+msgid "Free plugins"
+msgstr "Бесплатные плагины"
+
+#: twitter.php:300
+msgid "Download"
+msgstr "Скачать"
+
+#: twitter.php:300
+#, php-format
+msgid "Install %s"
+msgstr "Установлено %s"
+
+#: twitter.php:300
+msgid "Install now from wordpress.org"
+msgstr "Установить с wordpress.org"
+
+#: twitter.php:305
+msgid "If you have any questions, please contact us via"
+msgstr "Если у вас есть какие-то вопросы, обращайтесь на"
+
+#: twitter.php:312
+msgid "System status"
+msgstr "Системная информация"
+
+#: twitter.php:316
+msgid "Environment"
+msgstr "Системная среда"
+
+#: twitter.php:327
+msgid "Active Plugins"
+msgstr "Активированные плагины"
+
+#: twitter.php:338
+msgid "Inactive Plugins"
+msgstr "Неактивированные плагины"
+
+#: twitter.php:352
+msgid "Send to support"
+msgstr "Отправить в тех.поддержку"
+
+#: twitter.php:359
+msgid "Send to custom email &#187;"
+msgstr "Отправить на email &#187;"
+
+#: twitter.php:397
+#: twitter.php:475
+msgid "Twitter Settings"
+msgstr "Настройки Twitter"
+
+#: twitter.php:397
+msgid "Twitter"
+msgstr "Twitter"
+
+#: twitter.php:428
+msgid "Settings saved"
+msgstr "Опции сохранены"
+
+#: twitter.php:450
+msgid "Error: File size > 32K"
+msgstr "Ошибка: Размер файла больше 32К"
+
+#: twitter.php:452
+msgid "Error: Invalid file type"
+msgstr "Ошибка: Некорректный тип файла"
+
+#: twitter.php:460
+msgid "Error: moving file failed"
+msgstr "Ошибка: при перемещении файла произошла ошибка"
+
+#: twitter.php:463
+msgid "Error: check image width or height"
+msgstr "Ошибка: Проверьте ширину и высоту изображения"
+
+#: twitter.php:467
+msgid "Uploading Error: check image properties"
+msgstr "Ошибка загрузки: Проверьте опции изображения"
+
+#: twitter.php:482
+msgid "Settings for the button \"Follow Me\":"
+msgstr "Настройки для кнопки \"Follow Me\":"
+
+#: twitter.php:486
+msgid "Enter your username:"
+msgstr "Введите ваш логин:"
+
+#: twitter.php:490
+msgid "If you do not have Twitter account yet, you should create it using this link"
+msgstr "Если у вас еще нет аккаунта на Twitter, вам надо создать его, перейдя по этой ссылке"
+
+#: twitter.php:491
+msgid "Paste the shortcode [follow_me] into the necessary page or post to use the \"Follow Me\" button."
+msgstr "Добавьте шорткод [follow_me] в контент страницы или поста, где вы хотите вывести кнопку \"Follow Me\"."
+
+#: twitter.php:492
+msgid "If you would like to use this button in some other place, please paste this line into the template source code"
+msgstr "Если вы хотите использовать данную кнопку в другом месте, пожалуйста, добавьте данную строку в код нужного темплейта"
+
+#: twitter.php:497
+msgid "Choose display settings:"
+msgstr "Выбор опций отображения:"
+
+#: twitter.php:501
+msgid "Standard button"
+msgstr "Стандартная кнопка"
+
+#: twitter.php:503
+msgid "Custom button"
+msgstr "Пользовательская кнопка"
+
+#: twitter.php:513
+msgid "Current image:"
+msgstr "Текущее изображение:"
+
+#: twitter.php:521
+msgid "\"Follow Me\" image:"
+msgstr "\"Follow Me\" изображение:"
+
+#: twitter.php:527
+msgid "Image properties: max image width:100px; max image height:100px; max image size:32Kb; image types:\"jpg\", \"jpeg\"."
+msgstr "Опции изображения для загрузки: максимальная ширина:100px; максимальная высота:100px; максимальный размер:32Kb; тип файла:\"jpg\", \"jpeg\"."
+
+#: twitter.php:534
+msgid "\"Twitter\" button settings:"
+msgstr "Настройки кнопки \"Twitter\":"
+
+#: twitter.php:537
+msgid "Disable the \"Twitter\" button:"
+msgstr "Отключить кнопку \"Twitter\":"
+
+#: twitter.php:540
+msgid "The button \"T\" will not be displayed. Just the shortcode [follow_me] will work."
+msgstr "Кнопка \"T\" не будет отображаться. Будет работать только шорткод [follow_me]."
+
+#: twitter.php:545
+msgid "Choose the \"Twitter\" icon position:"
+msgstr "Выбор позиции для иконки \"Twitter\":"
+
+#: twitter.php:548
+msgid "Top position"
+msgstr "Позиция вверху"
+
+#: twitter.php:549
+msgid "Bottom position"
+msgstr "Позиция внизу"
+
+#: twitter.php:550
+msgid "By clicking this icon a user can add the article he/she likes to his/her Twitter page."
+msgstr "При нажатии этой иконки пользователь добавляет на свою  twitter страницу статью, которая им нравится, а также ссылку на него."
+
+#: twitter.php:556
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+#: twitter.php:614
+msgid "Click here if you like this article."
+msgstr "Кликай, если понравилась данная статья."
+
+#: twitter.php:646
+msgid "FAQ"
+msgstr "FAQ"
+
+#: twitter.php:647
+msgid "Support"
+msgstr "Поддержка"
+
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill out the contact form on our website"
+#~ msgstr ""
+#~ "Если у вас есть какие-то впросы, обращайтесь на plugin@bestwebsoft.com "
+#~ "или заполните контактную форму на нашем сайте"
+#~ msgid "Settings for the button \"Twitter\":"
+#~ msgstr "Настройки для кнопки \"Twitter\":"
+#~ msgid "Install Now"
+#~ msgstr "Установить сейчас"
+#~ msgid "Twitter options"
+#~ msgstr "Опции Twitter"
+
