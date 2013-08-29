@@ -38,14 +38,14 @@ ul.select2-choices
 
 .select2-highlighted
   @include transition(background .3s, color, .3s)
-  background: $principalColor !important
+  background: $blue !important
 
 
 .select2-search-choice
   color: #FFF !important
-  border: 1px solid #1C9CD1 !important
+  border: 1px solid $blue !important
   box-shadow: none !important
-  background-color: #1C9CD1 !important
+  background-color: $blue !important
   background-image: none !important
 
 
@@ -56,4 +56,10 @@ ul.select2-choices
     box-shadow: none !important
     margin-top: 0 !important
 
+.select2-search-choice-close
+  background-position: -88px -19px
+  background-size: 104px 57px
+  &:hover
+    background-position: -88px -3px !important
+    background-size: 104px 57px
 
