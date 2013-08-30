@@ -37,12 +37,14 @@ section.personal_info,
     .view-all
       float: right
 
+  section#members
+    @include inside-box
+    header
+      font-size: 20px
   
-
       
   section.applications,
-  section.organizations,
-  section#members
+  section.organizations
     @include inside-box
     header
       font-size: 20px
@@ -76,3 +78,11 @@ div.aplication
     .btn-group
       button
         padding: 0px 12px !important
+  .members-list
+    .contact
+      .add
+        ul.multiselect-container
+          li.multiselect-group
+            color: #888
+            margin-left: 9px
+            border-bottom: 1px solid $blue

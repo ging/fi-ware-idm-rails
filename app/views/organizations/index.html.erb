@@ -7,7 +7,8 @@
     </h3>
   </header>
 
-  <div class="tabbable"> 
+  <div class="tabbable" style="margin-top:30px">
+  <!-- 
     <div class="search-nav hidden-phone">
       <%= form_tag search_path, method: 'get', class: "navbar-search pull-left" do %>
         <%= text_field_tag :q, nil, autocomplete: :off, class: 'search-query input-small', placeholder: t('search.name'), "data-min_query" => SocialStream::Search::MIN_QUERY %>
@@ -27,11 +28,13 @@
         <div class="no_results">
           <%= t 'search.nothing' %>
         </div>
+        
 
         <div class="results">
         </div>
       </div>
     </div>
+     -->
     <ul class="nav nav-tabs">
       <li>
         <a href="#owned" data-toggle="tab" data-path="<%= organizations_path %>">Owned</a>

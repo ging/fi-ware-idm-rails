@@ -9,7 +9,7 @@
         color: #8c8c8c
       &:hover
         a
-          color: $principalColor
+          color: $blueLight
 
       h2
         display: inline
@@ -25,7 +25,7 @@
     li.home
       &:hover
         .icon_menu-20-home
-          background-position: -49px -10px
+          background-position: -86px -10px
     .home.active
       .icon_menu-20-home
         background-position: -49px -10px
@@ -34,9 +34,9 @@
     li.members
       &:hover
         .icon_menu-20-organizations
-          background-position: -49px -45px
+          background-position: -86px -45px
         .icon_menu-20-members
-          background-position: -49px -45px
+          background-position: -86px -45px
     .members.active,     
     .organizations.active
       .icon_menu-20-organizations
@@ -47,13 +47,16 @@
     li.my-applications
       &:hover
         .icon_menu-20-my-applications
-          background-position: -49.5px -79px
+          background-position: -86px -79px
       a 
         @include ellipsis
     .my-applications.active
       .icon_menu-20-my-applications
-        background-position: -49.5px -79px
+        background-position: -86px -79px
 
     li.active
       a
         color: $principalColor
+      &:hover
+        a
+          color: $blueLight

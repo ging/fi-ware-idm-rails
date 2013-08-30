@@ -19,7 +19,7 @@
     margin-top: 0
     a
       float: left
-      @include btn-primary
+      @include btn-secundary
       @include border-radius(7px)
       margin-top: 13px
     h3
@@ -35,4 +35,26 @@
     width: 100%
     float: left
 
+@mixin dropdown
+  .dropdown-menu,
+  .dropdown-submenu
+    li 
+      a
+        &:hover 
+          background-color: $blueLight
+          background-image: none
+          color: $gray
 
+  .dropdown-menu
+    li 
+      a
+        &:focus
+          background-color: $blueLight
+    li.active
+      a
+        &:hover
+          background-color: $blue
+  .dropdown-submenu
+    &:focus 
+      a 
+        background-color: $blueLight

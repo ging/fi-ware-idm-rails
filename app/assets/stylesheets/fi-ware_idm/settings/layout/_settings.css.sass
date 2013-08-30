@@ -7,20 +7,18 @@
   input
     &[type="submit"]
       float: right
+      margin-right: 2%
+      @include btn-secundary
+      background-color: #619B56
+      &:hover
+        color: #619B56
+        border-color: #619B56
+
     &[type="password"],
     &[type="text"],
     &[type="email"]
       width: 90% !important
       margin-left: 2%
-
-  #cancel_account
-    &:hover
-      border-color: $red !important
-      a
-        color: $red !important
-    #cancel_account_content
-      a
-        color: $red !important
 
 .settings_content
   padding: 0px 15px

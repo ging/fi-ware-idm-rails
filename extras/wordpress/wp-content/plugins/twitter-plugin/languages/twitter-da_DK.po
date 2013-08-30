@@ -1,0 +1,385 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: twitter\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-18 15:57+0300\n"
+"PO-Revision-Date: 2013-07-18 15:57+0300\n"
+"Last-Translator: \n"
+"Language-Team: Tom <admin@artikelforlaget.dk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sk_SK\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: twitter.php:109
+msgid "Not set"
+msgstr ""
+
+#: twitter.php:111
+#: twitter.php:115
+msgid "On"
+msgstr ""
+
+#: twitter.php:113
+#: twitter.php:117
+msgid "Off"
+msgstr ""
+
+#: twitter.php:121
+#: twitter.php:125
+#: twitter.php:129
+#: twitter.php:133
+#: twitter.php:137
+#: twitter.php:163
+msgid "N/A"
+msgstr ""
+
+#: twitter.php:135
+msgid " Mb"
+msgstr ""
+
+#: twitter.php:139
+#: twitter.php:143
+#: twitter.php:147
+#: twitter.php:158
+msgid "Yes"
+msgstr ""
+
+#: twitter.php:141
+#: twitter.php:145
+#: twitter.php:149
+#: twitter.php:160
+msgid "No"
+msgstr ""
+
+#: twitter.php:174
+msgid "Operating System"
+msgstr ""
+
+#: twitter.php:175
+msgid "Server"
+msgstr ""
+
+#: twitter.php:176
+msgid "Memory usage"
+msgstr ""
+
+#: twitter.php:177
+msgid "MYSQL Version"
+msgstr ""
+
+#: twitter.php:178
+msgid "SQL Mode"
+msgstr ""
+
+#: twitter.php:179
+msgid "PHP Version"
+msgstr ""
+
+#: twitter.php:180
+msgid "PHP Safe Mode"
+msgstr ""
+
+#: twitter.php:181
+msgid "PHP Allow URL fopen"
+msgstr ""
+
+#: twitter.php:182
+msgid "PHP Memory Limit"
+msgstr ""
+
+#: twitter.php:183
+msgid "PHP Max Upload Size"
+msgstr ""
+
+#: twitter.php:184
+msgid "PHP Max Post Size"
+msgstr ""
+
+#: twitter.php:185
+msgid "PHP Max Script Execute Time"
+msgstr ""
+
+#: twitter.php:186
+msgid "PHP Exif support"
+msgstr ""
+
+#: twitter.php:187
+msgid "PHP IPTC support"
+msgstr ""
+
+#: twitter.php:188
+msgid "PHP XML support"
+msgstr ""
+
+#: twitter.php:189
+msgid "Site URL"
+msgstr ""
+
+#: twitter.php:190
+msgid "Home URL"
+msgstr ""
+
+#: twitter.php:191
+msgid "WordPress Version"
+msgstr ""
+
+#: twitter.php:192
+msgid "WordPress DB Version"
+msgstr ""
+
+#: twitter.php:193
+msgid "Multisite"
+msgstr ""
+
+#: twitter.php:194
+msgid "Active Theme"
+msgstr ""
+
+#: twitter.php:209
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: twitter.php:213
+msgid "Email with system info is sent to "
+msgstr ""
+
+#: twitter.php:217
+msgid "Thank you for contacting us."
+msgstr ""
+
+#: twitter.php:245
+msgid "Sorry, email message could not be delivered."
+msgstr ""
+
+#: twitter.php:253
+#, fuzzy
+msgid "Pro plugins"
+msgstr "BWS pluginy"
+
+#: twitter.php:256
+#: twitter.php:282
+msgid "Activated plugins"
+msgstr "Aktiverede plugins"
+
+#: twitter.php:258
+#: twitter.php:266
+#: twitter.php:274
+#: twitter.php:284
+#: twitter.php:292
+#: twitter.php:300
+msgid "Read more"
+msgstr "Læs mere"
+
+#: twitter.php:258
+#: twitter.php:284
+#: twitter.php:636
+#: twitter.php:645
+msgid "Settings"
+msgstr "Indstillinger"
+
+#: twitter.php:264
+#: twitter.php:290
+msgid "Installed plugins"
+msgstr "Installerede plugins"
+
+#: twitter.php:272
+#: twitter.php:298
+msgid "Recommended plugins"
+msgstr "Anbefalede plugins"
+
+#: twitter.php:274
+msgid "Purchase"
+msgstr ""
+
+#: twitter.php:279
+#, fuzzy
+msgid "Free plugins"
+msgstr "Anbefalede plugins"
+
+#: twitter.php:300
+msgid "Download"
+msgstr "Download"
+
+#: twitter.php:300
+#, php-format
+msgid "Install %s"
+msgstr "Installere %s"
+
+#: twitter.php:300
+msgid "Install now from wordpress.org"
+msgstr "Installere nu fra wordpress.org"
+
+#: twitter.php:305
+msgid "If you have any questions, please contact us via"
+msgstr ""
+
+#: twitter.php:312
+msgid "System status"
+msgstr ""
+
+#: twitter.php:316
+msgid "Environment"
+msgstr ""
+
+#: twitter.php:327
+#, fuzzy
+msgid "Active Plugins"
+msgstr "Aktiverede plugins"
+
+#: twitter.php:338
+#, fuzzy
+msgid "Inactive Plugins"
+msgstr "Aktiverede plugins"
+
+#: twitter.php:352
+#, fuzzy
+msgid "Send to support"
+msgstr "Support"
+
+#: twitter.php:359
+msgid "Send to custom email &#187;"
+msgstr ""
+
+#: twitter.php:397
+#: twitter.php:475
+msgid "Twitter Settings"
+msgstr "Twitter indstillinger"
+
+#: twitter.php:397
+msgid "Twitter"
+msgstr "Twitter"
+
+#: twitter.php:428
+msgid "Settings saved"
+msgstr "Indstillinger gemt"
+
+#: twitter.php:450
+msgid "Error: File size > 32K"
+msgstr "FEJL: fil størrelse > 32K"
+
+#: twitter.php:452
+msgid "Error: Invalid file type"
+msgstr "FEJL: ugyldig fil type"
+
+#: twitter.php:460
+msgid "Error: moving file failed"
+msgstr "FEJL: fejl under flytning af fil"
+
+#: twitter.php:463
+msgid "Error: check image width or height"
+msgstr "FEJL: tjek billede bredde eller højde"
+
+#: twitter.php:467
+msgid "Uploading Error: check image properties"
+msgstr "Oploading Fejl: tjek billedegenskaber"
+
+#: twitter.php:482
+msgid "Settings for the button \"Follow Me\":"
+msgstr "Indstillinger for knappen \"Follow Me\":"
+
+#: twitter.php:486
+msgid "Enter your username:"
+msgstr "Indtast dit brugernavn:"
+
+#: twitter.php:490
+msgid "If you do not have Twitter account yet, you should create it using this link"
+msgstr "Hvis du ikke har en Twitter konto endnu, kan du oprette en ved at følge dette link"
+
+#: twitter.php:491
+msgid "Paste the shortcode [follow_me] into the necessary page or post to use the \"Follow Me\" button."
+msgstr "Indsæt shortcoden [follow_me] på den nødvenlige side eller indlæg for at bruge \"Follow Me\" knappen."
+
+#: twitter.php:492
+msgid "If you would like to use this button in some other place, please paste this line into the template source code"
+msgstr "Hvis du ønsker at bruge denne knap et andet sted, så indsæt teksten herunder ind i skabelonens kildekode."
+
+#: twitter.php:497
+msgid "Choose display settings:"
+msgstr "Vælg visnings indstillinger"
+
+#: twitter.php:501
+msgid "Standard button"
+msgstr "Standard knap"
+
+#: twitter.php:503
+msgid "Custom button"
+msgstr "Brugerdefineret knap"
+
+#: twitter.php:513
+msgid "Current image:"
+msgstr "Nuværende billede"
+
+#: twitter.php:521
+msgid "\"Follow Me\" image:"
+msgstr "\"Follow Me\" billede:"
+
+#: twitter.php:527
+msgid "Image properties: max image width:100px; max image height:100px; max image size:32Kb; image types:\"jpg\", \"jpeg\"."
+msgstr "Billedegenskaber: Maks bredde: 100px; maks. højde: 100px; Maks billede størrelse: 32Kb; Billede type:\"jpg\", \"jpeg\"."
+
+#: twitter.php:534
+msgid "\"Twitter\" button settings:"
+msgstr "\"Twitter\" knap indstillinger:"
+
+#: twitter.php:537
+msgid "Disable the \"Twitter\" button:"
+msgstr "Slå \"Twitter\" knappen fra:"
+
+#: twitter.php:540
+msgid "The button \"T\" will not be displayed. Just the shortcode [follow_me] will work."
+msgstr "Knappen \"T\" vil ikke blive vist. Kun shortcoden [follow_me] vil virke."
+
+#: twitter.php:545
+msgid "Choose the \"Twitter\" icon position:"
+msgstr "Vælg \"Twitter\" ikon position:"
+
+#: twitter.php:548
+msgid "Top position"
+msgstr "Top position"
+
+#: twitter.php:549
+msgid "Bottom position"
+msgstr "Bund position"
+
+#: twitter.php:550
+msgid "By clicking this icon a user can add the article he/she likes to his/her Twitter page."
+msgstr "Når en bruger klikker på dette ikon, tilføjer brugeren til deres twitter side at de synes godt det, sammen med et link."
+
+#: twitter.php:556
+msgid "Save Changes"
+msgstr "Gem ændringer"
+
+#: twitter.php:614
+msgid "Click here if you like this article."
+msgstr "Klik her hvis du kan lide denne artikel."
+
+#: twitter.php:646
+msgid "FAQ"
+msgstr "FAQ"
+
+#: twitter.php:647
+msgid "Support"
+msgstr "Support"
+
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill out the contact form on our website"
+#~ msgstr ""
+#~ "Hvis du har nogen spørgsmål, så kontakt os venligst via email: "
+#~ "plugin@bestwebsoft.com eller udfyld kontaktformularen på vores "
+#~ "hjemmesside."
+#~ msgid "Options saved."
+#~ msgstr "Indstillinger gemt."
+#~ msgid "Settings for the button \"Twitter\":"
+#~ msgstr "Indstillinger for knappen \"Twitter\":"
+#~ msgid "Choose a position for an icon \"Twitter\":"
+#~ msgstr "Vælg en position for et ikon \"Twitter\":"
+#~ msgid "Install Now"
+#~ msgstr "Inštalovať teraz"
+
