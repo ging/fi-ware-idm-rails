@@ -2,10 +2,9 @@
 
 <div class="container">
 
-  <div class="copy">
-    <%= Date.today.year %> © <%= link_to t('site.name'), 'http://fi-ware.idm.com/' %>
-  </div>
- 
-  <%= link_to 'Terms of service', terms_of_service_path %>
 
-  <%= link_to t('Help') %>
+    <%= Date.today.year %> © <%= link_to t('site.name'), 'http://fi-ware.idm.com/' %>
+
+ 
+  Usage of FI-LAB services subject to acceptance of <%= link_to 'Terms of service', terms_of_service_path %> and <a href="http://forge.fi-ware.eu/plugins/mediawiki/wiki/fiware/index.php/FI-LAB_Personal_Data_Protection_Policy">Personal Data Protection Policy</a>
+</div>
