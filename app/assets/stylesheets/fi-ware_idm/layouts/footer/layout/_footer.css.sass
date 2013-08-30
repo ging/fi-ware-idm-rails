@@ -1,17 +1,14 @@
 footer
   @include grid-core-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+  font-size: 14px
   .copy,
   a
-    @include grid-core-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
-    float: left
     a
-      color: $grayLight
+      color: $blue
       width: auto
       &:hover
-        color: $principalColor
+        color: $blueLight
   a
-    color: $grayLight
+    color: $blue
     &:hover
-      color: $principalColor
-    &:last-child
-      float: right
+      color: $blueLight

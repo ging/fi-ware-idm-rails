@@ -53,6 +53,9 @@ en:
     name: "Provider"
   relation_purchaser:
     name: "Purchaser"
+  representation:
+    notice: Your identity has changed. Now you are acting on behalf of the “%{subject}” organization. 
+      Use the top-right menu to regain your identity as individual user. 
   site:
     client:
       add: "Add new application"
