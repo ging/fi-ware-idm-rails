@@ -36,9 +36,6 @@ header
   .register_link
     font-size: 15px !important
 
-#forgot-pass,
-#confirmation
-  width: 76%
 
 .headerFront
   a
@@ -85,14 +82,31 @@ header
         .icon_tool16-more
           margin-right: 6px
 
-#forgot-pass 
-  .forgot 
-    .password
-      margin: -11px 26% 0 14px
+#forgot-pass,
+#confirmation 
+  .forgot,
+  .instructions 
+    header
+      h3
+        text-align: center
+    .password,
+    .confirmation
+      width: 300px !important
+      margin: 0 auto
+      padding: 5px 15px
+      h3
+        margin-top: 0px
+      #remember
+        display: inilne
+        float: left
+      input
+        &[type="submit"]
+          float: right
+          display: inline-block
+      .soften
+        clear: both
+        margin: 35px 0 7px 
 
-#confirmation
-  .confirmation
-    margin: -11px 26% 0 14px !important
 
 
 
