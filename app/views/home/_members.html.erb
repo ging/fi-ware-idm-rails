@@ -1,6 +1,7 @@
 <div class="members">
   <header>
     Members
+          <%= link_to t('site.client.contact.add'), '#add-contact-modal', id: 'add-contact-link', 'data-toggle' => 'modal' %>
   </header>
   <form class="form-inline">
     <%= text_field_tag "contact-filter", "", placeholder: "filter", autocomplete: "off" %>
