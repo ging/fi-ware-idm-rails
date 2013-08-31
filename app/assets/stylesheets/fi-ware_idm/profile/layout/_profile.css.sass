@@ -12,12 +12,22 @@
     float: left
 
 
-form.edit_profile,
+
 .avatar-edit
   @include principal-box
   @include forms
   input
     &[type="submit"]
       @include btn-primary 
-      margin-right: 0px     
+      margin-right: 0px
+      margin-top: 15px
+
+form.edit_profile
+  @include principal-box
+  @include forms
+  input
+    &[type="submit"]
+      @include btn-primary 
+      margin-right: 0px
+
   
