@@ -1,10 +1,13 @@
 <!-- replace_contents 'footer' -->
 
 <div class="container">
-
-
-    <%= Date.today.year %> © <%= link_to 'FI-WARE', 'http://fi-ware.idm.com/' %>. 
-
- 
-  Usage of FI-LAB services subject to acceptance of <%= link_to 'Terms and Conditions', terms_of_service_path %> and <a href="http://forge.fi-ware.eu/plugins/mediawiki/wiki/fiware/index.php/FI-LAB_Personal_Data_Protection_Policy">Personal Data Protection Policy</a>
+  <%= Date.today.year %> 
+  © 
+  <%= link_to 'FI-WARE', 'http://fi-ware.idm.com/' %>. 
+  Usage of FI-LAB services subject to acceptance of 
+  <%= link_to 'Terms and Conditions', terms_of_service_path %> 
+  and 
+  <a href="http://forge.fi-ware.eu/plugins/mediawiki/wiki/fiware/index.php/FI-LAB_Personal_Data_Protection_Policy">
+    Personal Data Protection Policy
+  </a>
 </div>

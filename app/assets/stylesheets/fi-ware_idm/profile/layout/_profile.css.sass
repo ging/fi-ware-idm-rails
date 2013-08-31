@@ -2,18 +2,22 @@
   header
     margin-bottom: 0
   .personal
-    #edit_profile_form
-      min-height: 230px
+    .edit_profile
+      min-height: 291px
   .comunication-info
-    #edit_profile_form
-      min-height: 210px
+    .edit_profile
+      min-height: 182px
+  p
+    width: 240px
+    float: left
+
 
 form.edit_profile,
 .avatar-edit
   @include principal-box
   @include forms
-  min-height: 170px
   input
     &[type="submit"]
-      @include btn-primary      
+      @include btn-primary 
+      margin-right: 0px     
   
