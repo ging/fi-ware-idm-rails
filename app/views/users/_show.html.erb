@@ -38,10 +38,12 @@
           <div class="accordion-inner">
             <div class="content settings_content collapse in">
               <header>
-                Phone
+                Website
               </header>
               <div class="result">
-                <%= @user.profile.phone %>
+                <% if @user.profile.website.present? %>
+                  <%= link_to @user.profile.website, @user.profile.website %>
+                <% end %>
               </div>
     
               <header>

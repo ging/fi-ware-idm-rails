@@ -20,8 +20,6 @@
         <% if @organization.profile.website.present? %>
           <%= link_to @organization.profile.website, @organization.profile.website %>
         <% end %>
-        </br></br>
-
         <% if @organization.email.present? %>
           <%= link_to "mailto:#{ @organization.email }", @organization.email %>
         <% end %>

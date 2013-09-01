@@ -83,12 +83,20 @@ header
           margin-right: 6px
 
 #forgot-pass,
-#confirmation 
+#confirmation,
+#login
   .forgot,
-  .instructions 
+  .instructions,
+  .change
     header
+      width: 60%
+      margin: 0 20%
+      text-align: center
       h3
-        text-align: center
+        margin-bottom: 0px
+      #error_explanation
+        ul
+          text-align: center
     .password,
     .confirmation
       width: 300px !important
@@ -114,7 +122,8 @@ header
 #confirmation,
 #frontpage,
 #registration,
-#new_session
+#new_session,
+#login
   input
     &[type="submit"]
       @include btn-primary

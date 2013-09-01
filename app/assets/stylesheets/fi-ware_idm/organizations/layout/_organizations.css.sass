@@ -9,6 +9,9 @@
         display: inline-block
         width: auto
 
+#organizations
+  a.accordion-toggle
+    padding-top: 0
 
 .organizations-list
   ul
@@ -24,7 +27,16 @@
   a.view-all
     float: right
 
-
+#organization
+  .members-list
+    .contact
+      .name
+        a  
+          overflow: visible
+  .result
+    a
+      margin-top: 4px
+      display: block
 #members
   @include header-tab
   .members-list
@@ -73,11 +85,11 @@
       min-height: 110px
       padding: 0px 2.5% 0px
       clear: both
-    input
-      &[type="submit"]
+    a
+      &:last-child
         @include btn-primary
         float: right
-        margin: 0 15px 18px 0
+        margin: 0 15px 21px 0
 
 
       
