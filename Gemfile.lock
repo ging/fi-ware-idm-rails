@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/ging/social_stream.git
-  revision: 958d32e8785f6be7f164f409676645a164e54a00
-  branch: master
+  revision: eced5cca08a9bcb872a0cb62cf3ca1c79581103b
+  branch: 'eced5cca08a9bcb872a0cb62cf3ca1c79581103b'
   specs:
     social_stream-base (2.2.1)
       acts-as-taggable-on (~> 2.2.2)
