@@ -176,6 +176,8 @@ form#new_organization
     clear: both
 .edit_application
   .next-step
+    margin-top: -40px
+    margin-right: 20px
     @include btn-primary
 
 form#new_application
@@ -217,9 +219,13 @@ form#new_application
     form
       @include forms
 
-  .site_client_roles
+  .edit_site_client
     width: 100%
     margin: 0 0 20px 0
+    .logo
+      @include principal-box
+      clear: both
+
 
   section.delete
     clear: both
@@ -235,16 +241,18 @@ form#new_application
       a
         color: $red !important
 
-#edit_site_client
-  form.edit_application
-    min-height: 373px
-
 .edit_form,
 .create_logo_app
   @include principal-box
 .edit_form
   margin-bottom: 20px
 
+.edit_site_client
+  width: 100%
+  margin: 0 0 20px 0
+  .logo
+    @include principal-box
+    clear: both
 
 .new_app,
 .edit_form,
@@ -253,8 +261,21 @@ form#new_application
     &[type="submit"]
       @include btn-primary 
       float: right
-  .next-step
-    @include btn-primary
-    float: right
 
+.create_logo_app
+  .avatar-progress
+    width: 90%
+  .next-step
+    margin: -44px 20px 0 0
+
+#edit_site_client 
+  .edit_site_client 
+    form textarea
+      min-height: 20px
+      max-height: 19px
+      float: none
+
+  input
+    &[type="submit"]
+      margin: 0
 
