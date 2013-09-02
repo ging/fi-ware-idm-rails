@@ -136,6 +136,7 @@ form.new_site_client
       @include btn-primary
       margin-right: 8px
       margin-left: 8px
+      float: right
     .btn-group
       button
         @include btn-primary
@@ -208,6 +209,12 @@ form#new_application
       @include btn-primary
       float: right
       margin: 0 15px 18px 0
+  
+a.next-step
+  margin: -44px 20px 0 0
+  @include btn-primary 
+  float: right
+
 
 /*edit screen*/
 
@@ -267,6 +274,8 @@ form#new_application
     width: 90%
   .next-step
     margin: -44px 20px 0 0
+    @include btn-primary 
+    float: right
 
 #edit_site_client 
   .edit_site_client 
