@@ -1,8 +1,7 @@
 GIT
   remote: git://github.com/ging/social_stream.git
-  revision: eced5cca08a9bcb872a0cb62cf3ca1c79581103b
-  ref: eced5cca08a9bcb872a0cb62cf3ca1c79581103b
-
+  revision: 586a5fb14cb9951a7fb96d8fe1d63b30a4658acd
+  branch: master
   specs:
     social_stream-base (2.2.1)
       acts-as-taggable-on (~> 2.2.2)
@@ -80,8 +79,8 @@ GEM
       jquery-ui-rails (>= 4.0.0)
       paperclip (>= 2.3.4)
       rmagick (>= 2.13.1)
-    bcrypt-ruby (3.1.2)
-    bootstrap-sass (2.3.2.2)
+    bcrypt-ruby (3.1.1)
+    bootstrap-sass (2.3.2.1)
       sass (~> 3.2)
     builder (3.0.4)
     cancan (1.6.10)
@@ -105,7 +104,7 @@ GEM
     deface (0.9.1)
       nokogiri (~> 1.5.0)
       rails (~> 3.1)
-    devise (2.2.7)
+    devise (2.2.6)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (~> 3.1)
@@ -160,7 +159,7 @@ GEM
       foreigner (>= 0.9.1)
       rails (> 3.0.0)
     method_source (0.8.2)
-    mime-types (1.25)
+    mime-types (1.23)
     modernizr-rails (2.0.6)
     multi_json (1.7.9)
     multipart-post (1.2.0)
@@ -250,7 +249,7 @@ GEM
       vegas (~> 0.1.2)
     rest-client (1.6.7)
       mime-types (>= 1.16)
-    riddle (1.5.8)
+    riddle (1.5.7)
     rmagick (2.13.2)
     rspec-core (2.14.5)
     rspec-expectations (2.14.1)
@@ -292,7 +291,7 @@ GEM
       riddle (>= 1.5.3)
     thor (0.18.1)
     tilt (1.4.1)
-    treetop (1.4.15)
+    treetop (1.4.14)
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.37)
