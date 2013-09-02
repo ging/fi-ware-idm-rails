@@ -25,3 +25,4 @@ config/thales/*
 config/initializers/thales.rb
 .DS_Store
 
+.sass-cache/
