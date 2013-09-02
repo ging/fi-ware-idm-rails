@@ -1,7 +1,7 @@
 <div class="organizations">
   <header>
     Organizations
-    <%= link_to "Register", new_organization_path %>
+    <%= link_to "Create", new_organization_path %>
   </header>
 
   <!--
@@ -15,7 +15,7 @@
       <h3>  
         You are not member of any organization
       </h3> 
-      <%= link_to "Explore them", organizations_path(section: 'others') %>
+      <%= link_to "Create a New Organization", organizations_path(section: 'others') %>
     </div>
   
   <% else %>

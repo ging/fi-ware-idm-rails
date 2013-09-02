@@ -3,7 +3,7 @@
 <div class="container">
   <%= Date.today.year %> 
   © 
-  <%= link_to 'FI-WARE', 'http://fi-ware.idm.com/' %>. 
+  <%= link_to 'FI-WARE', 'http://fi-ware.eu/' %>. 
   Usage of FI-LAB services subject to acceptance of 
   <%= link_to 'Terms and Conditions', terms_of_service_path %> 
   and 
