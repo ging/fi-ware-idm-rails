@@ -33,7 +33,7 @@ en:
       one: Destroy organization
     new:
       action: "Register an organization"
-      title: "Register an organization"
+      title: "Create an organization"
   permission:
     description:
       default:
