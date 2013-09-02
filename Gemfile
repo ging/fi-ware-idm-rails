@@ -47,7 +47,7 @@ end
 
 # gem 'omniauth-social_stream', path: '../omniauth-social_stream'
 
-git 'git://github.com/ging/social_stream.git', ref: 'eced5cca08a9bcb872a0cb62cf3ca1c79581103b' do
+git 'git://github.com/ging/social_stream.git', branch: 'master' do
   gem 'social_stream-base'
   gem 'social_stream-oauth2_server'
 end
