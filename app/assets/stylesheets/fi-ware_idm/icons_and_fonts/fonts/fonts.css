@@ -15,7 +15,11 @@
 }
 
 @font-face {
-  font-family: NeoTech;
+  font-family: NeoTechRegular;
   src: url(fi-ware_idm/icons_and_fonts/fonts/NeoTechStd-Regular.otf);
+}
+
+@font-face {
+  font-family: NeoTechMedium;
   src: url(fi-ware_idm/icons_and_fonts/fonts/NeoTechStd-Medium.otf);
 }
