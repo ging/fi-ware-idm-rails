@@ -6,7 +6,7 @@
   <%= link_to 'FI-WARE', 'http://fi-ware.eu/' %>. 
   Usage of FI-LAB services subject to acceptance of 
   <a href="http://wiki.fi-ware.eu/FI-LAB_Terms_and_Conditions"> 
-    Terms_and_Conditions
+    Terms and Conditions
   </a>
   and 
   <a href="http://forge.fi-ware.eu/plugins/mediawiki/wiki/fiware/index.php/FI-LAB_Personal_Data_Protection_Policy">
