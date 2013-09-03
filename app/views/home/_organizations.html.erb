@@ -15,7 +15,7 @@
       <h3>  
         You are not member of any organization
       </h3> 
-      <%= link_to "Create a New Organization", organizations_path(section: 'others') %>
+      <%= link_to "Browse organizations", organizations_path(section: 'others') %> or <%= link_to "create a new organization", new_organization_path %>
     </div>
   
   <% else %>
