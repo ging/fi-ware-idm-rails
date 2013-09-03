@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/ging/social_stream.git
-  revision: 75548565eac1232e5f361851d9e9e0663097c527
+  revision: 181b553114adba6f9d549e2cdd4551e13760bde1
   branch: master
   specs:
     social_stream-base (2.2.1)
