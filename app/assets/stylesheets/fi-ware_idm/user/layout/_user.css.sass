@@ -71,12 +71,11 @@
         padding-top: 5px
         border-top: 1px solid #A5CACF
         color: #929292
+
       .accordion-group
         border: none
         .accordion-heading
           text-align: right
-          .accordion-toggle
-            margin-top: 20px
         .accordion-inner
           border: none
           padding: 0px
@@ -86,6 +85,9 @@
     .ocupation
       .result
         border-top: rgba(0, 0, 0, 0) !important
+    .city
+      .result
+        min-height: 40px
     .city,
     .ocupation
       .result
@@ -103,6 +105,9 @@
         @include follow
         .avatar
           margin-top: -3px
+        .data
+          width: 200px
+
 
 
 #organization
@@ -110,6 +115,7 @@
     .ocupation
       .result
         border-top: 1px solid #A5CACF !important
+        min-height: 50px
 
 
 .content

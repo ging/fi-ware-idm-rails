@@ -1,6 +1,6 @@
 <!-- replace_contents 'footer' -->
 
-<div class="container">
+<div>
   <%= Date.today.year %> 
   © 
   <%= link_to 'FI-WARE', 'http://fi-ware.eu/' %>. 
