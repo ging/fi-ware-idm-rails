@@ -186,3 +186,13 @@
     clear: both
     margin-bottom: 7px
   
+@mixin selection-light
+  li
+    &:hover
+      background-color: $white
+      @include transition(background 1s, color, 1s)
+
+
+
+
+
