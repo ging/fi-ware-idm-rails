@@ -1,0 +1,2 @@
+<!-- insert_bottom 'head' -->
+<%= render :partial => 'layouts/google_analytics' %>
