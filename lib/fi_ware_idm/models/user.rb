@@ -62,8 +62,15 @@ module FiWareIdm
 
       # Grab all the ties sent by organizations received by this user
       def ties_from_organizations(application)
-        return if application.blank? ||
-          (role_ids = application.custom_roles.map(&:id)).blank?
+        return if application.blank?
+       
+        if application.cloud? && cloud_master?
+          return ties_from_cloud_master
+        end
+
+        role_ids = application.custom_roles.map(&:id)
+
+        return if role_ids.blank?
 
         ::Tie.
           joins(sender: :group).
@@ -71,6 +78,16 @@ module FiWareIdm
           merge(Group.where(type: 'Organization')).
           merge(::Relation.where(id: role_ids)).
           received_by(self)
+      end
+
+      def ties_from_cloud_master
+        ::Actor.
+          where(subject_type: [ "User", "Group" ]).
+          all.
+          map{ |a|
+            ::Tie.new sender: a,
+                      relation: ::Relation.where(cloud: true).first
+          }
       end
     end
   end
