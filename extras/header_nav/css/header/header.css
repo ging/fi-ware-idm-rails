@@ -2,7 +2,9 @@ a:hover{
   color: #049cdb;
   text-decoration: none;
 }
-header#oil-nav{
+/* header */
+
+#oil-nav{
   display: block;
   background-color: #f4f4f4;
   padding: 1px 10px 1px;
@@ -16,6 +18,7 @@ header#oil-nav{
   padding: 1px 2% 1px;
   z-index: 2000000;
 }
+
 nav.navbar-inner{
   padding: 0;
   background-color: transparent;
@@ -33,33 +36,26 @@ nav.navbar-inner .logo-header{
   float: left;
 
 }
-header .navbar{
-  margin-bottom: 12px !important;
-}
 
 .logo-header .brand{
   padding: 0;
   width: auto;
   float: none;
-  margin: 12px 0 0 3px;
-  font-size: 20px;
-  color: #555;
-  font-family: "DsignesRegular";
+  margin: -1px 0 0 3px;
+  font-size: 23px;
+  font-family: "NeoTech";
+  font-size: 23px;
+  color: #60c1cf !important;
   display: inline-block;
-}
-
-.logo-header .brand a{
-  font-size: 34px;
-  color: #555;
+  font-weight: normal;
 }
 
 .logo-header .brand a:hover{
   text-decoration: none;
 }
 
-.logo-header .brand a:hover span{
-  font-size: 17px;
-  color: #888;
+.logo-header .brand span{
+  color: #002d67 !important;
 }
 
 .mobile .dropdown-menu{
@@ -70,8 +66,8 @@ ul.oil-portal{
   width: 366px;
   height: 36px;
   padding: 0px;
-  margin-left: 2px;
   margin-bottom: 0px;
+  margin-left: 0px;
   display: inline-block;
 }
 
@@ -83,12 +79,15 @@ ul.oil-portal li{
 ul.oil-portal li:hover{
   background-color: rgba(152, 152, 152, 0.1);
   height: 18px;
+}
+
+ul.oil-portal li:hover a{
   color: #049cdb;
 }
 
 ul.oil-portal li a{
   color: #555;
-  font-family: "OpensansRegular";
+  font-family: "Open Sans";
 }
 
 ul.oil-portal li a:hover{
@@ -106,6 +105,7 @@ ul.oil-portal li.active{
 ul.oil-portal li.active a{
   color: #049cdb;
 }
+
 
 .mobile{
   display: none;
@@ -125,31 +125,31 @@ ul.oil-portal li.active a{
   -moz-box-shadow: 2px 3px 6px rgba(0,0,0,0.1);
   box-shadow: 2px 3px 6px rgba(0,0,0,0.1);
   margin-top: 0px;
+  color:#333;
 }
 .mobile ul li a:hover{
-  background-color: rgb(65, 173, 218);
+  background-color: rgba(152, 152, 152, 0.1);
+  color:#333;
 }
 
 .mobile ul li.active a{
-  background-color: #049cdb;
+  background-color: rgba(152, 152, 152, 0.1);
   background-image: none;
+  color:#60C1CF;
 }
 
 .mobile ul li.active a:hover{
-  background-color: rgb(65, 173, 218);
+  background-color: rgba(152, 152, 152, 0.1);
   background-image: none;
+  color:#60C1CF;
 }
 
 .mobile ul li.active a:focus{
-  background-color: #049cdb;
+  background-color: rgba(152, 152, 152, 0.1);
   background-image: none;
+  color:#333;
 }
-header .navbar-inner .dropdown {
-  margin-top: 7px;
-}
-.dropdown .caret {
-margin-top: -8px;
-}
+
 
 @media (max-width: 767px){
   
@@ -163,12 +163,28 @@ margin-top: -8px;
     margin-top: 0px;
   }
 
+  .logo-header{
+    float: left;
+  }
+  .mobile .dropdown-menu li a{
+  padding: 6px 8px 6px;
+}
   .mobile{
-    display: inline-block;
+    display: inline-block !important;
+    margin-top: 10px;
   }
-  .logo{
-    display: none;   
+
+  .brand{
+    padding: 14px 1px 0 5px !important;
+    float: left !important;
   }
+  .logo-header a img{
+    display: none;
+  }
+  .dropdown .caret {
+margin-top: 8px;
+margin-left: 2px;
+}
 }
 
 @media (min-width: 768px) and (max-width: 979px){
@@ -176,13 +192,136 @@ margin-top: -8px;
   header.navbar ul{
     margin-top: 0px    
   }
-  .mobile {
+  .mobile{
     display: inline-block !important;
+    margin-top: 10px;
   }
-  .logo{
-    display: none;   
+
+  .brand{
+    padding: 14px 1px 0 5px !important;
+    float: left !important;
   }
-  header.navbar .oil-portal{
-    display: none
+  .logo-header a img{
+    display: none;
   }
+  .dropdown .caret {
+margin-top: 8px;
+margin-left: 2px;
 }
+header.navbar .mobile {
+margin-top: 8px;
+margin-left: 2px;
+margin-top: 10px;
+}
+}
+
+.mobile .dropdown-menu{
+  margin-left: -67px;
+  min-width: 90px;
+  background-color: rgb(244, 244, 244);
+  border: none;
+  -webkit-border-top-left-radius: 0px;
+  -moz-border-top-left-radius: 0px;
+  border-top-left-radius: 0px;
+  -webkit-border-top-right-radius: 0px;
+  -moz-border-top-right-radius: 0px;
+  border-top-right-radius: 0px;
+  -webkit-box-shadow: 2px 3px 6px rgba(0,0,0,0.1);
+  -moz-box-shadow: 2px 3px 6px rgba(0,0,0,0.1);
+  box-shadow: 2px 3px 6px rgba(0,0,0,0.1);
+  margin-top: 0px;
+}
+
+.dropdown-submenu a:hover{
+  color: #fff;
+  background-color: rgba(152, 152, 152, 0.1);
+  background-image: none;
+}
+
+.dropdown-submenu a:focus{
+  color: #fff;
+  background-color: rgba(152, 152, 152, 0.1);
+  background-image: none;
+}
+
+.dropdown-submenu a:active{
+  color: #fff;
+  background-color: rgba(152, 152, 152, 0.1);
+  background-image: none;
+}
+
+.dropdown-submenu .active a{
+  background-color: rgba(152, 152, 152, 0.1);
+  background-image: none
+}
+
+.dropdown-submenu .active a:focus{
+  background-color: rgba(152, 152, 152, 0.1);
+}
+
+.dropdown-submenu li a:hover{
+  color: #858585;
+  background-color: rgba(152, 152, 152, 0.1);
+  background-image: none;
+}
+
+.dropdown-submenu li a:focus{
+  color: #858585;
+  background-color: rgba(152, 152, 152, 0.1);
+  background-image: none;
+}
+
+.dropdown-submenu li a:active{
+  color: #858585;
+  background-color: rgba(152, 152, 152, 0.1);
+  background-image: none;
+}
+
+ul.nav li a img{
+  width: 24px;
+}
+
+ul.nav li a span{
+  box-shadow: none
+}
+
+ul.nav li.dropdown.open>.dropdown-toggle, .navbar .nav li.dropdown.active>.dropdown-toggle, .navbar .nav li.dropdown.open.active>.dropdown-toggle {
+  background-color: transparent !important;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-submenu:hover>a, .dropdown-submenu:focus>a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  background-color: #049cdb;
+  background-image: none !important;
+}
+
+li.dropdown a{
+  padding: 10px 6px !important;
+}
+.dropdown-menu .divider {
+  height: 1px;
+  margin: 4px;
+}
+.dropdown-menu{
+  margin-top: -7px;
+  -webkit-border: 1px solid rgba(0,0,0,0.1);
+  -moz-border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.1);
+  -webkit-box-shadow: 2px 3px 6px rgba(0,0,0,0.1);
+  -moz-box-shadow: 2px 3px 6px rgba(0,0,0,0.1);
+  box-shadow: 2px 3px 6px rgba(0,0,0,0.1);
+}
+
+ul.nav span.name{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  width: 70px;
+}
+ul.nav li a{
+  padding: 10px 0 10px 1px !important;
+}
+
+/* ---> header */
