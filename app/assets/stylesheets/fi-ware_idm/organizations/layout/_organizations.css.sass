@@ -18,10 +18,11 @@
     margin-left: 0px
 
 .tab-pane,
-.organizations-list
+.organizations-list,
   .organization
-    min-height: 50px
+    min-height: 38px
     @include contact
+    margin-bottom: 0px !important
     &:first-child
       margin-top: 3px
   a.view-all
@@ -29,6 +30,10 @@
 
 #organization
   .members-list
+    .contact
+      min-height: 38px
+      &:first-child
+        margin-top: 3px
     .contact
       .name
         a  
