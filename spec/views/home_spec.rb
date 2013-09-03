@@ -24,6 +24,8 @@ describe 'home/index' do
   describe 'organization session' do
     before do
       view.stub(:current_subject).and_return(organization)
+      # TODO stub tests
+      view.stub(:can?).and_return(false)
     end
 
     it "renders" do

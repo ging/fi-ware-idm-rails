@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130806104042) do
+ActiveRecord::Schema.define(:version => 20130903174103) do
 
   create_table "activities", :force => true do |t|
     t.integer  "activity_verb_id"
@@ -280,6 +280,7 @@ ActiveRecord::Schema.define(:version => 20130806104042) do
     t.string   "sender_type"
     t.string   "receiver_type"
     t.string   "ancestry"
+    t.boolean  "cloud",         :default => false
   end
 
   add_index "relations", ["actor_id"], :name => "index_relations_on_actor_id"
@@ -293,6 +294,7 @@ ActiveRecord::Schema.define(:version => 20130806104042) do
     t.string   "type"
     t.boolean  "official",   :default => false
     t.boolean  "store",      :default => false
+    t.boolean  "cloud",      :default => false
   end
 
   add_index "sites", ["actor_id"], :name => "index_sites_on_actor_id"
@@ -325,7 +327,7 @@ ActiveRecord::Schema.define(:version => 20130806104042) do
   add_index "ties", ["relation_id"], :name => "index_ties_on_relation_id"
 
   create_table "users", :force => true do |t|
-    t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
+    t.string   "encrypted_password",     :limit => 128, :default => "",    :null => false
     t.string   "password_salt"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -336,14 +338,15 @@ ActiveRecord::Schema.define(:version => 20130806104042) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "authentication_token"
-    t.datetime "created_at",                                            :null => false
-    t.datetime "updated_at",                                            :null => false
+    t.datetime "created_at",                                               :null => false
+    t.datetime "updated_at",                                               :null => false
     t.integer  "actor_id"
     t.string   "language"
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
+    t.boolean  "cloud_master",                          :default => false
   end
 
   add_index "users", ["actor_id"], :name => "index_users_on_actor_id"
