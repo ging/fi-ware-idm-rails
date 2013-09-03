@@ -7,7 +7,6 @@ describe 'home/index' do
   before do
     view.stub(:user_signed_in?).and_return(true)
     view.stub(:current_user).and_return(user)
-    view.stub(:current_subject).and_return(user)
   end
 
   describe 'user authenticated' do
@@ -25,6 +24,8 @@ describe 'home/index' do
   describe 'organization session' do
     before do
       view.stub(:current_subject).and_return(organization)
+      # TODO stub tests
+      view.stub(:can?).and_return(false)
     end
 
     it "renders" do
