@@ -7,6 +7,7 @@ describe 'home/index' do
   before do
     view.stub(:user_signed_in?).and_return(true)
     view.stub(:current_user).and_return(user)
+    view.stub(:current_subject).and_return(user)
   end
 
   describe 'user authenticated' do
