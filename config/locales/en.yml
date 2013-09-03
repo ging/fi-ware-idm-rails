@@ -34,6 +34,8 @@ en:
     new:
       action: "Register an organization"
       title: "Create an organization"
+    title:
+      other: Organizations
   permission:
     description:
       default:
