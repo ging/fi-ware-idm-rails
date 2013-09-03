@@ -67,6 +67,6 @@ FiWareIdm::Application.configure do
 
   config.middleware.use ExceptionNotifier,
     email_prefix: "[IdM Error] ",
-    sender_address: %{"Error Notifier" <no-reply@idm.lab.fi-ware.eu>},
+    sender_address: %{"Error Notifier" <no-reply@account.lab.fi-ware.eu>},
     exception_recipients: %w{atapiador@dit.upm.es}
 end
