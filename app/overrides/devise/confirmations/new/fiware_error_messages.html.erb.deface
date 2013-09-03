@@ -1,0 +1,3 @@
+<!-- replace "code[erb-loud]:contains('devise_error_messages!')" -->
+
+<%= fiware_devise_error_messages! %>
