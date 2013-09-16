@@ -22,9 +22,13 @@ class OrganizationsController < GroupsController
     col =
       case params[:section]
       when 'others'
-        current_user.other_organizations
+        user_signed_in? ?
+          current_user.other_organizations :
+          Organization
       else
-        current_user.organizations
+        user_signed_in? ?
+          current_user.organizations :
+          Kaminari.paginate_array([])
       end
 
     col.page(params[:page])
