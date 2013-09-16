@@ -1,6 +1,0 @@
-<!-- insert_before 'section.delete' -->
-<section class="logo">
-  <%= render partial: 'avatars/form',
-             object: resource.actor,
-             as: :avatarable %>
-</section>
