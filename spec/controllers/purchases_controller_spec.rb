@@ -7,6 +7,8 @@ describe PurchasesController do
     @user = Factory(:user)
     @application = Factory(:application)
     @store = Factory(:store)
+    # Generate relation instance to avoid database rollback
+    ::Relation::Purchaser.instance
   end
 
   context 'with oauth token from store' do
