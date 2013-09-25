@@ -1,6 +1,8 @@
 GIT
   remote: git://github.com/ging/social_stream.git
+
   revision: 5781ecea44a32159c856085097b28ba1bdc69c54
+
   branch: master
   specs:
     social_stream-base (2.2.1)
@@ -250,11 +252,9 @@ GEM
     riddle (1.5.8)
     rmagick (2.13.2)
     rspec-core (2.14.5)
-<<<<<<< HEAD
+
     rspec-expectations (2.14.2)
-=======
-    rspec-expectations (2.14.3)
->>>>>>> 3a29157e51e46e9a66c8404ad3b9c8e27c715075
+
       diff-lcs (>= 1.1.3, < 2.0)
     rspec-mocks (2.14.3)
     rspec-rails (2.14.0)
