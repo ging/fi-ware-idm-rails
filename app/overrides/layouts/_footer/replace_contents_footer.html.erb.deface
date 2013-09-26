@@ -4,7 +4,7 @@
   <%= Date.today.year %> 
   © 
   <%= link_to 'FI-WARE', 'http://fi-ware.eu/' %>. 
-  Usage of FI-LAB services subject to acceptance of 
+  The use of FI-LAB services is subject to the acceptance of the
   <a href="http://wiki.fi-ware.eu/FI-LAB_Terms_and_Conditions"> 
     Terms and Conditions
   </a>
