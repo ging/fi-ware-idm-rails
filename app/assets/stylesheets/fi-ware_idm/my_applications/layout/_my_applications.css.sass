@@ -68,6 +68,7 @@ form.new_site_client
           font-size: 13px
       img
         margin-top: -52px
+        @include border-radius(4px)
     .soften
       margin-bottom: 0px
     .content
@@ -230,6 +231,7 @@ a.next-step
   .modal-body
     form
       @include forms
+      padding-left: 18px
 
   .edit_site_client
     width: 100%
@@ -237,6 +239,7 @@ a.next-step
     .logo
       @include principal-box
       clear: both
+      min-height: 179px
 
 
   section.delete
@@ -292,4 +295,15 @@ a.next-step
   input
     &[type="submit"]
       margin: 0
+
+.jcrop-holder
+  margin: 20px auto 0
+
+.avatar-current
+  width: 115px
+  position: absolute
+  margin: 41px 0 0 20px
+  img 
+    @include border-radius(4px)
+
 
