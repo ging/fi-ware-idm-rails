@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/ging/social_stream.git
-  revision: 57d8cfe604fb90b4469ec5a6e58cbeec344d9af8
+  revision: cf9aa3ad1fda873b20ad1782310d846be094ebab
   branch: master
   specs:
     social_stream-base (2.2.2)
@@ -201,6 +201,8 @@ GEM
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
+    rack-cors (0.2.8)
+      rack
     rack-oauth2 (1.0.5)
       activesupport (>= 2.3)
       attr_required (>= 0.0.5)
@@ -313,6 +315,7 @@ DEPENDENCIES
   jquery-rails
   mysql2
   pry-rails
+  rack-cors
   rails (= 3.2.14)
   rest-client
   rspec-rails

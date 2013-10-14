@@ -4,12 +4,9 @@
       <a href="http://lab.fi-ware.eu/" class="logo-header">
         <img alt="FI-WARE IdM" class="logo" src="/assets/header-logo.png">
       </a>
-      <a href="http://lab.fi-ware.eu/" class="brand">
-        <span>
-          FI-
-        </span>
-        WARE
-      </a>
+      <%= link_to fiware_env_url, class: 'brand' do %>
+        <span>FI-</span>WARE
+      <% end %>
     </div>
   
     <div class="dropdown mobile">
@@ -47,26 +44,42 @@
       </ul>
     </div>
 
+<<<<<<< HEAD
+=======
+        <ul class="dropdown-menu dropdown-menu-header">
+          <li class="cloud">
+            <%= link_to 'Cloud', fiware_env_url(subdomain: 'cloud') %>
+          </li>
+          <li class="store">
+            <%= link_to 'Store', fiware_env_url(subdomain: 'store') %>
+          </li>
+          <li class="mashup">
+            <%= link_to 'Mashup', fiware_env_url(subdomain: 'mashup') %>
+          </li>
+          <li class="account active">
+            <%= link_to 'Account', root_url %>
+          </li>
+          <li class="help">
+            <%= link_to 'Help&info', fiware_env_url %>
+          </li>
+        </ul>
+      </div>
+>>>>>>> 3df7fb1d944a5faed636559094f5317e3733c910
     <ul class="oil-portal hidden-phone hidden-tablet">
       <li class="cloud">
-        <a href="http://cloud.lab.fi-ware.eu/">
-          Cloud
-        </a>
+        <%= link_to 'Cloud', fiware_env_url(subdomain: 'cloud') %>
       </li>
       <li class="store">
-        <a href="http://store.lab.fi-ware.eu/">
-          Store
-        </a>
+        <%= link_to 'Store', fiware_env_url(subdomain: 'store') %>
       </li>
       <li class="mashup">
-        <a href="http://mashup.lab.fi-ware.eu/">
-          Mashup
-        </a>
+        <%= link_to 'Mashup', fiware_env_url(subdomain: 'mashup') %>
       </li>
       <li class="account active">
-        <a href="https://account.lab.fi-ware.eu/">
-          Account
-        </a>
+        <%= link_to 'Account', root_url %>
+      </li>
+      <li class="help">
+        <%= link_to 'Help&info', fiware_env_url %>
       </li>
       <li class="help">
         <a href="http://lab.fi-ware.eu/">

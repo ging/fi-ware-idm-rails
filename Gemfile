@@ -57,3 +57,6 @@ gem 'pry-rails'
 gem 'exception_notification', '~> 3.0'
 
 gem 'rest-client'
+
+# CORS
+gem 'rack-cors', require: 'rack/cors'
