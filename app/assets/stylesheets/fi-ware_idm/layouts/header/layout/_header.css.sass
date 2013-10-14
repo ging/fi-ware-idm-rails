@@ -21,6 +21,7 @@ header.navbar
           font-size: 23px
     .mobile
       display: none
+      margin-top: 8px
       .dropdown-menu  
         margin-left: -67px
         min-width: 90px
@@ -36,16 +37,17 @@ header.navbar
         -moz-box-shadow: 2px 3px 6px rgba(0,0,0,0.1)
         box-shadow: 2px 3px 6px rgba(0,0,0,0.1)
         margin-top: 0px
+        color: #333
         .active
           a 
             background-color: $blueLight
             background-image: none
-            color: #fff
+            color: #60C1CF
             &:hover,
             &:focus
               background-color: rgba(152, 152, 152, 0.1)
               background-image: none
-              color: #fff
+              color: #60C1CF
 
         li 
           a
@@ -60,7 +62,7 @@ header.navbar
 
 
   ul.oil-portal
-    width: 428px
+    width: 463px
     height: 36px
     padding: 0px
     margin-bottom: 0px
@@ -80,9 +82,9 @@ header.navbar
         &:hover
           color: $blueLight
     li.active
-      background-color: #fcfcfc
+      background-color: #f9f9f9
       height: 18px
-      @include box-shadow (0px 9px 0px -1px #FCFCFC)
+      @include box-shadow (0px 3px 5px -1px #f9f9f9)
       a
         color: $blue
 
