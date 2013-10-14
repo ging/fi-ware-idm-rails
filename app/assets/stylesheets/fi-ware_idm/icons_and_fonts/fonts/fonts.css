@@ -2,22 +2,22 @@
 
 
 @font-face {
-  font-family: "NeoTech-Regular";
+  font-family: "NeoTechRegular";
   font-style: normal;
-  src: url('neotechstd-regular.eot');
-    src: url('neotechstd-regular.eot') format('embedded-opentype'),
-         url('neotechstd-regular.woff') format('woff'),
-         url('neotechstd-regular.ttf') format('truetype'),
-         url('neotechstd-regular.svg#NeoTechStdMedium') format('svg');
+  src: url('fi-ware_idm/icons_and_fonts/fonts/neotechstd-regular.eot');
+    src: url('fi-ware_idm/icons_and_fonts/fonts/neotechstd-regular.eot') format('embedded-opentype'),
+         url('fi-ware_idm/icons_and_fonts/fonts/neotechstd-regular.woff') format('woff'),
+         url('fi-ware_idm/icons_and_fonts/fonts/neotechstd-regular.ttf') format('truetype'),
+         url('fi-ware_idm/icons_and_fonts/fonts/neotechstd-regular.svg#NeoTechStdMedium') format('svg');
 }
 
 
 @font-face {
-  font-family: "NeoTech-Medium";
+  font-family: "NeoTechMedium";
   font-style: normal;
-  src: url('neotechstd-medium.eot');
-    src: url('neotechstd-medium.eot') format('embedded-opentype'),
-         url('neotechstd-medium.woff') format('woff'),
-         url('neotechstd-medium.ttf') format('truetype'),
-         url('neotechstd-medium.svg#NeoTechStdMedium') format('svg');
+  src: url('fi-ware_idm/icons_and_fonts/fonts/neotechstd-medium.eot');
+    src: url('fi-ware_idm/icons_and_fonts/fonts/neotechstd-medium.eot') format('embedded-opentype'),
+         url('fi-ware_idm/icons_and_fonts/fonts/neotechstd-medium.woff') format('woff'),
+         url('fi-ware_idm/icons_and_fonts/fonts/neotechstd-medium.ttf') format('truetype'),
+         url('fi-ware_idm/icons_and_fonts/fonts/neotechstd-medium.svg#NeoTechStdMedium') format('svg');
 }
