@@ -17,51 +17,40 @@
 
       <ul class="dropdown-menu dropdown-menu-header">
         <li class="cloud">
-          <a href="http://cloud.lab.fi-ware.eu/">
-            Cloud
-          </a>
+          <%= link_to 'Cloud', fiware_env_url(subdomain: 'cloud') %>
         </li>
         <li class="store">
-          <a href="http://store.lab.fi-ware.eu/">
-            Store
-          </a>
+          <%= link_to 'Store', fiware_env_url(subdomain: 'store') %>
         </li>
         <li class="mashup">
-          <a href="http://mashup.lab.fi-ware.eu/">
-            Mashup
-          </a>
+          <%= link_to 'Mashup', fiware_env_url(subdomain: 'mashup') %>
         </li>
         <li class="account active">
-          <a href="https://account.lab.fi-ware.eu/">
-            Account
-          </a>
+          <%= link_to 'Account', root_url %>
         </li>
         <li class="help">
-          <a href="http://lab.fi-ware.eu/">
-            Help&info
-          </a>
+          <%= link_to 'Help&info', fiware_env_url %>
         </li>
       </ul>
     </div>
 
-        <ul class="dropdown-menu dropdown-menu-header">
-          <li class="cloud">
-            <%= link_to 'Cloud', fiware_env_url(subdomain: 'cloud') %>
-          </li>
-          <li class="store">
-            <%= link_to 'Store', fiware_env_url(subdomain: 'store') %>
-          </li>
-          <li class="mashup">
-            <%= link_to 'Mashup', fiware_env_url(subdomain: 'mashup') %>
-          </li>
-          <li class="account active">
-            <%= link_to 'Account', root_url %>
-          </li>
-          <li class="help">
-            <%= link_to 'Help&info', fiware_env_url %>
-          </li>
-        </ul>
-      </div>
+    <ul class="dropdown-menu dropdown-menu-header">
+      <li class="cloud">
+        <%= link_to 'Cloud', fiware_env_url(subdomain: 'cloud') %>
+      </li>
+      <li class="store">
+        <%= link_to 'Store', fiware_env_url(subdomain: 'store') %>
+      </li>
+      <li class="mashup">
+        <%= link_to 'Mashup', fiware_env_url(subdomain: 'mashup') %>
+      </li>
+      <li class="account active">
+        <%= link_to 'Account', root_url %>
+      </li>
+      <li class="help">
+        <%= link_to 'Help&info', fiware_env_url %>
+      </li>
+    </ul>
 
     <% if user_signed_in? %>
       <ul class="nav pull-right">
