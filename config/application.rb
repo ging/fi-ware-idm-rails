@@ -62,5 +62,13 @@ module FiWareIdm
     config.after_initialize do
       I18n.available_locales = [:en]
     end
+
+    config.middleware.use Rack::Cors do
+      allow do
+        origins /.*\.fi-ware\.eu$/
+        resource '/users/sign_out',
+                 methods: :get
+      end
+    end
   end
 end
