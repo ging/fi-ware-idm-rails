@@ -25,7 +25,7 @@ Fiware.signOut = (function($, undefined) {
   // such as account.testbed.fi-ware.eu
   var productionCall = function(currentPortal) {
     portalCalls = $.map(portals, function(portal) {
-      url = portal.protocol + '://' + portal.subdomain + domain + portal.path;
+      url = portal.protocol + '://' + portal.subdomain + '.' + domain + portal.path;
 
       return $.ajax(url, { type: portal.verb });
     });
