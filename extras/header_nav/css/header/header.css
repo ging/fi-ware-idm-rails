@@ -2,7 +2,9 @@ a:hover{
   color: #049cdb;
   text-decoration: none;
 }
-/* header */
+/*
+New header style
+*/
 
 #oil-nav{
   display: block;
@@ -43,11 +45,11 @@ nav.navbar-inner .logo-header{
   float: none;
   margin: -1px 0 0 3px;
   font-size: 23px;
-  font-family: "NeoTech";
-  font-size: 23px;
+  font-family: "NeoTech-Regular";
   color: #60c1cf !important;
   display: inline-block;
-  font-weight: normal;
+  font-weight: normal !important;
+  text-shadow: 0 1px 0 rgb(255, 255, 255);
 }
 
 .logo-header .brand a:hover{
@@ -63,11 +65,11 @@ nav.navbar-inner .logo-header{
 }
 
 ul.oil-portal{
-  width: 366px;
+  width: 463px;
   height: 36px;
   padding: 0px;
   margin-bottom: 0px;
-  margin-left: 0px;
+  margin-left: 2px;
   display: inline-block;
 }
 
@@ -79,15 +81,11 @@ ul.oil-portal li{
 ul.oil-portal li:hover{
   background-color: rgba(152, 152, 152, 0.1);
   height: 18px;
-}
-
-ul.oil-portal li:hover a{
   color: #049cdb;
 }
 
 ul.oil-portal li a{
   color: #555;
-  font-family: "Open Sans";
 }
 
 ul.oil-portal li a:hover{
@@ -95,21 +93,22 @@ ul.oil-portal li a:hover{
 }
 
 ul.oil-portal li.active{
-  background-color: #fcfcfc;
+  background-color: #f9f9f9;
   height: 18px;
-  -moz-box-shadow: 0px 9px 0px -1px #FCFCFC;
-  -webkit-box-shadow: 0px 9px 0px -1px #FCFCFC;
-  box-shadow: 0px 9px 0px -1px #FCFCFC;
+  -moz-box-shadow: 0px 3px 5px -1px #F9F9F9;
+  -webkit-box-shadow: 0px 3px 5px -1px #F9F9F9;
+  box-shadow: 0px 3px 5px -1px #F9F9F9;
 }
 
 ul.oil-portal li.active a{
   color: #049cdb;
 }
 
-
 .mobile{
   display: none;
+  margin-top: 8px;
 }
+
 .mobile ul.dropdown-menu{
   margin-left: -67px;
   min-width: 90px;
@@ -150,69 +149,14 @@ ul.oil-portal li.active a{
   color:#333;
 }
 
-
-@media (max-width: 767px){
-  
-  body {
-    padding-right: 0px;
-    padding-left: 0px;
-    text-rendering: optimizeSpeed;
-  }
-
-  header .navbar ul.nav{
-    margin-top: 0px;
-  }
-
-  .logo-header{
-    float: left;
-  }
-  .mobile .dropdown-menu li a{
-  padding: 6px 8px 6px;
-}
-  .mobile{
-    display: inline-block !important;
-    margin-top: 10px;
-  }
-
-  .brand{
-    padding: 14px 1px 0 5px !important;
-    float: left !important;
-  }
-  .logo-header a img{
-    display: none;
-  }
-  .dropdown .caret {
-margin-top: 8px;
-margin-left: 2px;
-}
+.nav-tabs, .nav-tabs li a, .nav-tabs > .active > a, .nav-tabs > .active > a:hover {
+  margin: 2px 0px 1px 0px;
 }
 
-@media (min-width: 768px) and (max-width: 979px){
-
-  header.navbar ul{
-    margin-top: 0px    
-  }
-  .mobile{
-    display: inline-block !important;
-    margin-top: 10px;
-  }
-
-  .brand{
-    padding: 14px 1px 0 5px !important;
-    float: left !important;
-  }
-  .logo-header a img{
-    display: none;
-  }
-  .dropdown .caret {
-margin-top: 8px;
-margin-left: 2px;
-}
-header.navbar .mobile {
-margin-top: 8px;
-margin-left: 2px;
-margin-top: 10px;
-}
+.nav-tabs > .active > a, .nav-tabs > .active > a:hover {
+  color: #60C1CF;
+  background-color: #FFF;
+  border-radius: 5px;
 }
 
 .mobile .dropdown-menu{
@@ -299,10 +243,12 @@ ul.nav li.dropdown.open>.dropdown-toggle, .navbar .nav li.dropdown.active>.dropd
 li.dropdown a{
   padding: 10px 6px !important;
 }
+
 .dropdown-menu .divider {
   height: 1px;
   margin: 4px;
 }
+
 .dropdown-menu{
   margin-top: -7px;
   -webkit-border: 1px solid rgba(0,0,0,0.1);
@@ -320,8 +266,89 @@ ul.nav span.name{
   display: inline-block;
   width: 70px;
 }
+
 ul.nav li a{
-  padding: 10px 0 10px 1px !important;
+  padding: 12px 0 10px 1px;
 }
 
-/* ---> header */
+ul.nav li a:hover{
+  background-color: transparent;
+  border: none;
+}
+
+@media (max-width: 767px){
+
+  header .navbar ul.nav{
+    margin-top: 0px;
+  }
+
+  .logo-header{
+    float: left;
+  }
+
+  .mobile .dropdown-menu li a{
+    padding: 6px 8px 6px;
+  }
+
+  .mobile{
+    display: inline-block !important;
+    margin-top: 10px;
+  }
+
+  .brand{
+    padding: 14px 1px 0 5px !important;
+    float: left !important;
+  }
+
+  .logo-header a img{
+    display: none;
+  }
+
+  .dropdown .caret {
+    margin-top: 8px;
+    margin-left: 2px;
+  }
+
+  .nav-tabs, .nav-tabs li a, .nav-tabs > .active > a, .nav-tabs > .active > a:hover {
+    margin: 0px 0 1px 15px;
+    float: right;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px){
+
+
+  .nav-tabs, .nav-tabs li a, .nav-tabs > .active > a, .nav-tabs > .active > a:hover {
+    margin: 2px 0 1px 15px;
+    float: right;
+  }
+
+  header.navbar ul{
+    margin-top: 0px    
+  }
+
+  .mobile{
+    display: inline-block !important;
+    margin-top: 10px;
+  }
+
+  .brand{
+    padding: 14px 1px 0 5px !important;
+    float: left !important;
+  }
+
+  .logo-header a img{
+    display: none;
+  }
+
+  .dropdown .caret {
+    margin-top: 8px;
+    margin-left: 2px;
+  }
+
+  header.navbar .mobile {
+    margin-top: 8px;
+    margin-left: 2px;
+    margin-top: 10px;
+  }
+}
