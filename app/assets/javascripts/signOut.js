@@ -7,7 +7,7 @@ Fiware.signOut = (function($, undefined) {
       verb:      'GET',
       protocol:  'http',
       subdomain: 'cloud',
-      path:      '/#auth/logout'
+      path:      '/logout'
     },
     account: {
       name:      'Account',
@@ -27,17 +27,35 @@ Fiware.signOut = (function($, undefined) {
     portalCalls = $.map(portals, function(portal) {
       url = portal.protocol + '://' + portal.subdomain + '.' + domain + portal.path;
 
-      return $.ajax(url, { type: portal.verb });
+      return $.ajax(url, {
+        type: portal.verb,
+        error: function() { console.error("Error signing out " + portal.name); }
+      });
     });
 
-    $.when.apply($, portalCalls).
-      done(function() {
-        window.location.replace('http://' + domain);
-      }).
-      fail(function() {
-        var alertF = portals[currentPortal].alert || alert;
-        alertF('Error signing out');
+    deferredCall(portalCalls);
+  };
+
+  var deferredCall = function(calls) {
+    $.when.apply($, calls).then(
+      // success
+      finish,
+      // fail
+      function() {
+        if (calls.length === 1) {
+          finish();
+        } else {
+          var unfinished = $.grep(calls, function(call) {
+            return call.state() === "pending";
+          });
+
+          deferredCall(unfinished);
+        }
       });
+  };
+
+  var finish = function() {
+    window.location.replace('http://' + domain);
   };
 
   // Development environment
