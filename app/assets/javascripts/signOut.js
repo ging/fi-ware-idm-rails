@@ -31,12 +31,8 @@ Fiware.signOut = (function($, undefined) {
     });
 
     $.when.apply($, portalCalls).
-      done(function() {
+      always(function() {
         window.location.replace('http://' + domain);
-      }).
-      fail(function() {
-        var alertF = portals[currentPortal].alert || alert;
-        alertF('Error signing out');
       });
   };
 
