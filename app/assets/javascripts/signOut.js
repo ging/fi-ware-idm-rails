@@ -36,6 +36,7 @@ Fiware.signOut = (function($, undefined) {
 
       return $.ajax(url, {
         type: portal.verb,
+        xhrFields: { withCredentials: true },
         error: function() { console.error("Error signing out " + portal.name); }
       });
     });
