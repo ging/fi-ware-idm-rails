@@ -37,6 +37,10 @@ class Application < Site::Client
     alias_method "#{ app }?", app
   end
 
+  def official?
+    official.present?
+  end
+
   def roles
     relations_list
   end
