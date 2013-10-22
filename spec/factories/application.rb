@@ -6,9 +6,9 @@ Factory.define(:application, :class => ::Application) do |a|
 end
 
 Factory.define(:official_application, parent: :application) do |a|
-  a.official true
+  a.official 0
 end
 
 Factory.define(:store, parent: :official_application) do |a|
-  a.store true
+  a.official ::Application::OFFICIAL.index(:store)
 end
