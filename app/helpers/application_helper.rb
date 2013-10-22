@@ -12,7 +12,7 @@ module ApplicationHelper
 
   def no_active_official_app
     redirect_to_site_client? &&
-      redirecting_site_client.official?
+      ! redirecting_site_client.official?
   end
 
   def fiware_env_url(options = {})
