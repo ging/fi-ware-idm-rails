@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130903174103) do
+ActiveRecord::Schema.define(:version => 20131022103515) do
 
   create_table "activities", :force => true do |t|
     t.integer  "activity_verb_id"
@@ -289,12 +289,10 @@ ActiveRecord::Schema.define(:version => 20130903174103) do
   create_table "sites", :force => true do |t|
     t.integer  "actor_id"
     t.text     "config"
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.string   "type"
-    t.boolean  "official",   :default => false
-    t.boolean  "store",      :default => false
-    t.boolean  "cloud",      :default => false
+    t.integer  "official"
   end
 
   add_index "sites", ["actor_id"], :name => "index_sites_on_actor_id"
