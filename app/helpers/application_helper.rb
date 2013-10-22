@@ -10,9 +10,15 @@ module ApplicationHelper
       ''
   end
 
-  def no_active_official_app
+  def no_active_official_app?
     ! redirect_to_site_client? ||
       ! redirecting_site_client.official?
+  end
+
+  def no_active_official_app
+    no_active_official_app? ?
+      'active' :
+      ''
   end
 
   def fiware_env_url(options = {})
