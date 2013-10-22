@@ -11,7 +11,7 @@ module ApplicationHelper
   end
 
   def no_active_official_app
-    redirect_to_site_client? &&
+    ! redirect_to_site_client? ||
       ! redirecting_site_client.official?
   end
 
