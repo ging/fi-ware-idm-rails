@@ -1,10 +1,8 @@
 class FiwareApplication < ActiveRecord::Migration
   def up
-=begin
     change_table :sites do |t|
       t.column :fiware, :integer, default: nil
     end
-=end
 
     Application.reset_column_information
 
