@@ -63,7 +63,9 @@ Fiware.signOut = (function($, undefined) {
   };
 
   var finish = function() {
-    window.location.replace('http://' + domain);
+    if (!signOutDebug) {
+      window.location.replace('http://' + domain);
+    }
   };
 
   // Development environment
