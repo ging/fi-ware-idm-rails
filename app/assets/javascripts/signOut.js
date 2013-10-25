@@ -63,7 +63,8 @@ Fiware.signOut = (function($, undefined) {
   };
 
   var finish = function() {
-    if (!signOutDebug) {
+    // Use window.debugSignOut = true to debug
+    if (window.debugSignOut !== undefined) {
       window.location.replace('http://' + domain);
     }
   };
