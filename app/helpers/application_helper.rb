@@ -22,7 +22,7 @@ module ApplicationHelper
   end
 
   def fiware_env_url(options = {})
-    domain = request.host.gsub(/\Aaccount\./, '')
+    domain = FiWareIdm.subdomain
 
     if options[:subdomain].present?
       domain = "#{ options[:subdomain] }.#{ domain }"
