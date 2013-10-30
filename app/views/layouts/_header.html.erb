@@ -1,11 +1,12 @@
 <header class="navbar">
   <nav class="navbar-inner">
     <div class="logo-header">
-      <a href="http://lab.fi-ware.eu/" class="logo-header">
-        <img alt="FI-WARE IdM" class="logo" src="/assets/header-logo.png">
-      </a>
+      <%= link_to fiware_env_url, class: "logo-header" do %>
+        <%= image_tag 'header-logo.png', class: 'logo', alt: FiWareIdm.name %>
+      <% end %>
+
       <%= link_to fiware_env_url, class: 'brand' do %>
-        <span>FI-</span>WARE
+        <%= image_tag FiWareIdm.logo, class: 'fiware-logo', alt: FiWareIdm.name %>
       <% end %>
     </div>
   

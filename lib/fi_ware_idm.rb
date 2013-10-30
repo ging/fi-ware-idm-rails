@@ -11,6 +11,9 @@ module FiWareIdm
   mattr_accessor :name
   @@name = "FI-LAB"
 
+  mattr_accessor :logo
+  @@logo = 'Fi-lab.png'
+
   mattr_accessor :bug_receivers
   @@bug_receivers = []
 
