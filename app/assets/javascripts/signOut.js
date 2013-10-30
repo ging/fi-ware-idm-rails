@@ -9,6 +9,13 @@ Fiware.signOut = (function($, undefined) {
       subdomain: 'cloud',
       path:      '/logout'
     },
+    store: {
+      name:      'Store',
+      verb:      'GET',
+      protocol:  'https',
+      subdomain: 'store',
+      path:      '/logout'
+    },
     account: {
       name:      'Account',
       verb:      'GET',
@@ -29,6 +36,7 @@ Fiware.signOut = (function($, undefined) {
 
       return $.ajax(url, {
         type: portal.verb,
+        xhrFields: { withCredentials: true },
         error: function() { console.error("Error signing out " + portal.name); }
       });
     });
@@ -55,7 +63,10 @@ Fiware.signOut = (function($, undefined) {
   };
 
   var finish = function() {
-    window.location.replace('http://' + domain);
+    // Use window.debugSignOut to debug
+    if (window.debugSignOut === undefined) {
+      window.location.replace('http://' + domain);
+    }
   };
 
   // Development environment

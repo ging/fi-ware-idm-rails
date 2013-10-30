@@ -1,4 +1,6 @@
 class Application < Site::Client
+  OFFICIAL = [ :cloud, :store, :mashup ]
+
   scope :granting_roles, ->(actor) {
     select("DISTINCT sites.*").
       joins(actor: :sent_permissions).
@@ -6,8 +8,18 @@ class Application < Site::Client
       merge(Permission.where(action: 'get', object: 'relation/custom'))
   }
 
-  scope :official, -> {
-    where(official: true)
+  scope :official, ->(type = nil) {
+    if type.present?
+      i = OFFICIAL.index(type)
+
+      if i.present?
+        where(official: i)
+      else
+        raise "Unknown official application #{ type.inspect }"
+      end
+    else
+      where(arel_table[:official].not_eq(nil))
+    end
   }
 
   scope :purchased_by, ->(actor) {
@@ -16,6 +28,18 @@ class Application < Site::Client
       merge(Contact.received_by(actor)).
       merge(::Relation.where(id: ::Relation::Purchaser.instance.id))
   }
+
+  OFFICIAL.each do |app|
+    define_method app do
+      official == OFFICIAL.index(app)
+    end
+
+    alias_method "#{ app }?", app
+  end
+
+  def official?
+    official.present?
+  end
 
   def roles
     relations_list

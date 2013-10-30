@@ -1,11 +1,12 @@
 <header class="navbar">
   <nav class="navbar-inner">
     <div class="logo-header">
-      <a href="http://lab.fi-ware.eu/" class="logo-header">
-        <img alt="FI-WARE IdM" class="logo" src="/assets/header-logo.png">
-      </a>
+      <%= link_to fiware_env_url, class: "logo-header" do %>
+        <%= image_tag 'header-logo.png', class: 'logo', alt: FiWareIdm.name %>
+      <% end %>
+
       <%= link_to fiware_env_url, class: 'brand' do %>
-        <span>FI-</span>WARE
+        <%= image_tag FiWareIdm.logo, class: 'fiware-logo', alt: FiWareIdm.name %>
       <% end %>
     </div>
   
@@ -16,16 +17,16 @@
       </a>
 
       <ul class="dropdown-menu dropdown-menu-header">
-        <li class="cloud">
+        <li class="cloud <%= active_official_app(:cloud) %>">
           <%= link_to 'Cloud', fiware_env_url(subdomain: 'cloud') %>
         </li>
-        <li class="store">
+        <li class="store <%= active_official_app(:store) %>">
           <%= link_to 'Store', fiware_env_url(subdomain: 'store') %>
         </li>
-        <li class="mashup">
+        <li class="mashup <%= active_official_app(:mashup) %>">
           <%= link_to 'Mashup', fiware_env_url(subdomain: 'mashup') %>
         </li>
-        <li class="account active">
+        <li class="account <%= no_active_official_app %>">
           <%= link_to 'Account', root_url %>
         </li>
         <li class="help">
@@ -35,16 +36,16 @@
     </div>
 
     <ul class="oil-portal hidden-phone hidden-tablet">
-      <li class="cloud">
+      <li class="cloud <%= active_official_app(:cloud) %>">
         <%= link_to 'Cloud', fiware_env_url(subdomain: 'cloud') %>
       </li>
-      <li class="store">
+      <li class="store <%= active_official_app(:store) %>">
         <%= link_to 'Store', fiware_env_url(subdomain: 'store') %>
       </li>
-      <li class="mashup">
+      <li class="mashup <%= active_official_app(:mashup) %>">
         <%= link_to 'Mashup', fiware_env_url(subdomain: 'mashup') %>
       </li>
-      <li class="account active">
+      <li class="account <%= no_active_official_app %>">
         <%= link_to 'Account', root_url %>
       </li>
       <li class="help">
