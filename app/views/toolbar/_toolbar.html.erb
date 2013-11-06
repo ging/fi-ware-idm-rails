@@ -7,6 +7,7 @@
         <h2><%= t('toolbar.home') %></h2>
       <% end %>
     </li>
+
     <% if current_subject.is_a? User %>
       <li class="organizations<%= ' active' if controller.controller_name == 'organizations' %>">
         <%= link_to organizations_path do %>
@@ -22,11 +23,29 @@
         <% end %>
       </li>
     <% end %>
+
     <li class="my-applications<%= ' active' if controller.controller_name == 'applications' %>">
       <%= link_to applications_path do %>
         <i class='icon_menu-20-my-applications'></i>
         <h2><%= t('toolbar.applications') %></h2>
       <% end %>
     </li>
+
+    <% if can? :update, Site.current %>
+      <li class="notify<%= ' active' if controller.controller_name == 'notifications' %>">
+        <%= link_to new_notification_path do %>
+          <i class='icon_menu-20-notify'></i>
+          <h2>Notify</h2>
+        <% end %>
+      </li>
+
+      <li class="administrators<%= ' active' if controller.controller_name == 'administrators' %>">
+        <%= link_to administrators_path do %>
+          <i class='icon_menu-20-administrators'></i>
+          <h2>Administrators</h2>
+        <% end %>
+      </li>
+    <% end %>
+
   </ul>
 </div>
