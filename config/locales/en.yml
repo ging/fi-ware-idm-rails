@@ -22,6 +22,8 @@ en:
       application:
         create: Next
         update: Save
+      notification:
+        create: Send notification
       permission_custom:
         create: Create permission
         update: Update permission
