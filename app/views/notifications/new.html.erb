@@ -27,7 +27,7 @@
         <%= f.text_area :body %>
       </div>
 
-      <%= f.submit %>
+      <%= f.submit nil, 'data-loading-text' => 'Sending notification...' %>
     <% end %>
   </section>
 </section>
@@ -37,6 +37,12 @@
     $('#notification_body').cleditor({
       width: "100%",
       controls: "<%= SocialStream.cleditor_controls %>"
+    });
+
+    $('form.new_notification').submit(function() {
+      console.log('eo');
+      console.dir(this);
+      $(this).find('input[type="submit"]').button('loading');
     });
   });
 <% end %>
