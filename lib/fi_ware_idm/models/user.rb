@@ -4,6 +4,13 @@ module FiWareIdm
       extend ActiveSupport::Concern
 
       included do
+        validates :email,
+                  format: {
+                    with: /.*@#{ FiWareIdm.allowed_email_domains.join('|') }/,
+                    if: Proc.new { FiWareIdm.allowed_email_domains.present? },
+                    message: "has not a valid email domain"
+                  }
+
         # Overwrite User#represented method
         #
         # Right now, we do not need confirmation from users to represent

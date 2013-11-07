@@ -17,6 +17,9 @@ module FiWareIdm
   mattr_accessor :bug_receivers
   @@bug_receivers = []
 
+  mattr_accessor :allowed_email_domains
+  @@allowed_email_domains = []
+
   class << self
     def setup
       yield self

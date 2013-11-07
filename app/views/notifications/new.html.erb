@@ -1,0 +1,48 @@
+<section id="new_notification">
+  <header><h1>notify all account users</h1></header>
+
+  <section class="new_notification">
+    <%= form_for @notification do |f| %>
+      <% if f.object.errors.present? %>
+        <div class="error">
+          <h2>
+            <%= pluralize(f.object.errors.count, "error") %> prohibited this notification from being sent:
+          </h2>
+
+          <ul>
+            <% f.object.errors.full_messages.each do |msg| %>
+              <li>
+              <%= msg %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <%= f.label :subject %>
+      <%= f.text_field :subject %>
+
+      <%= f.label :body %>
+      <div id="ck_editor">
+        <%= f.text_area :body %>
+      </div>
+
+      <%= f.submit nil, 'data-loading-text' => 'Sending notification...' %>
+    <% end %>
+  </section>
+</section>
+
+<%= javascript_tag do %>
+  $(function() {
+    $('#notification_body').cleditor({
+      width: "100%",
+      controls: "<%= SocialStream.cleditor_controls %>"
+    });
+
+    $('form.new_notification').submit(function() {
+      console.log('eo');
+      console.dir(this);
+      $(this).find('input[type="submit"]').button('loading');
+    });
+  });
+<% end %>

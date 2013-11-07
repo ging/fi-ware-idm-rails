@@ -4,7 +4,7 @@ SocialStream.setup do |config|
   #
   # config.subjects = [:user, :group, :site ]
 
-  config.routed_subjects = [ :user, :organization, :application ]
+  config.routed_subjects = [ :user, :organization, :application, :'site/current' ]
 
   # Include devise modules in User. See devise documentation for details.
   # Others available are:
