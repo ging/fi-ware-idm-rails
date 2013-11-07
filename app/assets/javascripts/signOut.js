@@ -9,6 +9,13 @@ Fiware.signOut = (function($, undefined) {
       subdomain: 'cloud',
       path:      '/logout'
     },
+    mashup: {
+      name:      'Mashup',
+      verb:      'GET',
+      protocol:  'https',
+      subdomain: 'mashup',
+      path:      '/logout'
+    },
     store: {
       name:      'Store',
       verb:      'GET',
