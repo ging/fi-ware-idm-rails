@@ -1,8 +1,6 @@
 GIT
   remote: git://github.com/ging/social_stream.git
-
-  revision: 353379eb6ffb8e4fd6612f8915387176b8f7e0e2
-
+  revision: 9020d5e67923b4e443db35067548b7d24e48a264
   branch: master
   specs:
     social_stream-base (2.2.2)
@@ -92,7 +90,7 @@ GEM
       json (>= 1.7)
     climate_control (0.0.3)
       activesupport (>= 3.0)
-    cocaine (0.5.1)
+    cocaine (0.5.2)
       climate_control (>= 0.0.3, < 1.0)
     coderay (1.0.9)
     coffee-rails (3.2.2)
