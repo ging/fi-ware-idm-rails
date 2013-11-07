@@ -4,7 +4,7 @@ namespace :db do
       task(:create).prerequisites.delete(t)
     end
 
-    task create: [ 'create:organizations', 'create:applications', 'create:confirm_users', 'create:admin' ]
+    task create: [ 'create:organizations', 'create:applications', 'create:confirm_users' ]
 
     namespace :create do
       desc 'Create organizations'
@@ -50,16 +50,6 @@ namespace :db do
         User.all.each do |u|
           u.confirm!
         end
-      end
-
-      desc 'Add admin'
-      task admin: :read_environment do
-        puts "Add demo as admin"
-
-        contact = Site.current.contact_to!(SocialStream::Population::Actor.demo)
-        contact.user_author = SocialStream::Population::Actor.demo.user
-        contact.relation_ids = [ Relation::LocalAdmin.instance.id ]
-        binding.pry
       end
     end
   end
