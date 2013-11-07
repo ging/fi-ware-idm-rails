@@ -90,11 +90,7 @@ GEM
       json (>= 1.7)
     climate_control (0.0.3)
       activesupport (>= 3.0)
-<<<<<<< HEAD
-    cocaine (0.5.3)
-=======
     cocaine (0.5.2)
->>>>>>> 9a6983b4f3113ad83449791b58add22f32e7358c
       climate_control (>= 0.0.3, < 1.0)
     coderay (1.0.9)
     coffee-rails (3.2.2)
