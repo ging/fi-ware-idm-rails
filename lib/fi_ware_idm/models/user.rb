@@ -8,7 +8,7 @@ module FiWareIdm
                   format: {
                     with: /.*@#{ FiWareIdm.allowed_email_domains.join('|') }/,
                     if: Proc.new { FiWareIdm.allowed_email_domains.present? },
-                    message: "has not a valid email domain"
+                    message: "domain you have provided is not on the list of allowed partners (PPP member institutions). Please ensure that you supply a corporate address. Failing this, contact fiware-testbed-help@lists.fi-ware.eu and an administrator will add your domain to the list" 
                   }
 
         # Overwrite User#represented method
