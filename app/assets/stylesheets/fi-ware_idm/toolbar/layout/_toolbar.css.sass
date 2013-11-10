@@ -2,6 +2,10 @@
   width: 17%
   float: left
   margin-left: 0
+  h5
+    @extend .hidden-tablet
+  h5.tablet
+    @extend .visible-tablet
   ul
     margin-left: -3px
     li
@@ -25,34 +29,53 @@
     li.home
       &:hover
         .icon_menu-20-home
-          background-position: -86px -10px
+          background-position: -88px -10px
     .home.active
       .icon_menu-20-home
-        background-position: -49px -10px
+        background-position: -51px -10px
 
     li.organizations,
     li.members
       &:hover
         .icon_menu-20-organizations
-          background-position: -86px -45px
+          background-position: -88px -45px
         .icon_menu-20-members
-          background-position: -86px -45px
+          background-position: -88px -45px
     .members.active,     
     .organizations.active
       .icon_menu-20-organizations
-        background-position: -49px -45px
+        background-position: -51px -45px
       .icon_menu-20-members
-        background-position: -49px -45px
+        background-position: -51px -45px
 
     li.my-applications
       &:hover
         .icon_menu-20-my-applications
-          background-position: -86px -79px
+          background-position: -88px -80px
       a 
         @include ellipsis
     .my-applications.active
       .icon_menu-20-my-applications
-        background-position: -49px -79px
+        background-position: -51px -80px
+
+    .administrators.active
+      .icon_menu-20-administrators
+        background-position: -51px -150px
+
+    li.administrators
+      &:hover
+        .icon_menu-20-administrators
+          background-position: -88px -150px
+
+   
+    .notify.active
+      .icon_menu-20-notify
+        background-position: -51px -116px
+
+    li.notify
+      &:hover
+        .icon_menu-20-notify
+          background-position: -88px -116px
 
     li.active
       a
@@ -60,3 +83,6 @@
       &:hover
         a
           color: $blueLight
+
+    .soften
+      margin: 10px 0

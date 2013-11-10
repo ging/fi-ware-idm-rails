@@ -8,17 +8,19 @@
 }
 
 
-.icon_menu-20-home { background-position: -10px -10px; }
-.icon_menu-20-organizations  { background-position: -10px -45px;  }
-.icon_menu-20-members  { background-position: -10px -45px;  }
-.icon_menu-20-resources { background-position: -10px -114px;  }
-.icon_menu-20-my-applications { background-position: -10px -79px;  }
-.icon_menu-20-settings { background-position: -10px -148px; }
+.icon_menu-20-home { background-position: -12px -10px; }
+.icon_menu-20-organizations  { background-position: -12px -45px;  }
+.icon_menu-20-members  { background-position: -12px -45px;  }
+.icon_menu-20-resources { background-position: -12px -114px;  }
+.icon_menu-20-my-applications { background-position: -12px -80px;  }
+.icon_menu-20-notify { background-position: -12px -116px; }
+.icon_menu-20-administrators { background-position: -12px -150px; }
 
 
-.icon_menu-20-home-hover { background-position: -49px -10px; }
-.icon_menu-20-organizations-hover { background-position: -49px -45px;  }
-.icon_menu-20-members-hover  { background-position: -10px -45px;  }
-.icon_menu-20-resources-hover { background-position: -49px -114px;  }
-.icon_menu-20-my-applications-hover { background-position: -49px -79px;  }
-.icon_menu-20-settings-hover { background-position: -49px -148px; }
+.icon_menu-20-home-hover { background-position: -51px -10px; }
+.icon_menu-20-organizations-hover { background-position: -51px -45px;  }
+.icon_menu-20-members-hover  { background-position: -51px -45px;  }
+.icon_menu-20-resources-hover { background-position: -51px -114px;  }
+.icon_menu-20-my-applications-hover { background-position: -51px -79px;  }
+.icon_menu-20-notify-header { background-position: -51px -116px; }
+.icon_menu-20-administrators-header { background-position: -51px -150px; }
