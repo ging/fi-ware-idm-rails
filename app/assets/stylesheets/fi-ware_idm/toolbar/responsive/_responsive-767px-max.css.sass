@@ -6,28 +6,25 @@
 @media (max-width: 767px)
 
   .menu-toolbar
-    width: 45% !important
-    margin: -40px 25% 0 29%
-    z-index: 9999999
+    width: 100% !important
+    position: relative
     h5,
     h2
       @extend .hidden-phone
     ul.main_nav
-      width: 78%
-      margin: 0 21%
-      li.home
-        display: inline
-        width: 20%
-      li.organizations,
-      li.my-applications,
-      li.members
-        display: inline-block
-      li.organizations,
-      li.members
-        margin-left: 15%
-        width: 22%
-      li.my-applications
-        margin-left: 8%
+      width: 96%
+      margin: 0 auto
+      hr.soften
+        float: left
+        margin: 0 15px
+        width: 1px
+        height: 45px
+        clear: none
+        border-left: 2px solid #E2E2E2
+      li
+        float: left
+        margin: 0 10px
+
 
 
 
