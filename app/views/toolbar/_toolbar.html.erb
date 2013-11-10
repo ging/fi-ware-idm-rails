@@ -32,6 +32,7 @@
     </li>
 
     <% if can? :update, Site.current %>
+      <hr class="soften">
       <li class="notify<%= ' active' if controller.controller_name == 'notifications' %>">
         <%= link_to new_notification_path do %>
           <i class='icon_menu-20-notify'></i>
