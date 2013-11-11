@@ -15,6 +15,14 @@ module FiWareIdm
           alias_method_chain :available_permissions, :custom
         end
 
+        module ClassMethods
+          private
+
+          def create_activity?
+            false
+          end
+        end
+
         def trigger_policy_save
           if subject.is_a? Site::Client
             subject.trigger_policy_save
