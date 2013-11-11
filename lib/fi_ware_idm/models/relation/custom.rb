@@ -16,8 +16,6 @@ module FiWareIdm
         end
 
         module ClassMethods
-          private
-
           def create_activity?
             false
           end
