@@ -23,6 +23,7 @@ config/deploy.rb
 config/database.yml
 config/thales/*
 config/initializers/thales.rb
+config/initializers/0fiware.rb
 .DS_Store
 
 .sass-cache/
