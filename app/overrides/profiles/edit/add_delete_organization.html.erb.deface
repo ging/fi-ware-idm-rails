@@ -1,0 +1,20 @@
+<!-- insert_after 'code[erb-loud]:contains("avatar")' -->
+
+<section class="delete"
+  <div class="accordion" id="accordion2">
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <h5>
+          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#destroy_organization-content">
+            Delete orgaization
+          </a>
+        </h5>
+      </div>
+      <div id="destroy_organization-content" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <a href="#">Remove the organization and all its data.<a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

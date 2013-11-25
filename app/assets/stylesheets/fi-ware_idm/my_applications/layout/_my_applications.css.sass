@@ -252,19 +252,20 @@ section.create_logo_app
       min-height: 179px
 
 
-  section.delete
-    clear: both
-    @include principal-box
-    &:hover
-      border-color: $red !important
-      a
-        color: $red !important
-    header
-      margin-bottom: 0
-    #destroy_site_client-content
-      padding-left: 15px
-      a
-        color: $red !important
+section.delete
+  clear: both
+  @include principal-box
+  &:hover
+    border-color: $red !important
+    a
+      color: $red !important
+  header
+    margin-bottom: 0
+  #destroy_site_client-content,
+  #destroy_organization-content
+    padding-left: 15px
+    a
+      color: $red !important
 
 .edit_form,
 .create_logo_app
