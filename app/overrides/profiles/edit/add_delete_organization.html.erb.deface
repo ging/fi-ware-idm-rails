@@ -1,5 +1,5 @@
 <!-- insert_after 'code[erb-loud]:contains("avatar")' -->
-
+<h4>Delete organization</h4>
 <section class="delete"
   <div class="accordion" id="accordion2">
     <div class="accordion-group">
