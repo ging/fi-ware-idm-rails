@@ -1,0 +1,30 @@
+require_dependency 'fi_ware_idm'
+
+FiWareIdm.setup do |config|
+  # The domain this IdM in installed at
+  #
+  # config.domain    = 'account.lab.fi-ware.eu'
+
+  # The subdomain of the portal: cloud, store, mashup
+  #
+  # config.subdomain = 'lab.fi-ware.eu'
+
+  # The sender of registration emails
+  #
+  # config.sender    = 'no-reply@account.lab.fi-ware.eu'
+
+  # The name of the IdM
+  # config.name      = "FI-Lab"
+
+  # The logo of the IdM
+  #
+  # config.logo      = "FI-Lab.png"
+
+  # Email address that will receive bug reports
+  #
+  # config.bug_receivers = [ 'admin@lab.fi-ware.eu' ]
+
+  # List of email domains that are allowed to register
+  # config.allowed_email_domains = %w( example.com other-example.com )
+end
+
