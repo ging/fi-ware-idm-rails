@@ -1,12 +1,12 @@
 module FiWareIdm
   mattr_accessor :domain
-  @@domain = 'account.lab.fi-ware.eu'
+  @@domain = 'account.lab.fi-ware.org'
 
   mattr_accessor :subdomain
-  @@subdomain = 'lab.fi-ware.eu'
+  @@subdomain = 'lab.fi-ware.org'
 
   mattr_accessor :sender
-  @@sender = 'no-reply@account.lab.fi-ware.eu'
+  @@sender = 'no-reply@account.lab.fi-ware.org'
 
   mattr_accessor :name
   @@name = "FI-LAB"

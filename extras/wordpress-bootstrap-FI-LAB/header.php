@@ -152,7 +152,7 @@
           <a href="/page-homepage.php" class="logo-header">
             <img alt="FI-WARE" class="logo" src="wp-content/themes/wordpress-bootstrap/images/header-logo.png">
           </a>
-          <a href="http://lab.fi-ware.eu/" class="brand">
+          <a href="http://lab.fi-ware.org/" class="brand">
             <span>FI-</span>WARE
           </a>
         </div>
@@ -164,28 +164,28 @@
 
           <ul class="dropdown-menu dropdown-menu-header">
             <li class="cloud">
-              <a href="http://cloud.lab.fi-ware.eu/">
+              <a href="http://cloud.lab.fi-ware.org/">
                 Cloud
               </a>
             </li>
 
             <li class="store">
-              <a href="http://store.lab.fi-ware.eu/">
+              <a href="http://store.lab.fi-ware.org/">
                 Store
               </a>
             </li>
             <li class="mashup">
-              <a href="http://mashup.lab.fi-ware.eu/">
+              <a href="http://mashup.lab.fi-ware.org/">
                 Mashup
               </a>
             </li>
             <li class="account">
-              <a href="https://account.lab.fi-ware.eu/">
+              <a href="https://account.lab.fi-ware.org/">
                 Account
               </a>
             </li>
             <li class="help active">
-              <a href="http://lab.fi-ware.eu/">
+              <a href="http://lab.fi-ware.org/">
                 Help&info
               </a>
             </li>
@@ -195,27 +195,27 @@
 
         <ul class="oil-portal hidden-phone hidden-tablet">
           <li class="cloud">
-            <a href="http://cloud.lab.fi-ware.eu/">
+            <a href="http://cloud.lab.fi-ware.org/">
               Cloud
             </a>
           </li>
           <li class="store">
-            <a href="http://store.lab.fi-ware.eu/">
+            <a href="http://store.lab.fi-ware.org/">
               Store
             </a>
           </li>
           <li class="mashup">
-            <a href="http://mashup.lab.fi-ware.eu/">
+            <a href="http://mashup.lab.fi-ware.org/">
               Mashup
             </a>
           </li>
           <li class="account">
-            <a href="https://account.lab.fi-ware.eu/">
+            <a href="https://account.lab.fi-ware.org/">
               Account
             </a>
           </li>
           <li class="help active">
-            <a href="http://lab.fi-ware.eu/">
+            <a href="http://lab.fi-ware.org/">
               Help&info
             </a>
           </li>
@@ -251,7 +251,7 @@
               </li>
 
               <li class="settings-menu">
-                <a href="https://idm.lab.fi-ware.eu/settings">
+                <a href="https://idm.lab.fi-ware.org/settings">
                   Settings
                 </a>
               </li>
@@ -260,7 +260,7 @@
               </li>
               
               <li>
-                <a href="https://idm.lab.fi-ware.eu/users/sign_out">
+                <a href="https://idm.lab.fi-ware.org/users/sign_out">
                   Sign Out
                 </a>
               </li>

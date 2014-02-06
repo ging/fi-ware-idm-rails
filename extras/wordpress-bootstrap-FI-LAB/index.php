@@ -102,14 +102,14 @@
       
       <div id="content" class="clearfix wrapper row">
         <div class="help-bar">
-          <a class="help-box span3" href="mailto:fiware-lab-help@lists.fi-ware.eu?Subject=FI-LAB Assistance">
+          <a class="help-box span3" href="mailto:fiware-lab-help@lists.fi-ware.org?Subject=FI-LAB Assistance">
             <img src="wp-content/themes/wordpress-bootstrap/images/help.png">
             <div>
               <h4>Need Help?</h4>
               Send us a message
             </div>
           </a>
-          <a class="help-box span3" href="http://edu.fi-ware.eu/">
+          <a class="help-box span3" href="http://edu.fi-ware.org/">
             <img src="wp-content/themes/wordpress-bootstrap/images/more-info.png">
             <div>
               <h4>More information</h4>

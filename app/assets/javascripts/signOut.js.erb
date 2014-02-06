@@ -36,7 +36,7 @@ Fiware.signOut = (function($, undefined) {
   var domain = match && match[1];
 
   // If domain exists, we are in production environment,
-  // such as account.testbed.fi-ware.eu
+  // such as account.testbed.fi-ware.org
   var productionCall = function(currentPortal) {
     portalCalls = $.map(portals, function(portal) {
       url = portal.protocol + '://' + portal.subdomain + '.' + domain + portal.path;

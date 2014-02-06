@@ -1,6 +1,6 @@
 == KeyRock Fi-WARE Identity Manager Generic Enabler
 
-http://www.fi-ware.eu/
+http://www.fi-ware.org/
 
 Copyright (C) 2013 Universidad Politécnica de Madrid
 

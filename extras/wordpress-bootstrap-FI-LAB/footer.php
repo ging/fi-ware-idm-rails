@@ -1,7 +1,7 @@
 <footer>
   <div class="container">
       2013 &copy; 
-    <a href="http://fi-ware.eu/">
+    <a href="http://fi-ware.org/">
       FI-WARE.
     </a>
       The use of FI-LAB services is subject to the acceptance of the
@@ -9,7 +9,7 @@
       Terms and Conditions
     </a> 
       and 
-    <a href="http://forge.fi-ware.eu/plugins/mediawiki/wiki/fiware/index.php/FI-LAB_Personal_Data_Protection_Policy">
+    <a href="http://forge.fi-ware.org/plugins/mediawiki/wiki/fiware/index.php/FI-LAB_Personal_Data_Protection_Policy">
       Personal Data Protection Policy
     </a>
   </div>
