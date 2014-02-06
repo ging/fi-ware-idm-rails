@@ -65,7 +65,7 @@ module FiWareIdm
 
     config.middleware.use Rack::Cors do
       allow do
-        origins /.*\.fi-ware\.eu$/
+        origins /.*\.fi-ware\.org$/
         resource '/users/sign_out',
                  methods: :get
       end
