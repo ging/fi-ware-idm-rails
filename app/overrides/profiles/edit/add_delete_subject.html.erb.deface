@@ -1,0 +1,14 @@
+<!-- insert_after 'code[erb-loud]:contains("avatar")' -->
+<% if current_subject == current_user %>
+  <h4><%= t('settings.cancel_account.briefing') %></h4>
+  <section class="delete">
+    <%= render partial: "devise/registrations/delete_account",
+               locals: { resource: current_user,
+                         resource_name: :user } %>
+  </section>
+<% else %>
+  <h4><%= t("#{ current_subject.class.to_s.underscore }.destroy.one") %></h4>
+  <section class="delete">
+    <%= render partial: 'settings/destroy' %>
+  </section>
+<% end %>
