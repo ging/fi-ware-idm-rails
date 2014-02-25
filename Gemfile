@@ -58,5 +58,8 @@ gem 'exception_notification', '~> 3.0'
 
 gem 'rest-client'
 
+# CAPTCHA
+gem "galetahub-simple_captcha", :require => "simple_captcha"
+
 # CORS
 gem 'rack-cors', require: 'rack/cors'

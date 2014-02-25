@@ -1,0 +1,8 @@
+es:
+  simple_captcha:
+    placeholder: "Escribe el valor de la imagen"
+    label: "Escribe el código de la caja:"
+    message:
+      default: "El código secreto no coincide con el de la imagen"
+      user: "La imagen secreta y el código son diferentes"
+    error: "Por favor, escribe de nuevo el código captcha"
