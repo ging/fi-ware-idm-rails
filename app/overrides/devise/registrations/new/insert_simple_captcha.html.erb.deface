@@ -1,0 +1,2 @@
+<!-- insert_before "code[erb-loud]:contains('f.submit')" -->
+<%= show_simple_captcha %>

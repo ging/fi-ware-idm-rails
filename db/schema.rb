@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131022103515) do
+ActiveRecord::Schema.define(:version => 20140225153054) do
 
   create_table "activities", :force => true do |t|
     t.integer  "activity_verb_id"
@@ -285,6 +285,15 @@ ActiveRecord::Schema.define(:version => 20131022103515) do
 
   add_index "relations", ["actor_id"], :name => "index_relations_on_actor_id"
   add_index "relations", ["ancestry"], :name => "index_relations_on_ancestry"
+
+  create_table "simple_captcha_data", :force => true do |t|
+    t.string   "key",        :limit => 40
+    t.string   "value",      :limit => 6
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+  end
+
+  add_index "simple_captcha_data", ["key"], :name => "idx_key"
 
   create_table "sites", :force => true do |t|
     t.integer  "actor_id"
