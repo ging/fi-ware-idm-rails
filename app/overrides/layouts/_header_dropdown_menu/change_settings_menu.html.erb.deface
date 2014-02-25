@@ -1,0 +1,3 @@
+<!-- surround 'li.settings-menu' -->
+
+<% if current_subject.is_a? User %><%= render_original %><% end %>
