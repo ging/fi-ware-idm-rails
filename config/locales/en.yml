@@ -12,6 +12,8 @@ en:
     new:
       permission:
         title: "The application %{client} will be able to:"
+  captcha:
+    title: "Captcha"
   contact:
     new:
       modal:
