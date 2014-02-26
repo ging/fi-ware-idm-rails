@@ -8,7 +8,7 @@ module FiWareIdm
                   format: {
                     with: /(#{ FiWareIdm.allowed_email_domains.join('|') })$/,
                     if: Proc.new { FiWareIdm.allowed_email_domains.present? },
-                    message: "domain is not valid. Please note that you are signing up to the FI-WARE Testbed, restricted to PPP members. If you are a PPP member, please use your corporate email (not gmail, yahoo, etc.). If you are not a PPP member, you can apply for an account in FI-LAB, that is suitable for anyone, PPP member or not.
+                    message: "domain is not valid. Please note that you are signing up to the FI-WARE Testbed, restricted to PPP members. If you are a PPP member, please use your corporate email (not gmail, yahoo, etc.). If you are not a PPP member, you can apply for an account in <a href='http://lab.fi-ware.org/'>FI-LAB</a>, that is suitable for anyone, PPP member or not.
                     
                     If you are a PPP member using your corporate e-mail address and you get this message, please contact the support team at fiware-testbed-help@lists.fi-ware.org to add your domain name to our white list
         
