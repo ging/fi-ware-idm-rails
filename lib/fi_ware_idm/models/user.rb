@@ -100,6 +100,33 @@ module FiWareIdm
                       relation: ::Relation.where(cloud: true).first
           }
       end
+
+      def as_scim_json(version,controller)
+        {
+          schemas: ["urn:scim:schemas:core:2.0:User"],
+          id: actor.id,
+          userName: email,
+          name: {
+            formatted: CGI::escapeHTML(name)
+          },
+          displayedName: CGI::escapeHTML(name),
+          meta: {
+            resourceType: "User",
+            created: created_at,
+            lastModified: updated_at,
+            version: "1",
+            location: controller.request.url
+          },
+          profileUrl: controller.root_url[0..-2] + controller.user_path(self),
+          emails: [
+            {
+              value: email,
+              primary: "true"
+            }
+          ]
+        }
+      end
+
     end
   end
 end
