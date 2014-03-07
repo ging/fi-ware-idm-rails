@@ -11,5 +11,10 @@ FiWareIdm::Application.routes.draw do
 
   resources :purchases
 
+  #SCIM 2.0 API
+  namespace :v2 do
+    match '/users/:id' => 'users#show', via: [:get]
+  end
+
   match '/terms-of-service' => 'frontpage#terms_of_service', as: :terms_of_service
 end
