@@ -17,5 +17,9 @@ class Ability
         p.actor.allow?(subject, 'manage', 'relation/custom')
       )
     end
+
+    #SCIM2 Permissions
+    # can :manageSCIM, :all
+
   end
 end

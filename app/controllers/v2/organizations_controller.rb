@@ -1,21 +1,21 @@
-class V2::UsersController < ApplicationController
+class V2::OrganizationsController < ApplicationController
 	require 'SCIMUtils'
 
 	def index
-		unless can? :manageSCIM, User
+		unless can? :manageSCIM, Organization
 			render json: SCIMUtils.error("Permission denied")
 			return;
 		end
 
-		users = [];
-		User.all.each do |user|
-			users.push(user.as_scim_json(v=2,self))
+		organizations = [];
+		Organization.all.each do |organization|
+			organizations.push(organization.as_scim_json(v=2,self))
 		end
 
 		response = {
 			schemas: ["urn:scim:schemas:core:2.0:ListResponse"],
-			totalResults: users.length,
-			Resources: users
+			totalResults: organizations.length,
+			Resources: organizations
 		}
 
 		respond_to do |format|
@@ -26,20 +26,20 @@ class V2::UsersController < ApplicationController
 	def show
 		actor = Actor.find(params[:id])
 
-		if actor.subject_type != "User"
+		if actor.subject_type != "Group"
 			render json: SCIMUtils.error("Invalid Id")
 			return;
 		end
 
-		user = actor.user
+		organization = actor.group
 
-		unless can? :read, user
+		unless can? :read, organization
 			render json: SCIMUtils.error("Permission denied")
 			return;
 		end
 
 		respond_to do |format|
-			format.any { render json: user.as_scim_json(v=2,self) }
+			format.any { render json: organization.as_scim_json(v=2,self) }
 		end
 	end
 
