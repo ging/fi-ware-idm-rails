@@ -1,6 +1,7 @@
 class V2::OrganizationsController < ApplicationController
 	require 'SCIMUtils'
 
+	#SCIM 2.0: LIST Organizations => GET /organizations/
 	def index
 		unless can? :manageSCIM, Organization
 			render json: SCIMUtils.error("Permission denied")
@@ -23,6 +24,7 @@ class V2::OrganizationsController < ApplicationController
 		end
 	end
 
+	#SCIM 2.0: GET Organization => GET /organization/:actorId
 	def show
 		actor = Actor.find(params[:id])
 
