@@ -6,7 +6,7 @@ class Notification < ActiveRecord::Base
   private
 
   def send_emails
-    User.all.each do |u|
+  	User.where("confirmed_at IS NOT NULL").each do |u|
       Notify.all(u.email, subject, body).deliver
     end
   end
