@@ -3,3 +3,5 @@
   <%= render partial: 'frontpage/presentation' %>
 
   <%= render partial: 'devise/sessions/form' %>
+
+  Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - Branch test - 
