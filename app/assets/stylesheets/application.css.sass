@@ -1,199 +1,25 @@
-/*BOOTSTRAP-REWRITE*/
+/****************************** Variables */
+@import "rewrites/bootstrap/variables"
 
-@import "bootstrap-rewrite/variables"
 
-
-/*SOCIAL-STREAM*/
-
+/****************************** SOCIAL-STREAM */
 @import "social_stream-base"
 
-@import "bootstrap-rewrite/forms"
-@import "bootstrap-rewrite/accordion"
-@import "bootstrap-rewrite/reset"
-@import "bootstrap-rewrite/nav"
-@import "bootstrap-rewrite/modals"
-@import "bootstrap-rewrite/inputs"
 
+/****************************** Mixins */
+@import "fi-ware_idm/base/general/mixins/mixins_call"
 
 
-/*SELECT-2*/
+/****************************** Rewrite */
+@import "rewrites/bootstrap/bootstrap_call"
 
-@import "select-2-rewrite/select-2"
+@import "rewrites/select2/select2_call"
 
 
-/*GENERAL*/
+/****************************** Fonts */
+@import "fi-ware_idm/fonts/font-face"
 
-@import "fi-ware_idm/general_adjust"
 
-/*++++++++++ICONS & FONTS*/
 
-@import "fi-ware_idm/icons_and_fonts/fonts/fonts"
-
-@import "fi-ware_idm/icons_and_fonts/icons/icons"
-
-
-/*++++++++++MIXINS*/
-
-@import "fi-ware_idm/mixins/layout"
-
-@import "fi-ware_idm/mixins/box"
-
-@import "fi-ware_idm/mixins/buttons"
-
-
-@import "fi-ware_idm/mixins/forms"
-
-
-/*++++++++++LAYOUTS--APPLICATION*/
-
-@import "fi-ware_idm/layouts/application/application"
-
-@import "fi-ware_idm/layouts/application/responsive/responsive-768px-979px"
-@import "fi-ware_idm/layouts/application/responsive/responsive-1200px-min"
-@import "fi-ware_idm/layouts/application/responsive/responsive-767px-max"
-
-
-/*++++++++++LAYOUTS--HEADER*/
-
-@import "fi-ware_idm/layouts/header/header"
-
-@import "fi-ware_idm/layouts/header/layout/header"
-
-@import "fi-ware_idm/layouts/header/responsive/responsive-768px-979px"
-@import "fi-ware_idm/layouts/header/responsive/responsive-1200px-min"
-@import "fi-ware_idm/layouts/header/responsive/responsive-767px-max"
-
-
-/*++++++++++LAYOUTS--PAGES*/
-
-@import "fi-ware_idm/layouts/pages/pages"
-
-
-/*++++++++++LAYOUTS--FOOTER*/
-
-@import "fi-ware_idm/layouts/footer/layout/footer"
-
-
-/*++++++++++TOOLBAR*/
-
-@import "fi-ware_idm/toolbar/toolbar"
-
-@import "fi-ware_idm/toolbar/layout/toolbar"
-
-@import "fi-ware_idm/toolbar/responsive/responsive-768px-979px"
-@import "fi-ware_idm/toolbar/responsive/responsive-1200px-min"
-@import "fi-ware_idm/toolbar/responsive/responsive-767px-max"
-
-
-/*++++++++++SETTINGS*/
-
-@import "fi-ware_idm/settings/settings"
-
-@import "fi-ware_idm/settings/layout/settings"
-
-
-/*++++++++++PRIVACITY*/
-
-@import "fi-ware_idm/privacity/privacity"
-
-@import "fi-ware_idm/privacity/layout/privacity"
-
-@import "fi-ware_idm/privacity/responsive/responsive-768px-979px"
-@import "fi-ware_idm/privacity/responsive/responsive-1200px-min"
-@import "fi-ware_idm/privacity/responsive/responsive-767px-max"
-
-
-/*++++++++++PROFILE*/
-
-@import "fi-ware_idm/profile/profile"
-
-@import "fi-ware_idm/profile/layout/profile"
-
-@import "fi-ware_idm/profile/responsive/responsive-768px-979px"
-@import "fi-ware_idm/profile/responsive/responsive-1200px-min"
-@import "fi-ware_idm/profile/responsive/responsive-767px-max"
-
-
-/*FRONTPAGE*/
-
-@import "fi-ware_idm/frontpage_and_device/frontpage_and_device"
-
-@import "fi-ware_idm/frontpage_and_device/layout/frontpage_and_device"
-
-@import "fi-ware_idm/frontpage_and_device/responsive/responsive-768px-979px"
-@import "fi-ware_idm/frontpage_and_device/responsive/responsive-1200px-min"
-@import "fi-ware_idm/frontpage_and_device/responsive/responsive-767px-max"
-
-
-
-/*TERMS OF SERVICE*/
-
-@import "fi-ware_idm/terms_of_service/terms_of_service"
-
-@import "fi-ware_idm/terms_of_service/layout/terms_of_service"
-
-@import "fi-ware_idm/terms_of_service/responsive/responsive-768px-979px"
-@import "fi-ware_idm/terms_of_service/responsive/responsive-1200px-min"
-@import "fi-ware_idm/terms_of_service/responsive/responsive-767px-max"
-
-
-
-/*HOME*/
-
-@import "fi-ware_idm/home/home"
-
-@import "fi-ware_idm/home/layout/home"
-
-@import "fi-ware_idm/home/responsive/responsive-768px-979px"
-@import "fi-ware_idm/home/responsive/responsive-1200px-min"
-@import "fi-ware_idm/home/responsive/responsive-767px-max"
-
-
-
-/*ORGANIZATIONS*/
-
-@import "fi-ware_idm/organizations/organizations"
-
-@import "fi-ware_idm/organizations/layout/organizations"
-
-@import "fi-ware_idm/organizations/responsive/responsive-768px-979px"
-@import "fi-ware_idm/organizations/responsive/responsive-1200px-min"
-@import "fi-ware_idm/organizations/responsive/responsive-767px-max"
-
-
-
-/*MY APPLICATIONS*/
-
-@import "fi-ware_idm/my_applications/my_applications"
-
-@import "fi-ware_idm/my_applications/layout/my_applications"
-
-@import "fi-ware_idm/my_applications/responsive/responsive-768px-979px"
-@import "fi-ware_idm/my_applications/responsive/responsive-1200px-min"
-@import "fi-ware_idm/my_applications/responsive/responsive-767px-max"
-
-
-
-/*USER*/
-
-@import "fi-ware_idm/user/user"
-
-@import "fi-ware_idm/user/layout/user"
-
-@import "fi-ware_idm/user/responsive/responsive-768px-979px"
-@import "fi-ware_idm/user/responsive/responsive-1200px-min"
-@import "fi-ware_idm/user/responsive/responsive-767px-max"
-
-
-
-/*ORGANIZATIONS*/
-
-@import "fi-ware_idm/administrators/administrators"
-
-@import "fi-ware_idm/administrators/layout/administrators"
-
-@import "fi-ware_idm/administrators/responsive/responsive-768px-979px"
-@import "fi-ware_idm/administrators/responsive/responsive-1200px-min"
-@import "fi-ware_idm/administrators/responsive/responsive-767px-max"
-
-
+/****************************** Base */
+@import "fi-ware_idm/base/base_call"

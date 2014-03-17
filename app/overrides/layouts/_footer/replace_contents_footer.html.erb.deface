@@ -1,15 +1,17 @@
-<!-- replace_contents 'footer' -->
+<!-- replace 'footer' -->
 
-<div>
-  <%= Date.today.year %> 
-  © 
-  <%= link_to 'FI-WARE', 'http://fi-ware.org/' %>. 
-  The use of FI-LAB services is subject to the acceptance of the
-  <a href="http://wiki.fi-ware.org/FI-LAB_Terms_and_Conditions"> 
-    Terms and Conditions
-  </a>
-  and 
-  <a href="http://forge.fi-ware.org/plugins/mediawiki/wiki/fiware/index.php/FI-LAB_Personal_Data_Protection_Policy">
-    Personal Data Protection Policy
-  </a>
-</div>
+<footer class="container-fluid">
+  <p>
+    <%= Date.today.year %> 
+    © 
+    <%= link_to 'FI-WARE', 'http://fi-ware.org/' %>. 
+    The use of FI-LAB services is subject to the acceptance of the
+    <a href="http://wiki.fi-ware.org/FI-LAB_Terms_and_Conditions"> 
+      Terms and Conditions
+    </a>
+    and 
+    <a href="http://forge.fi-ware.org/plugins/mediawiki/wiki/fiware/index.php/FI-LAB_Personal_Data_Protection_Policy">
+      Personal Data Protection Policy
+    </a>
+  </p>
+</footer>

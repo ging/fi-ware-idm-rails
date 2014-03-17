@@ -1,0 +1,19 @@
+#frontpage
+  #presentation
+    @include make-sm-column(6, $gutter: $grid-gutter-width)
+    @include make-md-column(6, $gutter: $grid-gutter-width)
+    @include make-lg-column(6, $gutter: $grid-gutter-width)
+    .media-body
+      color: #666
+
+    .view-more
+      a
+        color: $brand-primary
+        text-decoration: none
+
+.registration, .forgot-pass, .confirmation, #sign_in
+  @include box-shadow (0px 1px 1px rgba(50, 50, 50, 0.15))
+  @include border-radius
+  padding: $padding-base-vertical $padding-base-horizontal
+  background-color: $white
+  color: $gray-darker

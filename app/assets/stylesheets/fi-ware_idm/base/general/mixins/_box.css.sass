@@ -1,0 +1,202 @@
+// menu horizontal
+// ----------------------------------
+
+@mixin principal-box
+  @include border-radius
+  @include box-shadow (1px 1px 15px 0px rgba(50, 50, 50, 0.1))
+  border: 1px solid 
+  border-color: rgba(0,0,0, 0.1)
+  background-color: $white
+  border-color: rgba(0,0,0, 0.1)
+
+@mixin contact
+  margin-bottom: 9px !important
+  .avatar
+    @include size(40px, 40px)
+    float: left
+    position: absolute
+    margin-top: -4px
+  .data
+    float: left
+    margin: 0px 0 0 60px
+    width: 115px
+    a
+      display: inline-block
+    .name
+      display: inline
+      font-size: 14px
+      a
+        color: $gray
+        @include text-overflow
+  .add
+    @include btn-add
+    margin: 0 0 0 60px
+    padding-top: 22px
+    .btn-group
+      button
+        padding: 0px 12px !important
+      ul.multiselect-container
+        li
+          .multiselect-group
+            color: #888
+            margin-left: 9px
+            border-bottom: 1px solid $brand-primary
+          a
+        li.active
+          label
+            color: $white
+      @include dropdown
+
+@mixin follow
+  position: relative
+  .avatar
+    @include size(40px, 40px)
+    float: left
+    position: absolute
+    margin-top: 2px
+  .data
+    float: left
+    margin: 0 0 0 60px
+    width: 115px
+    a
+      display: inline-block
+    .name
+      margin-top: 5px
+      font-size: 14px
+      a
+        color: $gray
+        @include text-overflow
+  .add
+    text-align: left
+    color: $white
+    font-size: 12px
+    margin: 0 0 0 60px
+    @include btn-add
+    ul.multiselect-container
+      li
+        .multiselect-group
+          color: #888
+          margin-left: 9px
+          border-bottom: 1px solid $brand-primary
+        a
+      li.active
+        label
+          color: $white
+    @include dropdown
+  form
+    margin: 0
+    input
+      display: block
+      background-color: $brand-secundary
+      @include border-radius
+      color: $white
+      text-align: center
+      float: left
+      font-size: 12px
+  .following-button
+    display: block
+    background-color: $body-bg
+    height: 20px
+    width: 100px
+    @include border-radius
+    text-align: center
+    float: left
+    margin-top: -4px
+    font-size: 12px
+  .unfollow-button
+    form
+      margin: 0px
+      input
+        height: 20px
+        border: 0px none 
+        width: 100px
+        display: block
+        background-color: $gray-light
+        @include border-radius
+        color: $white
+        text-align: center
+        float: left
+        margin-top: -4px
+        font-size: 12px
+
+
+@mixin application
+  margin-left: 0
+  li
+    img
+      @include size(40px, 40px)
+      @include border-radius
+      float: left
+      margin-bottom: 6px
+    .data
+      float: left
+      .name,
+      .url
+        margin-left: 10px
+      
+      .name
+        a
+          color: $gray
+      .url
+        margin-bottom: 6px
+        font-size: 14px
+
+    .users
+      float: right
+      
+    .team
+      @include make-sm-column(12, $gutter: $grid-gutter-width)
+      @include make-sm-column(3, $gutter: $grid-gutter-width)
+      @include make-md-column(3, $gutter: $grid-gutter-width)
+      @include make-lg-column(3, $gutter: $grid-gutter-width)
+      float: right
+      margin-top: -2px
+      text-align: right
+      font-size: 12px
+      .users,
+      .auth
+        padding-top: 2px
+        text-align: right
+        @include text-overflow
+        span
+          color: $brand-primary
+      .auth
+        display: inline-block
+
+
+
+
+@mixin inside-box
+  padding: 12px
+  min-height: 300px
+  header
+    margin: -38px 0 15px -12px
+    font-size: 20px
+    a
+      float: right
+      font-size: 16px
+  .first-time-message
+    h3
+      font-size: 22px
+      margin-bottom: 15px
+      line-height: 26px
+  .contact
+    @include contact
+
+  .site_clients
+    width: 100% !important
+  
+  .soften
+    clear: both
+    margin-bottom: 7px
+  
+@mixin selection-light
+  li
+    &:hover
+      background-color: $white
+      @include transition(background 1s, color, 1s)
+
+
+
+
+

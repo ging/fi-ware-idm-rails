@@ -1,0 +1,27 @@
+@mixin edit-btn
+  &:hover
+    header
+      .edit
+        @include opacity(100)
+        margin-left: 5px
+  header
+    .edit
+      @include btn-secundary
+      @include border-radius
+      @include opacity(0)
+
+
+@mixin btn-secundary
+  background-color: $brand-secundary
+  color: $white
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)
+  .caret
+    border-top-color: #FFF
+    border-bottom-color: #FFF
+
+  &:hover, 
+  &:focus, 
+  &:active
+    background-color: $brand-primary
+    color: $white
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)

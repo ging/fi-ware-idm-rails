@@ -1,0 +1,95 @@
+#home,
+#organizations,
+section#new_organization,
+#members,
+#site_clients,
+#site_client,
+#new_site_client,
+#edit_site_client,
+#relation_customs,
+#settings,
+#user,
+#organization,
+#profile-info_edit,
+#new_notification,
+#administrators,
+  @include make-sm-column(9, $gutter: $grid-gutter-width)
+  @include make-sm-column(9, $gutter: $grid-gutter-width)
+  @include make-md-column(9, $gutter: $grid-gutter-width)
+  @include make-lg-column(9, $gutter: $grid-gutter-width)
+  
+
+
+
+section.applications,
+section.organizations,
+section.personal_info
+  margin: 0 0 44px 2.5%
+  padding: 12px
+  h4
+    margin-left: 10px
+
+#organization,
+#user
+  h4
+    margin-left: 15px
+
+
+#organization
+  section.applications
+    width: 100%
+    min-height: 90px
+    ul
+      @include application
+    .view-all
+      float: right
+
+  section#members
+    @include inside-box
+    header
+      font-size: 20px
+  
+      
+  section.applications,
+  section.organizations
+    min-height: 100% !important
+    header
+      font-size: 20px
+      #add-contact-link
+        @include btn-secundary
+        @include border-radius
+  .applications,
+  .organizations
+    &:hover
+      header
+        .edit-phanton
+          @include opacity(100)
+    header
+      .edit-phanton
+        @extend btn-secundary
+        @include border-radius
+        @include opacity(0)
+
+
+div.organization,
+div.member,
+section.organizations
+  @include contact
+  
+
+div.aplication
+  @include application
+
+#members
+  .contact
+    .btn-group
+      button
+        padding: 0px 12px !important
+  .members-list
+    .contact
+      .add
+        ul.multiselect-container
+          li.multiselect-group
+            color: #888
+            margin-left: 9px
+            border-bottom: 1px solid $brand-primary

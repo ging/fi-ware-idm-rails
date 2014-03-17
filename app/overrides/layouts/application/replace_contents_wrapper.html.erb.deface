@@ -4,6 +4,8 @@
     <%= render :partial => "toolbar/toolbar" %>
   <% end %>
 
-  <%= flashy %>
-
   <%= yield %>
+
+  <div class="push"></div>
+
+  <%= flashy %>

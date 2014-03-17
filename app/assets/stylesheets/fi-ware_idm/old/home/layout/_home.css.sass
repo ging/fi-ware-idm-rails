@@ -1,0 +1,41 @@
+div.home
+  margin: 59px 0 0 0
+  div.applications
+    @include make-sm-column(6, $gutter: $grid-gutter-width)
+    @include make-sm-column(6, $gutter: $grid-gutter-width)
+    @include make-md-column(6, $gutter: $grid-gutter-width)
+    @include make-lg-column(6, $gutter: $grid-gutter-width)
+
+    float: left
+    ul
+      @include application
+    .view-all
+      float: right
+
+  div.organizations,
+  div.members
+    @include make-sm-column(6, $gutter: $grid-gutter-width)
+    @include make-sm-column(6, $gutter: $grid-gutter-width)
+    @include make-md-column(6, $gutter: $grid-gutter-width)
+    @include make-lg-column(6, $gutter: $grid-gutter-width)
+    float: right
+    margin: 0 0 43px 2.5%
+    form
+      margin-bottom: 11px
+    .view-all
+      float: right
+
+    .contact
+      min-height: 42px
+      
+
+  div.organizations
+    form
+      margin-bottom: 4px
+    
+  div.applications,
+  div.organizations,
+  div.members
+    padding: 12px 12px 12px 12px
+    @include inside-box
+

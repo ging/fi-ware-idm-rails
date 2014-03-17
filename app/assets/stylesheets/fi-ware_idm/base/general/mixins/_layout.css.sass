@@ -1,0 +1,55 @@
+// menu horizontal
+// ----------------------------------
+@mixin menuHorizontal 
+  list-style-type: none
+  display: inline
+  li
+    display: inline
+
+
+@mixin header-tab
+  header
+    margin-bottom: 0
+    margin-top: 0
+    a
+      float: left
+      @include btn-secundary
+      @include border-radius
+      margin-top: 13px
+      font-family: "Verdana"
+    h3
+      float: none !important
+      text-align: right
+
+  .search-nav
+    float: right
+    width: 30%
+
+  ul.nav-tabs
+    margin: -25px 0 0
+    width: 100%
+    float: left
+
+@mixin dropdown
+  .dropdown-menu,
+  .dropdown-submenu
+    li 
+      a
+        &:hover 
+          background-color: $brand-secundary
+          background-image: none
+          color: $gray
+
+  .dropdown-menu
+    li 
+      a
+        &:focus
+          background-color: $brand-secundary
+    li.active
+      a
+        &:hover
+          background-color: $brand-primary
+  .dropdown-submenu
+    &:focus 
+      a 
+        background-color: $brand-secundary

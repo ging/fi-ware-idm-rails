@@ -1,0 +1,68 @@
+<!-- replace_contents '.headerFront' -->
+
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <i class="fa fa-angle-double-down"></i>
+            </a>
+            <div class="logo-header in">
+              <a href="index.html" class="logo">
+                <img alt="FI-WARE" src="/assets/header-logo.png">
+              </a>
+              <a href="index.html" class="brand">
+                <span>FI-</span>WARE
+              </a>    
+            </div>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="cloud <%= active_official_app(:cloud) %>">
+	          <%= link_to 'Cloud', fiware_env_url(subdomain: 'cloud') %>
+	        </li>
+	        <li class="store <%= active_official_app(:store) %>">
+	          <%= link_to 'Store', fiware_env_url(subdomain: 'store') %>
+	        </li>
+	        <li class="mashup <%= active_official_app(:mashup) %>">
+	          <%= link_to 'Mashup', fiware_env_url(subdomain: 'mashup') %>
+	        </li>
+	        <li class="account <%= no_active_official_app %>">
+	          <%= link_to 'Account', root_url %>
+	        </li>
+	        <li class="help">
+	          <%= link_to 'Help&info', fiware_env_url %>
+	        </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+        <div class="pull-right login dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <%=t("sign_in")%>
+        <icon class="fa fa-caret-down"></icon>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu">
+        <%= form_for User.new, :as => :user, :url => user_session_path do |f| %>
+          <%= f.email_field :email, :id => "username" %>
+          <%= f.password_field :password, :id => "password"  %>
+          <label class="checkbox">
+            <input type="checkbox"> <%=t("activerecord.attributes.user.remember_me")%>
+          </label>
+          <%= f.submit t(:sign_in), :class => ' btn btn-primary'%>
+          <hr class="soften">
+          <%= link_to t('devise.links.forgot_password'), new_password_path(:user) %>
+          <%= render :partial => "devise/shared/links" %>
+        <% end %>
+        <%= javascript_tag do %>
+          $(function() {
+            if ("placeholder" in document.createElement("input")) {
+              $("#username").attr('placeholder', I18n.t('activerecord.attributes.user.email'));
+            } 
+            else 
+            { $("#username").watermark(I18n.t('activerecord.attributes.user.email'),"#666");
+            }
+            $("#password").watermark(I18n.t('activerecord.attributes.user.password'),"#666");
+          });
+        <% end %>
+      </ul>
+    </div>
+      </nav>
