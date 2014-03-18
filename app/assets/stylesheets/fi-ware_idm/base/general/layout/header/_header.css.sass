@@ -6,37 +6,25 @@ header
       width: auto
       margin-top: 0
       margin-left: 10px
-      img
+      img.logo
         width: 51px
         padding-top: 0
-        float: left
-  .brand
-    padding: 0
-    width: auto
-    margin: 0 0 0 3px
-    font-size: 23px !important
-    font-family: "NeoTechstd-Regular"
-    color: #00D3DE !important
-    display: inline-block
-    font-weight: normal !important
-    text-shadow: 0 1px 0 rgb(255, 255, 255)
-    padding: 7px 0px 0px 0px
-    font-size: 26px
-    a
-      &:hover
-        text-decoration: none
-    span
-      color: #002d67 !important
-
-
-  .logo, 
-  .brand
-    float: left !important
+      img.fiware-logo,
+      img.filab-logo
+        margin-left: 3px
+        margin-top: 8px
+    .logo
+      float: left
+      margin-top: 0
 .login
-  position: absolute
-  right: 25px
-  margin-top: 10px
-
+  width: 100%
+  background: #FFF
+  .dropdown
+    position: absolute
+    right: 0
+    padding: 6px 25px 8px 0
+  .dropdown-menu 
+    @include dropdown-log
 a.menu-down
   float: right !important
   padding: 0 !important
@@ -79,16 +67,20 @@ a.menu-down
   font-weight: bold
 
 
-.navbar .nav > .active > a, .navbar .nav > li > a:focus, .navbar .nav > li > a:hover
+.navbar .nav > .active > a
   color: #002759
   background-color: #FAFAFA
+  &:focus,
+  &:hover
+    background-color: #002759 !important
+    color: #fff !important
 
 
 .navbar .nav > li > a
   padding: 14px 20px 9px 20px
   font-size: 14px
   text-shadow: none
-  font-family: $font-family-sans-serif-Regular
+  font-family: $corporate-font-family-sans-serif-Regular
   color: $navbar-default-link-color
   &:hover
     border: 0
@@ -97,6 +89,7 @@ a.menu-down
     box-shadow: none !important
     background-color: #FFF !important
     color: #00D3DE !important
+
   &:focus
     border: 0
     -webkit-box-shadow: none
@@ -104,10 +97,6 @@ a.menu-down
     box-shadow: none !important
     background-color: #FcFcFc !important
     color: #00D3DE !important
-  &:focus,
-  &:hover
-    background-color: #002759 !important
-    color: #fff !important
 
 .navbar-toggle
   padding: 0
