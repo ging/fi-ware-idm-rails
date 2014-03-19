@@ -126,7 +126,6 @@ module FiWareIdm
           ]
         }
       end
-
     end
   end
 end
