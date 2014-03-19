@@ -4,7 +4,7 @@ class V2::UsersController < ApplicationController
 	#SCIM 2.0: LIST Users => GET /v2/users/
 	def index
 		unless can? :manageSCIM, User
-			render json: SCIMUtils.error("Permission denied")
+			render json: SCIMUtils.error("Permission denied",401)
 			return;
 		end
 
@@ -29,14 +29,14 @@ class V2::UsersController < ApplicationController
 		actor = Actor.find(params[:id])
 
 		if actor.subject_type != "User"
-			render json: SCIMUtils.error("Invalid Id")
+			render json: SCIMUtils.error("Invalid Id",404)
 			return;
 		end
 
 		user = actor.user
 
 		unless can? :read, user
-			render json: SCIMUtils.error("Permission denied")
+			render json: SCIMUtils.error("Permission denied",401)
 			return;
 		end
 

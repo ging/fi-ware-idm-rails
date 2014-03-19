@@ -4,7 +4,7 @@ class V2::OrganizationsController < ApplicationController
 	#SCIM 2.0: LIST Organizations => GET /v2/organizations/
 	def index
 		unless can? :manageSCIM, Organization
-			render json: SCIMUtils.error("Permission denied")
+			render json: SCIMUtils.error("Permission denied",401)
 			return;
 		end
 
@@ -29,14 +29,14 @@ class V2::OrganizationsController < ApplicationController
 		actor = Actor.find(params[:id])
 
 		if actor.subject_type != "Group"
-			render json: SCIMUtils.error("Invalid Id")
+			render json: SCIMUtils.error("Invalid Id",404)
 			return;
 		end
 
 		organization = actor.group
 
 		unless can? :read, organization
-			render json: SCIMUtils.error("Permission denied")
+			render json: SCIMUtils.error("Permission denied",401)
 			return;
 		end
 
