@@ -115,7 +115,7 @@ module FiWareIdm
             created: created_at,
             lastModified: updated_at,
             version: "1",
-            location: controller.request.url
+            location: controller.root_url + "v2/users/" + actor.id.to_s
           },
           profileUrl: controller.root_url[0..-2] + controller.user_path(self),
           emails: [
@@ -123,7 +123,14 @@ module FiWareIdm
               value: email,
               primary: "true"
             }
-          ]
+          ],
+          groups: self.organizations.map{ |o|
+            {
+              value: o.actor.id,
+              ref: controller.root_url + "v2/organizations/" + o.actor.id.to_s,
+              display: o.name
+            }
+          }
         }
       end
     end

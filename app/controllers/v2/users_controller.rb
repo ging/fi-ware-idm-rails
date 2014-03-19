@@ -1,7 +1,7 @@
 class V2::UsersController < ApplicationController
 	require 'SCIMUtils'
 
-	#SCIM 2.0: LIST Users => GET /users/
+	#SCIM 2.0: LIST Users => GET /v2/users/
 	def index
 		unless can? :manageSCIM, User
 			render json: SCIMUtils.error("Permission denied")
@@ -24,7 +24,7 @@ class V2::UsersController < ApplicationController
 		end
 	end
 
-	#SCIM 2.0: GET User => GET /users/:actorId
+	#SCIM 2.0: GET User => GET /v2/users/:actorId
 	def show
 		actor = Actor.find(params[:id])
 
