@@ -20,6 +20,9 @@ module FiWareIdm
   mattr_accessor :allowed_email_domains
   @@allowed_email_domains = []
 
+  mattr_accessor :forbidden_email_domains
+  @@forbidden_email_domains = []
+
   class << self
     def setup
       yield self

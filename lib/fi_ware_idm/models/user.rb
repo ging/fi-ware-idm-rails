@@ -4,16 +4,34 @@ module FiWareIdm
       extend ActiveSupport::Concern
 
       included do
-        validates :email,
-                  format: {
-                    with: /(#{ FiWareIdm.allowed_email_domains.join('|') })$/,
-                    if: Proc.new { FiWareIdm.allowed_email_domains.present? },
-                    message: ": the e-mail domain is not valid. Please note that you are signing up to the FI-WARE Testbed, restricted to PPP members. If you are a PPP member, please use your corporate email (not gmail, yahoo, etc.). If you are not a PPP member, you can apply for an account in FI-WARE (http://fi-ware.org/), that is suitable for anyone, PPP member or not.
-                    
-                    If you are a PPP member using your corporate e-mail address and you get this message, please contact the support team at fiware-testbed-help@lists.fi-ware.org to add your domain name to our white list.
         
+        validate :checkEmail
+
+        def checkEmail
+          errorMsg = ": the e-mail domain is not valid. Please note that you are signing up to the FI-WARE Testbed, restricted to PPP members. If you are a PPP member, please use your corporate email (not gmail, yahoo, etc.). If you are not a PPP member, you can apply for an account in FI-WARE (http://fi-ware.org/), that is suitable for anyone, PPP member or not.
+                    If you are a PPP member using your corporate e-mail address and you get this message, please contact the support team at fiware-testbed-help@lists.fi-ware.org to add your domain name to our white list.
                     Important: a given domain on the white list authorises e-mail adresses in all the subdomains under it."
-                  }
+
+          emailDomain = Mail::Address.new(self.email).domain
+
+          #If a blacklist if defined, all emails included can't be registered
+          if FiWareIdm.forbidden_email_domains.present?
+            if FiWareIdm.forbidden_email_domains.include?(emailDomain)
+              errors.add(:email,errorMsg)
+              return
+            end
+          end
+
+          #If a whitelist if defined, if a email is not included, it can't be registered
+          if FiWareIdm.allowed_email_domains.present?
+            if !FiWareIdm.allowed_email_domains.include?(emailDomain)
+              errors.add(:email,errorMsg)
+              return
+            end
+          end
+
+          true
+        end
 
         # Overwrite User#represented method
         #

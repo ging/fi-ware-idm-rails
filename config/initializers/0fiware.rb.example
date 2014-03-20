@@ -25,6 +25,22 @@ FiWareIdm.setup do |config|
   # config.bug_receivers = [ 'admin@lab.fi-ware.org' ]
 
   # List of email domains that are allowed to register
-  # config.allowed_email_domains = %w( example.com other-example.com )
+  #
+  # whiteListPath = "config/emailLists/whitelist.txt"
+  # if File.exists?(whiteListPath)
+  #   config.allowed_email_domains = File.read(whiteListPath).split("\n")[0].split(", ")
+  # else
+  #   config.allowed_email_domains = %w( example.com other-example.com )
+  # end
+
+  # List of email domains that are not allowed to register
+  #
+  # blackListPath = "config/emailLists/blacklist.txt"
+  # if File.exists?(blackListPath)
+  #   config.forbidden_email_domains = File.read(blackListPath).split("\n")[0].split(", ")
+  # else
+  #   config.forbidden_email_domains = %w( example.com other-example.com )
+  # end
+
 end
 
