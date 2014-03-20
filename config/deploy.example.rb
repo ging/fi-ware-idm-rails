@@ -4,7 +4,7 @@ set :rvm_type, :system
 require 'bundler/capistrano'
 
 set :application, "fi-ware-idm"
-set :repository,  "git://github.com/ging/fi-ware-idm.git"
+set :repository,  "https://github.com/ging/fi-ware-idm.git"
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`

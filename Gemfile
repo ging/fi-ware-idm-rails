@@ -38,6 +38,7 @@ gem 'jquery-rails'
 group :development do
   gem 'forgery'
   gem 'diffy'
+  gem "capistrano", "~> 2.15.5"
 end
 
 group :development, :test do
