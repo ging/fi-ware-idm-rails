@@ -45,4 +45,38 @@ class V2::UsersController < ApplicationController
 		end
 	end
 
+	#SCIM 2.0: CREATE User => POST /v2/users/
+	def create
+		# #Params example
+		# {
+		#  "user"=>
+		# {"name"=>"Demo",
+		#  "email"=>"demo@social-stream.dit.upm.es",
+		#  "password"=>"demonstration",
+		#  "password_confirmation"=>"demonstration"},
+		# }
+
+		unless can? :manageSCIM, User
+			render json: SCIMUtils.error("Permission denied",401)
+			return;
+		end
+
+		user = User.new(params[:user])
+		user.valid?
+
+		#Skip device validation...
+		#This is needed to allow users to log in without validate its email. Prevent this error when a user try to logs in: You have to confirm your account before continuing.'
+		user.skip_confirmation!
+
+		respond_to do |format|
+			format.any { 
+				if user.errors.blank? and user.save
+					render json: user 
+				else
+					render json: user.errors, status: :unprocessable_entity
+				end
+			}
+		end
+	end
+
 end
