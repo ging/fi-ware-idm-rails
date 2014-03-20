@@ -1,5 +1,7 @@
-header 
-  .logo-header
+header,
+.navbar-header
+  .logo-header,
+  .logo-header-in
     width: 200px
     display: inline
     a.logo
@@ -16,9 +18,12 @@ header
     .logo
       float: left
       margin-top: 0
+  .extras
+    display: inline-block
 .login
   width: 100%
-  background: #FFF
+  background: $body-bg
+  min-height: 33px
   .dropdown
     position: absolute
     right: 0

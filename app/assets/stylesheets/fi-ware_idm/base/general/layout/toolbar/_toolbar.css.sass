@@ -1,7 +1,7 @@
 .menu-toolbar
-  width: 17%
-  float: left
-  margin-left: 0
+  @include make-sm-column(4, $gutter: $grid-gutter-width)
+  @include make-md-column(4, $gutter: $grid-gutter-width)
+  @include make-lg-column(4, $gutter: $grid-gutter-width)
   h5
     font-size: 19px
     font-family: $corporate-font-family-sans-serif-Regular

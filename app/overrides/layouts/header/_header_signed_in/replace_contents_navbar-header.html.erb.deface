@@ -1,0 +1,50 @@
+<!-- replace_contents'.navbar-header' -->
+  <a type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+    <i class="fa fa-angle-double-down"></i>
+  </a>
+  <div class="logo-header">
+    <a href="index.html" class="logo">
+      <img alt="FI-WARE" class="logo" src="/assets/header-logo.png">
+              
+      <img alt="FI-WARE" class="fiware-logo" src="/assets/FI-WARE.png">
+    </a>
+  </div>
+
+  <div class="dropdown extras">
+    <%= link_to '#', class: 'dropdown-toggle', "data-toggle" => "dropdown" do %>
+      <i class='fa fa-caret-down'></i> 
+    <% end %>
+
+    <ul class="dropdown-menu dropdown-menu-right">
+      <li class="cloud">
+      <a href="#">
+        cloud   
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        store
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        mashup
+      </a>
+    </li>
+    <li class="active">
+      <a href="#">
+        account
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        help & info
+      </a>
+    </li>
+    </ul>
+  </div>
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav nav-mobile">
+      <%= render partial: 'layouts/header/header_signed_in_mobile' %>
+    </ul>
+  </div>
