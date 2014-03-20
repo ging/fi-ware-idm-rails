@@ -27,3 +27,7 @@ config/initializers/0fiware.rb
 .DS_Store
 
 .sass-cache/
+
+#Email lists
+config/emailLists/whitelist.txt
+config/emailLists/blacklist.txt

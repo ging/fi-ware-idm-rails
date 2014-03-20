@@ -12,7 +12,7 @@ module FiWareIdm
                     
                     If you are a PPP member using your corporate e-mail address and you get this message, please contact the support team at fiware-testbed-help@lists.fi-ware.org to add your domain name to our white list.
         
-        Important: a given domain on the white list authorises e-mail adresses in all the subdomains under it."
+                    Important: a given domain on the white list authorises e-mail adresses in all the subdomains under it."
                   }
 
         # Overwrite User#represented method
