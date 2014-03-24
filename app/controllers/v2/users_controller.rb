@@ -1,3 +1,5 @@
+# You can use the template http://localhost:3000/scimapi to test the SCIM API
+
 class V2::UsersController < ApplicationController
 	require 'SCIMUtils'
 
@@ -76,6 +78,36 @@ class V2::UsersController < ApplicationController
 					render json: user.errors, status: :unprocessable_entity
 				end
 			}
+		end
+	end
+
+	#SCIM 2.0: Update User => PUT /v2/users/:actorId
+	def update
+		actor = Actor.find(params[:id])
+
+		if actor.subject_type != "User"
+			render json: SCIMUtils.error("Invalid Id",404)
+			return;
+		end
+
+		user = actor.user
+
+		unless can? :update, user
+			render json: SCIMUtils.error("Permission denied",401)
+			return;
+		end
+
+		if !params[:user].nil? and params[:user][:password].blank?
+			params[:user].delete("password")
+		end
+
+		user.assign_attributes(params[:user])
+		user.valid?
+
+		if user.errors.blank? and user.save
+			render json: user
+		else
+			render json: user.errors, status: :unprocessable_entity
 		end
 	end
 

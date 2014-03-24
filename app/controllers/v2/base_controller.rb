@@ -25,4 +25,9 @@ class V2::BaseController < ApplicationController
 		end
 	end
 
+	#Testing the SCIM 2.0 API  => /v2/testing
+	def testing
+		render :layout => false
+	end
+
 end

@@ -1,0 +1,50 @@
+<p> Testing SCIM API </p>
+
+
+</br>
+<p><a href="/v2/users" target="_blank">Listing users</a></p>
+
+</br>
+<p> Register a new user </p>
+<form accept-charset="UTF-8" action="/v2/users" method="post">
+	<input name="utf8" type="hidden" value="✓">
+	<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+      
+    <div class="reg-labels">
+      <label for="user_name">Name</label>
+      <input class="form_tag" id="user_name" name="user[name]" size="30" type="text">
+      
+      <label for="user_email">Email</label>
+      <input class="form_tag" id="user_email" name="user[email]" size="30" type="text" value="">
+      
+      <label for="user_password">Password</label>
+      <input class="form_tag" id="password" name="user[password]" size="30" type="password">
+
+      <label for="user_password_confirmation">Confirm password</label>
+      <input class="form_tag" id="user_password_confirmation" name="user[password_confirmation]" size="30" type="password">
+
+	  <input class="btn pull-right" name="commit" type="submit" value="Accept">
+	</div>
+</form>
+
+</br>
+<p> Editing the first user </p>
+<% user = User.find(1) %>
+<form accept-charset="UTF-8" action="/v2/users/<%=user.actor.id=%>" method="post">
+  <input name="_method" type="hidden" value="put">
+	<input name="utf8" type="hidden" value="✓">
+	<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+      
+    <div class="reg-labels">
+      <label for="user_name">Name</label>
+      <input class="form_tag" id="user_name" name="user[name]" size="30" type="text" value="<%=user.name=%>">
+      
+      <label for="user_email">Email</label>
+      <input class="form_tag" id="user_email" name="user[email]" size="30" type="text" value="<%=user.email=%>">
+      
+      <label for="user_password">Password</label>
+      <input class="form_tag" id="password" name="user[password]" size="30" type="password">
+
+	    <input class="btn pull-right" name="commit" type="submit" value="Accept">
+	</div>
+</form>

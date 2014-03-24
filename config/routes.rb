@@ -16,6 +16,7 @@ FiWareIdm::Application.routes.draw do
     resources :users
     resources :organizations
     match '/ServiceProviderConfigs' => "base#getConfig"
+    match '/testing' => "base#testing"
   end
 
   match '/terms-of-service' => 'frontpage#terms_of_service', as: :terms_of_service
