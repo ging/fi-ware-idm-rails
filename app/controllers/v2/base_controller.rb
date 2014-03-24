@@ -1,13 +1,26 @@
+# You can use the template http://localhost:3000/scimapi to test the SCIM API
+
 class V2::BaseController < ApplicationController
 	require 'SCIMUtils'
+	before_filter :authorizeSCIM, :except => [:testing,:getConfig]
+	before_filter :authorizeSCIMWatcher, :only => [:getConfig]
 
-	#SCIM 2.0: Retrieve the Provider Configuration  => GET /v2/ServiceProviderConfigs
-	def getConfig
-		unless can? :manageSCIM, Organization
+	def authorizeSCIM
+		unless can? :manageSCIM, User
 			render json: SCIMUtils.error("Permission denied",401)
 			return;
 		end
+	end
 
+	def authorizeSCIMWatcher
+		unless ((can? :manageSCIM, User)or(can? :showSCIM, User))
+			render json: SCIMUtils.error("Permission denied",401)
+			return;
+		end
+	end
+
+	#SCIM 2.0: Retrieve the Provider Configuration  => GET /v2/ServiceProviderConfigs
+	def getConfig
 		totalUsers = User.count;
 		totalOrganizations = Organization.count;
 		totalResources = totalUsers + totalOrganizations

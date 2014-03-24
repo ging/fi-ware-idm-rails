@@ -1,5 +1,4 @@
-class V2::OrganizationsController < ApplicationController
-	require 'SCIMUtils'
+class V2::OrganizationsController < V2::BaseController
 
 	#SCIM 2.0: LIST Organizations => GET /v2/organizations/
 	def index

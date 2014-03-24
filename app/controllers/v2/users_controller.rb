@@ -1,15 +1,8 @@
-# You can use the template http://localhost:3000/scimapi to test the SCIM API
-
-class V2::UsersController < ApplicationController
-	require 'SCIMUtils'
+class V2::UsersController < V2::BaseController
+	before_filter :checkValidActor, :only => [:show,:update,:destroy]
 
 	#SCIM 2.0: LIST Users => GET /v2/users/
 	def index
-		unless can? :manageSCIM, User
-			render json: SCIMUtils.error("Permission denied",401)
-			return;
-		end
-
 		users = [];
 		User.all.each do |user|
 			users.push(user.as_scim_json(v=2,self))
@@ -28,22 +21,13 @@ class V2::UsersController < ApplicationController
 
 	#SCIM 2.0: GET User => GET /v2/users/:actorId
 	def show
-		actor = Actor.find(params[:id])
-
-		if actor.subject_type != "User"
-			render json: SCIMUtils.error("Invalid Id",404)
-			return;
-		end
-
-		user = actor.user
-
-		unless can? :read, user
+		unless can? :read, @user
 			render json: SCIMUtils.error("Permission denied",401)
 			return;
 		end
 
 		respond_to do |format|
-			format.any { render json: user.as_scim_json(v=2,self) }
+			format.any { render json: @user.as_scim_json(v=2,self) }
 		end
 	end
 
@@ -57,11 +41,6 @@ class V2::UsersController < ApplicationController
 		#  "password"=>"demonstration",
 		#  "password_confirmation"=>"demonstration"},
 		# }
-
-		unless can? :manageSCIM, User
-			render json: SCIMUtils.error("Permission denied",401)
-			return;
-		end
 
 		user = User.new(params[:user])
 		user.valid?
@@ -83,16 +62,7 @@ class V2::UsersController < ApplicationController
 
 	#SCIM 2.0: Update User => PUT /v2/users/:actorId
 	def update
-		actor = Actor.find(params[:id])
-
-		if actor.subject_type != "User"
-			render json: SCIMUtils.error("Invalid Id",404)
-			return;
-		end
-
-		user = actor.user
-
-		unless can? :update, user
+		unless can? :update, @user
 			render json: SCIMUtils.error("Permission denied",401)
 			return;
 		end
@@ -101,14 +71,42 @@ class V2::UsersController < ApplicationController
 			params[:user].delete("password")
 		end
 
-		user.assign_attributes(params[:user])
-		user.valid?
+		@user.assign_attributes(params[:user])
+		@user.valid?
 
-		if user.errors.blank? and user.save
-			render json: user
+		if @user.errors.blank? and @user.save
+			render json: @user
 		else
-			render json: user.errors, status: :unprocessable_entity
+			render json: @user.errors, status: :unprocessable_entity
 		end
+	end
+
+	#SCIM 2.0: Destroy User => DELETE /v2/users/:actorId
+	def destroy
+		unless can? :destroy, @user
+			render json: SCIMUtils.error("Permission denied",401)
+			return;
+		end
+
+		if @user.destroy
+			render json: "Done"
+		else
+			render json: SCIMUtils.error("Internal server error",500)
+		end
+	end
+
+	##########
+	# Filters
+	##########
+	def checkValidActor
+		actor = Actor.find(params[:id])
+
+		if actor.subject_type != "User"
+			render json: SCIMUtils.error("Invalid Id",404)
+			return;
+		end
+
+		@user = actor.user
 	end
 
 end
