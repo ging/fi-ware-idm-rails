@@ -11,6 +11,10 @@ class OrganizationsController < GroupsController
     end
   end
 
+  def create
+    super
+  end
+
   protected
 
   def collection

@@ -1,6 +1,11 @@
 <p> Testing SCIM API </p>
 
 
+
+</br>
+</br>
+<h1> Users </h1>
+
 </br>
 <p><a href="/v2/users" target="_blank">Listing users</a></p>
 
@@ -66,4 +71,33 @@
       
       <input class="btn pull-right" name="commit" type="submit" value="Remove">
   </div>
+</form>
+
+
+</br>
+</br>
+<h1> Organizations </h1>
+
+</br>
+<p><a href="/v2/organizations" target="_blank">Listing organizations</a></p>
+</br>
+
+<p> Create an organization </p>
+<form accept-charset="UTF-8" action="/v2/organizations" method="post">
+  <input name="utf8" type="hidden" value="✓">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+  <section class="name">
+    <label for="organization_name">Name</label>
+    <input id="organization_name" name="organization[name]" size="30" type="text">
+  </section>
+  <section class="owners">
+    <label for="s2id_autogen1">Owners. Include actor ids separated by commas (e.g. 1,2,8)</label>
+    <input name="organization[owners]" size="30" type="text">
+  </section>
+  <section class="description">
+    <label for="organization_description">Description</label>
+    <textarea cols="40" name="organization[description]" rows="20"></textarea>
+  </section>
+  <input class="btn" name="commit" type="submit" value="Create Organization">
 </form>

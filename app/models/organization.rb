@@ -4,6 +4,13 @@ class Organization < Group
 		self.contact_subjects(:direction => :sent, :type=> :user)
 	end
 
+	def to_json(params)
+		self.attributes.merge({
+			name: name,
+			description: description
+		}).to_json
+	end
+
 	def as_scim_json(version,controller)
 		{
 			schemas: ["urn:scim:schemas:core:2.0:Group"],
