@@ -1,0 +1,81 @@
+#user,
+#organization
+  margin-top: 16px
+  header
+    margin-bottom: 8px
+    h3
+      margin: $zero
+      line-height: 20px
+      float: left !important
+    a
+      float: right
+      img
+        margin: -21px 15px -74px $zero
+    .edit
+      float: left
+
+  section.organizations,
+  section.aplications
+    width: 100%
+    margin-left: $zero
+  
+
+  .organizations-list
+    li
+      @include panels-contacts
+  .applications-list
+    li
+      @include panels-items
+
+
+  .personal_info
+    header
+      margin-bottom: $zero
+      font-size: 18px
+      color: $brand-primary
+      font-family: $corporate-font-family-sans-serif-Regular
+    .result
+      margin-bottom: 2px
+      padding-top: 5px
+      border-top: 1px solid #A5CACF
+      color: #929292
+    .panel-group
+      margin-bottom: $zero
+    .panel-default
+      border: none
+      box-shadow: none
+      .panel-heading
+        background-color: $white
+        min-height: 12px
+        color: $link-color
+        text-align: right
+        padding: $zero
+        a
+          float: none
+      .panel-collapse
+        border: none
+        padding: 0px
+        margin: $zero
+        .panel-body
+          border: none
+          padding: $zero
+        .content
+          padding: 0px
+
+    .ocupation,
+    .website
+      margin-bottom: 6px
+
+  .members
+    .member-list
+      @include panels-contacts
+      .contact
+        min-height: 50px
+        padding-top: 6px
+        @include follow
+        .avatar
+          margin-top: -3px
+        .data
+          width: 200px
+
+      

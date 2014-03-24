@@ -13,25 +13,28 @@ section#new_organization,
 #profile-info_edit,
 #new_notification,
 #administrators,
-  @include make-sm-column(8, $gutter: $grid-gutter-width)
-  @include make-md-column(8, $gutter: $grid-gutter-width)
-  @include make-lg-column(8, $gutter: $grid-gutter-width)
-  
+  @include make-sm-column(11, $gutter: $grid-gutter-width)
+  @include make-md-column(9, $gutter: $grid-gutter-width)
+  @include make-lg-column(9, $gutter: $grid-gutter-width)
+  .well
+    clear: both
 
-
-
-section.applications,
-section.organizations,
-section.personal_info
-  margin: 0 0 44px 2.5%
-  padding: 12px
-  h4
-    margin-left: 10px
-
+#home,
+#organizations,
+section#new_organization,
+#members,
+#site_clients,
+#site_client,
+#new_site_client,
+#edit_site_client,
+#relation_customs,
+#user,
 #organization,
-#user
-  h4
-    margin-left: 15px
+#profile-info_edit,
+#new_notification,
+#administrators
+  @include header-tab
+
 
 
 #organization
@@ -73,8 +76,14 @@ section.personal_info
 div.organization,
 div.member,
 section.organizations
-  @include contact
+  @include follow
   
+#organizations,
+#site_clients
+  ul.nav
+    float: none
+    margin: $zero
+
 
 div.aplication
   @include application
@@ -92,3 +101,19 @@ div.aplication
             color: #888
             margin-left: 9px
             border-bottom: 1px solid $brand-primary
+
+
+
+.alert
+  position: relative
+
+a
+  text-decoration: none
+  &:hover
+    text-decoration: none
+
+
+  #error_explanation
+    h2
+      font-size: 18px
+      margin-bottom: 1px

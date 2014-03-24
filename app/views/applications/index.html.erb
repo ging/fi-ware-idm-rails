@@ -2,22 +2,20 @@
   <section class="site_clients">
     <header>
       <h3>
-        <%= link_to t('site.client.new.link'), polymorphic_path(resource_class.new, action: 'new'), class: "new_site_client-modal-link"  %>
-        
         Applications
       </h3>
+      <%= link_to t('site.client.new.link'), polymorphic_path(resource_class.new, action: 'new'), class: "new_site_client-modal-link"  %>
     </header>
 
-    <div class="tabbable">
+    <div class="well">
       <ul class="nav nav-tabs">
         <li><a href="#providing" data-toggle="tab">Providing</a></li>
         <li><a href="#purchased" data-toggle="tab">Purchased</a></li>
       </ul>  
-    </div>
-
-    <div class="tab-content">
-      <div class="tab-pane" id="providing"></div>
-      <div class="tab-pane" id="purchased"></div>
+      <div class="tab-content">
+        <div class="tab-pane" id="providing"></div>
+        <div class="tab-pane" id="purchased"></div>
+      </div>
     </div>
   </section>
 

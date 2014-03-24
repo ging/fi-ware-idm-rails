@@ -9,26 +9,31 @@
 
 @mixin header-tab
   header
-    margin-bottom: 0
-    margin-top: 0
-    a
+    margin-bottom: $zero
+    margin-top: $zero
+    .edit
       float: left
       @include btn-secundary
       @include border-radius
       margin-top: 13px
-      font-family: "Verdana"
+      font-family: $font-family-sans-serif
     h3
       float: none !important
       text-align: right
+      display: block
+      font-family: $corporate-font-family-sans-serif-Regular
+      color: $brand-primary-2
+
 
   .search-nav
     float: right
     width: 30%
 
   ul.nav-tabs
-    margin: -25px 0 0
-    width: 100%
-    float: left
+    margin: -25px $zero $zero
+    @include make-sm-column(12, $gutter: $grid-gutter-width)
+    @include make-md-column(12, $gutter: $grid-gutter-width)
+    @include make-lg-column(12, $gutter: $grid-gutter-width)
 
 @mixin dropdown
   .dropdown-menu,
@@ -36,7 +41,7 @@
     li 
       a
         &:hover 
-          background-color: $brand-secundary
+          background-color: $brand-primary-2
           background-image: none
           color: $gray
 
@@ -44,7 +49,7 @@
     li 
       a
         &:focus
-          background-color: $brand-secundary
+          background-color: $brand-primary-2
     li.active
       a
         &:hover
@@ -52,4 +57,4 @@
   .dropdown-submenu
     &:focus 
       a 
-        background-color: $brand-secundary
+        background-color: $brand-primary-2

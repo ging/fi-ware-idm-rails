@@ -1,27 +1,25 @@
-<div class="organizations">
-  <header>
-    Organizations
+<div class="panel panel-default organizations">
+  <div class="panel-heading">
+    <h5 class="panel-title">Organizations</h5>
     <%= link_to "Create", new_organization_path %>
-  </header>
-
-  <!--
-  <form class="form-inline">
-    <input type="text" class="input-small" placeholder="search..">
-  </form>
-  -->
-
-  <% if current_user.organizations.blank? %>
-    <div class="first-time-message">
-      <h3>  
-        You are not member of any organization
-      </h3> 
-      <%= link_to "Browse organizations", organizations_path(section: 'others') %> or <%= link_to "create a new organization", new_organization_path %>
+  </div>
+  <% if current_subject.applications.blank? %>
+    <div class="panel-body">
+      <div class="first-time-message">
+        <h3>  
+          You are not member of any organization
+        </h3> 
+        <%= link_to "Browse organizations", organizations_path(section: 'others') %> or <%= link_to "create a new organization", new_organization_path %>
+      </div>
     </div>
-  
-  <% else %>
-    <%= render partial: 'organizations/list',
-               object: current_user.organizations.first(5) %>
-
-    <%= link_to "View all", organizations_path, :class => "view-all" %>
   <% end %>
+  <% if current_subject.applications.blank? %>
+    <% else %>
+      <%= render partial: 'organizations/list',
+               object: current_user.organizations.first(5) %>
+    
+    <div class="panel-footer">
+      <%= link_to "View all", organizations_path, :class => "view-all" %>
+    </div>
+    <% end %>
 </div>

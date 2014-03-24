@@ -1,15 +1,20 @@
-<div class="applications">
-  <header>
-    Applications
+<div class="panel panel-default applications">
+  <div class="panel-heading">
+    <h5 class="panel-title">Applications</h5>
     <%= link_to "Register", new_application_path %>
-  </header>
-
+  </div>
   <% if current_subject.applications.blank? %>
-    <%= render partial: 'applications/first'%>
-  <% else %>
-    <%= render partial: 'site/clients/list',
-               object: current_subject.applications.first(5) %>
-
-    <%= link_to 'View all', applications_path, :class => "view-all" %>
+    <div class="panel-body">
+      <%= render partial: 'applications/first'%>
+    </div>
   <% end %>
+  <% if current_subject.applications.blank? %>
+    <% else %>
+      <%= render partial: 'site/clients/list',
+               object: current_subject.applications.first(5) %>
+    
+    <div class="panel-footer">
+      <%= link_to 'View all', applications_path, :class => "view-all" %>
+    </div>
+    <% end %>
 </div>

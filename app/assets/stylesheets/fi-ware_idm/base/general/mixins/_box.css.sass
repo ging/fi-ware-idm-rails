@@ -9,46 +9,10 @@
   background-color: $white
   border-color: rgba(0,0,0, 0.1)
 
-@mixin contact
-  margin-bottom: 9px !important
-  .avatar
-    @include size(40px, 40px)
-    float: left
-    position: absolute
-    margin-top: -4px
-  .data
-    float: left
-    margin: 0px 0 0 60px
-    width: 115px
-    a
-      display: inline-block
-    .name
-      display: inline
-      font-size: 14px
-      a
-        color: $gray
-        @include text-overflow
-  .add
-    @include btn-add
-    margin: 0 0 0 60px
-    padding-top: 22px
-    .btn-group
-      button
-        padding: 0px 12px !important
-      ul.multiselect-container
-        li
-          .multiselect-group
-            color: #888
-            margin-left: 9px
-            border-bottom: 1px solid $brand-primary
-          a
-        li.active
-          label
-            color: $white
-      @include dropdown
-
 @mixin follow
-  position: relative
+  display: inline-table
+  margin-left: 20px
+  margin-bottom: 20px
   .avatar
     @include size(40px, 40px)
     float: left
@@ -64,7 +28,6 @@
       margin-top: 5px
       font-size: 14px
       a
-        color: $gray
         @include text-overflow
   .add
     text-align: left
@@ -95,7 +58,7 @@
       font-size: 12px
   .following-button
     display: block
-    background-color: $body-bg
+    background-color: $brand-primary-2
     height: 20px
     width: 100px
     @include border-radius
@@ -181,7 +144,7 @@
       margin-bottom: 15px
       line-height: 26px
   .contact
-    @include contact
+    @include panels-contacts
 
   .site_clients
     width: 100% !important

@@ -1,0 +1,306 @@
+.new_site_client,
+.site_clients,
+#site_client
+  #toolbar
+    display: none
+
+form.new_site_client
+  @include form
+  padding: 3%
+  width: 94% !important
+  margin-left: $zero !important
+
+
+.site_clients
+  .team
+    width: 13% !important
+
+.site_clients_list
+  ul
+    @include application
+    li
+      margin-top: 5px
+      min-height: 49px
+ 
+
+
+.authorization
+  width: 322px !important
+  margin-left: auto
+  margin-right: auto
+  h2
+    margin-top: -3px
+    border-bottom: 1px solid #ccc
+    color: $brand-primary
+    font-family: $corporate-font-family-sans-serif-Regular
+  form
+    text-align: right
+    margin-bottom: -5px
+    margin-top: 14px
+    border-top: 1px solid #f1f1f1
+    padding-top: 10px
+
+  ul
+    margin-top: 5px
+    margin-left: 10px
+    li
+      padding-bottom: 5px
+      padding-top: 5px
+
+
+/*show screen*/
+#site_client
+  margin-top: 74px
+  .site_client
+    width: 95% 
+    padding: $zero 2.5%
+    margin-bottom: 30px
+    display: inline-block
+    @include form
+    @include edit-btn
+    header
+      margin-top: -37px
+      h4
+        @include clearfix
+        margin-bottom: 4px
+        margin-left: -2.5%
+        a
+          font-size: 13px
+      img
+        margin-top: -52px
+        @include border-radius
+    .soften
+      margin-bottom: $zero
+    .content
+      padding: 14px
+      img
+        display: inline
+        @include size (40px, 40px)
+      .gereral-info
+        @include make-md-column(4, $gutter: $grid-gutter-width)
+        @include make-lg-column(4, $gutter: $grid-gutter-width)
+        margin-top: -50px
+        h4
+          margin-bottom: $zero
+          font-size: 18px
+          color: $brand-primary
+          font-family: $corporate-font-family-sans-serif-Regular
+        .name,
+        .url,
+        .users
+          display: inline-block
+        .name,
+        .url
+          margin-left: 20px
+
+        .result
+          margin-bottom: 18px
+          margin-left: 14px
+          padding-top: 10px
+          border-top: 1px solid #C1C1C1
+          color: #929292
+      .accordion
+        .settings_content
+          padding-top: $zero
+          margin-top: -2px
+        h6
+          border-bottom: 1px solid #CCC
+          a
+            color: $brand-primary !important
+        div.client-secret,
+        div.client-id
+          form
+            margin-top: -20px
+            input
+              &[type="submit"]
+                border: none
+                box-shadow: none
+                &:hover
+                  background-color: $white !important
+                  color: $brand-primary
+
+            p
+              padding-left: 10px
+        div.client-id
+          h6
+            margin-top: $zero
+        div.client-secret 
+          word-wrap: break-word
+          min-height: 22px
+          width: 100%
+          input
+            &[type="submit"]
+              padding-right: $zero
+  .tabbable
+    #contact-filter
+      @include filter
+    #add-contact-link
+      @include btn-secundary
+      margin-right: 8px
+      margin-left: 8px
+      float: right
+    .btn-group
+      button
+        @include btn-secundary
+        &:first-child
+          border-right-radius: none
+        &:last-child
+          border-left-radius: none
+    .tab-content
+      overflow: visible
+      padding-top: 20px
+      .contact
+        @include follow
+        width: 170px
+        float: left
+        margin-left: 12px
+        .add
+          @include btn-add
+          margin: $zero $zero $zero 60px
+          padding-top: 27px
+      .soften
+        display: none
+
+
+
+/*create screen*/
+
+form#new_application,
+form#new_organization
+  @include form
+
+img.step
+  width: 100%
+
+#site_client_form,
+  min-height: 315px
+  @include form
+  @include principal-box
+
+  div
+    clear: both
+.edit_application
+  .next-step
+    margin-top: -40px
+    margin-right: 20px
+    @include btn-secundary
+
+form#new_application
+  padding-bottom: 50px
+  @mixin devise-box-style
+  section
+    @include form
+    .name,
+    .description,
+    .url
+      margin-bottom: 10px
+    .url,
+    .callback_url
+      textarea
+        max-height: 33px
+  input
+    &[type="submit"]
+      @include btn-secundary
+      float: right
+      margin: $zero 15px 18px $zero
+  
+a.next-step
+  margin: -47px 5px $zero $zero
+  float: right
+
+.site_client_roles
+  .next-step
+    clear: both
+
+section.create_logo_app
+  @include principal-box
+  min-height: 225px
+  h4
+    margin: 20px $zero $zero 18px
+
+#profile-info_edit
+  section.avatar-edit
+    min-height: 133px
+    .avatar-current
+      margin: 20px $zero $zero !important
+
+/*edit screen*/
+
+#edit_site_client,
+#new_site_client-modal
+  padding-top: 9px
+  .edit_site_client,
+  .modal-body
+    form
+      @include forms
+      padding-left: 18px
+
+  .edit_site_client
+    width: 100%
+    margin: $zero $zero 20px $zero
+    .logo
+      @include principal-box
+      clear: both
+      min-height: 179px
+
+
+section.delete
+  clear: both
+  @include form
+  &:hover
+    border-color: $brand-danger !important
+    a
+      color: $brand-danger !important
+  header
+    margin-bottom: $zero
+  #destroy_site_client-content,
+  #destroy_organization-content
+    padding-left: 15px
+    a
+      color: $brand-danger !important
+
+.edit_form,
+.create_logo_app
+  @include form
+.edit_form
+  margin-bottom: 20px
+
+.edit_site_client
+  width: 100%
+  margin: $zero $zero 20px $zero
+  .logo
+    @include form
+    clear: both
+
+.new_app,
+.edit_form,
+.create_logo_app
+  input
+    &[type="submit"]
+      @include btn-secundary
+      float: right
+
+#avatar-progress
+  width: 90%
+
+#edit_site_client 
+  .edit_site_client 
+    form textarea
+      min-height: 20px
+      max-height: 19px
+      float: none
+
+  input
+    &[type="submit"]
+      margin: $zero
+
+.jcrop-holder
+  margin: 20px auto $zero
+
+.avatar-current
+  width: 115px
+  margin: 9px $zero $zero 20px
+  img 
+    border: $border-radius-base
+
+

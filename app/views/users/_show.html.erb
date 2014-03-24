@@ -8,12 +8,13 @@
       <%= link_to 'Edit', polymorphic_path([ @user, :profile ], action: :edit), class: 'edit' %>
     <% end %>
 
-    <%= link_to (image_tag(@user.logo.url(:medium) , :size => "small", :alt => @user.name )), @user  %>
+    <%= link_to (image_tag(@user.logo.url(:medium) , :size => "small", :class => "avatar", :alt => @user.name )), @user  %>
   </header>
 
-  <section class="personal_info">
+  <section class="personal_info well">
     <div class="ocupation">
       <header>
+        Description
       </header>
       <div class="result">
         <%= @user.profile.description %>
@@ -27,16 +28,18 @@
         <%= @user.profile.city %>
       </div>
     </div>
-    <div class="accordion" id="accordion2">
-      <div class="accordion-group">
-        <div class="accordion-heading">
-          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-            + more info
-          </a>
+    <div class="panel-group" id="accordion2">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h6 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+              + more info
+            </a>
+          </h6>
         </div>
-        <div id="collapseOne" class="accordion-body collapse">
-          <div class="accordion-inner">
-            <div class="content settings_content collapse in">
+        <div id="collapseOne" class="panel-collapse collapse in">
+          <div class="panel-body">
+            <div class="website">
               <header>
                 Website
               </header>
@@ -45,7 +48,8 @@
                   <%= link_to @user.profile.website, @user.profile.website %>
                 <% end %>
               </div>
-    
+            </div>
+            <div class="email">
               <header>
                 E-mail
               </header>
@@ -56,7 +60,7 @@
           </div>
         </div>
       </div>
-    </div>
+    
   </section>
     
   <h4>

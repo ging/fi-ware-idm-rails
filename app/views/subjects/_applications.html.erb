@@ -1,8 +1,10 @@
-<section class="applications">
+<section class="applications well">
   <% if subject.applications.present? %>
-    <section class="applications-list">
-      <%= render subject.applications %>
-    </section>
+    <ul class="applications-list list-group">
+      <li class="list-group-item">
+        <%= render subject.applications %>
+      </li>
+    </ul>
   <% else %>
     <% if profile_subject_is_current? %>
       Haven't you any application?

@@ -6,7 +6,7 @@
     margin-bottom: 0px
     font-size: 18px !important
     color: $brand-primary !important
-    font-family: $font-family-corporate-regular
+    font-family: $corporate-font-family-sans-serif-Regular
     line-height: 32px
 
   textarea
@@ -18,7 +18,6 @@
     border-right: none
     border-bottom: none
     box-shadow: none
-    @include border-radius(0px)
     float: right
   input
     &[type="text"],
@@ -30,7 +29,6 @@
       border-right: none
       border-bottom: none
       box-shadow: none
-      @include border-radius
       float: right
   .description
     textarea
@@ -54,5 +52,3 @@
 @mixin filter
   width: 30% !important
   float: right
-  background-image: none
-  background-color: rgb(255, 255, 255)

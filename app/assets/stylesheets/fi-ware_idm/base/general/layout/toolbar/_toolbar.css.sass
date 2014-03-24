@@ -1,7 +1,20 @@
+// UP TO LANDSCAPE PHONE
+// ---------------------
+
 .menu-toolbar
-  @include make-sm-column(4, $gutter: $grid-gutter-width)
-  @include make-md-column(4, $gutter: $grid-gutter-width)
-  @include make-lg-column(4, $gutter: $grid-gutter-width)
+  @include make-xs-column(12, $gutter: $grid-gutter-width)
+  @include make-sm-column(1, $gutter: $grid-gutter-width)
+  @include make-md-column(3, $gutter: $grid-gutter-width)
+  @include make-lg-column(3, $gutter: $grid-gutter-width)
+  @media (max-width: $screen-sm-min)
+    position: relative
+    margin-bottom: 0
+    border-bottom: 1px solid #E0E0E0
+  @media (max-width: $screen-xs-min)
+    position: relative
+    margin-bottom: 0
+    border-bottom: 1px solid #E0E0E0
+
   h5
     font-size: 19px
     font-family: $corporate-font-family-sans-serif-Regular
@@ -9,85 +22,59 @@
     border-bottom: 2px solid #CCC
     padding-bottom: 2px
     letter-spacing: 1px
+    @include hidden-sm
+    @include hidden-xs
+    @media (min-width: 1200px)
+      a
+        font-size: 25px
   h5.tablet
- 
+    @include hidden-md
+    @include hidden-lg
   ul
-    margin-left: -3px
+    padding: 0
+    @media (max-width: $screen-sm-min)
+      width: 96%
+      margin: 0 auto
     li
+      @media (max-width: $screen-xs-min)
+        float: left
+        margin: 0 4%
+      @media (max-width: $screen-sm-min)
+        float: left
+        margin: 0 5%
       a
         color: #8c8c8c
       &:hover
         a
-          color: $brand-secundary
-
+          color: $brand-primary-2
       h2
         display: inline
         font-size: 15px
         margin-left: 12px
         line-height: 42px
         vertical-align: text-top
-        a
-          text-decoration: none
-          &:hover
-            text-decoration: none
+        @media (max-width: $screen-sm-min)
+          @extend .hidden-phone
+        i
+          padding-right: 8px
+        span
+          @include hidden-sm
+          @include hidden-xs
 
-    li.home
-      &:hover
-        .icon_menu-20-home
-          background-position: -88px -10px
-    .home.active
-      .icon_menu-20-home
-        background-position: -51px -10px
-
-    li.organizations,
-    li.members
-      &:hover
-        .icon_menu-20-organizations
-          background-position: -88px -45px
-        .icon_menu-20-members
-          background-position: -88px -45px
-    .members.active,     
-    .organizations.active
-      .icon_menu-20-organizations
-        background-position: -51px -45px
-      .icon_menu-20-members
-        background-position: -51px -45px
 
     li.my-applications
-      &:hover
-        .icon_menu-20-my-applications
-          background-position: -88px -80px
       a 
         @include text-overflow
-    .my-applications.active
-      .icon_menu-20-my-applications
-        background-position: -51px -80px
-
-    .administrators.active
-      .icon_menu-20-administrators
-        background-position: -51px -150px
-
-    li.administrators
-      &:hover
-        .icon_menu-20-administrators
-          background-position: -88px -150px
-
-   
-    .notify.active
-      .icon_menu-20-notify
-        background-position: -51px -116px
-
-    li.notify
-      &:hover
-        .icon_menu-20-notify
-          background-position: -88px -116px
 
     li.active
-      a
-        color: $brand-primary
-      &:hover
-        a
-          color: $brand-secundary
+      color: $brand-primary-2
 
-    .soften
+    hr
       margin: 10px 0
+      @media (max-width: $screen-sm-min)
+        float: left
+        margin: 0 15px
+        width: 1px
+        height: 45px
+        clear: none
+        border-left: 2px solid #E2E2E2

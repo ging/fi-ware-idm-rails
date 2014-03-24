@@ -1,0 +1,35 @@
+// compositions
+// ----------------------------------
+
+@mixin panels-items
+  a
+    img
+      @include size(40px, 40px)
+      display: inline
+      vertical-align: top
+  .data
+    display: inline-block
+    .name
+      display: block
+  hr
+    display: none
+
+@mixin panels-contacts
+  .avatar
+    display: inline
+    a
+      img
+        @include size(40px, 40px)
+        display: inline
+        vertical-align: top
+  .data
+    display: inline-block
+    .name
+      display: block
+  hr
+    display: none
+
+
+@mixin contact
+  background-color: red
+  

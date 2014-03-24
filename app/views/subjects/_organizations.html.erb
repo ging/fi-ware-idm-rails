@@ -1,8 +1,10 @@
-<section class="organizations">
+<section class="organizations well">
   <% if subject.organizations.present? %>
-    <section class="organizations-list">
-      <%= render subject.organizations %>
-    </section>
+    <ul class="organizations-list list-group">
+      <li class="list-group-item">
+        <%= render subject.organizations %>
+      </li>
+    </ul>
   <% else %>
     <% if profile_subject_is_current? %>
       Aren't you member of any organization?

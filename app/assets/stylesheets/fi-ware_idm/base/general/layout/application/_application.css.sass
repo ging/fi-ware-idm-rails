@@ -1,11 +1,17 @@
 body
-  font-family: Verdana, Arial, sans-serif
+  font-family: $font-family-sans-serif
   font-size: 13px
   line-height: 20px
   text-rendering: optimizeSpeed
   background-color: #FCFCFC !important
   padding-top: 45px
 
+.wrapper
+  margin: 20px auto -11px
+  min-height: 84%
+  @media (max-width: $screen-sm-min)
+    margin: $zero auto -11px
+  
 li
   line-height: 21px
 
@@ -14,7 +20,7 @@ li
   overflow: hidden
   bottom: 1px
   right: 3px
-  left: 0px
+  left: $zero
   z-index: 9999999
 
 
@@ -48,7 +54,7 @@ h5,
 h6
   font-family: $corporate-font-family-sans-serif-Regular !important
   font-weight: normal
-  margin: 1px 0
+  margin: 1px $zero
 
 h1 
   font-size: 50px

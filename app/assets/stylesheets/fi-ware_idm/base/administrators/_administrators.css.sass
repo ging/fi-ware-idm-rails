@@ -1,0 +1,42 @@
+/*************************administrators*/
+#administrators
+  #contact-filter
+    @include filter
+    margin-top: -48px
+  .administrators-list
+    clear: both
+  .contact
+    @include follow
+  .soften
+    display: none
+  #add-contact-modal
+    @extend .btn 
+    @extend .btn-primary
+
+/*************************notifications*/
+#new_notification
+  header
+    margin-bottom: 0
+
+.new_notification
+  min-height: 421px
+  form#new_notification
+    width: 100% !important
+    float: none !important
+    label
+      display: block
+      @extend .caption
+    #notification_subject
+      width: 100%
+      margin-bottom: 10px
+    .cleditorMain
+      border: 1px solid #D5D5D5
+      .cleditorToolbar
+        background: none
+        background-color: $gray
+      iframe
+        background-color: #f9f9f9
+    input
+      &[type="submit"]
+        float: right
+        margin-top: 13px

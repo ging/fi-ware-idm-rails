@@ -1,0 +1,48 @@
+div.home
+  width: 100%
+  @media (max-width: $screen-sm-min)
+    margin: 67px $zero $zero
+    clear: both
+    padding-top: 50px
+  div.applications
+    @include make-xs-column(12, $gutter: $grid-gutter-width)
+    @include make-sm-column(6, $gutter: $grid-gutter-width)
+    @include make-md-column(6, $gutter: $grid-gutter-width)
+    @include make-lg-column(6, $gutter: $grid-gutter-width)
+    li.list-group-item
+      @include panels-items
+
+
+  div.organizations,
+  div.members
+    @include make-xs-column(12, $gutter: $grid-gutter-width)
+    @include make-sm-column(5, $gutter: $grid-gutter-width)
+    @include make-md-column(5, $gutter: $grid-gutter-width)
+    @include make-lg-column(5, $gutter: $grid-gutter-width)
+    float: right
+    margin-left: 2.5%
+    ul
+      li.list-group-item
+        @include panels-contacts
+        .contacts
+          @include follow
+
+  div.applications,
+  div.organizations,
+  div.members
+    padding: $zero
+
+  div.organizations
+    form
+      margin-bottom: 4px
+    
+    
+.organizations-list
+  .data
+    &:hover
+      .session-switch
+        @include opacity(100)
+
+    .session-switch
+      @include opacity(0)
+

@@ -1,28 +1,26 @@
 <section id="members">
   <header>
-  <%= render partial: "contacts/add_button",
+    <h3>Members</h3>
+    <%= render partial: "contacts/add_button",
              locals: {
                sender: current_subject,
                type: :user
              }
-  %>
-
-    <h3>Members</h3>
+    %>
   </header>
-  <section class="members">
+  <div class="members">
     <%= render partial: 'layouts/loading' %>
 
     <%= text_field_tag "contact-filter", "", placeholder: "filter", autocomplete: "off" %>
 
-    <section class="member-list">
+    <div class="member-list well">
       <%= render current_subject_contacts_to(@contacts) %>
-    </section>
+    </div>
 
     <%= javascript_tag do %>
       $(function() {
         Member.index();
       });
     <% end %>
-
-  </section>
+  </div>
 </section>

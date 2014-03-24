@@ -36,9 +36,11 @@
 }
 
 ul.navbar-nav > li {
-  font-family: "neoTechstd-Regular";
+  font-family: $corporate-font-family-sans-serif-Regular;
 }
-
+.navbar-nav.navbar-right:last-child {
+  margin-right: $zero;
+}
 @media (min-width: 768px){
 .navbar-nav>li>a {
   padding-top: 13px;

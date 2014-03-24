@@ -11,7 +11,7 @@
     <%= link_to (image_tag(@organization.logo.url(:medium) , :size => "small", :alt => @organization.name )), @organization  %>
   </header>
 
-  <section class="personal_info">
+  <section class="personal_info well">
     <div class="ocupation">
       <header>
         Contact us
@@ -25,22 +25,13 @@
         <% end %>
       </div>
     </div>
-    <div class="accordion" id="accordion2">
-      <div class="accordion-group">
-        <div class="accordion-heading">
-          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-            Description
-          </a>
-        </div>
-        <div id="collapseOne" class="accordion-body collapse">
-          <div class="accordion-inner">
-            <div class="content settings_content collapse in">
-              <div class="result">
-                <%= @organization.profile.description %>
-              </div>
-            </div>
-          </div>
-        </div>
+
+    <div class="description">
+      <header>
+        Description
+      </header>
+      <div class="result">
+        <%= @organization.profile.description %>
       </div>
     </div>
   </section>

@@ -1,53 +1,55 @@
-<div class="nav menu-toolbar affix">
+<div class="nav menu-toolbar affix" role="complementary" data-spy="affix" data-offset-top="65" data-offset-bottom="200">
   <h5>Identity Manager</h5>
   <h5 class="tablet">IdM</h5>
   <ul class="main_nav">
     <li class="home<%= ' active' if controller.controller_name == 'home' %>">
       <%= link_to home_path do %>
-        <i class='icon_menu-20-home'></i>
-        <h2><%= t('toolbar.home') %></h2>
+        <h2><i class='fa fa-home'></i><span><%= t('toolbar.home') %></span></h2>
       <% end %>
     </li>
 
     <% if current_subject.is_a? User %>
       <li class="organizations<%= ' active' if controller.controller_name == 'organizations' %>">
         <%= link_to organizations_path do %>
-          <i class='icon_menu-20-organizations'></i>
-          <h2><%= t('toolbar.organizations')%></h2>
+          <h2><i class='fa fa-group'></i><span><%= t('toolbar.organizations')%></span></h2>
         <% end %>
       </li>
     <% else %>
       <li class="members<%= ' active' if controller.controller_name == 'contacts' %>">
         <%= link_to contacts_path do %>
-          <i class='icon_menu-20-members'></i>
-          <h2><%= t('toolbar.members')%></h2>
+          <h2><i class='fa fa-group'></i><span><%= t('toolbar.members')%></span></h2>
         <% end %>
       </li>
     <% end %>
 
     <li class="my-applications<%= ' active' if controller.controller_name == 'applications' %>">
       <%= link_to applications_path do %>
-        <i class='icon_menu-20-my-applications'></i>
-        <h2><%= t('toolbar.applications') %></h2>
+        <h2><i class='fa fa-laptop'></i><span><%= t('toolbar.applications') %></span></h2>
       <% end %>
     </li>
 
     <% if can? :update, Site.current %>
-      <hr class="soften">
+      <hr>
       <li class="notify<%= ' active' if controller.controller_name == 'notifications' %>">
         <%= link_to new_notification_path do %>
-          <i class='icon_menu-20-notify'></i>
-          <h2>Notify</h2>
+          <h2><i class='fa fa-comment'></i><span>Notify</span></h2>
         <% end %>
       </li>
 
       <li class="administrators<%= ' active' if controller.controller_name == 'administrators' %>">
         <%= link_to administrators_path do %>
-          <i class='icon_menu-20-administrators'></i>
-          <h2>Administrators</h2>
+          <h2><i class='fa fa-wrench'></i><span>Administrators</span></h2>
         <% end %>
       </li>
     <% end %>
 
   </ul>
 </div>
+<script>
+  $('.menu-toolbar').affix({
+      offset: {
+        top: 65
+
+      }
+    })
+</script>
