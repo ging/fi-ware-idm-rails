@@ -1,4 +1,4 @@
-# You can use the template http://localhost:3000/scimapi to test the SCIM API
+# You can use the template http://localhost:3000/v2/testing to test the SCIM API
 
 class V2::BaseController < ApplicationController
 	require 'SCIMUtils'

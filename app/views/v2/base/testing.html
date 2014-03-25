@@ -15,61 +15,64 @@
 	<input name="utf8" type="hidden" value="✓">
 	<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
       
-    <div class="reg-labels">
-      <label for="user_name">Name</label>
-      <input class="form_tag" id="user_name" name="user[name]" size="30" type="text">
+    <div>
+      <label>Name</label>
+      <input name="user[name]" size="30" type="text">
       
-      <label for="user_email">Email</label>
-      <input class="form_tag" id="user_email" name="user[email]" size="30" type="text" value="">
+      <label>Email</label>
+      <input name="user[email]" size="30" type="text" value="">
       
-      <label for="user_password">Password</label>
-      <input class="form_tag" id="password" name="user[password]" size="30" type="password">
+      <label>Password</label>
+      <input name="user[password]" size="30" type="password">
 
-      <label for="user_password_confirmation">Confirm password</label>
-      <input class="form_tag" id="user_password_confirmation" name="user[password_confirmation]" size="30" type="password">
+      <label>Confirm password</label>
+      <input name="user[password_confirmation]" size="30" type="password">
 
-	  <input class="btn pull-right" name="commit" type="submit" value="Accept">
+    <br/>
+	  <input name="commit" type="submit" value="Accept">
 	</div>
 </form>
 
 </br>
 <p> Editing the first user </p>
 <% user = User.first %>
-<form accept-charset="UTF-8" action="/v2/users/<%=user.actor.id=%>" method="post">
+<form accept-charset="UTF-8" action="/v2/users/<%=user.actor.id%>" method="post">
   <input name="_method" type="hidden" value="put">
 	<input name="utf8" type="hidden" value="✓">
 	<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
       
-    <div class="reg-labels">
-      <label for="user_name">Name</label>
-      <input class="form_tag" id="user_name" name="user[name]" size="30" type="text" value="<%=user.name=%>">
+    <div>
+      <label>Name</label>
+      <input name="user[name]" size="30" type="text" value="<%=user.name=%>">
       
-      <label for="user_email">Email</label>
-      <input class="form_tag" id="user_email" name="user[email]" size="30" type="text" value="<%=user.email=%>">
+      <label>Email</label>
+      <input name="user[email]" size="30" type="text" value="<%=user.email=%>">
       
-      <label for="user_password">Password</label>
-      <input class="form_tag" id="password" name="user[password]" size="30" type="password">
+      <label>Password</label>
+      <input name="user[password]" size="30" type="password">
 
-	    <input class="btn pull-right" name="commit" type="submit" value="Accept">
+      <br/>
+	    <input name="commit" type="submit" value="Accept">
 	</div>
 </form>
 
 </br>
 <p> Deleting the last user </p>
 <% luser = User.last %>
-<form accept-charset="UTF-8" action="/v2/users/<%=luser.actor.id=%>" method="post">
+<form accept-charset="UTF-8" action="/v2/users/<%=luser.actor.id%>" method="post">
   <input name="_method" type="hidden" value="delete">
   <input name="utf8" type="hidden" value="✓">
   <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
       
-    <div class="reg-labels">
-      <label for="user_name">Name</label>
-      <input class="form_tag" id="user_name" name="user[name]" size="30" type="text" value="<%=luser.name=%>">
+    <div>
+      <label>Name</label>
+      <input name="user[name]" size="30" type="text" value="<%=luser.name=%>">
       
-      <label for="user_email">Email</label>
-      <input class="form_tag" id="user_email" name="user[email]" size="30" type="text" value="<%=luser.email=%>">
+      <label>Email</label>
+      <input name="user[email]" size="30" type="text" value="<%=luser.email=%>">
       
-      <input class="btn pull-right" name="commit" type="submit" value="Remove">
+      <br/>
+      <input name="commit" type="submit" value="Remove">
   </div>
 </form>
 
@@ -87,17 +90,60 @@
   <input name="utf8" type="hidden" value="✓">
   <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 
-  <section class="name">
-    <label for="organization_name">Name</label>
-    <input id="organization_name" name="organization[name]" size="30" type="text">
+  <section>
+    <label>Name</label>
+    <input name="organization[name]" size="30" type="text">
   </section>
-  <section class="owners">
-    <label for="s2id_autogen1">Owners. Include actor ids separated by commas (e.g. 1,2,8)</label>
+  <section>
+    <label>Owners. Include actor ids separated by commas (e.g. 1,2,8)</label>
     <input name="organization[owners]" size="30" type="text">
   </section>
-  <section class="description">
-    <label for="organization_description">Description</label>
-    <textarea cols="40" name="organization[description]" rows="20"></textarea>
+  <section>
+    <label>Description</label>
+    <textarea name="organization[description]" cols="62" rows="2"></textarea>
   </section>
-  <input class="btn" name="commit" type="submit" value="Create Organization">
+  <br/>
+  <input name="commit" type="submit" value="Create Organization">
+</form>
+
+</br>
+<p> Editing the first organization </p>
+<% organization = Organization.first %>
+<form accept-charset="UTF-8" action="/v2/organizations/<%=organization.actor.id%>" method="post">
+  <input name="_method" type="hidden" value="put">
+  <input name="utf8" type="hidden" value="✓">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+      
+    <div>
+      <label>Name</label>
+      <input name="organization[name]" size="30" type="text" value="<%=organization.name=%>">
+      
+      <label>Owners</label>
+      <input name="organization[owners]" size="30" type="text" value="<%=organization.user_author.actor.id=%>">
+      
+      <label>Description</label>
+      <textarea name="organization[description]" cols="62" rows="2"><%=organization.description%></textarea>
+      <br/>
+      <input name="commit" type="submit" value="Accept">
+  </div>
+</form>
+
+</br>
+<p> Deleting the last organization </p>
+<% lorganization = Organization.last %>
+<form accept-charset="UTF-8" action="/v2/organizations/<%=lorganization.actor.id%>" method="post">
+  <input name="_method" type="hidden" value="delete">
+  <input name="utf8" type="hidden" value="✓">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+      
+    <div>
+      <label>Name</label>
+      <input size="30" type="text" value="<%=lorganization.name=%>">
+      
+      <label>Description</label>
+      <textarea name="organization[description]" cols="62" rows="2"><%=lorganization.description=%></textarea>
+      
+      <br/>
+      <input name="commit" type="submit" value="Remove">
+  </div>
 </form>

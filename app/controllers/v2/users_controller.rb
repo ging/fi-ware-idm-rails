@@ -52,7 +52,7 @@ class V2::UsersController < V2::BaseController
 		respond_to do |format|
 			format.any { 
 				if user.errors.blank? and user.save
-					render json: user 
+					render json: user.as_scim_json(v=2,self) 
 				else
 					render json: user.errors, status: :unprocessable_entity
 				end
@@ -75,7 +75,7 @@ class V2::UsersController < V2::BaseController
 		@user.valid?
 
 		if @user.errors.blank? and @user.save
-			render json: @user
+			render json: @user.as_scim_json(v=2,self)
 		else
 			render json: @user.errors, status: :unprocessable_entity
 		end

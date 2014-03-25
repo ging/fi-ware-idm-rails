@@ -67,9 +67,54 @@ class V2::OrganizationsController < V2::BaseController
 		organization.valid?
 
 		if organization.errors.blank? and organization.save
-			render json: organization
+			render json: organization.as_scim_json(v=2,self)
 		else
 			render json: organization.errors, status: :unprocessable_entity
+		end
+	end
+
+	#SCIM 2.0: Update Organization => PUT /v2/organizations/:actorId
+	def update
+		unless can? :update, @organization
+			render json: SCIMUtils.error("Permission denied",401)
+			return;
+		end
+
+		if params[:organization] and !params[:organization][:owners].blank?
+			begin
+				author = Actor.find(params[:organization][:owners].split(",").first.to_i)
+				if author.subject_type == "User"
+					params[:organization][:author_id] = author.id
+					params[:organization][:user_author_id] = author.id
+					params[:organization][:owner_id] = author.id
+				end
+			rescue Exception => e
+				render json: e.message, status: :unprocessable_entity
+				return
+			end
+		end
+
+		@organization.assign_attributes(params[:organization])
+		@organization.valid?
+
+		if @organization.errors.blank? and @organization.save
+			render json: @organization.as_scim_json(v=2,self)
+		else
+			render json: @organization.errors, status: :unprocessable_entity
+		end
+	end
+
+	#SCIM 2.0: Destroy Organization => DELETE /v2/organizations/:actorId
+	def destroy
+		unless can? :destroy, @organization
+			render json: SCIMUtils.error("Permission denied",401)
+			return;
+		end
+
+		if @organization.destroy
+			render json: "Done"
+		else
+			render json: SCIMUtils.error("Internal server error",500)
 		end
 	end
 

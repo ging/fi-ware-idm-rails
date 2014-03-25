@@ -20,6 +20,7 @@ class Ability
 
     #SCIM2 Permissions
     # can :manageSCIM, :all
+    # can :showSCIM, :all
 
   end
 end

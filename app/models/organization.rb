@@ -16,12 +16,19 @@ class Organization < Group
 			schemas: ["urn:scim:schemas:core:2.0:Group"],
 			id: actor.id,
 			displayName: CGI::escapeHTML(name),
+			description: CGI::escapeHTML(description),
 			members: self.members.map{ |user|
 				{
 					value: user.actor.id,
 					ref: controller.root_url + "v2/users/" + user.actor.id.to_s,
 					display: CGI::escapeHTML(user.name)
 				}
+			},
+			author: 
+			{
+				value: user_author.actor.id,
+				ref: controller.root_url + "v2/users/" + user_author.actor.id.to_s,
+				display: CGI::escapeHTML(user_author.name)
 			},
 			meta: {
 				resourceType: "Organization",
