@@ -2,6 +2,7 @@
 
 class V2::BaseController < ApplicationController
 	require 'SCIMUtils'
+	before_filter :authenticate_user!
 	before_filter :authorizeSCIM, :except => [:testing,:getConfig]
 	before_filter :authorizeSCIMWatcher, :only => [:getConfig]
 

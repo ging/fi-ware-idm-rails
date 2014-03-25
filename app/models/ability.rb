@@ -19,8 +19,9 @@ class Ability
     end
 
     #SCIM2 Permissions
+    # Pending. An Admin or SCIM Master role must be implemented.
     # can :manageSCIM, :all
-    # can :showSCIM, :all
+    can :showSCIM, :all
 
   end
 end
