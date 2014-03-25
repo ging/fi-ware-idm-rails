@@ -22,8 +22,7 @@ class V2::OrganizationsController < V2::BaseController
 	#SCIM 2.0: GET Organization => GET /v2/organization/:actorId
 	def show
 		unless can? :read, @organization
-			render json: SCIMUtils.error("Permission denied",401)
-			return;
+			render json: SCIMUtils.error("Permission denied",401) and return
 		end
 
 		respond_to do |format|
@@ -50,16 +49,14 @@ class V2::OrganizationsController < V2::BaseController
 				author = Actor.find(params[:organization][:owners].split(",").first.to_i)
 
 				if author.subject_type != "User"
-					render json: SCIMUtils.error("Invalid Owner Id",404)
-					return
+					render json: SCIMUtils.error("Invalid Owner Id",404) and return
 				end
 
 				params[:organization][:author_id] = author.id
 				params[:organization][:user_author_id] = author.id
 				params[:organization][:owner_id] = author.id
 			rescue Exception => e
-				render json: e.message, status: :unprocessable_entity
-				return
+				render json: SCIMUtils.error(e.message,500) and return
 			end
 		end
 
@@ -69,15 +66,14 @@ class V2::OrganizationsController < V2::BaseController
 		if organization.errors.blank? and organization.save
 			render json: organization.as_scim_json(v=2,self)
 		else
-			render json: organization.errors, status: :unprocessable_entity
+			render json: SCIMUtils.error(organization.errors,404)
 		end
 	end
 
 	#SCIM 2.0: Update Organization => PUT /v2/organizations/:actorId
 	def update
 		unless can? :update, @organization
-			render json: SCIMUtils.error("Permission denied",401)
-			return;
+			render json: SCIMUtils.error("Permission denied",401) and return
 		end
 
 		if params[:organization] and !params[:organization][:owners].blank?
@@ -89,8 +85,7 @@ class V2::OrganizationsController < V2::BaseController
 					params[:organization][:owner_id] = author.id
 				end
 			rescue Exception => e
-				render json: e.message, status: :unprocessable_entity
-				return
+				render json: SCIMUtils.error(e.message,500) and return
 			end
 		end
 
@@ -100,19 +95,18 @@ class V2::OrganizationsController < V2::BaseController
 		if @organization.errors.blank? and @organization.save
 			render json: @organization.as_scim_json(v=2,self)
 		else
-			render json: @organization.errors, status: :unprocessable_entity
+			render json: SCIMUtils.error(organization.errors,404)
 		end
 	end
 
 	#SCIM 2.0: Destroy Organization => DELETE /v2/organizations/:actorId
 	def destroy
 		unless can? :destroy, @organization
-			render json: SCIMUtils.error("Permission denied",401)
-			return;
+			render json: SCIMUtils.error("Permission denied",401) and return
 		end
 
 		if @organization.destroy
-			render json: "Done"
+			render :nothing => true, :status => 204
 		else
 			render json: SCIMUtils.error("Internal server error",500)
 		end
@@ -126,8 +120,7 @@ class V2::OrganizationsController < V2::BaseController
 		actor = Actor.find(params[:id])
 
 		if actor.subject_type != "Group"
-			render json: SCIMUtils.error("Invalid Id",404)
-			return;
+			render json: SCIMUtils.error("Invalid Id",404) and return
 		end
 
 		@organization = actor.group

@@ -22,8 +22,7 @@ class V2::UsersController < V2::BaseController
 	#SCIM 2.0: GET User => GET /v2/users/:actorId
 	def show
 		unless can? :read, @user
-			render json: SCIMUtils.error("Permission denied",401)
-			return;
+			render json: SCIMUtils.error("Permission denied",401) and return
 		end
 
 		respond_to do |format|
@@ -54,7 +53,7 @@ class V2::UsersController < V2::BaseController
 				if user.errors.blank? and user.save
 					render json: user.as_scim_json(v=2,self) 
 				else
-					render json: user.errors, status: :unprocessable_entity
+					render json: SCIMUtils.error(user.errors,404)
 				end
 			}
 		end
@@ -63,8 +62,7 @@ class V2::UsersController < V2::BaseController
 	#SCIM 2.0: Update User => PUT /v2/users/:actorId
 	def update
 		unless can? :update, @user
-			render json: SCIMUtils.error("Permission denied",401)
-			return;
+			render json: SCIMUtils.error("Permission denied",401) and return
 		end
 
 		if !params[:user].nil? and params[:user][:password].blank?
@@ -77,19 +75,18 @@ class V2::UsersController < V2::BaseController
 		if @user.errors.blank? and @user.save
 			render json: @user.as_scim_json(v=2,self)
 		else
-			render json: @user.errors, status: :unprocessable_entity
+			render json: SCIMUtils.error(@user.errors,404)
 		end
 	end
 
 	#SCIM 2.0: Destroy User => DELETE /v2/users/:actorId
 	def destroy
 		unless can? :destroy, @user
-			render json: SCIMUtils.error("Permission denied",401)
-			return;
+			render json: SCIMUtils.error("Permission denied",401) and return
 		end
 
 		if @user.destroy
-			render json: "Done"
+			render :nothing => true, :status => 204
 		else
 			render json: SCIMUtils.error("Internal server error",500)
 		end
@@ -102,8 +99,7 @@ class V2::UsersController < V2::BaseController
 		actor = Actor.find(params[:id])
 
 		if actor.subject_type != "User"
-			render json: SCIMUtils.error("Invalid Id",404)
-			return;
+			render json: SCIMUtils.error("Invalid Id",404) and return
 		end
 
 		@user = actor.user
