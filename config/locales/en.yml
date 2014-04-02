@@ -77,7 +77,7 @@ en:
         title: "Register new application"
     current:
       description: Create and manage your FI-WARE account
-      keywords: fi-ware,idm,GE,oauth2
+      keywords: fi-ware, fi-lab, fi-ware-portal, fi-ware-gei, fi-ware-cloud, fi-ware-accounts, fi-ware-wirecloud, fi-ware-store, context-broker-orion, bigdata-cosmos, GE, oauth2
       title: FI-WARE Identity Manager
     name: FI-WARE IdM
   toolbar:
