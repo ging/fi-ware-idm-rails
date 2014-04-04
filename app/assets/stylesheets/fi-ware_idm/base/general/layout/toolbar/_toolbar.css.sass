@@ -22,14 +22,10 @@
     border-bottom: 2px solid #CCC
     padding-bottom: 2px
     letter-spacing: 1px
-    @include hidden-sm
-    @include hidden-xs
     @media (min-width: 1200px)
       a
         font-size: 25px
   h5.tablet
-    @include hidden-md
-    @include hidden-lg
   ul
     padding: 0
     @media (max-width: $screen-sm-min)
@@ -54,12 +50,9 @@
         line-height: 42px
         vertical-align: text-top
         @media (max-width: $screen-sm-min)
-          @extend .hidden-phone
+
         i
           padding-right: 8px
-        span
-          @include hidden-sm
-          @include hidden-xs
 
 
     li.my-applications

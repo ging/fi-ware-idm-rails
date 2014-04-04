@@ -1,7 +1,7 @@
 GIT
-  remote: git://github.com/ging/social_stream-b3.git
-  revision: 64387d5e14bb0fafcd206f37a06fd64222a56070
-  branch: master
+  remote: git://github.com/ging/social_stream.git
+  revision: 2c29ced1263fa6deee04d9a43db63aababc5aee0
+  branch: ss-b3
   specs:
     social_stream-base (2.2.2)
       acts-as-taggable-on (~> 2.2.2)
@@ -93,7 +93,7 @@ GEM
       mime-types (>= 1.16)
     climate_control (0.0.3)
       activesupport (>= 3.0)
-    cocaine (0.5.3)
+    cocaine (0.5.4)
       climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.0)
     coffee-rails (3.2.2)
