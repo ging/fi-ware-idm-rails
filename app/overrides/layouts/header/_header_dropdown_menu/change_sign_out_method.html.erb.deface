@@ -1,9 +1,6 @@
 <!-- replace "li.sign-out" -->
 <li>
   <i class='fa  fa-sign-out' title="<%= t 'sign_out' %>">
-            <%= t 'sign_out' %>
-          </i>
-</li>
-<li>
-<%= link_to t('sign_out'), '#', onclick: "Fiware.signOut('account'); return false" %>
+    <%= link_to t('sign_out'), '#', onclick: "Fiware.signOut('account'); return false" %>
+  </i>
 </li>
