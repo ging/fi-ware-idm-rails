@@ -10,9 +10,42 @@
       @include border-radius
       @include opacity(0)
 
+@mixin btn
+  display: inline-block
+  padding: 6px 12px
+  margin-bottom: 0
+  font-size: 14px
+  font-weight: normal
+  line-height: 1.42857143
+  text-align: center
+  white-space: nowrap
+  vertical-align: middle
+  cursor: pointer
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  background-image: none
+  border: 1px solid transparent
+  border-radius: 4px
+  &:focus
+    outline: thin dotted
+    outline: 5px auto -webkit-focus-ring-color
+    outline-offset: -2px
+
+  &:hover
+  &:focus 
+    color: #333
+    text-decoration: none
+  &:active
+    background-image: none
+    outline: 0
+    @include box-shadow (inset 0 3px 5px rgba(0, 0, 0, .125))
+
 
 @mixin btn-secundary
-  background-color: $brand-secundary
+  @include btn
+  background-color: $brand-primary
   color: $white
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)
   .caret
@@ -22,6 +55,6 @@
   &:hover, 
   &:focus, 
   &:active
-    background-color: $brand-primary
+    background-color: $brand-primary-2
     color: $white
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)

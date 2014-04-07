@@ -29,15 +29,20 @@
   ul
     padding: 0
     @media (max-width: $screen-sm-min)
-      width: 96%
+      width: 352px
       margin: 0 auto
+      height: 45px
+    @media (max-width: $screen-xs-min)
+      width: 100%
     li
       @media (max-width: $screen-xs-min)
-        float: left
-        margin: 0 4%
+        &:first-child
+          margin-left: 0
+        &:last-child
+          margin-right: 0
       @media (max-width: $screen-sm-min)
         float: left
-        margin: 0 5%
+        margin: 0 1rem
       a
         color: #8c8c8c
       &:hover
@@ -60,7 +65,8 @@
         @include text-overflow
 
     li.active
-      color: $brand-primary-2
+      a
+        color: $brand-primary
 
     hr
       margin: 10px 0
