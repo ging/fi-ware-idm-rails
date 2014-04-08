@@ -50,7 +50,6 @@ form.new_site_client
 
 /*show screen*/
 #site_client
-  margin-top: 74px
   .site_client
     width: 95% 
     padding: $zero 2.5%
@@ -68,18 +67,17 @@ form.new_site_client
           font-size: 13px
       img
         margin-top: -52px
+        float: right
         @include border-radius
     .soften
       margin-bottom: $zero
     .content
       padding: 14px
       img
-        display: inline
-        @include size (40px, 40px)
+        margin-top: -75px
       .gereral-info
         @include make-md-column(4, $gutter: $grid-gutter-width)
         @include make-lg-column(4, $gutter: $grid-gutter-width)
-        margin-top: -50px
         h4
           margin-bottom: $zero
           font-size: 18px
@@ -245,8 +243,6 @@ section.create_logo_app
 
 
 section.delete
-  clear: both
-  @include form
   &:hover
     border-color: $brand-danger !important
     a
