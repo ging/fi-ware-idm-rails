@@ -16,8 +16,6 @@ section#new_organization,
   @include make-sm-column(11, $gutter: $grid-gutter-width)
   @include make-md-column(9, $gutter: $grid-gutter-width)
   @include make-lg-column(9, $gutter: $grid-gutter-width)
-  .well
-    clear: both
   @media (max-width: $screen-sm-min)
     margin-top: 45px
 
@@ -37,7 +35,13 @@ section#new_organization,
 #administrators
   @include header-tab
 
-
+.well
+  @include header-tabbable
+  margin-top: 0
+  min-height: 210px
+  li:hover,
+  li:focus
+    border-bottom: 3px solid $gray-darker !important
 
 #organization
   section.applications
@@ -85,6 +89,7 @@ section.organizations
   ul.nav
     float: none
     margin: $zero
+    padding-left: 0
 
 
 div.aplication

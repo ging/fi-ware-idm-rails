@@ -1,6 +1,9 @@
 #user,
 #organization
   margin-top: 16px
+  &:hover
+    .edit
+      @include opacity(100)
   header
     margin-bottom: 8px
     h3
@@ -13,6 +16,10 @@
         margin: -21px 15px -74px $zero
     .edit
       float: left
+      @include opacity(0)
+  
+  .well
+    min-height: 100px
 
   section.organizations,
   section.aplications

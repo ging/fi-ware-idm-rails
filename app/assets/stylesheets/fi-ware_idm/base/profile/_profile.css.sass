@@ -4,10 +4,12 @@
     margin-bottom: 0
   .personal
     .edit_profile
-      min-height: 291px
+      min-height: 300px
+      @extend .well
   .comunication-info
     .edit_profile
-      min-height: 182px
+      min-height: 208px
+      @extend .well
   p
     width: 200px
     float: left
@@ -17,24 +19,29 @@
   width: 20px
   display: inline
 
+.avatar
+  h4
+    display: inline
 
 
 .avatar-edit
-  @include principal-box
+  @extend .well
   @include forms
   input
     &[type="submit"]
       @extend .btn-primary 
+      @include border-radius
       margin-right: 0px
-      margin-top: 15px
+      margin-top: 13px
 
 form.edit_profile
-  @include principal-box
   @include forms
   input
     &[type="submit"]
       @extend .btn-primary 
+      @include border-radius
       margin-right: 0px
+      margin-top: 13px
 
 
   

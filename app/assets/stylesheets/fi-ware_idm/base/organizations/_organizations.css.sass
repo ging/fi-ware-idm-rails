@@ -1,32 +1,26 @@
-
-
-
 /*create screen*/
 
 #new_organization
   h3
     text-align: right
+  .well
+    padding: 0
+    min-height: 296px
   form#new_organization
-    padding-bottom: 50px
-    section
-      @include forms
-    .name
-      max-height: 50px
-      min-height: 53px
-      padding: 20px 2.5% 0px
+    @include forms
+    .name,
+    .owners,
+    .description
       clear: both
+    .name,
     .owners
       min-height: 62px
-      padding: 0px 2.5% 0px
-      clear: both
     .description
-      min-height: 110px
-      padding: 0px 2.5% 0px
-      clear: both
+      min-height: 96px
     .btn
-      @extend .btn-primary
-      float: right
-      margin: 0 15px 21px 0
+      margin-top: 0px
+      margin-right: 0 !important
+
       
   #new_organization
     textarea
