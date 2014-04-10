@@ -73,7 +73,8 @@ module FiWareIdm
       end
       allow do
         origins '*'
-        resource '/oauth2/*', 
+        resource '/oauth2/*',
+                 :headers => 'authorization',
                  :methods => [:get, :post]
       end
       allow do
@@ -83,7 +84,8 @@ module FiWareIdm
       end
       allow do
         origins '*'
-        resource '/token', 
+        resource '/token',
+                 :headers => 'authorization',
                  methods: :post
       end
       allow do
