@@ -67,30 +67,24 @@ module FiWareIdm
 
     config.middleware.use Rack::Cors do
       allow do
-        origins /.*\.fi-ware\.org$/
-        resource '/users/sign_out',
-                 methods: :get
-      end
-      allow do
         origins '*'
         resource '/oauth2/*',
                  :headers => 'authorization',
                  :methods => [:get, :post]
-      end
-      allow do
-        origins '*'
         resource '/authorize', 
                  methods: :get
-      end
-      allow do
-        origins '*'
         resource '/token',
                  :headers => 'authorization',
                  methods: :post
-      end
-      allow do
-        origins '*'
         resource '/user', 
+                 methods: :get
+      end
+    end
+
+    config.middleware.use Rack::Cors do
+      allow do
+        origins /.*\.fi-ware\.org$/
+        resource '/users/sign_out',
                  methods: :get
       end
     end
