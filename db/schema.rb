@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140225153054) do
+ActiveRecord::Schema.define(:version => 20140522103829) do
 
   create_table "activities", :force => true do |t|
     t.integer  "activity_verb_id"
@@ -354,6 +354,7 @@ ActiveRecord::Schema.define(:version => 20140225153054) do
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
     t.boolean  "cloud_master",                          :default => false
+    t.boolean  "by_saml",                               :default => false
   end
 
   add_index "users", ["actor_id"], :name => "index_users_on_actor_id"

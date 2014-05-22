@@ -64,3 +64,6 @@ gem "galetahub-simple_captcha", :require => "simple_captcha"
 
 # CORS
 gem 'rack-cors', require: 'rack/cors'
+
+# SHIBBOLETH
+gem 'omniauth-shibboleth'

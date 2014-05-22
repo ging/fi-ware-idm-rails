@@ -1,0 +1,13 @@
+Comportamento utenti (premessa: username di IDM è la mail)
+
+Quando un utente si logga tramite IDP esterno viene creata un nuovo utente nel db marcato come esterno
+
+1) La entry nel db è permanente o temporanea?
+1) Un utente "esterno" ha gli stessi permessi di un utente locale?
+2) Un utente "locale" si logga con IDP esterno via SAML 
+	2.1) Stessa mail -> cosa succede?
+	2.2) Mail diversa -> creazione di un nuovo utente
+3) Un utente esterno NON può loggarsi localmente (non conosce la sua password)
+4) Necessario mettere messaggi aggiuntivi sull'IDM per indicare accesso esterno?
+
+* Aggiungere i messaggi nel footer come per l'utente locale
