@@ -1,118 +1,3 @@
-/*header.navbar{
-  position: fixed;
-  width: 96%;
-  height: 35px;
-  padding: 1px 2% 1px;
-  z-index: 2000000;
-}
-
-nav.navbar-inner .logo-header{
-  display: inline;
-}
-
-.logo-header  img{
-  width: 60px;
-  padding-top: 0;
-}
-
-.logo-header .brand{
-  padding: 0;
-  width: auto;
-  float: none;
-  margin: -1px 0 0 3px;
-  font-family: "NeoTechRegular";
-  font-weight: normal;
-}
-
-.logo-header .brand a{
-  font-size: 23px;
-}
-
-.mobile{
-  display: none;
-  margin-top: 8px;
-}
-
-.mobile .dropdown-menu { 
-  margin-left: -67px;
-  min-width: 90px;
-  background-color: rgb(244, 244, 244);
-  border: none;
-  -webkit-border-top-left-radius: 0px;
-  -moz-border-top-left-radius: 0px;
-  border-top-left-radius: 0px;
-  -webkit-border-top-right-radius: 0px;
-  -moz-border-top-right-radius: 0px;
-  border-top-right-radius: 0px;
-  -webkit-box-shadow: 2px 3px 6px rgba(0,0,0,0.1);
-  -moz-box-shadow: 2px 3px 6px rgba(0,0,0,0.1);
-  box-shadow: 2px 3px 6px rgba(0,0,0,0.1);
-  margin-top: 0px;
-  color: #333;
-}
-
-.mobile .dropdown-menu .active a {
-  background-color: $blueLight;
-  background-image: none;
-  color: #60C1CF;
-}
-
-.mobile .dropdown-menu .active a:hover,
-.mobile .dropdown-menu .active a:focus{
-  background-color: rgba(152, 152, 152, 0.1);
-  background-image: none;
-  color: #60C1CF;
-}
-
-.mobile .dropdown-menu li a:hover{
-  background-color: rgba(152, 152, 152, 0.1);
-  background-image: none;
-  color: $gray;
-}
-
-ul.oil-portal{
-  width: 463px;
-  height: 36px;
-  padding: 0px;
-  margin-bottom: 0px;
-  margin-left: 3px;
-  display: inline-block;
-}
-
-ul.oil-portal li{
-  display: inline-block;
-  padding: 14px 18px 9px;
-}
-
-ul.oil-portal li:hover{
- background-color: rgba(152, 152, 152, 0.1);
- height: 18px;
-}
-
-ul.oil-portal li:hover a{
-  color: $blueLight;
-}
-
-ul.oil-portal li a{
-  color: $gray;
-}
-
-ul.oil-portal li a:hover{
-  color: $blueLight;
-}
-
-ul.oil-portal li.active{
-  background-color: #f9f9f9;
-  height: 18px;
-  box-shadow: (0px 3px 5px -1px #f9f9f9);
-}
-
-ul.oil-portal li.active a{
-  color: $blue;
-}
-
-*/
-
 a:hover{
   color: #049cdb;
   text-decoration: none;
@@ -148,10 +33,15 @@ nav.navbar-inner .logo-header{
 }
 
 .logo-header img{
-  width: 60px;
-  padding-top: 0;
   float: left;
+}
 
+.logo-header .logo {
+  width: 60px;
+}
+
+.logo-header .fiware-logo {
+  width: 97px;
 }
 
 .logo-header .brand{
