@@ -2,28 +2,37 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   
   # Shibboleth provider
   def shibboleth
-    
+#    
 #    logger.tagged("MIRKO") {logger.warn "REQUEST" }
 #    request.env.keys.each do |chiave|  
 #    logger.tagged("MIRKO") {logger.warn chiave.to_s + "=>" + request.env[chiave].to_s}
 #    end
-##    
-
+    
     # If another user is logged -> forced logout
     if user_signed_in? 
       sign_out
     end
 
-    if authorized_external_user?(request.env['omniauth.auth']['info']['email'], request.env['omniauth.auth']['info']['name'])
-      sign_in User.find_by_email(request.env['omniauth.auth']['info']['email'])
-    end
+    # Check if the access request is made by an authorized IDP
+    info_idp = ExternalIdp.find_by_url(request.env['REQUEST_URI'].to_s)
+    if !info_idp.blank?
+      if info_idp[:enabled]
 
+        mod_email = request.env['omniauth.auth']['info']['email'] + "_" + info_idp[:mark]
+        if authorized_external_user?(mod_email, request.env['omniauth.auth']['info']['name'], info_idp[:id])
+          sign_in User.find_by_email(mod_email)
+          set_flash_message :notice, :success, :kind => info_idp[:description]
+        end
+
+      end
+    end
+    
     redirect_to :home
   end
   
 private 
 
-  def authorized_external_user?(email, name)
+  def authorized_external_user?(email, name, idp_mark)
     
     user = User.find_by_email(email)
     
@@ -36,11 +45,11 @@ private
       user.password_confirmation = password
       user.skip_confirmation!
       user.name = name
-      user.by_saml = true # External user
+      user.ext_idp = idp_mark 
       
       return user.save
     else
-      return user[:by_saml]      
+      return true 
     end
     
     return false

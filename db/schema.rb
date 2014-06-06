@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140522103829) do
+ActiveRecord::Schema.define(:version => 20140604115808) do
 
   create_table "activities", :force => true do |t|
     t.integer  "activity_verb_id"
@@ -154,6 +154,15 @@ ActiveRecord::Schema.define(:version => 20140522103829) do
     t.string   "subject",    :default => ""
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
+  end
+
+  create_table "external_idps", :force => true do |t|
+    t.string   "url",                           :null => false
+    t.boolean  "enabled",     :default => true
+    t.string   "mark",                          :null => false
+    t.string   "description", :default => ""
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
   create_table "groups", :force => true do |t|
@@ -354,10 +363,11 @@ ActiveRecord::Schema.define(:version => 20140522103829) do
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
     t.boolean  "cloud_master",                          :default => false
-    t.boolean  "by_saml",                               :default => false
+    t.integer  "ext_idp"
   end
 
   add_index "users", ["actor_id"], :name => "index_users_on_actor_id"
+  add_index "users", ["ext_idp"], :name => "fk_users_external_idps"
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
   add_foreign_key "activities", "activity_verbs", :name => "index_activities_on_activity_verb_id"
@@ -415,5 +425,6 @@ ActiveRecord::Schema.define(:version => 20140522103829) do
   add_foreign_key "ties", "relations", :name => "ties_on_relation_id"
 
   add_foreign_key "users", "actors", :name => "users_on_actor_id"
+  add_foreign_key "users", "external_idps", :name => "fk_users_external_idps", :column => "ext_idp"
 
 end
