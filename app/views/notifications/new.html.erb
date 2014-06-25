@@ -34,10 +34,12 @@
 
 <%= javascript_tag do %>
 
+  //SocialStream.cleditor_controls = "bold italic underline strikethrough subscript superscript | size style | bullets | image link unlink"
+
   $(function() {
     $('#notification_body').cleditor({
       width: "100%",
-      controls: "bold italic underline | size style | pastetext "
+      controls: "bold italic underline strikethrough subscript superscript | bullets | link unlink | pastetext "
     });
 
     $('form.new_notification').submit(function(){

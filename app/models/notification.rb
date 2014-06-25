@@ -9,7 +9,16 @@ class Notification < ActiveRecord::Base
   def purgeBody
   	#Prevent text styling to be sent together with the text
   	#This usually occurs when text is copied from text editors such as Microsoft Word
-  	self.body = Sanitize.clean(self.body,Sanitize::Config::RESTRICTED)
+
+    # self.body = Sanitize.clean(self.body,Sanitize::Config::RESTRICTED)
+    # Sanitize::Config::BASIC more flexible. For instance, allows <a> links and lists.
+    customSanitizeConfig = Sanitize::Config::BASIC
+
+    # Allow font tags with size attributtes
+    # customSanitizeConfig[:elements].push("font")
+    # customSanitizeConfig[:attributes]["font"] = ["size"]
+
+    self.body = Sanitize.clean(self.body,customSanitizeConfig)
   	self.body = self.body.gsub(/(^[\r\n]+)/, "")
   	self.body = self.body.gsub(/([.]*[\r\n]+)/, "\r\n")
   end
