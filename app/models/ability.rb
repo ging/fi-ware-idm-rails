@@ -4,6 +4,8 @@ class Ability
   def initialize(subject)
     super
 
+    admin = (!Site.current.nil?) and (can? :update, Site.current)
+
     if subject.is_a?(Application) && subject.store?
       can :create, Purchase
     end
@@ -19,9 +21,10 @@ class Ability
     end
 
     #SCIM2 Permissions
-    # Pending. An Admin or SCIM Master role must be implemented.
-    # can :manageSCIM, :all
     can :showSCIM, :all
+    if admin
+      can :manageSCIM, :all
+    end
 
   end
 end
