@@ -33,15 +33,14 @@
 </section>
 
 <%= javascript_tag do %>
+
   $(function() {
     $('#notification_body').cleditor({
       width: "100%",
-      controls: "<%= SocialStream.cleditor_controls %>"
+      controls: "bold italic underline | size style | pastetext "
     });
 
-    $('form.new_notification').submit(function() {
-      console.log('eo');
-      console.dir(this);
+    $('form.new_notification').submit(function(){
       $(this).find('input[type="submit"]').button('loading');
     });
   });
