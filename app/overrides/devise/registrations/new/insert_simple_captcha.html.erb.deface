@@ -1,2 +1,9 @@
 <!-- insert_before "code[erb-loud]:contains('f.submit')" -->
 <%= show_simple_captcha %>
+
+<div class="conditions">
+  By clicking Accept, you agree to our 
+
+  <a href="http://forge.fi-ware.org/plugins/mediawiki/wiki/fiware/index.php/FI-LAB_Terms_and_Conditions" target="_blank">Terms and Conditions.</a>
+
+  </div>
