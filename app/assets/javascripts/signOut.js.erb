@@ -72,18 +72,18 @@ Fiware.signOut = (function($, undefined) {
   var finish = function() {
     // Use window.debugSignOut to debug
     if (window.debugSignOut === undefined) {
-      window.location.replace('http://' + domain);
+      window.location.replace(location.protocol + '//' + domain);
     }
   };
 
   // Development environment
   var developmentCall = function(currentPortal) {
-    var url = 'http://' + window.location.host + portals[currentPortal].path;
+    var url = location.protocol + '//' + window.location.host + portals[currentPortal].path;
 
     $.ajax(url, {
       type: portals[currentPortal].verb,
       success: function() {
-        window.location.replace('http://' + window.location.host);
+        window.location.replace(location.protocol + '//' + window.location.host);
       }
     });
   };
