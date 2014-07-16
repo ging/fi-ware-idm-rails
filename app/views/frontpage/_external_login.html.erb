@@ -1,0 +1,13 @@
+<section id="external_sign_in">
+   <h3>
+    <%= t('external_IDP') %>
+  </h3>
+  <article class="login_data">
+
+  <%- if devise_mapping.omniauthable? %>
+    <%- resource_class.omniauth_providers.each do |provider| %>
+      <%= link_to image_tag("#{ provider }.png"), omniauth_authorize_path(resource_name, provider) %>
+    <% end -%>
+  <% end -%>
+  </article>
+</section>
