@@ -1,3 +1,3 @@
 class ExternalIdp < ActiveRecord::Base
-  attr_accessible :enabled, :url
+  attr_accessible :enabled, :route, :url
 end

@@ -38,8 +38,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 private 
 
   def autenticate_sso_user(requestVar)
-    info_idp = ExternalIdp.find_by_url(requestVar.env['REQUEST_URI'].to_s)
-
+    
+    # Removed callback path
+    info_idp = ExternalIdp.find_by_route(requestVar.env['REQUEST_URI'].to_s.sub('/callback',''))
     if !info_idp.blank?
 
       if info_idp[:enabled]

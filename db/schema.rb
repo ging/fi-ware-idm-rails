@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140604115808) do
+ActiveRecord::Schema.define(:version => 20140717133529) do
 
   create_table "activities", :force => true do |t|
     t.integer  "activity_verb_id"
@@ -157,12 +157,21 @@ ActiveRecord::Schema.define(:version => 20140604115808) do
   end
 
   create_table "external_idps", :force => true do |t|
-    t.string   "url",                           :null => false
+    t.string   "route",                         :null => false
     t.boolean  "enabled",     :default => true
     t.string   "mark",                          :null => false
     t.string   "description", :default => ""
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
+    t.string   "url",         :default => "",   :null => false
+  end
+
+  create_table "full_users", :id => false, :force => true do |t|
+    t.integer   "id_utente", :default => 0,  :null => false
+    t.integer   "external"
+    t.string    "name"
+    t.string    "email",     :default => "", :null => false
+    t.timestamp "time_mark",                 :null => false
   end
 
   create_table "groups", :force => true do |t|
@@ -342,28 +351,38 @@ ActiveRecord::Schema.define(:version => 20140604115808) do
   add_index "ties", ["contact_id"], :name => "index_ties_on_contact_id"
   add_index "ties", ["relation_id"], :name => "index_ties_on_relation_id"
 
+  create_table "user_changed", :id => false, :force => true do |t|
+    t.integer   "actor_id",                :null => false
+    t.timestamp "date",                    :null => false
+    t.string    "action",    :limit => 10, :null => false
+    t.string    "attribute", :limit => 45, :null => false
+  end
+
+  add_index "user_changed", ["actor_id"], :name => "idx_user_id"
+
   create_table "users", :force => true do |t|
-    t.string   "encrypted_password",     :limit => 128, :default => "",    :null => false
-    t.string   "password_salt"
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                         :default => 0
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.string   "authentication_token"
-    t.datetime "created_at",                                               :null => false
-    t.datetime "updated_at",                                               :null => false
-    t.integer  "actor_id"
-    t.string   "language"
-    t.string   "confirmation_token"
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
-    t.string   "unconfirmed_email"
-    t.boolean  "cloud_master",                          :default => false
-    t.integer  "ext_idp"
+    t.string    "encrypted_password",     :limit => 128, :default => "",    :null => false
+    t.string    "password_salt"
+    t.string    "reset_password_token"
+    t.datetime  "reset_password_sent_at"
+    t.datetime  "remember_created_at"
+    t.integer   "sign_in_count",                         :default => 0
+    t.datetime  "current_sign_in_at"
+    t.datetime  "last_sign_in_at"
+    t.string    "current_sign_in_ip"
+    t.string    "last_sign_in_ip"
+    t.string    "authentication_token"
+    t.datetime  "created_at",                                               :null => false
+    t.datetime  "updated_at",                                               :null => false
+    t.integer   "actor_id"
+    t.string    "language"
+    t.string    "confirmation_token"
+    t.datetime  "confirmed_at"
+    t.datetime  "confirmation_sent_at"
+    t.string    "unconfirmed_email"
+    t.boolean   "cloud_master",                          :default => false
+    t.integer   "ext_idp"
+    t.timestamp "time_mark",                                                :null => false
   end
 
   add_index "users", ["actor_id"], :name => "index_users_on_actor_id"

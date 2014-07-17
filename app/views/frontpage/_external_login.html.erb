@@ -6,7 +6,7 @@
 
     <%- if devise_mapping.omniauthable? %>
       <%- resource_class.omniauth_providers.each do |provider| 
-          info_idp = ExternalIdp.find_by_url(omniauth_authorize_path(resource_name, provider)+ '/callback')
+          info_idp = ExternalIdp.find_by_route(omniauth_authorize_path(resource_name, provider))
           if !info_idp.blank? && info_idp[:enabled] -%>
           <%= link_to image_tag("#{ provider }.png"), omniauth_authorize_path(resource_name, provider) %>
         <% end -%>

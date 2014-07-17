@@ -83,7 +83,14 @@ Fiware.signOut = (function($, undefined) {
     $.ajax(url, {
       type: portals[currentPortal].verb,
       success: function() {
-        window.location.replace(location.protocol + '//' + window.location.host);
+        if (idp_logout_url != '')
+        {
+          window.location.replace(idp_logout_url);
+        }
+        else
+        {
+          window.location.replace(location.protocol + '//' + window.location.host);
+        }
       }
     });
   };
