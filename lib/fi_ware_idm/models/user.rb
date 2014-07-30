@@ -74,12 +74,14 @@ module FiWareIdm
           hash
         end
 
+        role_ids = options[:client].custom_roles.map(&:id)
+
         ties_hash.each_pair do |org, roles|
           hash['organizations'] << {
             id: org.subject.id,
             actorId: org.id,
             displayName: org.name,
-            roles: roles.map{ |r|
+            roles: roles.select{|r| role_ids.include? r.id}.map{ |r|
               {
                 id: r.id,
                 name: r.name
@@ -107,7 +109,7 @@ module FiWareIdm
           joins(sender: :group).
           includes({ sender: :group }, :relation).
           merge(Group.where(type: 'Organization')).
-          merge(::Relation.where(id: role_ids)).
+          #merge(::Relation.where(id: role_ids)).
           received_by(self)
       end
 
