@@ -15,18 +15,19 @@ class V2::OrganizationsController < V2::BaseController
 		}
 
 		respond_to do |format|
-			format.any { render json: response }
+			format.any { render json: response, content_type: "application/json" }
 		end
 	end
 
 	#SCIM 2.0: GET Organization => GET /v2/organization/:actorId
 	def show
 		unless can? :read, @organization
-			render json: SCIMUtils.error("Permission denied",401) and return
+			render json: SCIMUtils.error("Permission denied",401), content_type: "application/json"
+			return
 		end
 
 		respond_to do |format|
-			format.any { render json: @organization.as_scim_json(v=2,self) }
+			format.any { render json: @organization.as_scim_json(v=2,self), content_type: "application/json" }
 		end
 	end
 
@@ -49,14 +50,16 @@ class V2::OrganizationsController < V2::BaseController
 				author = Actor.find(params[:organization][:owners].split(",").first.to_i)
 
 				if author.subject_type != "User"
-					render json: SCIMUtils.error("Invalid Owner Id",404) and return
+					render json: SCIMUtils.error("Invalid Owner Id",404), content_type: "application/json"
+					return
 				end
 
 				params[:organization][:author_id] = author.id
 				params[:organization][:user_author_id] = author.id
 				params[:organization][:owner_id] = author.id
 			rescue Exception => e
-				render json: SCIMUtils.error(e.message,500) and return
+				render json: SCIMUtils.error(e.message,500), content_type: "application/json"
+				return
 			end
 		end
 
@@ -64,16 +67,17 @@ class V2::OrganizationsController < V2::BaseController
 		organization.valid?
 
 		if organization.errors.blank? and organization.save
-			render json: organization.as_scim_json(v=2,self)
+			render json: organization.as_scim_json(v=2,self), content_type: "application/json"
 		else
-			render json: SCIMUtils.error(organization.errors,404)
+			render json: SCIMUtils.error(organization.errors,404), content_type: "application/json"
 		end
 	end
 
 	#SCIM 2.0: Update Organization => PUT /v2/organizations/:actorId
 	def update
 		unless can? :update, @organization
-			render json: SCIMUtils.error("Permission denied",401) and return
+			render json: SCIMUtils.error("Permission denied",401), content_type: "application/json"
+			return
 		end
 
 		if params[:organization] and !params[:organization][:owners].blank?
@@ -85,7 +89,8 @@ class V2::OrganizationsController < V2::BaseController
 					params[:organization][:owner_id] = author.id
 				end
 			rescue Exception => e
-				render json: SCIMUtils.error(e.message,500) and return
+				render json: SCIMUtils.error(e.message,500), content_type: "application/json"
+				return
 			end
 		end
 
@@ -93,22 +98,23 @@ class V2::OrganizationsController < V2::BaseController
 		@organization.valid?
 
 		if @organization.errors.blank? and @organization.save
-			render json: @organization.as_scim_json(v=2,self)
+			render json: @organization.as_scim_json(v=2,self), content_type: "application/json"
 		else
-			render json: SCIMUtils.error(organization.errors,404)
+			render json: SCIMUtils.error(organization.errors,404), content_type: "application/json"
 		end
 	end
 
 	#SCIM 2.0: Destroy Organization => DELETE /v2/organizations/:actorId
 	def destroy
 		unless can? :destroy, @organization
-			render json: SCIMUtils.error("Permission denied",401) and return
+			render json: SCIMUtils.error("Permission denied",401), content_type: "application/json"
+			return
 		end
 
 		if @organization.destroy
 			render :nothing => true, :status => 204
 		else
-			render json: SCIMUtils.error("Internal server error",500)
+			render json: SCIMUtils.error("Internal server error",500), content_type: "application/json"
 		end
 	end
 
@@ -120,7 +126,8 @@ class V2::OrganizationsController < V2::BaseController
 		actor = Actor.find(params[:id])
 
 		if actor.subject_type != "Group"
-			render json: SCIMUtils.error("Invalid Id",404) and return
+			render json: SCIMUtils.error("Invalid Id",404), content_type: "application/json"
+			return
 		end
 
 		@organization = actor.group

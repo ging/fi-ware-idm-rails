@@ -8,13 +8,15 @@ class V2::BaseController < ApplicationController
 
 	def authorizeSCIM
 		unless can? :manageSCIM, User
-			render json: SCIMUtils.error("Permission denied",401) and return
+			render json: SCIMUtils.error("Permission denied",401), content_type: "application/json" 
+			return
 		end
 	end
 
 	def authorizeSCIMWatcher
 		unless ((can? :manageSCIM, User)or(can? :showSCIM, User))
-			render json: SCIMUtils.error("Permission denied",401) and return
+			render json: SCIMUtils.error("Permission denied",401), content_type: "application/json"
+			return
 		end
 	end
 
@@ -33,7 +35,7 @@ class V2::BaseController < ApplicationController
 		}
 
 		respond_to do |format|
-			format.any { render json: response }
+			format.any { render json: response, content_type: "application/json" }
 		end
 	end
 

@@ -15,18 +15,19 @@ class V2::UsersController < V2::BaseController
 		}
 
 		respond_to do |format|
-			format.any { render json: response }
+			format.any { render json: response, content_type: "application/json" }
 		end
 	end
 
 	#SCIM 2.0: GET User => GET /v2/users/:actorId
 	def show
 		unless can? :read, @user
-			render json: SCIMUtils.error("Permission denied",401) and return
+			render json: SCIMUtils.error("Permission denied",401), content_type: "application/json"
+			return
 		end
 
 		respond_to do |format|
-			format.any { render json: @user.as_scim_json(v=2,self) }
+			format.any { render json: @user.as_scim_json(v=2,self), content_type: "application/json" }
 		end
 	end
 
@@ -51,9 +52,9 @@ class V2::UsersController < V2::BaseController
 		respond_to do |format|
 			format.any { 
 				if user.errors.blank? and user.save
-					render json: user.as_scim_json(v=2,self) 
+					render json: user.as_scim_json(v=2,self), content_type: "application/json"
 				else
-					render json: SCIMUtils.error(user.errors,404)
+					render json: SCIMUtils.error(user.errors,404), content_type: "application/json"
 				end
 			}
 		end
@@ -62,7 +63,8 @@ class V2::UsersController < V2::BaseController
 	#SCIM 2.0: Update User => PUT /v2/users/:actorId
 	def update
 		unless can? :update, @user
-			render json: SCIMUtils.error("Permission denied",401) and return
+			render json: SCIMUtils.error("Permission denied",401), content_type: "application/json"
+			return
 		end
 
 		if !params[:user].nil? and params[:user][:password].blank?
@@ -73,22 +75,23 @@ class V2::UsersController < V2::BaseController
 		@user.valid?
 
 		if @user.errors.blank? and @user.save
-			render json: @user.as_scim_json(v=2,self)
+			render json: @user.as_scim_json(v=2,self), content_type: "application/json"
 		else
-			render json: SCIMUtils.error(@user.errors,404)
+			render json: SCIMUtils.error(@user.errors,404), content_type: "application/json"
 		end
 	end
 
 	#SCIM 2.0: Destroy User => DELETE /v2/users/:actorId
 	def destroy
 		unless can? :destroy, @user
-			render json: SCIMUtils.error("Permission denied",401) and return
+			render json: SCIMUtils.error("Permission denied",401), content_type: "application/json"
+			return
 		end
 
 		if @user.destroy
 			render :nothing => true, :status => 204
 		else
-			render json: SCIMUtils.error("Internal server error",500)
+			render json: SCIMUtils.error("Internal server error",500), content_type: "application/json"
 		end
 	end
 
@@ -99,7 +102,8 @@ class V2::UsersController < V2::BaseController
 		actor = Actor.find(params[:id])
 
 		if actor.subject_type != "User"
-			render json: SCIMUtils.error("Invalid Id",404) and return
+			render json: SCIMUtils.error("Invalid Id",404), content_type: "application/json"
+			return
 		end
 
 		@user = actor.user
