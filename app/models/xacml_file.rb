@@ -61,18 +61,18 @@ class XacmlFile
     #create all the rules 
     xml.Rule(:RuleId => "role_#{ role.id }_can_#{ action.to_s.gsub(/\s/, '') }_#{ object.to_s.gsub(/\s/, '') }", :Effect =>'Permit'){
       xml.Description(role.name + ' can ' + action.to_s + ' ' + object.to_s)
-      xml.Target {
-        xml.Resources {
-          xml.Resource {
-            xml.ResourceMatch(:MatchId => StrFuncStrEqual) {
+      xml.Target{
+        xml.Resources{
+          xml.Resource{
+            xml.ResourceMatch(:MatchId => StrFuncStrEqual){
               xml.AttributeValue(object, :DataType => StrDataType)
               xml.ResourceAttributeDesignator(:AttributeId =>StrResourceId, :DataType =>StrDataType, :MustBePresent => "true")
             }
           }
         }
-        xml.Actions {
-          xml.Action {
-            xml.ActionMatch (:MatchId => StrFuncStrEqual) {
+        xml.Actions{
+          xml.Action{
+            xml.ActionMatch(:MatchId => StrFuncStrEqual){
               xml.AttributeValue(action.to_s, :DataType => StrDataType)
               xml.ActionAttributeDesignator(:AttributeId =>StrActionId, :DataType =>StrDataType, :MustBePresent => "true")
             }
