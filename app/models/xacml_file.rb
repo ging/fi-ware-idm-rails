@@ -6,6 +6,7 @@ class XacmlFile
   StrDataType = "http://www.w3.org/2001/XMLSchema#string"
   StrSubResourceId = "urn:thales:xacml:2.0:resource:sub-resource-id"
   StrResourceId = "urn:oasis:names:tc:xacml:1.0:resource:resource-id"
+  StrRoleId = "urn:oasis:names:tc:xacml:2.0:subject:role"
   StrActionId = "urn:oasis:names:tc:xacml:1.0:action:action-id"
   StrFuncStrIsIn = "urn:oasis:names:tc:xacml:1.0:function:string-is-in"
   StrFuncAnd = "urn:oasis:names:tc:xacml:1.0:function:and"
@@ -32,11 +33,11 @@ class XacmlFile
     xml.Policy(:PolicyId => role.id, :Version => "1.0", :RuleCombiningAlgId => StrRuleCombiningAlgIdPermitOverrides){
       xml.Description 'Role permissions policy file for '+role.name 
       xml.Target{
-        xml.Resources{
-          xml.Resource{
-            xml.ResourceMatch(:MatchId => StrFuncStrEqual) {
+        xml.Subjects{
+          xml.Subject{
+            xml.SubjectMatch(:MatchId => StrFuncStrEqual) {
               xml.AttributeValue(role.name, :DataType => StrDataType)
-              xml.ResourceAttributeDesignator(:DataType => StrDataType, :AttributeId => StrResourceId, :MustBePresent => "true")
+              xml.SubjectAttributeDesignator(:DataType => StrDataType, :AttributeId => StrRoleId, :MustBePresent => "true")
             }
           }
         }
@@ -59,16 +60,22 @@ class XacmlFile
   def create_rule(xml, role, action, object )
     #create all the rules 
     xml.Rule(:RuleId => "role_#{ role.id }_can_#{ action.to_s.gsub(/\s/, '') }_#{ object.to_s.gsub(/\s/, '') }", :Effect =>'Permit'){
-      xml.Description(role.name+' can '+ action.to_s+' '+object.to_s)
-      xml.Condition{
-        xml.Apply(:FunctionId =>StrFuncAnd){
-          xml.Apply(:FunctionId => StrFuncStrIsIn){
-            xml.AttributeValue(object, :DataType => StrDataType)
-            xml.ResourceAttributeDesignator(:AttributeId =>StrSubResourceId, :DataType =>StrDataType, :MustBePresent => "true")
+      xml.Description(role.name + ' can ' + action.to_s + ' ' + object.to_s)
+      xml.Target {
+        xml.Resources {
+          xml.Resource {
+            xml.ResourceMatch (:MatchId => StrFuncStrEqual) {
+              xml.AttributeValue(object, :DataType => StrDataType)
+              xml.ResourceAttributeDesignator(:AttributeId =>StrResourceId, :DataType =>StrDataType, :MustBePresent => "true")
+            }
           }
-          xml.Apply(:FunctionId => StrFuncStrIsIn){
-            xml.AttributeValue(action.to_s, :DataType => StrDataType)
-            xml.ActionAttributeDesignator(:AttributeId =>StrActionId, :DataType =>StrDataType, :MustBePresent => "true")
+        }
+        xml.Actions {
+          xml.Action {
+            xml.ActionMatch (:MatchId => StrFuncStrEqual) {
+              xml.AttributeValue(action.to_s, :DataType => StrDataType)
+              xml.ActionAttributeDesignator(:AttributeId =>StrActionId, :DataType =>StrDataType, :MustBePresent => "true")
+            }
           }
         }
       }
