@@ -64,7 +64,7 @@ class XacmlFile
       xml.Target {
         xml.Resources {
           xml.Resource {
-            xml.ResourceMatch (:MatchId => StrFuncStrEqual) {
+            xml.ResourceMatch(:MatchId => StrFuncStrEqual) {
               xml.AttributeValue(object, :DataType => StrDataType)
               xml.ResourceAttributeDesignator(:AttributeId =>StrResourceId, :DataType =>StrDataType, :MustBePresent => "true")
             }
