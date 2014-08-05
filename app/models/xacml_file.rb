@@ -36,7 +36,7 @@ class XacmlFile
         xml.Subjects{
           xml.Subject{
             xml.SubjectMatch(:MatchId => StrFuncStrEqual) {
-              xml.AttributeValue(role.name, :DataType => StrDataType)
+              xml.AttributeValue(role.id, :DataType => StrDataType)
               xml.SubjectAttributeDesignator(:DataType => StrDataType, :AttributeId => StrRoleId, :MustBePresent => "true")
             }
           }
