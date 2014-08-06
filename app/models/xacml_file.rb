@@ -45,12 +45,17 @@ class XacmlFile
       role.permissions.each do |permission|
         action = permission.action
         object = permission.object
+        xml_policy = permission.xml
 
         if object == nil 
           object="null"
         end
-
-        create_rule(xml, role, action, object) 
+        
+        if xml_policy == nil
+          create_rule(xml, role, action, object) 
+        else
+          xml << xml_policy
+        end
       end
     }
 
