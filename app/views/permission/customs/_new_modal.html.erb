@@ -1,3 +1,22 @@
+<script language="javascript" type="text/javascript" >
+
+  $("#accordion-togglerer").click(function(e){
+
+    if($("#accordion-togglerer").attr("title")==="Add advanced rule"){
+      $("#accordion-togglerer").html("Add standar rule");
+      $("#accordion-togglerer").attr("title", "Add standar rule");
+      $( "#first-option" ).hide();
+    }
+    else{
+      $("#accordion-togglerer").html("Add advanced rule");
+      $("#accordion-togglerer").attr("title", "Add advanced rule");
+      $( "#first-option" ).show();
+    }
+    return true;
+  });
+
+</script>
+
 <div id="new_permission_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="new_permission_modal_header" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -15,18 +34,49 @@
 
       <%= f.label :description %>
       <%= f.text_area :description %>
+      <span id="first-option">
+        <%= f.label :action, 'HTTP actions' %>
+        <%= f.text_field :action %>
 
-      <%= f.label :action, 'HTTP actions' %>
-      <%= f.text_field :action %>
+        <%= f.label :object, 'Resource' %>
+        <%= f.text_field :object %>
+      </span>
 
-      <%= f.label :object, 'Resource' %>
-      <%= f.text_field :object %>
 
-      <%= f.label :xml, 'XACML' %>
-      <%= f.text_field :xml %>
+      <div class="accordion" id="accordion1">
+        <div class="accordion-group">
+          <div class="accordion-heading">
+
+
+
+
+<a class="expand" data-toggle="collapse" data-parent="#accordion1" href="#moreoptions">
+  
+   
+    <span id="accordion-togglerer" class="showMore accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#moreoptions" title="Add advanced rule">
+      Add advanced rule
+    </span>
+</a>
+
+
+
+
+
+          </div>
+          <div id="moreoptions" class="accordion-body collapse">
+            <div class="accordion-inner">
+              <%= f.label :xml, 'XACML' %>
+              <%= f.text_area :xml, :rows =>6 %>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
     <div class="modal-footer">
       <%= f.submit %>
     </div>
   <% end %>
 </div>
+
+
