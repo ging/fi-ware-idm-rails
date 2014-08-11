@@ -3,8 +3,8 @@
   $("#accordion-togglerer").click(function(e){
 
     if($("#accordion-togglerer").attr("title")==="Add advanced rule"){
-      $("#accordion-togglerer").html("Add standar rule");
-      $("#accordion-togglerer").attr("title", "Add standar rule");
+      $("#accordion-togglerer").html("Add standard rule");
+      $("#accordion-togglerer").attr("title", "Add standard rule");
       $( "#first-option" ).hide();
     }
     else{
@@ -22,12 +22,11 @@
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     <h3 id="new_permission_modal_header">New permission</h3>
   </div>
-  <%= form_for custom, remote: true do |f| %>
+    <%= form_for custom, remote: true do |f| %>
     <%= f.hidden_field :actor_id %>
 
     <div class="modal-body">
-      <div class="error_explanation" class="alert alert-error">
-      </div>
+      <div class="error_explanation" class="alert alert-error"></div>
 
       <%= f.label :name %>
       <%= f.text_field :name %>
@@ -42,30 +41,16 @@
         <%= f.text_field :object %>
       </span>
 
-
       <div class="accordion" id="accordion1">
         <div class="accordion-group">
           <div class="accordion-heading">
-
-
-
-
-<a class="expand" data-toggle="collapse" data-parent="#accordion1" href="#moreoptions">
-  
-   
-    <span id="accordion-togglerer" class="showMore accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#moreoptions" title="Add advanced rule">
-      Add advanced rule
-    </span>
-</a>
-
-
-
-
-
+            <a class="expand" data-toggle="collapse" data-parent="#accordion1" href="#moreoptions">
+            <span id="accordion-togglerer" class="showMore accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#moreoptions" title="Add advanced rule">Add advanced rule</span>
+            </a>
           </div>
           <div id="moreoptions" class="accordion-body collapse">
             <div class="accordion-inner">
-              <%= f.label :xml, 'XACML' %>
+              <%= f.label :xml, 'XACML rule' %>
               <%= f.text_area :xml, :rows =>6 %>
             </div>
           </div>
@@ -78,5 +63,3 @@
     </div>
   <% end %>
 </div>
-
-
