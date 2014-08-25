@@ -28,9 +28,9 @@ es:
       new:
         title: "Registrar aplicación"
     current:
-      description: Create and manage your FI-WARE account
+      description: Create and manage your FIWARE account
       keywords: fi-ware,idm,GE,oauth2
-      title: FI-WARE Identity Manager
-    name: FI-WARE IdM
+      title: FIWARE Identity Manager
+    name: FIWARE IdM
 
 

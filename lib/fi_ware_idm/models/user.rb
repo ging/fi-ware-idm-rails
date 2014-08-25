@@ -8,7 +8,7 @@ module FiWareIdm
         validate :checkEmail
 
         def checkEmail
-          errorMsg1 = ": the e-mail domain is not valid. Please note that you are signing up to the FI-WARE Testbed, restricted to PPP members. If you are a PPP member, please use your corporate email (not gmail, yahoo, etc.). If you are not a PPP member, you can apply for an account in FI-Lab (http://lab.fi-ware.org/), that is suitable for anyone, PPP member or not.
+          errorMsg1 = ": the e-mail domain is not valid. Please note that you are signing up to the FIWARE Testbed, restricted to PPP members. If you are a PPP member, please use your corporate email (not gmail, yahoo, etc.). If you are not a PPP member, you can apply for an account in FI-Lab (http://lab.fi-ware.org/), that is suitable for anyone, PPP member or not.
                     If you are a PPP member using your corporate e-mail address and you get this message, please contact the support team at fiware-testbed-help@lists.fi-ware.org to add your domain name to our white list.
                     Important: a given domain on the white list authorises e-mail adresses in all the subdomains under it."
 

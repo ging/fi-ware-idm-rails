@@ -1,5 +1,5 @@
 FiWareIdm::Application.routes.draw do
-  # FI-WARE compatible routes
+  # FIWARE compatible routes
   match '/authorize', to: 'authorizations#new'
   post  '/token', to: proc { |env| SocialStream::Oauth2Server::TokenEndpoint.new.call(env) }
 

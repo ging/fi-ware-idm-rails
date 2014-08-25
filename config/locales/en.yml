@@ -76,10 +76,10 @@ en:
         link: "Add application"
         title: "Register new application"
     current:
-      description: Create and manage your FI-WARE account
+      description: Create and manage your FIWARE account
       keywords: fi-ware, fi-lab, fi-ware-portal, fi-ware-gei, fi-ware-cloud, fi-ware-accounts, fi-ware-wirecloud, fi-ware-store, context-broker-orion, bigdata-cosmos, GE, oauth2
-      title: FI-WARE Identity Manager
-    name: FI-WARE IdM
+      title: FIWARE Identity Manager
+    name: FIWARE IdM
   toolbar:
     applications: My Applications
     home: Home

@@ -3,8 +3,8 @@
 <div>
   <%= Date.today.year %> 
   © 
-  <%= link_to 'FI-WARE', 'http://fi-ware.org/' %>. 
-  The use of FI-LAB services is subject to the acceptance of the
+  <%= link_to 'FIWARE', 'http://fi-ware.org/' %>. 
+  The use of FIWARE Lab services is subject to the acceptance of the
   <a href="http://wiki.fi-ware.org/FI-LAB_Terms_and_Conditions"> 
     Terms and Conditions
   </a>

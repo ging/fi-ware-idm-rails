@@ -1,4 +1,4 @@
-# API to the FI-WARE OIL Store
+# API to the FIWARE OIL Store
 #
 class PurchasesController < ApplicationController
   respond_to :json

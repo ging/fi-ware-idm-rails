@@ -1,4 +1,4 @@
-# Models a purchase from the FI-WARE OIL Store
+# Models a purchase from the FIWARE OIL Store
 #
 # {
 #   "offering": {
