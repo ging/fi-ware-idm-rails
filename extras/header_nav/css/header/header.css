@@ -6,7 +6,7 @@ a:hover{
 New header style
 */
 
-#oil-nav{
+header.navbar{
   display: block;
   background-color: #f4f4f4;
   padding: 1px 10px 1px;
@@ -16,7 +16,7 @@ New header style
   box-shadow: 0px 1px 8px rgba(50, 51, 51, 0.15);
   position: fixed;
   width: 96%;
-  height: 35px;
+  height: 37px;
   padding: 1px 2% 1px;
   z-index: 2000000;
 }
@@ -32,61 +32,57 @@ nav.navbar-inner .logo-header{
   display: inline
 }
 
-.logo-header img{
-  float: left;
-}
-
-.logo-header .logo {
-  width: 60px;
-}
-
-.logo-header .fiware-logo {
-  width: 97px;
+.fiware-logo,
+.filab-logo {
+  width: 158px !important;
+  margin-left: 0px;
+  margin-left: 0px;
+  margin-top: 2px;
 }
 
 .logo-header .brand{
-  padding: 0;
-  width: auto;
-  float: none;
-  margin: -1px 0 0 3px;
-  font-size: 23px;
-  font-family: "NeoTech-Regular";
-  color: #60c1cf !important;
-  display: inline-block;
-  font-weight: normal !important;
-  text-shadow: 0 1px 0 rgb(255, 255, 255);
+  margin: 0 0 0 -8px !important;
+  padding: 0 !important;
 }
 
-.logo-header .brand a:hover{
-  text-decoration: none;
-}
-
-.logo-header .brand span{
-  color: #002d67 !important;
-}
 
 .mobile .dropdown-menu{
   margin-left: -67px;
+  min-width: 90px
+  background-color: rgb(244, 244, 244);
+  border: none;
+  -webkit-border-top-left-radius: 0px;
+  -moz-border-top-left-radius: 0px;
+  border-top-left-radius: 0px;
+  -webkit-border-top-right-radius: 0px;
+  -moz-border-top-right-radius: 0px;
+  border-top-right-radius: 0px;
+  -webkit-box-shadow: 2px 3px 6px rgba(0,0,0,0.1);
+  -moz-box-shadow: 2px 3px 6px rgba(0,0,0,0.1);
+  box-shadow: 2px 3px 6px rgba(0,0,0,0.1);
+  margin-top: 0px;
+  color: #333;
+
 }
 
 ul.oil-portal{
-  width: 463px;
+  width: 650px;
   height: 36px;
   padding: 0px;
   margin-bottom: 0px;
-  margin-left: 3px;
-  display: inline-block;
+  margin-left: 2px;
+  float: left;
 }
 
 ul.oil-portal li{
   display: inline-block;
-  padding: 14px 18px 9px;
+  padding: 12px 18px 8px;
 }
 
 ul.oil-portal li:hover{
   background-color: rgba(152, 152, 152, 0.1);
-  height: 18px;
-  color: #049cdb;
+  background-image: none;
+  color: #60C1CF;
 }
 
 ul.oil-portal li a{
@@ -100,9 +96,6 @@ ul.oil-portal li a:hover{
 ul.oil-portal li.active{
   background-color: #f9f9f9;
   height: 18px;
-  -moz-box-shadow: 0px 3px 5px -1px #F9F9F9;
-  -webkit-box-shadow: 0px 3px 5px -1px #F9F9F9;
-  box-shadow: 0px 3px 5px -1px #F9F9F9;
 }
 
 ul.oil-portal li.active a{
@@ -131,6 +124,7 @@ ul.oil-portal li.active a{
   margin-top: 0px;
   color:#333;
 }
+
 .mobile ul li a:hover{
   background-color: rgba(152, 152, 152, 0.1);
   color:#333;
@@ -186,7 +180,7 @@ ul.oil-portal li.active a{
   }
 
   .brand{
-    padding: 14px 1px 0 5px !important;
+    padding: 0px 4px 0 0px !important;
     float: left !important;
   }
 
@@ -223,7 +217,7 @@ ul.oil-portal li.active a{
   }
 
   .brand{
-    padding: 14px 1px 0 5px !important;
+    padding: 0px 4px 0 0px !important;
     float: left !important;
   }
 
