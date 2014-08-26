@@ -40,5 +40,22 @@ module ApplicationHelper
   def isAdmin?
     user_signed_in? and current_user.admin?
   end
+
+  #Inherited from Social Stream
+  def current_subject_contacts_to(contacts)
+    contacts.map{ |c|
+      current_actor.blank? || c.sender == current_actor ?
+        c :
+        current_actor.contact_to!(c.receiver)
+    }
+  end
+
+  #Inherited from Social Stream
+  def current_subject_contacts(subject)
+    params[:subject] = subject
+    params[:d]    ||= 'sent'
+    params[:type] ||= subject.class.contact_index_models.first.to_s
+    current_subject_contacts_to(Contact.index(params))
+  end
   
 end
