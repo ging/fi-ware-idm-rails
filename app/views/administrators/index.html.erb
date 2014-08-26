@@ -1,0 +1,21 @@
+<% content_for :title do%>
+  <%= t('administrators.index.title') %>
+<% end %>
+
+<section id="administrators">
+  <header>
+    <h3>
+    <%= render  partial: 'contacts/add_button',
+                locals: {
+                sender: Site.current,
+                 type: [ :user ]
+               }
+    %>
+    <%= t('administrators.index.title') %></h3>
+  </header>
+
+  <section class="administrators">
+    <%= render partial:    'contacts/contact',
+               collection: administrators_list %>
+  </section>
+</section>

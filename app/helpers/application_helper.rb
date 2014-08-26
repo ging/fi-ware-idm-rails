@@ -50,12 +50,18 @@ module ApplicationHelper
     }
   end
 
-  #Inherited from Social Stream
   def current_subject_contacts(subject)
     params[:subject] = subject
     params[:d]    ||= 'sent'
     params[:type] ||= subject.class.contact_index_models.first.to_s
     current_subject_contacts_to(Contact.index(params))
+  end
+
+  def administrators_list
+    params[:subject] = Site.current
+    params[:d]    ||= 'sent'
+    params[:type] ||= 'user'
+    Contact.index(params)
   end
   
 end
