@@ -45,13 +45,14 @@
                   <%= link_to @user.profile.website, @user.profile.website %>
                 <% end %>
               </div>
-    
-              <header>
-                E-mail
-              </header>
-              <div class="result">
-                <%= @user.profile.email %>
-              </div>
+              <% if current_subject == @user or isAdmin? %>
+                <header>
+                  E-mail
+                </header>
+                <div class="result">
+                  <%= @user.profile.email %>
+                </div>
+              <% end %>
             </div>
           </div>
         </div>

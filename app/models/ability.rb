@@ -4,7 +4,7 @@ class Ability
   def initialize(subject)
     super
 
-    admin = (!Site.current.nil?) and (can? :update, Site.current)
+    admin = ((!subject.nil?) and (!Site.current.nil?) and (can? :update, Site.current))
 
     if subject.is_a?(Application) && subject.store?
       can :create, Purchase
@@ -21,8 +21,8 @@ class Ability
     end
 
     #SCIM2 Permissions
-    can :showSCIM, :all
     if admin
+      can :showSCIM, :all
       can :manageSCIM, :all
     end
 

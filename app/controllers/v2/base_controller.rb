@@ -4,7 +4,7 @@ class V2::BaseController < ApplicationController
 	require 'SCIMUtils'
 	before_filter :authenticate_user!
 	before_filter :authorizeSCIM, :except => [:testing,:getConfig]
-	before_filter :authorizeSCIMWatcher, :only => [:getConfig]
+	# before_filter :authorizeSCIMWatcher, :only => [:getConfig]
 
 	def authorizeSCIM
 		unless can? :manageSCIM, User
@@ -40,8 +40,8 @@ class V2::BaseController < ApplicationController
 	end
 
 	#Testing the SCIM 2.0 API  => /v2/testing
-	def testing
-		render :layout => false
-	end
+	# def testing
+	# 	render :layout => false
+	# end
 
 end
