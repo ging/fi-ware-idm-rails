@@ -46,6 +46,16 @@ module FiWareIdm
         end
 
         alias_method_chain :as_json, :organizations
+
+        #Allow to call can? method from model
+        def ability
+          @ability ||= Ability.new(self)
+        end
+        delegate :can?, :cannot?, :to => :ability
+      end
+
+      def admin?
+        ((!Site.current.nil?) and (self.can? :update, Site.current))
       end
 
       # Authorize FiWARE apps by default

@@ -36,4 +36,9 @@ module ApplicationHelper
 
     "#{ protocol }://#{ domain }"
   end
+
+  def isAdmin?
+    user_signed_in? and current_user.admin?
+  end
+  
 end
