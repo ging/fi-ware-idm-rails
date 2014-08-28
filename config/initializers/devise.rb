@@ -242,9 +242,6 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = "/my_engine/users/auth"
   
   # Omniauth shibboleth configuration
-  config.omniauth :shibboleth_idp1, {:info_fields => {:email => 'mail', :name => 'cn'},:debug => false }
-  config.omniauth :shibboleth_idp2, {:info_fields => {:email => 'mail', :name => 'cn'},:debug => false }
-  config.omniauth :shibboleth_idp3, {:info_fields => {:email => 'mail', :name => 'cn'},:debug => false }
-  config.omniauth :shibboleth_idp4, {:info_fields => {:email => 'mail', :name => 'cn'},:debug => false }
-  
+ 
+
 end

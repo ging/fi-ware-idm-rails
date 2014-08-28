@@ -10,7 +10,8 @@ FiWareIdm::Application.routes.draw do
   end
 
   resources :purchases
-
+  resources :external_idps
+  
   #SCIM 2.0 API
   namespace :v2 do
     resources :users

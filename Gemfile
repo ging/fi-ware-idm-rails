@@ -67,3 +67,9 @@ gem 'rack-cors', require: 'rack/cors'
 
 # SHIBBOLETH
 gem 'omniauth-shibboleth'
+
+# Script
+gem 'mysql'
+
+# For carrierwave
+gem "mini_magick"

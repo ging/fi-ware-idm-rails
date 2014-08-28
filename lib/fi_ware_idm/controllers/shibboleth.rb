@@ -4,7 +4,7 @@ module FiWareIdm
       
       def shibboleth_logout
         
-        if current_user.ext_idp?
+        if !current_user.nil? && current_user.ext_idp?
           
           # Recover shibboleth session cookie
           cookies.each do |cookie| 

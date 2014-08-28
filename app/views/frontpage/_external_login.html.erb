@@ -8,7 +8,13 @@
       <%- resource_class.omniauth_providers.each do |provider| 
           info_idp = ExternalIdp.find_by_route(omniauth_authorize_path(resource_name, provider))
           if !info_idp.blank? && info_idp[:enabled] -%>
-          <%= link_to image_tag("#{ provider }.png"), omniauth_authorize_path(resource_name, provider) %>
+            <%= if info_idp.logo_url.nil?
+              image_path = "/assets/logos/small/site.png"              
+            else
+              image_path = info_idp.logo_url 
+            end 
+            link_to image_tag(image_path, :alt => info_idp.description, :title => info_idp.description), omniauth_authorize_path(resource_name, provider)
+        %>
         <% end -%>
       <% end -%>
     <% end -%>

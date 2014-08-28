@@ -1,40 +1,5 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
-  
-  # Shibboleth provider
-  def shibboleth_idp1
 
-    autenticate_sso_user(request)
-        
-    redirect_to :home
-  end
-
-  # Shibboleth provider
-  def shibboleth_idp2
-    
-    # Check if the access request is made by an authorized IDP
-    autenticate_sso_user(request)
-    
-    redirect_to :home
-  end
-
-  # Shibboleth provider
-  def shibboleth_idp3
-    
-    # Check if the access request is made by an authorized IDP
-    autenticate_sso_user(request)
-    
-    redirect_to :home
-  end
-
-  # Shibboleth provider
-  def shibboleth_idp4
-    
-    # Check if the access request is made by an authorized IDP
-    autenticate_sso_user(request)
-    
-    redirect_to :home
-  end
-  
 private 
 
   def autenticate_sso_user(requestVar)

@@ -166,9 +166,12 @@ GEM
       rails (> 3.0.0)
     method_source (0.8.2)
     mime-types (1.25)
+    mini_magick (3.8.0)
+      subexec (~> 0.2.1)
     modernizr-rails (2.0.6)
     multi_json (1.8.2)
     multipart-post (1.2.0)
+    mysql (2.9.1)
     mysql2 (0.3.14)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
@@ -302,6 +305,7 @@ GEM
       actionpack (~> 3.0)
       activemodel (~> 3.0)
       railties (~> 3.0)
+    subexec (0.2.3)
     thinking-sphinx (2.0.14)
       activerecord (>= 3.0.3)
       builder (>= 2.1.2)
@@ -332,6 +336,8 @@ DEPENDENCIES
   forgery
   galetahub-simple_captcha
   jquery-rails
+  mini_magick
+  mysql
   mysql2
   omniauth-shibboleth
   pry-rails

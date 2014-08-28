@@ -80,11 +80,51 @@ en:
       keywords: fi-ware, fi-lab, fi-ware-portal, fi-ware-gei, fi-ware-cloud, fi-ware-accounts, fi-ware-wirecloud, fi-ware-store, context-broker-orion, bigdata-cosmos, GE, oauth2
       title: FI-WARE Identity Manager
     name: FI-WARE IdM
+    
+  idp:
+    
+    index: 
+      title: External IDPs
+      button:
+        add: Add IDP
+        sp_metadata: 
+          text: SP Metadata
+          title: Download Service Provider's Metadata
+        idp_metadata: 
+          text: IDP Metadata
+          title: Download Identity Provider's Metadata
+  
+    new: 
+      title: Register a new IDP
+      action: Register a new IDP 
+      
+    edit:
+      title: Modify an IDP
+      
+    form:
+      update: IDP updated
+      new: New IDP registered
+      metadata: 
+        label: Upload metadata (XML)
+        button: Choose file
+        empty: No file selected
+      logo:
+        label: Upload logo
+        
+    destroy:
+      confirm: Are you sure? This operation cannot be reverted!
+      link: Remove the external IDP and all its data
+      title: Destroy IDP
+      
+    delete: IDP deleted
+    
+       
   toolbar:
     applications: My Applications
     home: Home
     members: Members
     organizations: Organizations
+    external_idps: External IDPs
     resources: Resources
     settings: Settings
 
