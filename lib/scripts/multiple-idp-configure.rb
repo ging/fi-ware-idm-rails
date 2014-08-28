@@ -12,7 +12,7 @@ IDM_PATH = '/home/mirko/progetti/fi-ware-idm/'
 PID_FILE = '/var/run/multiple-idp-configure.pid'
 STATE_FILE = '/tmp/multiple-idp-configure.stat'
 METADATA_PATH = IDM_PATH + 'public/uploads/external_idp/metadata/' # From rails carrierwave gem 
-		
+
 File.open(PID_FILE, 'w') { |file| file.write(Process.pid) }
 
 def do_exit state=false
@@ -34,7 +34,7 @@ end
 
 $MyLog.debug('START')
 
-Configuration = {:sp => {:configuration_path => SP_CONFIGURATION_PATH},:apache => {:configuration_path => APACHE_CONFIGURATION_PATH, :configuration_file => APACHE_CONFIGURATION_FILE},:idm => {:path => IDM_PATH}}
+Configuration = {:sp => {:configuration_path => SP_CONFIGURATION_PATH},:apache => {:configuration_path => APACHE_CONFIGURATION_PATH, :configuration_file => APACHE_CONFIGURATION_FILE},:idm => {:path => IDM_PATH, :metadata_path => METADATA_PATH}}
 
 # Read the ini file
 ini_file = 'multiple-idp-configure.ini'
@@ -55,9 +55,10 @@ end
 # CONTROLLARE CHE QUELLI LETTI DALL'IDP TERMINO CON /
 
 # IDM CONFIGURATION
-Configuration[:idm][:devise_configuration_path] = Configuration[:idm][:path] + "config/initializers/"
-Configuration[:idm][:omniauth_configuration_path] = Configuration[:idm][:path] + "config/initializers/"
-Configuration[:idm][:omniauth_callbacks_path] = Configuration[:idm][:path] + "app/controllers/"
+Configuration[:idm][:devise_configuration_path] = File.join(Configuration[:idm][:path],"config/initializers/")
+Configuration[:idm][:omniauth_configuration_path] = File.join(Configuration[:idm][:path],"config/initializers/")
+Configuration[:idm][:omniauth_callbacks_path] = File.join(Configuration[:idm][:path],"app/controllers/")
+Configuration[:idm][:metadata_path] = File.join(Configuration[:idm][:path],'public/uploads/external_idp/metadata/')
 
 #### CHECK IF DEVEL OR NOT ####
 
@@ -96,7 +97,7 @@ def updateShibbolethConfiguration (listOfIdps = nil, saveTemporaryTo= "")
 	
 	metaDataProvider = "<MetadataProvider type=\"Chaining\">\n"
 	listOfIdps.each do |key, aRow|
-		metaDataProvider = metaDataProvider + "\t<MetadataProvider type=\"XML\" path=\"" + METADATA_PATH + aRow["id"] + "/" +  aRow["metadata"] + "\" />\n"
+		metaDataProvider = metaDataProvider + "\t<MetadataProvider type=\"XML\" path=\"" + File.join(Configuration[:idm][:metadata_path],aRow["id"],aRow["metadata"]) + "\" />\n"
 	end
 	metaDataProvider = metaDataProvider + "</MetadataProvider>"
 	
