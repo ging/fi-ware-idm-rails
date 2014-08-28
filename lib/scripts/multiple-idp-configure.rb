@@ -109,7 +109,7 @@ def updateApacheConfiguration (listOfIdps = nil, saveTemporaryTo = "")
 	
 	locations = ""
 	listOfIdps.each do |key, aRow|
-		url = aRow["url"]
+		url = File.join(aRow["url"],'idp','shibboleth')
 		tag = aRow["route"]
 
 		locations = locations + <<EOS
