@@ -1,14 +1,27 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
+  def shibboleth_idp1
+    autenticate_sso_user(request)
+    
+		if request.env['rack.session']['user_return_to'].nil?
+			redirect_to :home
+		else
+			redirect_to request.env['rack.session']['user_return_to'] 
+		end
+  end
 
 private 
 
   def autenticate_sso_user(requestVar)
     
     # Removed callback path
+		#requestVar.env.each do |val|
+		#	logger.tagged("MIRKO") {logger.warn val }
+		#end
+		#logger.tagged("MIRKO") {logger.warn requestVar.env['rack.session']['user_return_to'] }
     info_idp = ExternalIdp.find_by_route(requestVar.env['REQUEST_URI'].to_s.sub('/callback',''))
     if !info_idp.blank?
       if info_idp[:enabled]
-        logger.tagged("MIRKO") {logger.warn "enabled" }
+        #logger.tagged("MIRKO") {logger.warn "enabled" }
         begin
           email = requestVar.env['omniauth.auth']['info']['email']
         rescue    
