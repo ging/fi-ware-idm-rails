@@ -1,16 +1,21 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def shibboleth_idp1
+
     autenticate_sso_user(request)
-    
-		if request.env['rack.session']['user_return_to'].nil?
-			redirect_to :home
-		else
-			redirect_to request.env['rack.session']['user_return_to'] 
-		end
+        
+    whereRedirect(request)
   end
 
 private 
 
+  def whereRedirect(requestVar)
+    if request.env['rack.session']['user_return_to'].nil?
+      redirect_to :home
+    else
+      redirect_to request.env['rack.session']['user_return_to'] 
+    end
+  end
+	
   def autenticate_sso_user(requestVar)
     
     # Removed callback path

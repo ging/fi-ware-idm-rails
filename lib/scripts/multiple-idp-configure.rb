@@ -182,7 +182,7 @@ def updateCallbackController (listOfIdps = nil, saveTemporaryTo = "")
 
     autenticate_sso_user(request)
         
-    redirect_to :home
+    whereRedirect(request)
   end
 EOS
 	end
