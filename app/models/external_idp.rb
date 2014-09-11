@@ -13,7 +13,7 @@ class ExternalIdp < ActiveRecord::Base
   end
   
   before_destroy do
-   # logger.tagged("MIRKO") {logger.warn "BEFORE_DESTROY"}
+    
     listUsers = User.find_by_sql('SELECT users.id FROM users JOIN external_idps ON users.ext_idp=external_idps.id')
     listUsers.each do |user|
       User.find(user.id).destroy
@@ -22,15 +22,14 @@ class ExternalIdp < ActiveRecord::Base
   end
   
   after_commit do
-    #logger.tagged("MIRKO") {logger.warn "AFTER COMMIT"}
+
     self.apply_changes
+    
   end
    
   def apply_changes # Run auto_reconfigure.rb script
-    
     path = Rails.root.join('lib','scripts').to_s
     comando = "sudo #{path}/multiple-idp-configure.sh #{path}"
-
     system(comando)
   end
   

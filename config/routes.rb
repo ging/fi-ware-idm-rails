@@ -11,6 +11,7 @@ FiWareIdm::Application.routes.draw do
 
   resources :purchases
   resources :external_idps
+  resources :external_sps
   
   #SCIM 2.0 API
   namespace :v2 do

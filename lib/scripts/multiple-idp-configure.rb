@@ -65,7 +65,7 @@ Configuration[:idm][:metadata_path] = File.join(Configuration[:idm][:path],'publ
 # Recover info database
 Configuration[:db] = {}
 $MyLog.debug("Read database configuration")
-dbHash = YAML.load_file(Configuration[:idm][:path] + '/config/database.yml')
+dbHash = YAML.load_file(File.join(Configuration[:idm][:path],'/config/database.yml'))
 Configuration[:db][:user] = dbHash['development']['user']
 Configuration[:db][:password] = dbHash['development']['password']
 Configuration[:db][:database] = dbHash['development']['database']
@@ -218,7 +218,7 @@ $MyLog.debug("Create temporary directory #{tempDir}")
 FileUtils.remove_dir(tempDir, true)
 FileUtils.mkdir tempDir
 
-backupDir = tempDir + "/org/"
+backupDir = File.join(tempDir,"/org/")
 FileUtils.mkdir backupDir
 
 files = 'shibboleth2.xml', Configuration[:apache][:configuration_file],  'devise.rb', 'omniauth.rb', 'omniauth_callbacks_controller.rb'
@@ -226,24 +226,24 @@ files = 'shibboleth2.xml', Configuration[:apache][:configuration_file],  'devise
 # Create the new files version
 files.each do |filename| 
 
-	tempFile = tempDir + "/" + filename
+	tempFile = File.join(tempDir,filename)
 	begin
 		# Check org file
 		case filename
 		when 'shibboleth2.xml'
-			FileUtils.cp(Configuration[:sp][:configuration_path] + filename, backupDir + filename)
+			FileUtils.cp(File.join(Configuration[:sp][:configuration_path],filename),File.join(backupDir,filename))
 			result = updateShibbolethConfiguration(listOfIdps, tempFile)
 		when Configuration[:apache][:configuration_file]
-			FileUtils.cp(Configuration[:apache][:configuration_path] + filename, backupDir + filename)
+			FileUtils.cp(File.join(Configuration[:apache][:configuration_path],filename),File.join(backupDir,filename))
 			result = updateApacheConfiguration(listOfIdps, tempFile) 
 		when 'devise.rb'
-			FileUtils.cp(Configuration[:idm][:devise_configuration_path] + filename, backupDir + filename)
+			FileUtils.cp(File.join(Configuration[:idm][:devise_configuration_path],filename),File.join(backupDir,filename))
 			result = updateDevise(listOfIdps, tempFile) 
 		when 'omniauth.rb'
-			FileUtils.cp(Configuration[:idm][:omniauth_configuration_path] + filename, backupDir + filename)
+			FileUtils.cp(File.join(Configuration[:idm][:omniauth_configuration_path],filename),File.join(backupDir,filename))
 			result = updateOmniAuth(listOfIdps, tempFile)
 		when 'omniauth_callbacks_controller.rb'
-			FileUtils.cp(Configuration[:idm][:omniauth_callbacks_path] + filename, backupDir + filename)
+			FileUtils.cp(File.join(Configuration[:idm][:omniauth_callbacks_path],filename),File.join(backupDir,filename))
 			result = updateCallbackController(listOfIdps, tempFile)
 		end
 	rescue Exception => e  
@@ -274,8 +274,8 @@ files.each do |filename|
 		orgDir = Configuration[:idm][:omniauth_callbacks_path]
 	end
 	
-	tempFile = tempDir + "/" + filename
-	orgFile = orgDir + filename
+	tempFile = File.join(tempDir,filename)
+	orgFile = File.join(orgDir,filename)
 	
 	# Recover owner + group
 	oldStat = File.stat(orgFile)

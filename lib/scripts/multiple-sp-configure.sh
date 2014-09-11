@@ -4,6 +4,6 @@ eval "$(rbenv init -)"
 
 CURDIR=$(pwd)
 cd $1
-ruby ./multiple-idp-configure.rb
+ruby ./multiple-sp-configure.rb
 cd $CURDIR
 

@@ -39,6 +39,13 @@
       <% end %>
     </li>
 
+    <li class="administrators<%= ' active' if controller.controller_name == 'external_sps' %>">
+      <%= link_to external_sps_path do %>
+        <i class='icon_menu-20-administrators'></i>
+        <h2><%= t('toolbar.external_sps') %></h2>
+      <% end %>
+    </li>
+    
     <% if can? :update, Site.current %>
       <hr class="soften">
       <li class="notify<%= ' active' if controller.controller_name == 'notifications' %>">
