@@ -121,7 +121,7 @@ en:
   sp:
     
     index: 
-      title: External SPs
+      title: IDP configuration
       button:
         add: Add SP
         idp_metadata: 
@@ -161,7 +161,7 @@ en:
     members: Members
     organizations: Organizations
     external_idps: External IDPs
-    external_sps: External SPs
+    external_sps: IDP Configuration
     resources: Resources
     settings: Settings
 
