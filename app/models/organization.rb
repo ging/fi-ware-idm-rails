@@ -4,6 +4,13 @@ class Organization < Group
 		self.contact_subjects(:direction => :sent, :type=> :user)
 	end
 
+	def api_attributes
+		attrs = self.actor.attributes
+		attrs["actor_id"] = attrs["id"]
+		attrs["id"] = self.id
+		attrs
+	end
+
 	def to_json(params)
 		self.attributes.merge({
 			name: name,

@@ -10,7 +10,14 @@ class ApplicationsController < Site::ClientsController
                  object: collection
         end
       }
-      format.json { render json: Actor.find(params[:actor_id]).applications }
+      format.json { 
+        if params[:actor_id]
+          apps = Actor.find(params[:actor_id]).applications
+        else
+          apps = current_subject.applications
+        end
+        render json: apps
+      }
     end
   end
 

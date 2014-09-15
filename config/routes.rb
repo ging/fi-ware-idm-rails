@@ -11,6 +11,13 @@ FiWareIdm::Application.routes.draw do
 
   resources :purchases
 
+  #Authentication Token API
+  namespace :api do
+    namespace :v1  do
+      resources :tokens,:only => [:create, :destroy]
+    end
+  end
+
   #SCIM 2.0 API
   namespace :v2 do
     resources :users
