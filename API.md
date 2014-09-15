@@ -31,7 +31,7 @@ Example of error UNAUTHORIZED:
 ```
 
 
-Once you have a valid token you will be able to access the different resources in the API. All of them present a REST interface
+Once you have a valid token you will be able to access the different resources in the API. All of them present a REST interface with a CRUD options (Create, Read, Update, Delete).
 
 2. Applications API:
 --------------------------
@@ -42,7 +42,7 @@ Index of applications:
     Server: status = 200, [{"id":2,"name":"my_first_app","description":"kike kike","url":"http://myfirstapp.fiware.eu"},{"id":3,"name":"my_second_app","description":"description provided","url":"http://mysecondapp.fiware.org"}]
 ```
 
-Show one application:
+READ: Show one application:
 ```
     client: GET /applications/2.json?auth_token=yEA7ndmSsg2xQz8ypAat
     Server: status = 200, {"id":2,"name":"my_first_app","description":"kike kike","url":"http://myfirstapp.fiware.eu"}
