@@ -69,6 +69,7 @@ class Application < Site::Client
   def api_attributes
     attrs = self.attributes
     attrs["slug"] = self.slug
+    attrs["name"] = self.name
     attrs
   end
 

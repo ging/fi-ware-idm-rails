@@ -39,6 +39,24 @@ class ApplicationsController < Site::ClientsController
     end
   end
 
+  def update
+    respond_to do |format|
+      format.html {
+        super
+      }
+      format.json {
+        update! do |success, error|
+          success.json { 
+            render json: resource.api_attributes
+          }
+          error.json {
+            render json: resource.errors
+          }
+        end
+      }
+    end
+  end
+
   def show
     respond_to do |format|
       format.html {
@@ -46,6 +64,24 @@ class ApplicationsController < Site::ClientsController
       }
       format.json {
         render json: resource.api_attributes
+      }
+    end
+  end
+
+  def destroy
+    respond_to do |format|
+      format.html {
+        super
+      }
+      format.json {
+        destroy! do |success, error|
+          success.json {
+            render json: resource.api_attributes
+          }
+          error.json {
+            render json: resource.errors
+          }
+        end
       }
     end
   end
