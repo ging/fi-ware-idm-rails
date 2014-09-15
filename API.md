@@ -47,3 +47,11 @@ READ: Show one application:
     client: GET /applications/2.json?auth_token=yEA7ndmSsg2xQz8ypAat
     Server: status = 200, {"id":2,"name":"my_first_app","description":"kike kike","url":"http://myfirstapp.fiware.eu"}
 ```
+
+|   |   | ddddd  |   |   |
+|---|---|--------|---|---|
+|   |   | dfdfdf |   |   |
+|   |   |        |   |   |
+|   |   |        |   |   |
+
+
