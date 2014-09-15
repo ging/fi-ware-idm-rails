@@ -36,22 +36,13 @@ Once you have a valid token you will be able to access the different resources i
 2. Applications API:
 --------------------------
 
-Index of applications:
-```
-    client: GET /applications.json?auth_token=yEA7ndmSsg2xQz8ypAat
-    Server: status = 200, [{"id":2,"name":"my_first_app","description":"kike kike","url":"http://myfirstapp.fiware.eu"},{"id":3,"name":"my_second_app","description":"description provided","url":"http://mysecondapp.fiware.org"}]
-```
+| Methods | URL                               | Params                                                                                                                                                                     | Example response |
+|---------|-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|
+| INDEX   | GET /applications.json            |                                                                                                                                                                            |                  |
+| CREATE  | POST /applications.json           | application[name]*: Application name application[description]: Application description application[url]*: Application URL application[callback_url]*: Application callback |                  |
+| READ    | GET /applications/#{slug}.json    | slug: Slug identifier of the application.                                                                                                                                  |                  |
+| UPDATE  | PUT /applications/#{slug}.json    | application[name]*: Application name application[description]: Application description application[url]*: Application URL application[callback_url]*: Application callback |                  |
+| DELETE  | DELETE /applications/#{slug}.json | slug: Slug identifier of the application.                                                                                                                                  |                  |
 
-READ: Show one application:
-```
-    client: GET /applications/2.json?auth_token=yEA7ndmSsg2xQz8ypAat
-    Server: status = 200, {"id":2,"name":"my_first_app","description":"kike kike","url":"http://myfirstapp.fiware.eu"}
-```
-
-|   |   | ddddd  |   |   |
-|---|---|--------|---|---|
-|   |   | dfdfdf |   |   |
-|   |   |        |   |   |
-|   |   |        |   |   |
 
 
