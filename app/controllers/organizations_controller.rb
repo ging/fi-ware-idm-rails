@@ -18,8 +18,69 @@ class OrganizationsController < GroupsController
     end
   end
 
+  def show
+    respond_to do |format|
+      format.html {
+        super
+      }
+      format.json {
+        render json: resource.api_attributes
+      }
+    end
+  end
+
   def create
-    super
+    respond_to do |format|
+      format.html {
+        super
+      }
+      format.json {
+        create! do |success, error|
+          success.json { 
+            render json: resource.api_attributes
+          }
+          error.json {
+            render json: resource.errors
+          }
+        end
+      }
+    end
+  end
+
+  def update
+    respond_to do |format|
+      format.html {
+        super
+      }
+      format.json {
+        update! do |success, error|
+          success.json { 
+            render json: resource.api_attributes
+          }
+          error.json {
+            render json: resource.errors
+          }
+        end
+      }
+    end
+  end
+
+  def destroy
+    respond_to do |format|
+      format.html {
+        super
+      }
+      format.json {
+        destroy! do |success, error|
+          success.json {
+            render json: resource.api_attributes
+          }
+          error.json {
+            render json: resource.errors
+          }
+        end
+      }
+    end
   end
 
   protected
