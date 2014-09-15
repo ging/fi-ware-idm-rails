@@ -14,9 +14,38 @@ class ApplicationsController < Site::ClientsController
         if params[:actor_id]
           apps = Actor.find(params[:actor_id]).applications
         else
-          apps = current_subject.applications
+          apps = current_subject.applications.map{|a| a.api_attributes}
         end
         render json: apps
+      }
+    end
+  end
+
+  def create
+    respond_to do |format|
+      format.html {
+        super
+      }
+      format.json {
+        create! do |success, error|
+          success.json { 
+            render json: resource.api_attributes
+          }
+          error.json {
+            render json: resource.errors
+          }
+        end
+      }
+    end
+  end
+
+  def show
+    respond_to do |format|
+      format.html {
+        super
+      }
+      format.json {
+        render json: resource.api_attributes
       }
     end
   end

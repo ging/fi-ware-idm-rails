@@ -66,6 +66,12 @@ class Application < Site::Client
     XacmlPolicy.save self
   end
 
+  def api_attributes
+    attrs = self.attributes
+    attrs["slug"] = self.slug
+    attrs
+  end
+
   def as_json(options = {})
     {
       id: id,
