@@ -9,13 +9,8 @@
                }
     %>
   </header>
-  <!-- 
-  <form class="form-inline">
-    <%= text_field_tag "contact-filter", "", placeholder: "filter", autocomplete: "off" %>
-  </form>
-  -->
 
-  <%= render Contact.index(subject: current_subject).first(5) %>
-
+  <%= render current_subject_contacts(current_subject).first(5) %>
+  
   <%= link_to 'View more',  contacts_path, :class => "view-all"  %>
 </div>
