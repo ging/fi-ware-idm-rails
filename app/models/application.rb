@@ -66,11 +66,17 @@ class Application < Site::Client
     XacmlPolicy.save self
   end
 
-  def api_attributes
-    attrs = self.attributes
+  def api_attributes(includeResources=true)
+    attrs = Hash.new
+    attrs["id"] = self.id
+    attrs["actor_id"] = self.actor_id
     attrs["slug"] = self.slug
     attrs["name"] = self.name
-    attrs["roles"] = self.roles.map{|r| r.api_attributes}
+    attrs["created_at"] = self.created_at
+    attrs["updated_at"] = self.updated_at
+    if includeResources
+      attrs["roles"] = self.roles.map{|r| r.api_attributes}
+    end
     attrs
   end
 

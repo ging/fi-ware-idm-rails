@@ -133,7 +133,7 @@ module FiWareIdm
           }
       end
 
-      def api_attributes(current_user=nil)
+      def api_attributes(current_user=nil,includeResources=true)
         attrs = Hash.new
         attrs["id"] = self.id
         attrs["slug"] = self.slug
@@ -143,6 +143,12 @@ module FiWareIdm
           #Restricted data
           attrs["email"] = self.email
           attrs["authentication_token"] = self.authentication_token
+        end
+        attrs["created_at"] = self.created_at
+        attrs["updated_at"] = self.updated_at
+        if includeResources
+          attrs["organizations"] = self.organizations.map{|o| o.api_attributes(false)}
+          attrs["applications"] = self.applications.map{|a| a.api_attributes(false)}
         end
         attrs
       end
