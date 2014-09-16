@@ -69,7 +69,7 @@ Once you have a valid token you will be able to access the different resources i
 | DELETE  | DELETE /users/#{slug}.json | slug: Slug identifier of the user.                                                                                                                                  |
 
 
-4. Assign Role to User in Application API:
+5. Assign Role to User in Application API:
 --------------------------
 Coming soon
 
