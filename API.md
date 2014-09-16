@@ -67,10 +67,7 @@ Once you have a valid token you will be able to access the different resources i
 | READ    | GET /users/#{slug}.json    | slug: Slug identifier of the user.                                                                                                                                  |
 | UPDATE  | PUT /users/#{slug}.json    | user[name]: User name <br>user[password]: User password <br>user[email]: User email |
 | DELETE  | DELETE /users/#{slug}.json | slug: Slug identifier of the user.                                                                                                                                  |
+| ADD USER  | POST  /applications/#{slug}/add_user.json | Add a user to the application with a specific role.<br>slug: Slug identifier of the application.<br>actor_slug: Slug identifier of the actor (user or organization).<br>role_id: Identifier of the role.<br>  |
 
-
-5. Assign Role to User in Application API:
---------------------------
-Coming soon
 
 
