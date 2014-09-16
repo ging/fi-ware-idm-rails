@@ -1,4 +1,3 @@
-
 IDM - REST API - VERSION 1
 ==================
 
@@ -36,13 +35,42 @@ Once you have a valid token you will be able to access the different resources i
 2. Applications API:
 --------------------------
 
-| Methods | URL                               | Params                                                                                                                                                                     | Example response |
+| Methods | URL                               | Params                                                                                                                                                                     |
 |---------|-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|
 | INDEX   | GET /applications.json            |                                                                                                                                                                            |                  |
-| CREATE  | POST /applications.json           | application[name]*: Application name application[description]: Application description application[url]*: Application URL application[callback_url]*: Application callback |                  |
-| READ    | GET /applications/#{slug}.json    | slug: Slug identifier of the application.                                                                                                                                  |                  |
-| UPDATE  | PUT /applications/#{slug}.json    | application[name]*: Application name application[description]: Application description application[url]*: Application URL application[callback_url]*: Application callback |                  |
-| DELETE  | DELETE /applications/#{slug}.json | slug: Slug identifier of the application.                                                                                                                                  |                  |
+| CREATE  | POST /applications.json           | application[name]\*: Application name <br>application[description]: Application description <br>application[url]\*: Application URL <br>application[callback_url]\*: Application callback |
+| READ    | GET /applications/#{slug}.json    | slug: Slug identifier of the application.                                                                                                                                  |
+| UPDATE  | PUT /applications/#{slug}.json    | application[name]\*: Application name <br>application[description]: Application description <br>application[url]\*: Application URL <br>application[callback_url]\*: Application callback |
+| DELETE  | DELETE /applications/#{slug}.json | slug: Slug identifier of the application.                                                                                                                                  |
 
+
+3. Organizations API:
+--------------------------
+
+| Methods | URL                               | Params                                                                                                                                                                     |
+|---------|-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|
+| INDEX   | GET /organizations.json            |                                                                                                                                                                            |                  |
+| CREATE  | POST /organizations.json           | organization[name]\*: Organization name<br> organization[owners]: Owners list<br>organization[description]: Description<br> |
+| READ    | GET /organizations/#{slug}.json    | slug: Slug identifier of the organization.                                                                                                                                  |
+| UPDATE  | PUT /organizations/#{slug}.json    | organization[name]*: Organization name<br>organization[owners]: Owners list<br>organization[description]: Description |
+| DELETE  | DELETE /organizations/#{slug}.json | slug: Slug identifier of the organization.                                                                                                                                  |
+
+
+
+4. Users API:
+--------------------------
+
+| Methods | URL                               | Params                                                                                                                                                                     |
+|---------|-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|
+| INDEX   | GET /users.json            |    No soportado (Usar SCIM API)                                                                                                                                                                        |                  |
+| CREATE  | POST /users.json           | No soportado (Usar SCIM API) |
+| READ    | GET /users/#{slug}.json    | slug: Slug identifier of the user.                                                                                                                                  |
+| UPDATE  | PUT /users/#{slug}.json    | user[name]: User name <br>user[password]: User password <br>user[email]: User email |
+| DELETE  | DELETE /users/#{slug}.json | slug: Slug identifier of the user.                                                                                                                                  |
+
+
+4. Assign Role to User in Application API:
+--------------------------
+Coming soon
 
 
