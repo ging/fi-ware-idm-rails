@@ -10,6 +10,7 @@ FiWareIdm::Application.routes.draw do
   end
 
   resources :purchases
+  resources :roles
 
   #Authentication Token API
   namespace :api do
