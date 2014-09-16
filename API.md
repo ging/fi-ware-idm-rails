@@ -42,6 +42,8 @@ Once you have a valid token you will be able to access the different resources i
 | READ    | GET /applications/#{slug}.json    | slug: Slug identifier of the application.                                                                                                                                  |
 | UPDATE  | PUT /applications/#{slug}.json    | application[name]\*: Application name <br>application[description]: Application description <br>application[url]\*: Application URL <br>application[callback_url]\*: Application callback |
 | DELETE  | DELETE /applications/#{slug}.json | slug: Slug identifier of the application.                                                                                                                                  |
+| ADD USER  | POST  /applications/#{slug}/add_user.json | Add a user to the application with a specific role.<br>slug: Slug identifier of the application.<br>actor_slug: Slug identifier of the actor (user or organization).<br>role_id: Identifier of the role.<br>  |
+
 
 
 3. Organizations API:
@@ -67,7 +69,7 @@ Once you have a valid token you will be able to access the different resources i
 | READ    | GET /users/#{slug}.json    | slug: Slug identifier of the user.                                                                                                                                  |
 | UPDATE  | PUT /users/#{slug}.json    | user[name]: User name <br>user[password]: User password <br>user[email]: User email |
 | DELETE  | DELETE /users/#{slug}.json | slug: Slug identifier of the user.                                                                                                                                  |
-| ADD USER  | POST  /applications/#{slug}/add_user.json | Add a user to the application with a specific role.<br>slug: Slug identifier of the application.<br>actor_slug: Slug identifier of the actor (user or organization).<br>role_id: Identifier of the role.<br>  |
+
 
 
 
