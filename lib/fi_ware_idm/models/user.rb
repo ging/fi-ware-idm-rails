@@ -133,6 +133,20 @@ module FiWareIdm
           }
       end
 
+      def api_attributes(current_user=nil)
+        attrs = Hash.new
+        attrs["id"] = self.id
+        attrs["slug"] = self.slug
+        attrs["name"] = self.name
+        attrs["language"] = self.language
+        if (current_user and (current_user.admin? or self.id==current_user.id))
+          #Restricted data
+          attrs["email"] = self.email
+          attrs["authentication_token"] = self.authentication_token
+        end
+        attrs
+      end
+
       def as_scim_json(version,controller)
         {
           schemas: ["urn:scim:schemas:core:2.0:User"],
