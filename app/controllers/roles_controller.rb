@@ -64,9 +64,16 @@ class RolesController < ApplicationController
     unless params[:role].nil?
       params[:relation_custom] = params[:role]
     end
-    if !params[:relation_custom].nil? and !params[:relation_custom][:app_id].nil?
-      params[:relation_custom][:actor_id] = Application.find(params[:relation_custom][:app_id]).actor_id
-      params[:relation_custom].delete "app_id"
+
+    unless params[:relation_custom].nil?
+      unless params[:relation_custom][:app_id].nil?
+        params[:relation_custom][:actor_id] = Application.find(params[:relation_custom][:app_id]).actor_id
+        params[:relation_custom].delete "app_id"
+      end
+      unless params[:relation_custom][:app_slug].nil?
+        params[:relation_custom][:actor_id] = Application.find_by_slug(params[:relation_custom][:app_slug]).actor_id
+        params[:relation_custom].delete "app_slug"
+      end
     end
   end
 
