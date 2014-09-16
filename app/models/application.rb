@@ -70,6 +70,7 @@ class Application < Site::Client
     attrs = self.attributes
     attrs["slug"] = self.slug
     attrs["name"] = self.name
+    attrs["roles"] = self.roles.map{|r| r.api_attributes}
     attrs
   end
 
