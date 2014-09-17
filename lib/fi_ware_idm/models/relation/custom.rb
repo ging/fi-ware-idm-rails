@@ -39,7 +39,7 @@ module FiWareIdm
           default
         end
 
-        def api_attributes
+        def api_attributes(options={})
           super
         end
       end

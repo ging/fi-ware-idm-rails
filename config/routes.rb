@@ -11,7 +11,13 @@ FiWareIdm::Application.routes.draw do
 
   resources :purchases
   resources :roles
-  match '/applications/:id/add_actor' => "applications#add_actor", :via => :post, :format => :json
+
+  #Role Assignment. REST API
+  match '/applications/:app_id/actors' => "applications#index_actors", :via => :get, :format => :json
+  match '/applications/:app_id/actors' => "applications#create_actor", :via => :post, :format => :json
+  match '/applications/:app_id/actors/:actor_id' => "applications#show_actor", :via => :get, :format => :json
+  match '/applications/:app_id/actors/:actor_id' => "applications#update_actor", :via => :put, :format => :json
+  match '/applications/:app_id/actors/:actor_id' => "applications#delete_actor", :via => :delete, :format => :json
 
   #Authentication Token API
   namespace :api do

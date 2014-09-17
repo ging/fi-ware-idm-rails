@@ -66,7 +66,9 @@ class Application < Site::Client
     XacmlPolicy.save self
   end
 
-  def api_attributes(includeResources=true)
+  def api_attributes(options={})
+    options[:includeResources] = true unless options[:includeResources]==false
+
     attrs = Hash.new
     attrs["id"] = self.id
     attrs["actor_id"] = self.actor_id
@@ -74,8 +76,9 @@ class Application < Site::Client
     attrs["name"] = self.name
     attrs["created_at"] = self.created_at
     attrs["updated_at"] = self.updated_at
-    if includeResources
-      attrs["roles"] = self.roles.map{|r| r.api_attributes}
+    if options[:includeResources]
+      attrs["actors"] = self.sent_contacts.map{|c| Actor.find(c.receiver_id).api_attributes({:includeResources => false, :includeRoles => options[:includeRoles]})}
+      attrs["roles"] = self.roles.map{|r| r.api_attributes({:includeResources => false})}
     end
     attrs
   end

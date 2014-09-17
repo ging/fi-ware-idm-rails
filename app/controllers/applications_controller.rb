@@ -1,7 +1,7 @@
 class ApplicationsController < Site::ClientsController
   # Change the settings of inherited_resources for applications
   defaults resource_class: Application
-  skip_load_and_authorize_resource :only => [:add_user]
+  skip_load_and_authorize_resource :only => [:index_actors, :create_actor, :show_actor, :update_actor, :delete_actor]
 
   def index
     respond_to do |format|
@@ -87,14 +87,26 @@ class ApplicationsController < Site::ClientsController
     end
   end
 
-  def add_actor
-    app = Application.find_by_slug(params[:id])
+
+  #Role Assignment. REST API
+
+  def index_actors
+    app = Application.find_by_slug(params[:app_id])
+    respond_to do |format|
+      format.any {
+        render json: app.api_attributes({:includeRoles => app})
+      }
+    end
+  end
+
+  def create_actor
+    app = Application.find_by_slug(params[:app_id])
     authorize! :update, app
 
     #1. Build parameters
     idmParams = Hash.new
     idmParams["actors"] = Actor.find_by_slug(params["actor_slug"]).id.to_s
-    idmParams["relations"] = [params["role_id"]]
+    idmParams["relations"] = params["role_ids"].split(",")
     idmParams["application_id"] = app.id
 
     idmParams["auth_token"] = params["auth_token"]
@@ -103,7 +115,7 @@ class ApplicationsController < Site::ClientsController
     relation_ids = idmParams["relations"].map(&:to_i)
 
     idmParams["actors"].split(',').each do |a|
-      c = profile_or_current_subject.contact_to!(a)
+      c = app.contact_to!(a)
       # Record who is manipulating the contact, mainly in groups
       c.user_author = current_user
       c.relation_ids = relation_ids
@@ -111,9 +123,21 @@ class ApplicationsController < Site::ClientsController
 
     respond_to do |format|
       format.any {
-        render json: app.api_attributes
+        render json: app.api_attributes({:includeRoles => app})
       }
     end
+  end
+
+  def show_actor
+    app = Application.find_by_slug(params[:app_id])
+    authorize! :show, app
+    actor = Actor.find_by_slug(params[:actor_id])
+  end
+
+  def update_actor
+  end
+
+  def delete_actor
   end
 
 

@@ -133,22 +133,17 @@ module FiWareIdm
           }
       end
 
-      def api_attributes(current_user=nil,includeResources=true)
+      def api_attributes(options={})
         attrs = Hash.new
-        attrs["id"] = self.id
-        attrs["slug"] = self.slug
-        attrs["name"] = self.name
         attrs["language"] = self.language
-        if (current_user and (current_user.admin? or self.id==current_user.id))
-          #Restricted data
+        showSensibleData = (options[:current_user] and (options[:current_user].admin? or self.id==options[:current_user].id))
+        if showSensibleData
+          #Sensible data
           attrs["email"] = self.email
           attrs["authentication_token"] = self.authentication_token
         end
-        attrs["created_at"] = self.created_at
-        attrs["updated_at"] = self.updated_at
-        if includeResources
-          attrs["organizations"] = self.organizations.map{|o| o.api_attributes(false)}
-          attrs["applications"] = self.applications.map{|a| a.api_attributes(false)}
+        if options[:includeResources]
+          attrs["organizations"] = self.organizations.map{|o| o.api_attributes({:includeResources => false})}
         end
         attrs
       end

@@ -4,17 +4,10 @@ class Organization < Group
 		self.contact_subjects(:direction => :sent, :type=> :user)
 	end
 
-	def api_attributes(includeResources=true)
+	def api_attributes(options={})
 		attrs = Hash.new
-		attrs["id"] = self.id
-		attrs["actor_id"] = self.actor_id
-		attrs["slug"] = self.slug
-		attrs["name"] = self.name
-		attrs["created_at"] = self.created_at
-		attrs["updated_at"] = self.updated_at
-		if includeResources
-			attrs["members"] = self.members.map{|u| u.api_attributes(nil,false)}
-			attrs["applications"] = self.applications.map{|a| a.api_attributes(false)}
+		if options[:includeResources]
+			attrs["members"] = self.members.map{|u| u.api_attributes({:includeResources => false})}
 		end
 		attrs
 	end

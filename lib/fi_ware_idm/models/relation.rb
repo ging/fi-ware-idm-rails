@@ -6,7 +6,9 @@ module FiWareIdm
       def trigger_policy_save
       end
 
-      def api_attributes
+      def api_attributes(options={})
+        options[:includeResources] = true unless options[:includeResources]==false
+        
         attrs = Hash.new
         attrs["id"] = self.id
         attrs["actor_id"] = self.actor_id
