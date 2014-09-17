@@ -50,11 +50,15 @@ class UsersController < ApplicationController
     end
   end
 
-  def current
-    respond_to do |format|
-      format.json { render json: current_user.to_json }
-    end
-  end
+  # Overriden in app/decorators/user_controller_decorator.rb in SS oauth2_server gem
+  # Method as_json_with_client overriden in lib/social_stream/oauth2_server/models/user.rb
+  # def current
+  #   respond_to do |format|
+  #     format.json { 
+  #       render json: current_user.to_json 
+  #     }
+  #   end
+  # end
 
   # Supported through devise
   def new; end; def create; end

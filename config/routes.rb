@@ -11,7 +11,7 @@ FiWareIdm::Application.routes.draw do
 
   resources :purchases
   resources :roles
-  match '/applications/:id/add_user' => "applications#add_user", :via => :post, :format => :json
+  match '/applications/:id/add_actor' => "applications#add_actor", :via => :post, :format => :json
 
   #Authentication Token API
   namespace :api do

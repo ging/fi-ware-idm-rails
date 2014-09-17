@@ -87,7 +87,7 @@ class ApplicationsController < Site::ClientsController
     end
   end
 
-  def add_user
+  def add_actor
     app = Application.find_by_slug(params[:id])
     authorize! :update, app
 
