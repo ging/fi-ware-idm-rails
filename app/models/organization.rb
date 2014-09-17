@@ -1,7 +1,7 @@
 class Organization < Group
 
 	def members
-		self.contact_subjects(:direction => :sent, :type=> :user)
+		self.contact_subjects(:direction => :sent, :type=> :user).compact
 	end
 
 	def api_attributes(options={})
