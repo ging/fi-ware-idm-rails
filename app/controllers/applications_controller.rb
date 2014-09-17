@@ -90,6 +90,7 @@ class ApplicationsController < Site::ClientsController
 
   #Role Assignment. REST API
 
+  #GET applications/#{app_slug}/actors.json
   def index_actors
     app = Application.find_by_slug(params[:app_id])
     respond_to do |format|
@@ -99,6 +100,7 @@ class ApplicationsController < Site::ClientsController
     end
   end
 
+  #POST applications/#{app_slug}/actors.json
   def create_actor
     app = Application.find_by_slug(params[:app_id])
     authorize! :update, app
@@ -128,16 +130,62 @@ class ApplicationsController < Site::ClientsController
     end
   end
 
+  #GET applications/#{app_slug}/actors/#{actor_slug}.json
   def show_actor
     app = Application.find_by_slug(params[:app_id])
     authorize! :show, app
-    actor = Actor.find_by_slug(params[:actor_id])
+    actor = app.actors.select{|a| a.slug==params[:actor_id]}.first
+    if actor.nil?
+      raise ActiveRecord::RecordNotFound
+    end
+    authorize! :show, actor.subject
+    respond_to do |format|
+      format.any {
+        render json: actor.api_attributes({:includeRoles => app, :includeResources => false})
+      }
+    end
   end
 
+  #PUT applications/#{app_slug}/actors/#{actor_slug}.json
   def update_actor
+    app = Application.find_by_slug(params[:app_id])
+    authorize! :update, app
+    actor = app.actors.select{|a| a.slug==params[:actor_id]}.first
+    if actor.nil?
+      raise ActiveRecord::RecordNotFound
+    end
+
+    #1. Find the relation
+    c = app.contact_to!(actor)
+    #2. Update
+    c.relation_ids = params["role_ids"].split(",").map(&:to_i)
+
+    respond_to do |format|
+      format.any {
+        render json: actor.api_attributes({:includeRoles => app, :includeResources => false})
+      }
+    end
   end
 
+  #DELETE applications/#{app_slug}/actors/#{actor_slug}.json
   def delete_actor
+    app = Application.find_by_slug(params[:app_id])
+    authorize! :update, app
+    actor = app.actors.select{|a| a.slug==params[:actor_id]}.first
+    if actor.nil?
+      raise ActiveRecord::RecordNotFound
+    end
+
+    #1. Find the relation
+    c = app.contact_to!(actor)
+    #2. Remove roles
+    c.relation_ids = []
+
+    respond_to do |format|
+      format.any {
+        render json: actor.api_attributes({:includeRoles => app, :includeResources => false})
+      }
+    end
   end
 
 
