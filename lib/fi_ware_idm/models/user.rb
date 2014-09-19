@@ -133,6 +133,21 @@ module FiWareIdm
           }
       end
 
+      def api_attributes(options={})
+        attrs = Hash.new
+        attrs["language"] = self.language
+        showSensibleData = (options[:current_user] and (options[:current_user].admin? or self.id==options[:current_user].id))
+        if showSensibleData
+          #Sensible data
+          attrs["email"] = self.email
+          attrs["authentication_token"] = self.authentication_token
+        end
+        if options[:includeResources]
+          attrs["organizations"] = self.organizations.map{|o| o.api_attributes({:includeResources => false})}
+        end
+        attrs
+      end
+
       def as_scim_json(version,controller)
         {
           schemas: ["urn:scim:schemas:core:2.0:User"],

@@ -37,6 +37,10 @@ class Application < Site::Client
     alias_method "#{ app }?", app
   end
 
+  def actors
+    self.sent_contacts.map{|c| Actor.find(c.receiver_id)}
+  end
+
   def official?
     official.present?
   end
@@ -64,6 +68,23 @@ class Application < Site::Client
     return unless FiWareIdm::Thales.enable
 
     XacmlPolicy.save self
+  end
+
+  def api_attributes(options={})
+    options[:includeResources] = true unless options[:includeResources]==false
+
+    attrs = Hash.new
+    attrs["id"] = self.id
+    attrs["actor_id"] = self.actor_id
+    attrs["slug"] = self.slug
+    attrs["name"] = self.name
+    attrs["created_at"] = self.created_at
+    attrs["updated_at"] = self.updated_at
+    if options[:includeResources]
+      attrs["actors"] = self.actors.map{|a| a.api_attributes({:includeResources => false, :includeRoles => options[:includeRoles]})}
+      attrs["roles"] = self.roles.map{|r| r.api_attributes({:includeResources => false})}
+    end
+    attrs
   end
 
   def as_json(options = {})

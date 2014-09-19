@@ -59,6 +59,29 @@ module FiWareIdm
         }
       end
 
+      def api_attributes(options={})
+        options[:includeResources] = true unless options[:includeResources]==false
+
+        attrs = Hash.new
+        attrs["id"] = self.subject.id
+        attrs["actor_type"] = self.subject_type
+        attrs["actor_id"] = self.id
+        attrs["slug"] = self.slug
+        attrs["name"] = self.name
+        attrs["created_at"] = self.created_at
+        attrs["updated_at"] = self.updated_at
+        if options[:includeRoles]
+          app = options[:includeRoles]
+          attrs["roles"] = app.contact_to!(self).relations.map{|r| r.api_attributes({:includeResources => false})}
+        end
+        if options[:includeResources]
+          attrs["applications"] = self.applications.map{|a| a.api_attributes({:includeResources => false})}
+        end
+
+        attrs = attrs.merge(self.subject.api_attributes(options))
+        attrs
+      end
+
       protected
 
       def build_options_for_contact_select

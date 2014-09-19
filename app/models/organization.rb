@@ -1,7 +1,15 @@
 class Organization < Group
 
 	def members
-		self.contact_subjects(:direction => :sent, :type=> :user)
+		self.contact_subjects(:direction => :sent, :type=> :user).compact
+	end
+
+	def api_attributes(options={})
+		attrs = Hash.new
+		if options[:includeResources]
+			attrs["members"] = self.members.map{|u| u.api_attributes({:includeResources => false})}
+		end
+		attrs
 	end
 
 	def to_json(params)

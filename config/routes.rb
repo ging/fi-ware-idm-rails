@@ -10,6 +10,21 @@ FiWareIdm::Application.routes.draw do
   end
 
   resources :purchases
+  resources :roles
+
+  #Role Assignment. REST API
+  match '/applications/:app_id/actors' => "applications#index_actors", :via => :get, :format => :json
+  match '/applications/:app_id/actors' => "applications#create_actor", :via => :post, :format => :json
+  match '/applications/:app_id/actors/:actor_id' => "applications#show_actor", :via => :get, :format => :json
+  match '/applications/:app_id/actors/:actor_id' => "applications#update_actor", :via => :put, :format => :json
+  match '/applications/:app_id/actors/:actor_id' => "applications#delete_actor", :via => :delete, :format => :json
+
+  #Authentication Token API
+  namespace :api do
+    namespace :v1  do
+      resources :tokens,:only => [:create, :destroy]
+    end
+  end
 
   #SCIM 2.0 API
   namespace :v2 do

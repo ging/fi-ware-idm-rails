@@ -38,6 +38,10 @@ module FiWareIdm
 
           default
         end
+
+        def api_attributes(options={})
+          super
+        end
       end
     end
   end

@@ -5,14 +5,82 @@ class OrganizationsController < GroupsController
   before_filter :redirect_to_members, only: [ :index ]
 
   def index
-    if request.xhr?
-      render partial: 'list',
-             object: collection
+    respond_to do |format|
+      format.html {
+        if request.xhr?
+          render partial: 'list',
+                 object: collection
+        end
+      }
+      format.json {
+        render json: current_user.organizations.map{|o| o.api_attributes }
+      }
+    end
+  end
+
+  def show
+    respond_to do |format|
+      format.html {
+        super
+      }
+      format.json {
+        render json: resource.api_attributes
+      }
     end
   end
 
   def create
-    super
+    respond_to do |format|
+      format.html {
+        super
+      }
+      format.json {
+        create! do |success, error|
+          success.json { 
+            render json: resource.api_attributes
+          }
+          error.json {
+            render json: resource.errors
+          }
+        end
+      }
+    end
+  end
+
+  def update
+    respond_to do |format|
+      format.html {
+        super
+      }
+      format.json {
+        update! do |success, error|
+          success.json { 
+            render json: resource.api_attributes
+          }
+          error.json {
+            render json: resource.errors
+          }
+        end
+      }
+    end
+  end
+
+  def destroy
+    respond_to do |format|
+      format.html {
+        super
+      }
+      format.json {
+        destroy! do |success, error|
+          success.json {
+            render json: resource.api_attributes
+          }
+          error.json {
+            render json: resource.errors
+          }
+        end
+      }
+    end
   end
 
   protected
