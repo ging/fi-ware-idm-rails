@@ -1,5 +1,5 @@
 class Application < Site::Client
-  OFFICIAL = [ :cloud, :store, :mashup ]
+  OFFICIAL = [ :cloud, :store, :mashup, :data ]
 
   scope :granting_roles, ->(actor) {
     select("DISTINCT sites.*").
