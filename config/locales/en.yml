@@ -82,7 +82,10 @@ en:
     name: FI-WARE IdM
     
   idp:
-    
+    frontpage:
+        text: Sign in
+        title: Federated login
+        
     index: 
       title: External IDPs
       button:
