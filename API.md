@@ -111,7 +111,7 @@ response:
 
 
 We need a session token before accessing these API methods. In the following examples we are going to suppose that we have this session token: {"token":"DtDTMSMuntmZgEgwaAhq"}.
-Also, we are also going to suppose that we have the following app:
+Also, we are going to suppose that we have the following app:
 ```
 {"id":62,"actor_id":141,"slug":"myapp","name":"MyApp","description":null,"url":"myURL","callback":"myCallback","created_at":"2014-09-22T08:35:47Z","updated_at":"2014-09-22T08:35:47Z","actors":[{"id":26,"actor_type":"User","actor_id":135,"slug":"demo-2","name":"Demo","created_at":"2014-09-22T08:04:39Z","updated_at":"2014-09-22T08:04:39Z","language":null}],"roles":[{"id":34,"actor_id":null,"type":"Relation::Manager","name":"Provider","created_at":"2014-03-20T10:10:35Z","updated_at":"2014-03-20T10:10:35Z"},{"id":44,"actor_id":null,"type":"Relation::Purchaser","name":"Purchaser","created_at":"2014-03-20T10:38:16Z","updated_at":"2014-03-20T10:38:16Z"}]}
 ```
@@ -176,7 +176,7 @@ response:
 
 | Methods | URL                               | Params                                                                                                                                                                     |
 |---------|-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|
-| INDEX   |            |       Access an application to get a list of its roles.<br>GET /applications.json                                                                                                                                                                     |                  |
+| INDEX?   |            |       There is no Index method in this API. To get an Index of the roles of an application you can access an application or the index of applications.<br>GET /applications.json                                                                                                                                                                     |                  |
 | CREATE  | POST /roles.json   | role[name]\*: Role name<br>role[app_id]: App id or role[app_slug]: App slug |
 | READ    | GET /roles/#{id}.json    | id: Role id.                                                                                                                                  |
 | UPDATE  | PUT /roles/#{id}.json    | id: Role id<br>role[name]\*: Role name<br>role[app_id]: App id or role[app_slug]: App slug |
@@ -184,15 +184,15 @@ response:
 
 
 We need a session token before accessing these API methods. In the following examples we are going to suppose that we have this session token: {"token":"DtDTMSMuntmZgEgwaAhq"}.
-Also, we are also going to suppose that we have the following app:
+Also, we are going to suppose that we have the following app:
 ```
 {"id":62,"actor_id":141,"slug":"myapp","name":"MyApp","description":null,"url":"myURL","callback":"myCallback","created_at":"2014-09-22T08:35:47Z","updated_at":"2014-09-22T08:35:47Z","actors":[{"id":26,"actor_type":"User","actor_id":135,"slug":"demo-2","name":"Demo","created_at":"2014-09-22T08:04:39Z","updated_at":"2014-09-22T08:04:39Z","language":null}],"roles":[{"id":34,"actor_id":null,"type":"Relation::Manager","name":"Provider","created_at":"2014-03-20T10:10:35Z","updated_at":"2014-03-20T10:10:35Z"},{"id":44,"actor_id":null,"type":"Relation::Purchaser","name":"Purchaser","created_at":"2014-03-20T10:38:16Z","updated_at":"2014-03-20T10:38:16Z"}]}
 ```
 
-**Create a new/custom role for the above application:**
+**Create a new custom role for the above application:**
 ```
 request:
-	POST /roles.json?auth_token=DtDTMSMuntmZgEgwaAhq
+POST /roles.json?auth_token=DtDTMSMuntmZgEgwaAhq
 POST params
 role[name]: MyCustomRole
 role[app_slug]: myapp
@@ -203,7 +203,7 @@ response:
 **To read the above role:**
 ```
 request:
-	GET /roles/101.json?auth_token=DtDTMSMuntmZgEgwaAhq
+GET /roles/101.json?auth_token=DtDTMSMuntmZgEgwaAhq
 response:
 {"id":101,"actor_id":141,"type":"Relation::Custom","name":"MyCustomRole","created_at":"2014-09-22T09:04:56Z","updated_at":"2014-09-22T09:04:56Z"}
 ```
@@ -221,7 +221,7 @@ response:
 **Delete the role:**
 ```
 request:
-	DELETE /roles/101.json?auth_token=DtDTMSMuntmZgEgwaAhq
+DELETE /roles/101.json?auth_token=DtDTMSMuntmZgEgwaAhq
 response:
 {"id":101,"actor_id":141,"type":"Relation::Custom","name":"MyCustomRoleUpdated","created_at":"2014-09-22T09:04:56Z","updated_at":"2014-09-22T09:08:16Z"}
 ```
@@ -244,10 +244,10 @@ response:
 We need a session token before accessing these API methods. In the following examples we are going to suppose that we have this session token: {"token":"DtDTMSMuntmZgEgwaAhq"}.
 
 **Create a new organization:**
-The default owner is the user who make the request. To specify additional owners use the organization[owners] param.
+The default owner is the user who makes the request. To specify additional owners use the organization[owners] param.
 ```
 request:
-	POST /organizations.json?auth_token=DtDTMSMuntmZgEgwaAhq
+POST /organizations.json?auth_token=DtDTMSMuntmZgEgwaAhq
 POST params
 organization[name]: MyDemoOrganization
 response:
@@ -259,7 +259,7 @@ response:
 **Create a new organization with more owners. In this case we have to fill the owners list with the actor ids of the users.**
 ```
 request:
-	POST /organizations.json?auth_token=DtDTMSMuntmZgEgwaAhq
+POST /organizations.json?auth_token=DtDTMSMuntmZgEgwaAhq
 POST params
 organization[name]: OrganizationWithSeveralOwners
 organization[owners]: 9,135
@@ -270,7 +270,7 @@ response:
 **Read a organization:**
 ```
 request:
-        GET /organizations/mydemoorganization.json?auth_token=DtDTMSMuntmZgEgwaAhq
+GET /organizations/mydemoorganization.json?auth_token=DtDTMSMuntmZgEgwaAhq
 response:
 {"id":29,"actor_type":"Group","actor_id":147,"slug":"mydemoorganization","name":"MyDemoOrganization","created_at":"2014-09-22T09:28:07Z","updated_at":"2014-09-22T09:28:07Z","applications":[],"members":[{"id":26,"actor_type":"User","actor_id":135,"slug":"demo-2","name":"Demo","created_at":"2014-09-22T08:04:39Z","updated_at":"2014-09-22T08:04:39Z","language":null}]}
 ```
@@ -278,8 +278,8 @@ response:
 **Update a organization:**
 ```
 request:
-        PUT /organizations/mydemoorganization.json?auth_token=DtDTMSMuntmZgEgwaAhq
-	PUT params
+PUT /organizations/mydemoorganization.json?auth_token=DtDTMSMuntmZgEgwaAhq
+PUT params
 organization[name]: MyDemoOrganizationUpdated
 response:
 {"id":29,"actor_type":"Group","actor_id":147,"slug":"mydemoorganization","name":"MyDemoOrganizationUpdated","created_at":"2014-09-22T09:28:07Z","updated_at":"2014-09-22T09:37:59Z","applications":[],"members":[{"id":26,"actor_type":"User","actor_id":135,"slug":"demo-2","name":"Demo","created_at":"2014-09-22T08:04:39Z","updated_at":"2014-09-22T08:04:39Z","language":null}]}
@@ -326,9 +326,9 @@ response:
 **Update a user:**
 ```
 request:
-	PUT /users/demo-2.json?auth_token=DtDTMSMuntmZgEgwaAhq
-	PUT params
-	user[name]: DemoUpdated
+PUT /users/demo-2.json?auth_token=DtDTMSMuntmZgEgwaAhq
+PUT params
+user[name]: DemoUpdated
 response:
 {"id":26,"actor_type":"User","actor_id":135,"slug":"demo-2","name":"DemoUpdated","created_at":"2014-09-22T08:04:39Z","updated_at":"2014-09-22T09:48:23Z","applications":[{"id":62,"actor_id":141,"slug":"myapp","name":"MyApp","description":null,"url":"myURL","callback":"myCallback","created_at":"2014-09-22T08:35:47Z","updated_at":"2014-09-22T08:35:47Z"}],"language":null,"organizations":[{"id":29,"actor_type":"Group","actor_id":147,"slug":"mydemoorganization","name":"MyDemoOrganizationUpdated","created_at":"2014-09-22T09:28:07Z","updated_at":"2014-09-22T09:37:59Z"}]}
 ```
@@ -336,7 +336,7 @@ response:
 **Delete a user (only authorized for admins).**
 ```
 request:
-	DELETE /users/demo-2.json?auth_token=DtDTMSMuntmZgEgwaAhq
+DELETE /users/demo-2.json?auth_token=DtDTMSMuntmZgEgwaAhq
 response:
 {"id":26,"actor_type":"User","actor_id":135,"slug":"demo-2","name":"DemoUpdated","created_at":"2014-09-22T08:04:39Z","updated_at":"2014-09-22T09:48:23Z","applications":[{"id":62,"actor_id":141,"slug":"myapp","name":"MyApp","description":null,"url":"myURL","callback":"myCallback","created_at":"2014-09-22T08:35:47Z","updated_at":"2014-09-22T08:35:47Z"}],"language":null,"organizations":[{"id":29,"actor_type":"Group","actor_id":147,"slug":"mydemoorganization","name":"MyDemoOrganizationUpdated","created_at":"2014-09-22T09:28:07Z","updated_at":"2014-09-22T09:37:59Z"}]}
 ```
