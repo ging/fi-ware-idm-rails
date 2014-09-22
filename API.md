@@ -2,18 +2,24 @@ IDM - REST API - VERSION 1
 ==================
 
 
-1. Authentication
+1. Authentication/Session Token
 -------------------------------------------
 In the first place you have to authenticate to get a valid token in the IDM.
 
+| Methods | URL                               | Params                                                                                                                                                                     |
+|---------|-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|
+| CREATE   | POST /api/v1/tokens.json            |    email\*: User email <br> password\*: User password                                                                                                                                                                        |                  |
+| DELETE  | DELETE /api/v1/tokens/{token}.json           | token\*: User Token |
+
+
 Example of success CREATE TOKEN:
 ```
-    client: POST /api/v1/tokens.json?email=XXX@emailservice.com&password=YYY
-    Server: status =200, {“token”:”ASDERfsfgewrvsa@#$%5″}
+    request: POST /api/v1/tokens.json?email=XXX@emailservice.com&password=YYY
+    response: status =200, {“token”:”cQ9Aqz5ezhU3z6BdH1Ks″}
 ```  
 Example of success DELETE TOKEN:
 ```
-    client: DELETE /api/v1/tokens/ASDERfsfgewrvsa@#$%5.json
+    client: DELETE /api/v1/tokens/cQ9Aqz5ezhU3z6BdH1Ks.json
     Server: status =200, {“token”:”ASDERfsfgewrvsa@#$%5″}
 ```
 
