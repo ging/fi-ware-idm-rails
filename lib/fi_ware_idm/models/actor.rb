@@ -78,7 +78,10 @@ module FiWareIdm
           attrs["applications"] = self.applications.map{|a| a.api_attributes({:includeResources => false})}
         end
 
-        attrs = attrs.merge(self.subject.api_attributes(options))
+        if (!self.subject.nil? and self.subject.respond_to?(:additional_api_attributes))
+          attrs = attrs.merge(self.subject.additional_api_attributes(options))
+        end
+        
         attrs
       end
 

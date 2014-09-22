@@ -134,6 +134,10 @@ module FiWareIdm
       end
 
       def api_attributes(options={})
+        super
+      end
+  
+      def additional_api_attributes(options={})
         attrs = Hash.new
         attrs["language"] = self.language
         showSensibleData = (options[:current_user] and (options[:current_user].admin? or self.id==options[:current_user].id))

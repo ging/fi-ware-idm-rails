@@ -5,6 +5,10 @@ class Organization < Group
 	end
 
 	def api_attributes(options={})
+		super
+	end
+	
+	def additional_api_attributes(options={})
 		attrs = Hash.new
 		if options[:includeResources]
 			attrs["members"] = self.members.map{|u| u.api_attributes({:includeResources => false})}
