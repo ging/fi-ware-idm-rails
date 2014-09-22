@@ -36,7 +36,7 @@ In the first place you have to authenticate to get a valid token in the IDM.
 ```
 
 
-Once you have a valid token you will be able to access the different resources in the API. All of them present a REST interface with a CRUD options (Create, Read, Update, Delete).
+Once you have a valid token you will be able to access the different resources in the API. All of them present a REST interface with CRUD options (Create, Read, Update, Delete).
 
 2. Applications API:
 --------------------------
@@ -50,7 +50,7 @@ Once you have a valid token you will be able to access the different resources i
 | DELETE  | DELETE /applications/#{slug}.json | slug: Slug identifier of the application.                                                                                                                                  |
 
 
-We need a session token before access this API methods. In the following examples we are going to suppose that we have this session token: {"token":"DtDTMSMuntmZgEgwaAhq"}.
+We need a session token before accessing these API methods. In the following examples we are going to suppose that we have this session token: {"token":"DtDTMSMuntmZgEgwaAhq"}.
 
 **Example of CREATE APPLICATION:**
 ```
@@ -64,7 +64,7 @@ application[callback_url]: myCallback
 response:
 {"id":61,"actor_id":140,"slug":"demoapplication-1","name":"DemoApplication","description":null,"url":"example.com","callback":"myCallback","created_at":"2014-09-22T08:27:34Z","updated_at":"2014-09-22T08:27:34Z","actors":[{"id":26,"actor_type":"User","actor_id":135,"slug":"demo-2","name":"Demo","created_at":"2014-09-22T08:04:39Z","updated_at":"2014-09-22T08:04:39Z","language":null}],"roles":[{"id":34,"actor_id":null,"type":"Relation::Manager","name":"Provider","created_at":"2014-03-20T10:10:35Z","updated_at":"2014-03-20T10:10:35Z"},{"id":44,"actor_id":null,"type":"Relation::Purchaser","name":"Purchaser","created_at":"2014-03-20T10:38:16Z","updated_at":"2014-03-20T10:38:16Z"}]}
 ```  
-**Example of success READ Application:**
+**Example of READ Application:**
 ```
 request:
 GET /applications/demoapplication-1.json?auth_token=DtDTMSMuntmZgEgwaAhq
@@ -110,7 +110,7 @@ response:
 | DELETE  | DELETE /applications/#{app_slug}/actors/#{actor_slug}.json | app_slug: Slug identifier of the application.<br>actor_slug: Slug identifier of the actor (user or organization)..    |
 
 
-We need a session token before access this API methods. In the following examples we are going to suppose that we have this session token: {"token":"DtDTMSMuntmZgEgwaAhq"}.
+We need a session token before accessing these API methods. In the following examples we are going to suppose that we have this session token: {"token":"DtDTMSMuntmZgEgwaAhq"}.
 Also, we are also going to suppose that we have the following app:
 ```
 {"id":62,"actor_id":141,"slug":"myapp","name":"MyApp","description":null,"url":"myURL","callback":"myCallback","created_at":"2014-09-22T08:35:47Z","updated_at":"2014-09-22T08:35:47Z","actors":[{"id":26,"actor_type":"User","actor_id":135,"slug":"demo-2","name":"Demo","created_at":"2014-09-22T08:04:39Z","updated_at":"2014-09-22T08:04:39Z","language":null}],"roles":[{"id":34,"actor_id":null,"type":"Relation::Manager","name":"Provider","created_at":"2014-03-20T10:10:35Z","updated_at":"2014-03-20T10:10:35Z"},{"id":44,"actor_id":null,"type":"Relation::Purchaser","name":"Purchaser","created_at":"2014-03-20T10:38:16Z","updated_at":"2014-03-20T10:38:16Z"}]}
@@ -183,7 +183,7 @@ response:
 | DELETE  | DELETE /roles/#{id}.json | id: Role id.    |
 
 
-We need a session token before access this API methods. In the following examples we are going to suppose that we have this session token: {"token":"DtDTMSMuntmZgEgwaAhq"}.
+We need a session token before accessing these API methods. In the following examples we are going to suppose that we have this session token: {"token":"DtDTMSMuntmZgEgwaAhq"}.
 Also, we are also going to suppose that we have the following app:
 ```
 {"id":62,"actor_id":141,"slug":"myapp","name":"MyApp","description":null,"url":"myURL","callback":"myCallback","created_at":"2014-09-22T08:35:47Z","updated_at":"2014-09-22T08:35:47Z","actors":[{"id":26,"actor_type":"User","actor_id":135,"slug":"demo-2","name":"Demo","created_at":"2014-09-22T08:04:39Z","updated_at":"2014-09-22T08:04:39Z","language":null}],"roles":[{"id":34,"actor_id":null,"type":"Relation::Manager","name":"Provider","created_at":"2014-03-20T10:10:35Z","updated_at":"2014-03-20T10:10:35Z"},{"id":44,"actor_id":null,"type":"Relation::Purchaser","name":"Purchaser","created_at":"2014-03-20T10:38:16Z","updated_at":"2014-03-20T10:38:16Z"}]}
@@ -241,7 +241,7 @@ response:
 | UPDATE  | PUT /organizations/#{slug}.json    | organization[name]\*: Organization name<br>organization[owners]: Owners list<br>organization[description]: Description |
 | DELETE  | DELETE /organizations/#{slug}.json | slug: Slug identifier of the organization.                                                                                                                                  |
 
-We need a session token before access this API methods. In the following examples we are going to suppose that we have this session token: {"token":"DtDTMSMuntmZgEgwaAhq"}.
+We need a session token before accessing these API methods. In the following examples we are going to suppose that we have this session token: {"token":"DtDTMSMuntmZgEgwaAhq"}.
 
 **Create a new organization:**
 The default owner is the user who make the request. To specify additional owners use the organization[owners] param.
@@ -312,7 +312,7 @@ response:
 | UPDATE  | PUT /users/#{slug}.json    | user[name]: User name <br>user[password]: User password <br>user[email]: User email |
 | DELETE  | DELETE /users/#{slug}.json | slug: Slug identifier of the user.                                                                                                                                  |
 
-We need a session token before access this API methods. In the following examples we are going to suppose that we have this session token: {"token":"DtDTMSMuntmZgEgwaAhq"}.
+We need a session token before accessing these API methods. In the following examples we are going to suppose that we have this session token: {"token":"DtDTMSMuntmZgEgwaAhq"}.
 
 
 **Read a user:**
