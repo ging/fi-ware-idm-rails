@@ -68,6 +68,7 @@ response:
 ```
 request:
 GET /applications/demoapplication-1.json?auth_token=DtDTMSMuntmZgEgwaAhq
+
 response:
 {"id":61,"actor_id":140,"slug":"demoapplication-1","name":"DemoApplication","description":null,"url":"example.com","callback":"myCallback","created_at":"2014-09-22T08:27:34Z","updated_at":"2014-09-22T08:27:34Z","actors":[{"id":26,"actor_type":"User","actor_id":135,"slug":"demo-2","name":"Demo","created_at":"2014-09-22T08:04:39Z","updated_at":"2014-09-22T08:04:39Z","language":null}],"roles":[{"id":34,"actor_id":null,"type":"Relation::Manager","name":"Provider","created_at":"2014-03-20T10:10:35Z","updated_at":"2014-03-20T10:10:35Z"},{"id":44,"actor_id":null,"type":"Relation::Purchaser","name":"Purchaser","created_at":"2014-03-20T10:38:16Z","updated_at":"2014-03-20T10:38:16Z"}]}
 ```
@@ -87,6 +88,7 @@ response:
 ```
 request:
 GET /applications.json?auth_token=DtDTMSMuntmZgEgwaAhq
+
 response:
 [{"id":61,"actor_id":140,"slug":"demoapplication-1","name":"DemoApplicationUpdated","description":null,"url":"example.com","callback":"myCallback","created_at":"2014-09-22T08:27:34Z","updated_at":"2014-09-22T08:31:19Z","actors":[{"id":26,"actor_type":"User","actor_id":135,"slug":"demo-2","name":"Demo","created_at":"2014-09-22T08:04:39Z","updated_at":"2014-09-22T08:04:39Z","language":null}],"roles":[{"id":34,"actor_id":null,"type":"Relation::Manager","name":"Provider","created_at":"2014-03-20T10:10:35Z","updated_at":"2014-03-20T10:10:35Z"},{"id":44,"actor_id":null,"type":"Relation::Purchaser","name":"Purchaser","created_at":"2014-03-20T10:38:16Z","updated_at":"2014-03-20T10:38:16Z"}]}]
 ```
@@ -95,6 +97,7 @@ response:
 ```
 request:
 DELETE /applications/demoapplication-1.json?auth_token=DtDTMSMuntmZgEgwaAhq
+
 response:
 {"id":61,"actor_id":140,"slug":"demoapplication-1","name":"DemoApplicationUpdated","description":null,"url":"example.com","callback":"myCallback","created_at":"2014-09-22T08:27:34Z","updated_at":"2014-09-22T08:31:19Z","actors":[],"roles":[{"id":34,"actor_id":null,"type":"Relation::Manager","name":"Provider","created_at":"2014-03-20T10:10:35Z","updated_at":"2014-03-20T10:10:35Z"},{"id":44,"actor_id":null,"type":"Relation::Purchaser","name":"Purchaser","created_at":"2014-03-20T10:38:16Z","updated_at":"2014-03-20T10:38:16Z"}]}
 ```
@@ -118,7 +121,7 @@ Also, we are going to suppose that we have the following app:
 
 **If we want to add the following user:**
 ```
-	{"id"=>9,  "actor_type"=>"User",  "actor_id"=>9,  "slug"=>"sean-bowman", "name"=>"Sean Bowman",  "created_at"=>Thu, 20 Mar 2014 10:10:08 UTC +00:00,  "updated_at"=>Thu, 20 Mar 2014 10:10:28 UTC +00:00,  "applications"=>  [{"id"=>3,
+{"id"=>9,  "actor_type"=>"User",  "actor_id"=>9,  "slug"=>"sean-bowman", "name"=>"Sean Bowman",  "created_at"=>Thu, 20 Mar 2014 10:10:08 UTC +00:00,  "updated_at"=>Thu, 20 Mar 2014 10:10:28 UTC +00:00,  "applications"=>  [{"id"=>3,
     "actor_id"=>33,  "slug"=>"in-felis-donec", "name"=>"in felis donec", "description"=>"Donec dapibus. Duis at velit eu est congue elementum.", "url"=>"https://blogpad.edu",
     "callback"=>"https://blogtag.biz/callback", "created_at"=>Thu, 20 Mar 2014 10:10:35 UTC +00:00, "updated_at"=>Thu, 20 Mar 2014 10:10:35 UTC +00:00}], "language"=>nil,
  "organizations"=>[{}, {}, {}, {}, {}, {}, {}, {}, {}]}
@@ -133,6 +136,7 @@ POST /applications/myapp/actors.json?auth_token=DtDTMSMuntmZgEgwaAhq
 POST params
 actor_slug: sean-bowman
 role_ids: 44
+
 response:
 {"id":62,"actor_id":141,"slug":"myapp","name":"MyApp","description":null,"url":"myURL","callback":"myCallback","created_at":"2014-09-22T08:35:47Z","updated_at":"2014-09-22T08:35:47Z","actors":[{"id":26,"actor_type":"User","actor_id":135,"slug":"demo-2","name":"Demo","created_at":"2014-09-22T08:04:39Z","updated_at":"2014-09-22T08:04:39Z","roles":[{"id":34,"actor_id":null,"type":"Relation::Manager","name":"Provider","created_at":"2014-03-20T10:10:35Z","updated_at":"2014-03-20T10:10:35Z"}],"language":null},{"id":9,"actor_type":"User","actor_id":9,"slug":"sean-bowman","name":"Sean Bowman","created_at":"2014-03-20T10:10:08Z","updated_at":"2014-03-20T10:10:28Z","roles":[{"id":44,"actor_id":null,"type":"Relation::Purchaser","name":"Purchaser","created_at":"2014-03-20T10:38:16Z","updated_at":"2014-03-20T10:38:16Z"}],"language":null}],"roles":[{"id":34,"actor_id":null,"type":"Relation::Manager","name":"Provider","created_at":"2014-03-20T10:10:35Z","updated_at":"2014-03-20T10:10:35Z"},{"id":44,"actor_id":null,"type":"Relation::Purchaser","name":"Purchaser","created_at":"2014-03-20T10:38:16Z","updated_at":"2014-03-20T10:38:16Z"}]}
 ```
@@ -141,6 +145,7 @@ response:
 ```
 request:
 GET /applications/myapp/actors/sean-bowman.json?auth_token=DtDTMSMuntmZgEgwaAhq
+
 response:
 {"id":9,"actor_type":"User","actor_id":9,"slug":"sean-bowman","name":"Sean Bowman","created_at":"2014-03-20T10:10:08Z","updated_at":"2014-03-20T10:10:28Z","roles":[{"id":44,"actor_id":null,"type":"Relation::Purchaser","name":"Purchaser","created_at":"2014-03-20T10:38:16Z","updated_at":"2014-03-20T10:38:16Z"}],"language":null}
 ```
@@ -151,6 +156,7 @@ request:
 PUT /applications/myapp/actors/sean-bowman.json?auth_token=DtDTMSMuntmZgEgwaAhq
 PUT params
 role_ids: 34
+
 response:
 {"id":9,"actor_type":"User","actor_id":9,"slug":"sean-bowman","name":"Sean Bowman","created_at":"2014-03-20T10:10:08Z","updated_at":"2014-03-20T10:10:28Z","roles":[{"id":34,"actor_id":null,"type":"Relation::Manager","name":"Provider","created_at":"2014-03-20T10:10:35Z","updated_at":"2014-03-20T10:10:35Z"}],"language":null}
 ```
@@ -159,6 +165,7 @@ response:
 ```
 request:
 GET /applications/myapp/actors.json?auth_token=DtDTMSMuntmZgEgwaAhq
+
 response:
 {"id":62,"actor_id":141,"slug":"myapp","name":"MyApp","description":null,"url":"myURL","callback":"myCallback","created_at":"2014-09-22T08:35:47Z","updated_at":"2014-09-22T08:35:47Z","actors":[{"id":26,"actor_type":"User","actor_id":135,"slug":"demo-2","name":"Demo","created_at":"2014-09-22T08:04:39Z","updated_at":"2014-09-22T08:04:39Z","roles":[{"id":34,"actor_id":null,"type":"Relation::Manager","name":"Provider","created_at":"2014-03-20T10:10:35Z","updated_at":"2014-03-20T10:10:35Z"}],"language":null},{"id":9,"actor_type":"User","actor_id":9,"slug":"sean-bowman","name":"Sean Bowman","created_at":"2014-03-20T10:10:08Z","updated_at":"2014-03-20T10:10:28Z","roles":[{"id":34,"actor_id":null,"type":"Relation::Manager","name":"Provider","created_at":"2014-03-20T10:10:35Z","updated_at":"2014-03-20T10:10:35Z"}],"language":null}],"roles":[{"id":34,"actor_id":null,"type":"Relation::Manager","name":"Provider","created_at":"2014-03-20T10:10:35Z","updated_at":"2014-03-20T10:10:35Z"},{"id":44,"actor_id":null,"type":"Relation::Purchaser","name":"Purchaser","created_at":"2014-03-20T10:38:16Z","updated_at":"2014-03-20T10:38:16Z"}]}
 ```
@@ -167,6 +174,7 @@ response:
 ```
 request:
 DELETE /applications/myapp/actors/sean-bowman.json?auth_token=DtDTMSMuntmZgEgwaAhq
+
 response:
 {"id":9,"actor_type":"User","actor_id":9,"slug":"sean-bowman","name":"Sean Bowman","created_at":"2014-03-20T10:10:08Z","updated_at":"2014-03-20T10:10:28Z","roles":[],"language":null}
 ```
@@ -196,6 +204,7 @@ POST /roles.json?auth_token=DtDTMSMuntmZgEgwaAhq
 POST params
 role[name]: MyCustomRole
 role[app_slug]: myapp
+
 response:
 {"id":101,"actor_id":141,"type":"Relation::Custom","name":"MyCustomRole","created_at":"2014-09-22T09:04:56Z","updated_at":"2014-09-22T09:04:56Z"}
 ```
@@ -204,6 +213,7 @@ response:
 ```
 request:
 GET /roles/101.json?auth_token=DtDTMSMuntmZgEgwaAhq
+
 response:
 {"id":101,"actor_id":141,"type":"Relation::Custom","name":"MyCustomRole","created_at":"2014-09-22T09:04:56Z","updated_at":"2014-09-22T09:04:56Z"}
 ```
@@ -214,6 +224,7 @@ request:
 	PUT /roles/101.json?auth_token=DtDTMSMuntmZgEgwaAhq
 PUT params
 role[name]: MyCustomRoleUpdated
+
 response:
 {"id":101,"actor_id":141,"type":"Relation::Custom","name":"MyCustomRoleUpdated","created_at":"2014-09-22T09:04:56Z","updated_at":"2014-09-22T09:08:16Z"}
 ```
@@ -222,6 +233,7 @@ response:
 ```
 request:
 DELETE /roles/101.json?auth_token=DtDTMSMuntmZgEgwaAhq
+
 response:
 {"id":101,"actor_id":141,"type":"Relation::Custom","name":"MyCustomRoleUpdated","created_at":"2014-09-22T09:04:56Z","updated_at":"2014-09-22T09:08:16Z"}
 ```
@@ -250,6 +262,7 @@ request:
 POST /organizations.json?auth_token=DtDTMSMuntmZgEgwaAhq
 POST params
 organization[name]: MyDemoOrganization
+
 response:
 {"id":29,"actor_type":"Group","actor_id":147,"slug":"mydemoorganization","name":"MyDemoOrganization","created_at":"2014-09-22T09:28:07Z","updated_at":"2014-09-22T09:28:07Z","applications":[],"members":[{"id":26,"actor_type":"User","actor_id":135,"slug":"demo-2","name":"Demo","created_at":"2014-09-22T08:04:39Z","updated_at":"2014-09-22T08:04:39Z","language":null}]}
 ```
@@ -263,6 +276,7 @@ POST /organizations.json?auth_token=DtDTMSMuntmZgEgwaAhq
 POST params
 organization[name]: OrganizationWithSeveralOwners
 organization[owners]: 9,135
+
 response:
 {"id":33,"actor_type":"Group","actor_id":151,"slug":"organizationwithseveralowners","name":"OrganizationWithSeveralOwners","created_at":"2014-09-22T09:34:32Z","updated_at":"2014-09-22T09:34:32Z","applications":[],"members":[{"id":9,"actor_type":"User","actor_id":9,"slug":"sean-bowman","name":"Sean Bowman","created_at":"2014-03-20T10:10:08Z","updated_at":"2014-03-20T10:10:28Z","language":null},{"id":26,"actor_type":"User","actor_id":135,"slug":"demo-2","name":"Demo","created_at":"2014-09-22T08:04:39Z","updated_at":"2014-09-22T08:04:39Z","language":null}]}
 ```
@@ -271,6 +285,7 @@ response:
 ```
 request:
 GET /organizations/mydemoorganization.json?auth_token=DtDTMSMuntmZgEgwaAhq
+
 response:
 {"id":29,"actor_type":"Group","actor_id":147,"slug":"mydemoorganization","name":"MyDemoOrganization","created_at":"2014-09-22T09:28:07Z","updated_at":"2014-09-22T09:28:07Z","applications":[],"members":[{"id":26,"actor_type":"User","actor_id":135,"slug":"demo-2","name":"Demo","created_at":"2014-09-22T08:04:39Z","updated_at":"2014-09-22T08:04:39Z","language":null}]}
 ```
@@ -281,6 +296,7 @@ request:
 PUT /organizations/mydemoorganization.json?auth_token=DtDTMSMuntmZgEgwaAhq
 PUT params
 organization[name]: MyDemoOrganizationUpdated
+
 response:
 {"id":29,"actor_type":"Group","actor_id":147,"slug":"mydemoorganization","name":"MyDemoOrganizationUpdated","created_at":"2014-09-22T09:28:07Z","updated_at":"2014-09-22T09:37:59Z","applications":[],"members":[{"id":26,"actor_type":"User","actor_id":135,"slug":"demo-2","name":"Demo","created_at":"2014-09-22T08:04:39Z","updated_at":"2014-09-22T08:04:39Z","language":null}]}
 ```
@@ -289,6 +305,7 @@ response:
 ```
 request:
 DELETE /organizations/organizationwithseveralowners.json?auth_token=DtDTMSMuntmZgEgwaAhq
+
 response:
 {"id":33,"actor_type":"Group","actor_id":151,"slug":"organizationwithseveralowners","name":"OrganizationWithSeveralOwners","created_at":"2014-09-22T09:34:32Z","updated_at":"2014-09-22T09:34:32Z","applications":[],"members":[]}
 ```
@@ -297,6 +314,7 @@ response:
 ```
 request:
 GET /organizations.json?auth_token=DtDTMSMuntmZgEgwaAhq
+
 response:
 [{"id":29,"actor_type":"Group","actor_id":147,"slug":"mydemoorganization","name":"MyDemoOrganizationUpdated","created_at":"2014-09-22T09:28:07Z","updated_at":"2014-09-22T09:37:59Z","applications":[],"members":[{"id":26,"actor_type":"User","actor_id":135,"slug":"demo-2","name":"Demo","created_at":"2014-09-22T08:04:39Z","updated_at":"2014-09-22T08:04:39Z","language":null}]}]
 ```
@@ -318,7 +336,8 @@ We need a session token before accessing these API methods. In the following exa
 **Read a user:**
 ```
 request:
-	GET /users/demo-2.json?auth_token=DtDTMSMuntmZgEgwaAhq
+GET /users/demo-2.json?auth_token=DtDTMSMuntmZgEgwaAhq
+	
 response:
 {"id":26,"actor_type":"User","actor_id":135,"slug":"demo-2","name":"Demo","created_at":"2014-09-22T08:04:39Z","updated_at":"2014-09-22T08:04:39Z","applications":[{"id":62,"actor_id":141,"slug":"myapp","name":"MyApp","description":null,"url":"myURL","callback":"myCallback","created_at":"2014-09-22T08:35:47Z","updated_at":"2014-09-22T08:35:47Z"}],"language":null,"organizations":[{"id":29,"actor_type":"Group","actor_id":147,"slug":"mydemoorganization","name":"MyDemoOrganizationUpdated","created_at":"2014-09-22T09:28:07Z","updated_at":"2014-09-22T09:37:59Z"}]}
 ```
@@ -329,6 +348,7 @@ request:
 PUT /users/demo-2.json?auth_token=DtDTMSMuntmZgEgwaAhq
 PUT params
 user[name]: DemoUpdated
+
 response:
 {"id":26,"actor_type":"User","actor_id":135,"slug":"demo-2","name":"DemoUpdated","created_at":"2014-09-22T08:04:39Z","updated_at":"2014-09-22T09:48:23Z","applications":[{"id":62,"actor_id":141,"slug":"myapp","name":"MyApp","description":null,"url":"myURL","callback":"myCallback","created_at":"2014-09-22T08:35:47Z","updated_at":"2014-09-22T08:35:47Z"}],"language":null,"organizations":[{"id":29,"actor_type":"Group","actor_id":147,"slug":"mydemoorganization","name":"MyDemoOrganizationUpdated","created_at":"2014-09-22T09:28:07Z","updated_at":"2014-09-22T09:37:59Z"}]}
 ```
@@ -337,6 +357,7 @@ response:
 ```
 request:
 DELETE /users/demo-2.json?auth_token=DtDTMSMuntmZgEgwaAhq
+
 response:
 {"id":26,"actor_type":"User","actor_id":135,"slug":"demo-2","name":"DemoUpdated","created_at":"2014-09-22T08:04:39Z","updated_at":"2014-09-22T09:48:23Z","applications":[{"id":62,"actor_id":141,"slug":"myapp","name":"MyApp","description":null,"url":"myURL","callback":"myCallback","created_at":"2014-09-22T08:35:47Z","updated_at":"2014-09-22T08:35:47Z"}],"language":null,"organizations":[{"id":29,"actor_type":"Group","actor_id":147,"slug":"mydemoorganization","name":"MyDemoOrganizationUpdated","created_at":"2014-09-22T09:28:07Z","updated_at":"2014-09-22T09:37:59Z"}]}
 ```
