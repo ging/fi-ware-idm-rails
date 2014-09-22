@@ -78,10 +78,13 @@ class Application < Site::Client
     attrs["actor_id"] = self.actor_id
     attrs["slug"] = self.slug
     attrs["name"] = self.name
+    attrs["description"] = self.description
+    attrs["url"] = self.url
+    attrs["callback"] = self.callback_url
     attrs["created_at"] = self.created_at
     attrs["updated_at"] = self.updated_at
     if options[:includeResources]
-      attrs["actors"] = self.actors.map{|a| a.api_attributes({:includeResources => false, :includeRoles => options[:includeRoles]})}
+      attrs["actors"] = self.actors.map{|a| a.api_attributes({:includeResources => false, :includeRoles => options[:includeRoles]})}.reject{|el| el["roles"].blank?}
       attrs["roles"] = self.roles.map{|r| r.api_attributes({:includeResources => false})}
     end
     attrs
