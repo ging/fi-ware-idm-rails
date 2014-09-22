@@ -306,11 +306,11 @@ response:
 
 | Methods | URL                               | Params                                                                                                                                                                     |
 |---------|-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|
-| INDEX   | GET /users.json            |    No soportado (Usar SCIM API)                                                                                                                                                                        |                  |
-| CREATE  | POST /users.json           | No soportado (Usar SCIM API) |
+| INDEX   |             |    No soportado                                                                                                                                                                         |                  |
+| CREATE  |            | No soportado  |
 | READ    | GET /users/#{slug}.json    | slug: Slug identifier of the user.                                                                                                                                  |
 | UPDATE  | PUT /users/#{slug}.json    | user[name]: User name <br>user[password]: User password <br>user[email]: User email |
-| DELETE  | DELETE /users/#{slug}.json | slug: Slug identifier of the user.                                                                                                                                  |
+| DELETE  | DELETE /users/#{slug}.json | slug: Slug identifier of the user. (Requires admin rights)                                                                                                                                 |
 
 We need a session token before accessing these API methods. In the following examples we are going to suppose that we have this session token: {"token":"DtDTMSMuntmZgEgwaAhq"}.
 
