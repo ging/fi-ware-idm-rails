@@ -15,18 +15,18 @@ In the first place you have to authenticate to get a valid token in the IDM.
 **Example of success CREATE TOKEN:**
 ```
     request: POST /api/v1/tokens.json?email=XXX@emailservice.com&password=YYY
-    response: status =200, {“token”:”cQ9Aqz5ezhU3z6BdH1Ks″}
+    response: status=200, {“token”:”cQ9Aqz5ezhU3z6BdH1Ks″}
 ```  
 **Example of success DELETE TOKEN:**
 ```
     request: DELETE /api/v1/tokens/cQ9Aqz5ezhU3z6BdH1Ks.json
-    response: status =200, {“token”:”cQ9Aqz5ezhU3z6BdH1Ks″}
+    response: status=200, {“token”:”cQ9Aqz5ezhU3z6BdH1Ks″}
 ```
 
 **Example of error INVALID EMAIL OR PASSWORD:**
 ```
     request: POST /api/v1/tokens.json?email=BADEMAIL@emailservice.com&password=BADPASSWD
-    response: status =401, {"message":"Invalid email or passoword."}
+    response: status=401, {"message":"Invalid email or passoword."}
 ```
 
 **Example of error UNAUTHORIZED:**
