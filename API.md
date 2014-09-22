@@ -20,7 +20,7 @@ In the first place you have to authenticate to get a valid token in the IDM.
 **Example of success DELETE TOKEN:**
 ```
     request: DELETE /api/v1/tokens/cQ9Aqz5ezhU3z6BdH1Ks.json
-    response: status =200, {“token”:”ASDERfsfgewrvsa@#$%5″}
+    response: status =200, {“token”:”cQ9Aqz5ezhU3z6BdH1Ks″}
 ```
 
 **Example of error INVALID EMAIL OR PASSWORD:**
