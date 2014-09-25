@@ -93,6 +93,7 @@ class ApplicationsController < Site::ClientsController
   #GET applications/#{app_slug}/actors.json
   def index_actors
     app = Application.find_by_slug(params[:app_id])
+    authorize! :show, app
     respond_to do |format|
       format.any {
         render json: app.api_attributes({:includeRoles => app})
