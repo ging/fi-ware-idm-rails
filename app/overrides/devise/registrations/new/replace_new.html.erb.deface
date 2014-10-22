@@ -1,10 +1,6 @@
-<!-- insert_before "code[erb-loud]:contains('f.submit')" -->
-<%= show_simple_captcha %>
+<!-- replace_contents ".welcome" -->
 
-<label class="conditions checkbox-inline">
-  <input type="checkbox" id="inlineCheckbox1" required="required"  title="You need to accept the Terms and Conditions to create your account" value="option1"> I accept FIWARE Lab <a href="http://forge.fi-ware.org/plugins/mediawiki/wiki/fiware/index.php/FI-LAB_Terms_and_Conditions" target="_blank">Terms and Conditions.</a>
-</label>
- <form action="" method="post" class="datos">
+<form action="" method="post" class="datos">
         <fieldset>
           
          

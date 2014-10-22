@@ -1,75 +1,87 @@
-#presentation{
-  .media,
-  .help-box{
-    background-color: #EBEBEB;
-    margin-top: 18px;
-    font-size: 12px;
-  }
-  .media{
-    padding: 10px 25px 15px 25px;
-    h3{
-      font-family: $corporateFontFamily;
-      margin-bottom: 4px;
-    }
-    span{
-      font-size: 13px;
-      font-weight: bold;
-      color: $brand-primary;
-      display: block;
-      margin: -7px 0 9px;
-    }
-    .sign_up{
-      float: right;
-      margin-top: 4px
-      a{
-        @include btn-secundary;
-      }
-    }
-  }
-  .help-bar{
-    width: 100%;
-  }
-  .help-box{ 
-    width: 48%;
-    min-height: 57px;
-    background-color: #f5f5f5;
-    margin-bottom: 2px;
-    float: left;
-    margin-left: 1%;
-    margin-right: 1%;
-    div{
-      margin-left: 8px;
-    }
-    header{
-      padding: 5px 1px 0px 5px;
-      min-height: 19px;
-      margin-bottom: 4px;
-      background-color: $brand-secunday;
-      i{
-        float: right;
-        margin-right: 4px;
-      }
-      &:hover{
-        background-color: darken($brand-secundary, 15%);
-      }
-    img{
-      display: inline;
-      width: 22px;
-      margin-top: -3px;
-      margin-right: 4px;
-    }
-    h5{ 
-      color: #fff;
-      line-height: 0;
-      display: inline-block;
-    }
-  }
-}
+.headerFront
+  a
+    img
+      vertical-align: top
+
+  .brand
+    font-size: 50px
+    a
+      color: #8C8C8C
+      &:hover
+        color: #8C8C8C
+        text-decoration: none
+    h2
+      font-family: $corporateFontFamily
+      color: $blue
+    h5
+      color: #8C8C8C
+      a
+        color: $blue
+        &:hover
+          color: $blue
 
 
-  .view-more{
-    a{
-      color: $brand-primary;
-      text-decoration: none;
-      }
-  }
+#frontpage,
+#new_session
+  #presentation
+    .media,
+    .help-box
+      background-color: #EBEBEB
+      margin-top: 18px
+      font-size: 12px
+    .media
+      padding: 10px 25px 15px 25px
+      h3
+        font-family: $corporateFontFamily
+        margin-bottom: 4px
+      span
+        font-size: 13px
+        font-weight: bold
+        color: $blue
+        display: block
+        margin: -7px 0 9px
+      .sign_up
+        float: right
+        margin-top: 4px
+        a
+          @include btn-secundary
+    .help-bar
+      width: 100%
+    .help-box 
+      width: 48%
+      min-height: 57px
+      background-color: #f5f5f5
+      margin-bottom: 2px
+      float: left
+      margin-left: 1%
+      margin-right: 1%
+      div
+        margin-left: 8px
+      header
+        padding: 5px 1px 0px 5px
+        min-height: 19px
+        margin-bottom: 4px
+        background-color: $blueLight
+        i
+          float: right
+          margin-right: 4px
+        &:hover
+          background-color: darken($blueLight, 15%)
+
+      img
+        display: inline
+        width: 22px
+        margin-top: -3px
+        margin-right: 4px
+
+      h5 
+        color: #fff
+        line-height: 0
+        display: inline-block
+      
+
+
+    .view-more
+      a
+        color: $blue
+        text-decoration: none
