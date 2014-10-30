@@ -1,0 +1,54 @@
+<section id="registration"> 
+  <section class="welcome">
+    
+  </section>
+
+  <section class="registration">
+    <h3>
+      <%= t('sign_up').capitalize %>
+    </h3>
+
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+    <fieldset>
+      <%= f.label :name %>
+      
+      <%= f.text_field :name, :class =>"form_tag" %>
+      
+      <%= f.label :email %>
+      
+      <%= f.text_field :email, :class =>"form_tag" %>
+      
+      <%= f.label :password %>
+      
+      <%= f.password_field :password, :class =>"form_tag", :id => "password" %>
+
+      <%= f.label :password_confirmation %>
+      
+      <%= f.password_field :password_confirmation, :class =>"form_tag"%>
+
+      <%= show_simple_captcha %>
+
+      <div class="terms-check">
+          <input type="checkbox" name="inlineCheckbox1" id="inlineCheckbox1" title="This field is required." value="option1" required/>
+
+          <label class="conditions checkbox-inline" for="inlineCheckbox1">
+          I accept FIWARE Lab <a href="http://forge.fi-ware.org/plugins/mediawiki/wiki/fiware/index.php/FI-LAB_Terms_and_Conditions" target="_blank">Terms and Conditions.</a>
+          </label>
+      </div>
+
+      <%= f.submit t('action.accept').capitalize,:class=>"btn pull-right"%>
+    </fieldset>
+    <hr class="soften">
+      
+    <%= render :partial => "devise/shared/links" %>
+      
+      <% end %>
+
+   
+  </section>
+</section>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
+<script>
+  $("#new_user").validate();
+</script>
