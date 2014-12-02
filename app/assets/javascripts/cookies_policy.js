@@ -13,7 +13,7 @@ function createDiv(){
     div.innerHTML = '<p>We use first and third-party’s cookies to improve your experience and our services,' +
                     'identifying your Internet browsing preferences on our website. ' +
                     'If you keep browsing, you accept its use. You can get more information on our ' + 
-                    '<a href="http://forge.fi-ware.org/plugins/mediawiki/wiki/fiware/index.php/Cookies_Policy_FIWARE_Lab" target="_blank">Cookie Policy. ' + 
+                    '<a href="https://forge.fi-ware.org/plugins/mediawiki/wiki/fiware/index.php/Cookies_Policy_FIWARE_Lab" target="_blank">Cookie Policy. ' + 
                     '</p><a id="close-cookie-banner" href="javascript:void(0);" onclick="removeMe();"><span>X</span></a>';    
 
     bodytag.insertBefore(div,bodytag.firstChild); // Adds the Cookie Law Banner just after the opening <body> tag
