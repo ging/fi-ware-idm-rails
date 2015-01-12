@@ -1,4 +1,12 @@
 <article id="presentation">
+  <script>
+    var confirm_help_box = function () {
+      var r = confirm("The communications sent to the FIWARE Lab support list are public and they generate public tickets. Please avoid sending private info unless you are happy to see it publicly available.");
+      if (r == true) {
+          window.location = "mailto:fiware-lab-help@lists.fi-ware.org?Subject=FI-Lab Assistance";
+      } 
+    }
+   </script>
   <section class="media">
     <h3 class="media-heading">
       FIWARE Lab
@@ -13,15 +21,14 @@
       <%= link_to t('devise.links.sign_up'), new_registration_path(resource_name) %>
     </div>
   </section>
+
    <section class="help-bar">
-        <div class="help-box">
-          <a href="mailto:fiware-lab-help@lists.fi-ware.org?Subject=FI-LAB Assistance">
+        <div style="cursor: pointer;" class="help-box" onclick="confirm_help_box()">
             <header>
               <img src="/assets/help.png">
               <h5>Need Help?</h5>
               <i class="icon-chevron-right icon-white"></i>
             </header>
-          </a>
           <div>
             Ask a question.
           </div>
