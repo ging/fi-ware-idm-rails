@@ -1,25 +1,27 @@
-<section id="external_sign_in">
-  <h3 title="<%= t('idp.frontpage.title') %>">
-    <%= t('idp.frontpage.text') %>
-  </h3>
-  <article class="login_data">
+<%- if ExternalIdp.count > 0 %>
+  <section id="external_sign_in">
+    <h3 title="<%= t('idp.frontpage.title') %>">
+      <%= t('idp.frontpage.text') %>
+    </h3>
+    <article class="login_data">
 
-    <%- if devise_mapping.omniauthable? %>
-      <%- resource_class.omniauth_providers.each do |provider| 
-          info_idp = ExternalIdp.find_by_route(omniauth_authorize_path(resource_name, provider))
-          if !info_idp.blank? && info_idp[:enabled] -%>
-      <div style="margin: .8em 0 .8em 0">
-          <span> <%= if info_idp.logo_url.nil?
-              image_path = "/assets/logos/small/site.png"              
-            else
-              image_path = info_idp.logo_url 
-            end 
-            link_to image_tag(image_path, :alt => info_idp.description, :title => info_idp.description), omniauth_authorize_path(resource_name, provider)
-        %>
-          </span><span style="height: 20px; display: inline-block; vertical-align: center;"><%=info_idp.description%></span>
-      </div>
+      <%- if devise_mapping.omniauthable? %>
+        <%- resource_class.omniauth_providers.each do |provider| 
+            info_idp = ExternalIdp.find_by_route(omniauth_authorize_path(resource_name, provider))
+            if !info_idp.blank? && info_idp[:enabled] -%>
+        <div style="margin: .8em 0 .8em 0">
+            <span> <%= if info_idp.logo_url.nil?
+                image_path = "/assets/logos/small/site.png"              
+              else
+                image_path = info_idp.logo_url 
+              end 
+              link_to image_tag(image_path, :alt => info_idp.description, :title => info_idp.description), omniauth_authorize_path(resource_name, provider)
+          %>
+            </span><span style="height: 20px; display: inline-block; vertical-align: center;"><%=info_idp.description%></span>
+        </div>
+          <% end -%>
         <% end -%>
       <% end -%>
-    <% end -%>
-  </article>
-</section>
+    </article>
+  </section>
+ <% end -%>

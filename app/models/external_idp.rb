@@ -21,6 +21,21 @@ class ExternalIdp < ActiveRecord::Base
 
   end
   
+  after_destroy do
+    
+    count = 1
+    ExternalIdp.find_each do |ext_idp|
+      
+      route = ext_idp.route
+      route[-1] = count.to_s
+      ActiveRecord::Base.connection.execute("UPDATE external_idps SET route='" + route + "' WHERE id=" + ext_idp.id.to_s)
+            
+      count += 1
+      
+    end
+   
+  end
+  
   after_commit do
 
     self.apply_changes
