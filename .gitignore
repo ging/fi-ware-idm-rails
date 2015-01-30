@@ -31,3 +31,7 @@ config/initializers/0fiware.rb
 #Email lists
 config/emailLists/whitelist.txt
 config/emailLists/blacklist.txt
+/nbproject/*
+/backup/
+/public/uploads
+/rotte

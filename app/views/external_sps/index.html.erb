@@ -1,0 +1,35 @@
+<div id="external_sps_list"> <!-- DIV1 -->
+  <header>
+    <h3>
+      <%= link_to t('sp.index.button.add'), new_external_sp_path, :id => 'edit_sp'%>
+      <%= link_to t('sp.index.button.idp_metadata.text'), "https://#{request.host}/idp/shibboleth", :id => 'metadata_idp', :title => t('sp.index.button.idp_metadata.title') %>
+      <%= t('sp.index.title') %>
+    </h3>
+  </header>
+  
+  <section id="sp_list">
+    <ul>
+      <% 
+      @external_sps.each do |external_sp|      
+      %>
+      <li>
+        <div class="sp"> <!-- DIV2 -->
+          <div style="float: left;"> <!-- DIV3 -->
+          <%= if external_sp.logo_url.nil?
+               image_tag "/assets/logos/small/site.png", {:style => 'margin-right: 10px'} 
+             else
+               image_tag external_sp.logo_url , {:style => 'margin-right: 10px'} 
+             end %>
+          </div> <!-- DIV3 -->
+          <div style="float: right;"> <!-- DIV4 -->
+            <div><%= link_to external_sp.description, edit_external_sp_path(external_sp),  { :alt => "Modify", :title => "Modify" } %></div> <!-- DIV6 -->
+            <div><%= external_sp.url%></div><!-- DIV7 -->
+          </div> <!-- DIV3 -->
+        </div> <!-- DIV2 -->
+        <div class="sp metadata_sp" title="<%=t('sp.index.button.sp_metadata.title') %> "><%= link_to t('sp.index.button.sp_metadata.text'), external_sp.metadata_url %></div> <!-- DIV5 -->
+       </li>
+      <% end %>
+    </ul>
+  </section>
+
+</div> <!-- DIV1 -->

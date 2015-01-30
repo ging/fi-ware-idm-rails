@@ -1,0 +1,13 @@
+<section class="zona" style="margin-top: 1em;">
+  <div id="destroy_external_idp_client" class="accordion-group" style="margin-bottom: 0px;">
+    <header class="accordion-heading">
+      <h5>
+        <%= link_to t("idp.destroy.title"), "javascript:void(0);", class: 'accordion-toggle', "data-toggle" => 'collapse', "data-parent" => "#external_idp-accordion", "data-target" => "#destroy_external_idp-content" %>
+      </h5>
+    </header>
+
+    <div class="content collapse" id="destroy_external_idp-content">
+      <%= link_to t("idp.destroy.link"),@external_idp,  confirm: t("idp.destroy.confirm"), method: :delete %>
+    </div>
+  </div>
+</section>

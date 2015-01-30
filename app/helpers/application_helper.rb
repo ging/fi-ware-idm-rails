@@ -37,6 +37,7 @@ module ApplicationHelper
     "#{ protocol }://#{ domain }"
   end
 
+
   def isAdmin?
     user_signed_in? and current_user.admin?
   end
@@ -62,6 +63,19 @@ module ApplicationHelper
     params[:d]    ||= 'sent'
     params[:type] ||= 'user'
     Contact.index(params)
+  end
+  
+  def include_shibbolet_idp
+    # For SSO IDP side
+    script = "<script>var idp_logout_url ="
+    if user_signed_in? and current_user.ext_idp?
+      script += "'" + ExternalIdp.find(current_user.ext_idp).url + "/idp/profile/Logout'";
+    else
+      script += "''"
+    end
+    script += "</script>"
+    script.html_safe
+
   end
   
 end
