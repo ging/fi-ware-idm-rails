@@ -1,0 +1,35 @@
+<div id="external_idps_list"> <!-- DIV1 -->
+  <header>
+    <h3>
+      <%= link_to t('idp.index.button.add'), new_external_idp_path, :id => 'edit_idp'%>
+      <%= link_to t('idp.index.button.sp_metadata.text'), "https://#{request.host}/Shibboleth.sso/Metadata", :id => 'metadata_sp', :title => t('idp.index.button.sp_metadata.title') %>
+      <%= t('idp.index.title') %>
+    </h3>
+  </header>
+  
+  <section id="idp_list">
+    <ul>
+      <% 
+      @external_idps.each do |external_idp|      
+      %>
+      <li>
+        <div class="idp"> <!-- DIV2 -->
+          <div style="float: left;"> <!-- DIV3 -->
+          <%= if external_idp.logo_url.nil?
+               image_tag "/assets/logos/small/site.png", {:style => 'margin-right: 10px'} 
+             else
+               image_tag external_idp.logo_url , {:style => 'margin-right: 10px'} 
+             end %>
+          </div> <!-- DIV3 -->
+          <div style="float: right;"> <!-- DIV4 -->
+            <div><%= link_to external_idp.description, edit_external_idp_path(external_idp),  { :alt => "Modify", :title => "Modify" } %></div> <!-- DIV6 -->
+            <div><%= external_idp.url%></div><!-- DIV7 -->
+          </div> <!-- DIV3 -->
+        </div> <!-- DIV2 -->
+        <div class="idp metadata_idp" title="<%=t('idp.index.button.idp_metadata.title') %> "><%= link_to t('idp.index.button.idp_metadata.text'), external_idp.metadata_url %></div> <!-- DIV5 -->
+       </li>
+      <% end %>
+    </ul>
+  </section>
+
+</div> <!-- DIV1 -->

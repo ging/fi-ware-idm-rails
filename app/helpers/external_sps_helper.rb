@@ -1,0 +1,2 @@
+module ExternalSpsHelper
+end

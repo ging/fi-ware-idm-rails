@@ -66,3 +66,14 @@ gem "galetahub-simple_captcha", :require => "simple_captcha"
 gem 'rack-cors', require: 'rack/cors'
 
 gem 'sanitize', '= 2.1.0'
+
+
+# SHIBBOLETH
+gem 'omniauth-shibboleth'
+
+# Script
+gem 'mysql'
+
+# For carrierwave
+gem "mini_magick"
+

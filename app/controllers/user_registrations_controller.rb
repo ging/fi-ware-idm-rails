@@ -1,4 +1,6 @@
 class UserRegistrationsController < Devise::RegistrationsController
+  include FiWareIdm::Controllers::Shibboleth
+  
   def create
     if simple_captcha_valid?
       super                   
@@ -8,4 +10,12 @@ class UserRegistrationsController < Devise::RegistrationsController
       render :new                                 
     end               
   end    
+  
+  def destroy
+    
+    shibboleth_logout    
+    
+    super
+  end
+  
 end

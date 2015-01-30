@@ -3,8 +3,8 @@ FiWareIdm::Application.routes.draw do
   match '/authorize', to: 'authorizations#new'
   post  '/token', to: proc { |env| SocialStream::Oauth2Server::TokenEndpoint.new.call(env) }
 
-  devise_for :users, :controllers => {:omniauth_callbacks => 'omniauth_callbacks', registrations: 'user_registrations'}
-
+  devise_for :users, :controllers => {:omniauth_callbacks => 'omniauth_callbacks', registrations: 'user_registrations', sessions: 'user_sessions'}
+  
   namespace :permission do
     resources :customs
   end
@@ -25,6 +25,11 @@ FiWareIdm::Application.routes.draw do
       resources :tokens,:only => [:create, :destroy]
     end
   end
+
+
+  resources :external_idps
+  resources :external_sps
+  
 
   #SCIM 2.0 API
   namespace :v2 do

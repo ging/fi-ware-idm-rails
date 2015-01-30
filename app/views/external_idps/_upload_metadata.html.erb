@@ -1,0 +1,8 @@
+<section id="idp_metadata_area" class="zona">
+  
+<%= form_tag({action: :upload}, multipart: true) do %>
+  <%= label_tag t('idp.form.metadata') %>
+  <%= file_field_tag 'picture' %>
+<% end %>
+  
+</section>

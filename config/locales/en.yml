@@ -80,11 +80,91 @@ en:
       keywords: fi-ware, fi-lab, fi-ware-portal, fi-ware-gei, fi-ware-cloud, fi-ware-accounts, fi-ware-wirecloud, fi-ware-store, context-broker-orion, bigdata-cosmos, GE, oauth2
       title: FIWARE Identity Manager
     name: FIWARE IdM
+
+  idp:
+    frontpage:
+        text: Sign in
+        title: Federated login
+        
+    index: 
+      title: External IDPs
+      button:
+        add: Add IDP
+        sp_metadata: 
+          text: SP Metadata
+          title: Download Service Provider's Metadata
+        idp_metadata: 
+          text: IDP Metadata
+          title: Download Identity Provider's Metadata
+  
+    new: 
+      title: Register a new IDP
+      action: Register a new IDP 
+      
+    edit:
+      title: Modify an IDP
+      
+    form:
+      update: IDP updated
+      new: New IDP registered
+      metadata: 
+        label: Upload metadata (XML)
+        button: Choose file
+        empty: No file selected
+      logo:
+        label: Upload logo
+        
+    destroy:
+      confirm: Are you sure? This operation cannot be reverted!
+      link: Remove the external IDP and all its data
+      title: Destroy IDP
+      
+    delete: IDP deleted
+    
+  sp:
+    
+    index: 
+      title: IDP configuration
+      button:
+        add: Add SP
+        idp_metadata: 
+          text: IDP Metadata
+          title: Download Identity Provider's Metadata
+        sp_metadata: 
+          text: SP Metadata
+          title: Download Service Provider's Metadata
+  
+    new: 
+      title: Register a new SP
+      action: Register a new SP 
+      
+    edit:
+      title: Modify an SP
+      
+    form:
+      update: SP updated
+      new: New SP registered
+      metadata: 
+        label: Upload metadata (XML)
+        button: Choose file
+        empty: No file selected
+      logo:
+        label: Upload logo
+        
+    destroy:
+      confirm: Are you sure? This operation cannot be reverted!
+      link: Remove the external SP and all its data
+      title: Destroy SP
+      
+    delete: SP deleted
+       
   toolbar:
     applications: My Applications
     home: Home
     members: Members
     organizations: Organizations
+    external_idps: External IDPs
+    external_sps: IDP Configuration
     resources: Resources
     settings: Settings
 
