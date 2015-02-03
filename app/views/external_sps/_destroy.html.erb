@@ -1,0 +1,13 @@
+<section class="zona" style="margin-top: 1em;">
+  <div id="destroy_external_sp_client" class="accordion-group" style="margin-bottom: 0px;">
+    <header class="accordion-heading">
+      <h5>
+        <%= link_to t("sp.destroy.title"), "javascript:void(0);", class: 'accordion-toggle', "data-toggle" => 'collapse', "data-parent" => "#external_sp-accordion", "data-target" => "#destroy_external_sp-content" %>
+      </h5>
+    </header>
+
+    <div class="content collapse" id="destroy_external_sp-content">
+      <%= link_to t("sp.destroy.link"),@external_sp,  confirm: t("sp.destroy.confirm"), method: :delete %>
+    </div>
+  </div>
+</section>

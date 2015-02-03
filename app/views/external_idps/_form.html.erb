@@ -1,0 +1,68 @@
+<section id="external_idp_data" class="zona">
+  
+  <%= form_for(@external_idp) do |f| %>
+  
+  <%if @external_idp.errors.any?%>
+  <div id="error_explanation">​
+    <h2>​<%=  pluralize(@external_idp.errors.count,"error") %>
+      prohibited this product from being saved: 
+    </h2>​
+    <ul>​
+      <%  @external_idp.errors.full_messages.each do |msg| %>
+        <li> <%=  msg %> </li>
+      <%  end %>
+    </ul>​
+  </div>​
+  <%end%>
+  
+  <section class="form_section description"> 
+    <%= f.label :description %>
+    <%= f.text_field :description, :required =>  "" %>
+  </section>
+
+  <section class="form_section">
+    <%= f.label :mark %>
+    <%= f.text_field :mark, :required =>  "" %>
+  </section>
+
+  <section class="form_section"> 
+    <%= f.label :url %>
+    <%= f.text_field :url, :required =>  "" %>
+  </section>
+  
+  <section class="form_section" id="idp_upload_area"> 
+    
+    <div id="idp_upload_metadata">
+      <%= f.label t('idp.form.metadata.label') %>
+      <%= 
+      if @new_idp
+        f.file_field :metadata, :required =>  "" 
+      else
+        f.file_field :metadata
+      end
+      %>
+    </div>
+    
+    <div id="idp_upload_logo_area">
+      <div id="idp_upload_logo_img">
+        <%= if @external_idp.logo_url.nil?
+              image_tag "/assets/logos/small/site.png" 
+            else
+              image_tag @external_idp.logo_url 
+            end %>
+      </div>
+      <div id="idp_upload_logo_button">
+        <%= f.label t('idp.form.logo.label') %>
+        <%= f.file_field :logo %>
+      </div>
+    </div>
+    
+  </section>  
+  
+  <div class="actions">
+    <%= f.submit :class => 'btn' %>
+  </div>
+
+  <% end %>
+  
+</section>

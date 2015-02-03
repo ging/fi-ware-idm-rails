@@ -6,7 +6,22 @@ module FiWareIdm
       included do
         
         validate :checkEmail
-
+        
+        # Only for local users
+        class << self
+   %w( email slug name ).each do |a|
+      eval <<-EOS
+    def find_by_#{ a }(#{ a })             # def find_by_email(email)
+      find :first,                         #   find(:first,
+           :include => :actor,             #         :include => :actor,
+           :conditions =>                  #         :conditions =>
+             { 'actors.#{ a }' => #{ a }, :ext_idp => nil } #           { 'actors.email' => email }
+    end                                    # end
+      EOS
+    end
+          
+        end
+        
         def checkEmail
           errorMsg1 = ": the e-mail domain is not valid. Please note that you are signing up to the FIWARE Testbed, restricted to PPP members. If you are a PPP member, please use your corporate email (not gmail, yahoo, etc.). If you are not a PPP member, you can apply for an account in FIWARE Lab (http://lab.fi-ware.org/), that is suitable for anyone, PPP member or not.
                     If you are a PPP member using your corporate e-mail address and you get this message, please contact the support team at fiware-testbed-help@lists.fi-ware.org to add your domain name to our white list.
