@@ -84,7 +84,38 @@ namespace :migration do
 		end
 
 		#Permission
-		
+		output["permissions"] = []
+		internalPermissions = Permission.all.select{|p| !(p.relations & internalRoles).empty?}
+		customPermissions = Permission::Custom.all
+		customPermissions = customPermissions.reject{|p| p.actor.nil? or p.actor.subject_type!="Site"}
+		permissions = (internalPermissions + customPermissions ).uniq
+		permissions.each do |permission|
+			is_internal = !(permission.type === "Permission::Custom")
+			permission_json = {
+				"id" => permission.id,
+				"name" => permission.name,
+				"is_internal" => is_internal
+			}
+			unless is_internal
+				permission_json["application_id"] = permission.actor.id
+			end
+			output["permissions"].push(permission_json)
+		end
+
+		#RolePermission
+		output["rpermissions"] = []
+		# rolePermissions = RelationPermission.all (this query only returns the enabled permissions. Also it returns permissions not related to applications.)
+		roles.each do |role|
+			rpermissions = role.available_permissions
+			rpermissions.each do |permission|
+				rpermission_json = {
+					"role_id" => role.id,
+					"permission_id" => permission.id,
+					"enabled" => (role.permissions.include? (permission))
+				}
+				output["rpermissions"].push(rpermission_json)
+			end
+		end
 
 		File.open("migrationdata.json","w") do |f|
 			f.write(output.to_json)
