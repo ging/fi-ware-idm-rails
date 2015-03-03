@@ -90,10 +90,17 @@ namespace :migration do
 		customPermissions = customPermissions.reject{|p| p.actor.nil? or p.actor.subject_type!="Site"}
 		permissions = (internalPermissions + customPermissions ).uniq
 		permissions.each do |permission|
+
 			is_internal = !(permission.type === "Permission::Custom")
+			if is_internal
+				permission_name = permission.object.nil? ? permission.action : (permission.action + " " + permission.object)
+			else
+				permission_name = permission.name
+			end
+
 			permission_json = {
 				"id" => permission.id,
-				"name" => permission.name,
+				"name" => permission_name,
 				"is_internal" => is_internal
 			}
 			unless is_internal
@@ -159,7 +166,15 @@ namespace :migration do
 		end
 
 		#Administrators
-		
+		output["administrators"] = []
+		administrators = Site.current.sent_contacts.select{|c| c.relations.include? Relation::LocalAdmin.instance}.map{|c| Actor.find(c.receiver_id)}
+		administrators.each do |actor|
+			admin_json = {
+				"user_id" => actor.id
+			}
+			output["administrators"].push(admin_json)
+		end
+
 
 		File.open("migrationdata.json","w") do |f|
 			f.write(output.to_json)
