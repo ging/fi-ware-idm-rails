@@ -117,6 +117,50 @@ namespace :migration do
 			end
 		end
 
+		#RoleUser
+		output["rusers"] = []
+		applications.each do |app|
+			app.actors.select{|actor| ["Group","User"].include? actor.subject_type}.each do |actor|
+				#Groups and Users
+				if app.grants_roles?(actor)
+
+					app.contact_to(actor).relation_ids.map{ |rid| Relation.find(rid) }.reject{ |role| !roles.include? role }.each do |role|
+						ruser_json = {
+							"role_id" => role.id,
+							"application_id" => app.actor.id
+						}
+
+						if actor.subject_type == "Group"
+							ruser_json["organization_id"] = actor.id
+						elsif actor.subject_type == "User"
+							ruser_json["user_id"] = actor.id
+						end
+
+						output["rusers"].push(ruser_json)
+					end
+				
+					#Specific roles of the members when they act as this group
+					if actor.subject_type == "Group"
+						actor.group.members.each do |user|
+							actor.contact_to(user.actor).relation_ids.map{ |rid| Relation.find(rid) }.select{|r| r.actor_id == app.actor_id}.reject{ |role| !roles.include? role }.each do |role|
+								ruser_json = {
+									"role_id" => role.id,
+									"user_id" => user.actor.id,
+									"organization_id" => actor.id,
+									"application_id" => app.actor.id
+								}
+								output["rusers"].push(ruser_json)
+							end
+						end
+					end
+
+				end
+			end
+		end
+
+		#Administrators
+		
+
 		File.open("migrationdata.json","w") do |f|
 			f.write(output.to_json)
 		end
