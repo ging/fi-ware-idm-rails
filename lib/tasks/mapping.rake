@@ -4,8 +4,10 @@ namespace :migration do
 
 	#How to use: bundle exec rake migration:migrate
 	#In production: bundle exec rake migration:migrate RAILS_ENV=production
-	task :migrate => :environment do |t, args|
+	task :map => :environment do |t, args|
 		puts "Mapping data"
+
+		output = {}
 
 		#Users
 		output["users"] = []
@@ -20,11 +22,11 @@ namespace :migration do
 			output["users"].push(user_json)
 		end
 
-		File.open("migrationdata.json","w") do |f|
+		File.open("map.json","w") do |f|
 			f.write(output.to_json)
 		end
 
-		puts "Task finished. Output on migrationdata.json file."
+		puts "Task finished. Output on map.json file."
 	end
 
 end
