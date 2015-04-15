@@ -1,7 +1,34 @@
-<section id="registration"> 
+<section id="registration">
   <section class="welcome">
-    
   </section>
+
+  <section class="maxusers">
+    <%if @maxusers === true%>
+      <div><pre>
+We feel excited about the increasing number of developers like you that are trying to test FIWARE on the FIWARE Lab ...  This is rather encouraging !!   Unfortunately, the number of Trial Users able to has reached its limit and we cannot serve your request at this moment.   If you are applying for an account on behalf of a SME or startup included in the <a href="http://www.fiware.org/fiware-accelerator-programme" target="_blank">FIWARE Accelerator Programme</a> or wish to apply for a Community User (*) account, please submit your application <a href="#" id="myCustomTrigger">here</a>. Otherwise, please check back in 2 weeks for the next open window enabling creation of new Trial User accounts.  If you have any questions or need help, please contact our Technical Support Team sending an email to <fiware-lab-help@list.fi-ware.org>.
+
+(*) - Community Users are users that are granted a more stable environment for testing (at least up to 9 months, more subject to renewal) because they plan to develop a project which may work as a reference example of the use of FIWARE technologies, therefore contributing to the development of the FIWARE Community.    Number of Community Users is limited so your application will be evaluated and may not be be finally selected.   In the event it is selected, you may be required to show your progress (e.g., making showcases/demos available on FIWARE Lab) every 2 months in order to keep your status as Community User.
+      </pre></div>
+
+      <script type="text/javascript" src="https://jira.fiware.org/s/4d99dfea096a41baa8a46feda6f85823-T/en_GBek2res/6346/29/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-GB&collectorId=a188b867"></script>
+
+      <script>
+        $(document).ready(function(){
+          window.ATL_JQ_PAGE_PROPS =  {
+            "triggerFunction": function(showCollectorDialog) {
+              //Requires that jQuery is available! 
+              $("#myCustomTrigger").click(function(e) {
+              e.preventDefault();
+              showCollectorDialog();
+            });
+          }};
+        });
+      </script>
+      
+    <% end %>
+  </section>
+
+
 
   <section class="registration">
     <h3>
