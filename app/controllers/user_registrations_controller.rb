@@ -2,7 +2,7 @@ class UserRegistrationsController < Devise::RegistrationsController
   def create
     
     # Limiting registrations
-  	if User.where(:created_at => DateTime.new(2015, 4, 16, 09, 00, 0)..Time.now).count > 100
+  	if User.where(:created_at => DateTime.new(2015, 4, 16, 9, 0, 0)..Time.now).count > 100
   		build_resource
   		resource.errors.add(:base, "Unfortunately, the number of Trial Users able to has reached its limit and we cannot serve your request at this moment.")
   		@maxusers = true
