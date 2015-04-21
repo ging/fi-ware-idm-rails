@@ -35,6 +35,7 @@ namespace :migration do
 		users = users.reject{|u| u.confirmed_at.nil?}
 		users.each do |user|
 			user_json = {
+				"nick" => user.slug,
 				"id" => user.actor_id,
 				"name" => user.name,
 				"email" => user.email,
