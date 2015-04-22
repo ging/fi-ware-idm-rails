@@ -56,6 +56,10 @@ We feel excited about the increasing number of developers like you that are tryi
 
       <%= show_simple_captcha %>
 
+      <% if @premium_registration %>
+        <input type="hidden" name="premium_password" value="<%=Site.current.config[:password]%>"/>
+      <% end %>
+
       <div class="terms-check">
           <input type="checkbox" name="inlineCheckbox1" id="inlineCheckbox1" title="This field is required." value="option1" required/>
 
