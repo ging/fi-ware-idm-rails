@@ -22,17 +22,21 @@ class UserRegistrationsController < Devise::RegistrationsController
   end  
 
   def premium_registration
-    build_resource
-
-    isAdmin = ((!Site.current.config[:password].nil?) and (params[:password]===Site.current.config[:password]))
-
-    if isAdmin
-      @premium_registration = true
+    if current_user
+      redirect_to :home
     else
-      resource.errors.add(:base, "Wrong password")
-    end
+      build_resource
 
-    render :new
+      isAdmin = ((!Site.current.config[:password].nil?) and (params[:password]===Site.current.config[:password]))
+
+      if isAdmin
+        @premium_registration = true
+      else
+        resource.errors.add(:base, "Wrong password")
+      end
+
+      render :new
+    end
   end
 
 end
