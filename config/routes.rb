@@ -8,7 +8,7 @@ FiWareIdm::Application.routes.draw do
   devise_for :users, :controllers => {:omniauth_callbacks => 'omniauth_callbacks', registrations: 'user_registrations'}
 
   devise_scope :user do
-   get "premium_registration", to: "devise/user_registrations#premium_registration"
+   get "premium_registration", to: "user_registrations#premium_registration"
   end
 
   namespace :permission do
