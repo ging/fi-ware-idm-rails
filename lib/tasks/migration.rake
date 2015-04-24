@@ -22,9 +22,11 @@ namespace :migration do
 				"website" => organization.profile.website,
 				"avatar" => organization.logo,
 				"members" => organization.members.map{|u| u.actor_id},
-				"owner" => organization.user_author.actor.id,
 				"owners" => organization.members.select{|m| organization.contact_to(m.actor).relations.include? Relation::Owner.instance}.map{|m| m.actor.id}
 			}
+			unless organization.user_author.nil? or organization.user_author.actor.nil?
+                organization_json["owner"] = organization.user_author.actor.id
+            end
 			output["organizations"].push(organization_json)
 		end
 
