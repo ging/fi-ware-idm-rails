@@ -62,9 +62,11 @@ namespace :migration do
 				"callback_url" => app.callback_url,
 				"oauth2_secret" => app.secret,
 				"oauth2_client_id" => app.id,
-				"avatar" => app.logo,
-				"owner" => app.user_author.actor.id
+				"avatar" => app.logo
 			}
+			unless app.user_author.nil? or app.user_author.actor.nil?
+                application_json["owner"] = app.user_author.actor.id
+            end
 			output["applications"].push(application_json)
 		end
 
