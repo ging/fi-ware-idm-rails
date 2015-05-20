@@ -1,6 +1,6 @@
 == KeyRock Fi-WARE Identity Manager Generic Enabler (DEPRECATED)
 
-Please, find the current release (here)[https://github.com/ging/fi-ware-idm]
+Please, find the current release [here](https://github.com/ging/fi-ware-idm)
 
 Copyright (C) 2013 Universidad Politécnica de Madrid
 
