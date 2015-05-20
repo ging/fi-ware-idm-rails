@@ -1,4 +1,4 @@
-== KeyRock Fi-WARE Identity Manager Generic Enabler (DEPRECATED)
+### KeyRock Fi-WARE Identity Manager Generic Enabler (DEPRECATED)
 
 Please, find the current release [here](https://github.com/ging/fi-ware-idm)
 
